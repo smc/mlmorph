@@ -1,8 +1,8 @@
 #Vowels# = അആഇഈഉഊഋഎഏഐഒഓഔഔഅം
-#VowelSigns# = ാിീുൃെേൊോൗ
+#VowelSigns# = ാിീുൃെേൊോൗൂൈ
 #Anuswara# = ം
 #Virama# = ്
-#Consonants# = കഖഗഘങചഛജഝഞടഠഡഢണതഥധനപഫബഭമയരലവശഷസഹളഴറ
+#Consonants# = കഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ
 #Chillus# = ൻർൽൾൿൺ
 
 % POS tags
