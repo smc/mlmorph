@@ -20,7 +20,6 @@ $n1k-prefix$ = ആയിരത്തി
 $n1l$ = ലക്ഷം <lakhs>
 $n1c$ = കോടി <crores>
 
-
 $N1$ =  ( $n1$ | $n2-9$ ) <ones> $half$?
 $N10$ = ( ( $n10$ | $n20-80$ | $n90$) <tens> $half$? ) |\
  ( \
