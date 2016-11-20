@@ -9,7 +9,7 @@
 #pos# = <adj><adv><n><np><prn><postp><ij><cnj><v><vaux><num><pnct>
 #BM#  = <RB><MB>    % Boundary markers
 #numbers# = <one><two><three><four><five><six><seven><eight><nine><ten><zero>\
-  <ones><half><tens><hundred><hundreds><thousand>
+  <ones><half><tens><hundreds><thousands><lakhs>
 % other intermediate symbols (this should probalby contain
 % <K><D><C><A><I>, we assume they may appear in lexicon for some
 % reason)
