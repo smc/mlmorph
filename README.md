@@ -11,8 +11,8 @@ The project is in early stage of development. As of now it can analyse/generate 
 Installation
 ============
 You need [SFST]( http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html) to compile and use this analyzer. The Makefile
-provided compiles compiles all the sources and produces the binary
-'trmorph.a'. Assuming you have fst-compiler-utf8 from SFST in your
+provided compiles compiles all the sources and produces the binary FSA
+'malayalam.a'. Assuming you have fst-compiler-utf8 from SFST in your
 path, in POSIX systems typing 'make' should be enough to get started.
 
 In a debian/ubuntu based GNU/Linux, SFST can be installed as follows

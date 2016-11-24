@@ -7,3 +7,9 @@ else
 %.a: %.fst
 	fst-compiler-utf8 $< $@
 endif
+
+%.dot: %.a
+	hfst-fst2txt -D -f dot -i $< -o $@
+
+%.generate.txt: %.a
+	fst-generate $< > $@

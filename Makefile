@@ -1,31 +1,28 @@
 LEXFILES = lexicon/nouns.lex
 FSTFILES = malayalam.fst symbols.fst num.fst
 SOURCES = $(LEXFILES) $(FSTFILES)
+SUBDIRS=phon
 
 include Makefile.inc
 
-.PHONY: all
+.PHONY: all  subdirs $(SUBDIRS)
 
-all: clean malayalam.a
+all: clean malayalam.a dot
 
-malayalam.a: malayalam.fst symbols.fst deriv.a
-deriv.a: num.a symbols.fst $(LEXFILES)
+malayalam.a: malayalam.fst symbols.fst ninfl.fst deriv.a
+deriv.a: subdirs num.a symbols.fst $(LEXFILES)
 
-archive:
-	./archive.sh $(DISTNAME)
+subdirs:
+	for dir in $(SUBDIRS); do  $(MAKE) -C $$dir;  done
 
-view: malayalam.a
-	fst-print malayalam.a > malayalam.txt
-	foma -f tools/visualize.script
+dot: malayalam.dot num.dot deriv.dot
+
 testset: ../data/data
 	awk '{print $$2}' ../data/data |sort |uniq > tests.all
 
 clean:
-	-rm -f *.a *~ Makefile.bak tests.all
+	-rm -f *.a *.dot *~ Makefile.bak tests.all
 	-for dir in $(SUBDIRS); do  $(MAKE) -C $$dir clean; done
-
-#Makefile: *.fst
-#	-makedepend -Y -o.a $(SOURCES) 2>/dev/null
 
 test:
 	fst-mor malayalam.a  < testset.1 |tee /tmp/mlfst-testset1.out|less; \
@@ -34,4 +31,13 @@ test:
 # DO NOT DELETE
 
 malayalam.a: malayalam.fst
-num.a: symbols.fst
+malayalam.dot: malayalam.a
+malayalam.generate.txt: malayalam.a
+
+num.a: num.fst
+num.dot: num.a
+num.generate.txt: num.a
+
+deriv.a: symbols.fst ninfl.fst
+deriv.dot: deriv.a
+deriv.generate.txt: deriv.a

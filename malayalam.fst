@@ -5,21 +5,20 @@
 %
 
 #include "symbols.fst"
+#include "ninfl.fst"
 
-$noun-reg-infl$ = <Noun>:<> (\
-    {<sg>}:{} |\
-    {<pl>}:{കൾ} |\
-    {<nominative>}:{} |\
-    {<vocative>}:{െ} |\
-    {<accusative>}:{യെ} |\
-    {<genitive>}:{യുടെ} |\
-    {<dative>}:{യ്ക്ക്} |\
-    {<instrumental>}:{യാൽ} |\
-    {<locative>}:{യിൽ} |\
-    {<sociative>}:{യോടു} )
+%%% The stems from the lexicon (possibly with derivation)
+$NSTEM$ = "<noun.a>"
+$NUMBERS$ = "<num.a>"
 
-$noun-infl$ = "lexicon/nouns.lex" $noun-reg-infl$
-$numbers$ = "<num.a>"
-$WORD$ = $noun-infl$ |\
-    $numbers$
-$WORD$
+$NOUN$ = $NSTEM$ $NINFL$?
+$WORD$ = $NOUN$ | $NUMBERS$
+
+%
+% filter for the symbols that we do not want to see in the analysis
+%
+
+ALPHABET = [#Asym#] <>:[#TMP#] <>:[#BM#]
+$afilter$ = .*
+
+$afilter$ || <BoW> $WORD$ <EoW> || "<phon/phon.a>"
