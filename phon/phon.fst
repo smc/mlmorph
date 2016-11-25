@@ -8,11 +8,11 @@
 %%% Delete analysis only symbols from the surface string
 %
 
-% ALPHABET = [#Ssym#] [#BM##POS#]:<>
-ALPHABET = [#AAsym#] [#BM##POS##TMP#]:<>
+ALPHABET = [#Ssym#] [#BM##POS##Numbers##TMP#]:<>
 $delete-pos$ = .*
 
 
-$PHON$ = $delete-pos$
+$PHON$ = "<duplication.a>" \
+	|| $delete-pos$
 
 $PHON$

@@ -12,7 +12,7 @@ $NSTEM$ = "<noun.a>"
 $NUMBERS$ = "<num.a>"
 
 $NOUN$ = $NSTEM$ $NINFL$?
-$WORD$ = $NOUN$ | $NUMBERS$
+$WORD$ =  $NUMBERS$ | $NOUN$
 
 %
 % filter for the symbols that we do not want to see in the analysis

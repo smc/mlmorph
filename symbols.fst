@@ -31,6 +31,7 @@
 	<instrumental><locative><sociative>
 
 %%%%% some character classes that are helpful
+#Lsym# = <del><dels><dup>
 
 % surface symbols
 #Ssym# =#Letters##Digit##Punct##Perc##Nsep##Apos#
@@ -45,4 +46,4 @@
 % All analysis symbols, including the intermediate ones.
 %
 
-#AAsym# = #Asym##BM##TMP#
+#AAsym# = #Asym##BM##TMP##Lsym# 
