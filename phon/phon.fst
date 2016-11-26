@@ -12,7 +12,10 @@ ALPHABET = [#Ssym#] [#BM##POS##Numbers##TMP#]:<>
 $delete-pos$ = .*
 
 
-$PHON$ = "<duplication.a>" \
+$PHON$ = "<chillu-normalization.a>" \
+ 	|| "<duplication.a>" \
+	|| "<deletion.a>" \
+	|| "<substitution.a>" \
 	|| $delete-pos$
 
 $PHON$
