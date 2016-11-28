@@ -1,4 +1,6 @@
-LEXFILES = lexicon/nouns.lex
+LEXFILES = lexicon/nouns.lex lexicon/adverbs.lex lexicon/conjunctions.lex\
+			lexicon/interjections.lex \
+			lexicon/proper_nouns.lex lexicon/verbs.lex lexicon/misc.lex
 FSTFILES = malayalam.fst symbols.fst num.fst
 SOURCES = $(LEXFILES) $(FSTFILES)
 SUBDIRS=phon

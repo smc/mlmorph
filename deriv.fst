@@ -6,12 +6,42 @@
 #include "ninfl.fst"
 
 $NSTEM$ =  "lexicon/nouns.lex" <n><RB>
+$ASTEM$ =  "lexicon/adverbs.lex" <adv><RB>
+$CSTEM$ =  "lexicon/conjunctions.lex" <cnj><RB>
+$JSTEM$ =  "lexicon/adjectives.lex" <adj><RB>
+$MSTEM$ =  "<num.a>" <num><RB>
+$PNSTEM$ = "lexicon/proper_nouns.lex" <np><RB>
+% $PSTEM$ =  "lexicon/postpositions" <postp><RB>
+$RSTEM$ =  "lexicon/pronouns.lex" <prn><RB>
+$VSTEM$ =  "lexicon/verbs.lex" <v><RB>
+$XSTEM$ =  "lexicon/interjections.lex" <ij><RB>
+$MISC$ =  "lexicon/misc.lex"
 
 %%%%%%%%%%%%%%%%%%%%% Write the FSTs
 
 $NSTEM$  >> "noun.a"
+$PNSTEM$ >> "prop.a"
+$RSTEM$  >> "pron.a"
+$JSTEM$  >> "adj.a"
+$ASTEM$  >> "adv.a"
+% $PSTEM$  >> "postp.a"
+$XSTEM$  >> "interj.a"
+$CSTEM$  >> "conj.a"
+$VSTEM$  >> "verb.a"
+$MSTEM$  >> "number.a"
+$MISC$   >> "misc.a"
 
 % This is for testing. Individual files are already written to
 % correspondign FSA already.
 
-<>:<BoW> ( $NSTEM$ ) <>:<EoW> || "<phon/phon.a>"
+<>:<BoW> ($NSTEM$ |\
+ $PNSTEM$|\
+ $RSTEM$ |\
+ $JSTEM$ |\
+ $ASTEM$ |\
+%  $PSTEM$ |\
+ $XSTEM$ |\
+ $CSTEM$ |\
+ $MISC$ |\
+ $VSTEM$ |\
+ $MSTEM$ ) <>:<EoW> || "<phon/phon.a>"
