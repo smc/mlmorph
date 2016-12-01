@@ -55,8 +55,6 @@ $N1L$ = ( $N1$|$N10$|$N100$ )? $n1l$ ($N1K$|$N100$|$N10$|$N1$)?
 $N1C$ = ( $N1$|$N10$|$N100$ )? $n1c$ ($N1L$|$N1K$|$N100$|$N10$|$N1$)?
 
 $numbers$ = ($n0$ | $N1$ |	$N10$ | $N100$ | $N1K$ ) $half$?
-% TODO: this is too liberal
-$Num$ = [#Perc#]? [#Digit#] [#Digit##Nsep#]*
 
 ALPHABET = [#Asym#] [#Numbers#]
 
@@ -88,6 +86,6 @@ $replace-vowel-by-sign$ = $replace-vowel-by-sign-a$ ||\
 
 $join-num-parts$ = $delete-virama$ || $delete-a$ || $delete-i-from-tens$ || $replace-vowel-by-sign$
 
-$numbers$ || $join-num-parts$
+$numbers$ || $join-num-parts$  
 
 % ($n0$ | $N1$ | $N10$ | $N100$ | $N1K$ | $N1M$ | $N1G$ ) | $Num$

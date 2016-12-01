@@ -10,7 +10,7 @@
 
 % POS tags
 #POS# = <adj><adv><n><np><prn><postp><ij><cnj><v><vaux><num><pnct><sg><pl>\
-	<Noun>
+	<Noun><Punct>
 
 % Boundary markers
 #BM#  = <RB><MB>
@@ -46,4 +46,4 @@
 % All analysis symbols, including the intermediate ones.
 %
 
-#AAsym# = #Asym##BM##TMP##Lsym# 
+#AAsym# = #Asym##BM##TMP##Lsym#

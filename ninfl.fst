@@ -13,8 +13,7 @@ $plural$ = <pl>:{കൾ} <MB>
 #include "symbols.fst"
 
 $noun-reg-infl$ = (\
-    {<sg>}:{} |\
-    {<nominative>}:{} |\
+%    {<sg><nominative>}:{} |\
     {<vocative>}:{െ} |\
     {<accusative>}:{യെ} |\
     {<genitive>}:{യുടെ} |\
