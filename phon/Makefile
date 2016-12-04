@@ -1,4 +1,6 @@
-FSTFILES = duplication.fst deletion.fst substitution.fst chillu-normalization.fst
+FSTFILES = chillu-normalization.fst virama-vowel.fst \
+ 	virama-consonant.fst word-vowel.fst \
+	vowelsign-consonant.fst vowelsign-vowel.fst
 FSAFILES=$(FSTFILES:.fst=.a)
 
 include ../Makefile.inc
@@ -14,7 +16,4 @@ clean:
 
 # DO NOT DELETE
 chillu-normalization.a: ../symbols.fst
-duplication.a: ../symbols.fst
-deletion.a: ../symbols.fst
-substitution.a: ../symbols.fst
 phon.a: ../symbols.fst

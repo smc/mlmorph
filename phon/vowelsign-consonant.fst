@@ -1,10 +1,8 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% $Dup$: Duplication of some root initial consonants during agglutination
 #include "../symbols.fst"
 
 ALPHABET = [#AAsym#] [#POS##BM##Numbers#]
 
-#=D# = കചടതപ
+#=D# = കുചടതപശ
 $D$ = {[#=D#]}:{[#=D#][#Virama#][#=D#]}
 
 % Vowel sign followed by hard consonants get duplicated
@@ -13,11 +11,13 @@ $D$ = {[#=D#]}:{[#=D#][#Virama#][#=D#]}
 % അമ്മി + കല്ല് => അമ്മിക്കല്ല്
 % സൂചി + തുള => സൂചിത്തുള
 
-$dup-vowelsign-hard-cons$ = [#VowelSigns#] [#POS##BM##Numbers#]+ $D$ ^-> (__ [#Consonants##VowelSigns#] )
-$dup-chillus-hard-cons$ = [#Chillus#] [#POS##BM##Numbers#]+ $D$ ^-> (__ [#Consonants##VowelSigns#] )
-$dup-cons-hard-cons$ = [#Consonants#] [#POS##BM##Numbers#]+ $D$ ^-> (__ [#Consonants##VowelSigns#] )
+$dup-vowelsign-hard-cons$ = [#VowelSigns#] [#POS##BM##Numbers##TMP#]+ $D$ ^-> (__ [#Consonants##VowelSigns#] )
+$dup-chillus-hard-cons$ = [#Chillus#] [#POS##BM##Numbers##TMP#]+ $D$ ^-> (__ [#Consonants##VowelSigns#] )
+$dup-cons-hard-cons$ = [#Consonants#] [#POS##BM##Numbers##TMP#]+ $D$ ^-> (__ [#Consonants##VowelSigns#] )
 
-ALPHABET = [#AAsym#] [#POS##BM##Numbers#]
+$vowelsign-consonant$ = $dup-vowelsign-hard-cons$ \
+	|| $dup-chillus-hard-cons$ \
+	|| $dup-cons-hard-cons$
 
 $tests$ = നൂറ്റി <hundreds> പതിനൊന്ന് <Noun> \
 	| അടി <Noun> പരപ്പ് <Noun> \
@@ -26,10 +26,6 @@ $tests$ = നൂറ്റി <hundreds> പതിനൊന്ന് <Noun> \
 	| ആൽ <Noun> തറ <Noun> \
 	| ആന <Noun> പുറം <Noun> \
 	| ആന <Noun> വണ്ടി <Noun> % No duplication, വ is not hard consonant
-
-$Dup$ = $dup-vowelsign-hard-cons$ \
-	|| $dup-chillus-hard-cons$ \
-	|| $dup-cons-hard-cons$
 % Uncomment below line for testing
 % $tests$ ||\
-$Dup$ || .*
+$vowelsign-consonant$ || .*

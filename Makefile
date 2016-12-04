@@ -1,5 +1,5 @@
 LEXFILES = lexicon/nouns.lex lexicon/adverbs.lex lexicon/conjunctions.lex\
-			lexicon/interjections.lex \
+			lexicon/interjections.lex lexicon/demonstrative-prenominal-base.lex \
 			lexicon/proper_nouns.lex lexicon/verbs.lex lexicon/misc.lex
 FSTFILES = malayalam.fst symbols.fst num.fst
 SOURCES = $(LEXFILES) $(FSTFILES)
@@ -9,7 +9,7 @@ include Makefile.inc
 
 .PHONY: all  subdirs $(SUBDIRS)
 
-all: clean malayalam.a dot
+all: malayalam.a dot
 
 malayalam.a: malayalam.fst symbols.fst ninfl.fst deriv.a
 deriv.a: subdirs num.a symbols.fst $(LEXFILES)
@@ -23,7 +23,7 @@ testset: ../data/data
 	awk '{print $$2}' ../data/data |sort |uniq > tests.all
 
 clean:
-	-rm -f *.a *.dot *~ Makefile.bak tests.all
+	-rm -f *.a *.dot *~ Makefile.bak tests.all *.gen*.txt
 	-for dir in $(SUBDIRS); do  $(MAKE) -C $$dir clean; done
 
 test:
@@ -40,6 +40,6 @@ num.a: num.fst
 num.dot: num.a
 num.generate.txt: num.a
 
-deriv.a: symbols.fst ninfl.fst
+deriv.a: deriv.fst
 deriv.dot: deriv.a
 deriv.generate.txt: deriv.a

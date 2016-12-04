@@ -56,36 +56,4 @@ $N1C$ = ( $N1$|$N10$|$N100$ )? $n1c$ ($N1L$|$N1K$|$N100$|$N10$|$N1$)?
 
 $numbers$ = ($n0$ | $N1$ |	$N10$ | $N100$ | $N1K$ ) $half$?
 
-ALPHABET = [#Asym#] [#Numbers#]
-
-% Delete the viram sign if it is at the end of any of <ones><tens><hundreds><thousands>
-% and followed by a vowel. Eg: ആറ് + ആയിരം = ആറായിരം. The ആ will be deleted in
-% following steps.
-$delete-virama$ = {[#Virama#]}:{<>} ^-> ( __ [<ones><tens><hundreds><thousands>] [#Vowels#] )
-
-% Delete അ vowel which occur anywhere in the text, except at first fragment.
-% Eg: ആറായിരത്തിഅഞ്ച് -> ആറായിരത്തിഞ്ച്. ി sign get deleted in following steps
-$delete-a$ = {അ}:{<>} ^-> ( [<ones><tens><hundreds><thousands>] __ )
-
-% Delete ി sign which occur just before any of <ones><tens><hundreds><thousands> and
-% followed by a Vowel
-% Eg: ആറായിരത്തിഅഞ്ച് -> ആറായിരത്തിഞ്ച്. അ get deleted in other steps.
-$delete-i-from-tens$ = {ി} :{<>} ^-> ( __ [<ones><tens><hundreds><thousands>] [#Vowels#] )
-
-% Delete Vowels and replace it by its vowel sign when the vowel is after any of
-% <ones><tens><hundreds><thousands>. Eg: ആറായിരത്തിഏഴ് -> ആറായിരത്തേഴ്. ി sign
-% get deleted in other steps.
-$replace-vowel-by-sign-a$ = {ആ}: {ാ} ^-> ( [<ones><tens><hundreds><thousands>] __ )
-$replace-vowel-by-sign-e$ = {എ}: {െ} ^-> ( [<ones><tens><hundreds><thousands>] __ )
-$replace-vowel-by-sign-E$ = {ഏ}: {േ} ^-> ( [<ones><tens><hundreds><thousands>] __ )
-$replace-vowel-by-sign-o$ = {ഒ}: {ൊ} ^-> ( [<ones><tens><hundreds><thousands>] __ )
-$replace-vowel-by-sign$ = $replace-vowel-by-sign-a$ ||\
-	$replace-vowel-by-sign-e$ ||\
-	$replace-vowel-by-sign-E$ ||\
-	$replace-vowel-by-sign-o$
-
-$join-num-parts$ = $delete-virama$ || $delete-a$ || $delete-i-from-tens$ || $replace-vowel-by-sign$
-
-$numbers$ || $join-num-parts$  
-
-% ($n0$ | $N1$ | $N10$ | $N100$ | $N1K$ | $N1M$ | $N1G$ ) | $Num$
+$numbers$

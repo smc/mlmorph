@@ -17,7 +17,7 @@ $VSTEM$ = "<verb.a>"
 $CSTEM$ = "<conj.a>"
 $XSTEM$ = "<interj.a>"
 $NUMBERS$ = "<number.a>"
-
+$DEM$ = "<dem.a>"
 % these following contains exceptional cases fully analyzed in the
 % lexicon.
 $MISC$ = "<misc.a>"
@@ -26,13 +26,16 @@ $MISC$ = "<misc.a>"
 $Num$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
 % Nouns
-$NOUN$ = $JSTEM$? ($NSTEM$ | $PRONSTEM$ | $NUMBERS$ | $PNSTEM$ ) ($CSTEM$? | $NINFL$?)
+$NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $NUMBERS$ | $PNSTEM$ ) ($CSTEM$? | $NINFL$?)
 
 % Verbs
 $VERB$ =  $VSTEM$
 
-$WORD$ = ( $NOUN$ $NOUN$? | $VERB$ | $XSTEM$ | $Num$ ) $MISC$?
-
+$WORD$ = ( $NOUN$ $NOUN$? \
+	| $VERB$ \
+	| $XSTEM$  \
+	| $Num$ \
+) $MISC$?
 
 %
 % filter for the symbols that we do not want to see in the analysis
