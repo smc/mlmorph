@@ -6,7 +6,9 @@ mlmorph is Malayalam Morphological Analyzer in development. It aims to build a m
 
 Status
 ======
-The project is in early stage of development. As of now it can analyse/generate Malayalam numbers in textual form(Example: അമ്പത്തെട്ടായിരത്തിനാനൂറ്റൊമ്പത്). See usage section below for some more examples.
+The project is in early stage of development. As of now it can analyse/generate Malayalam numbers in textual form(Example: അമ്പത്തെട്ടായിരത്തിനാനൂറ്റൊമ്പത്). The phonological rules are being developed and contains a small lexicon. It can analyze multi level agglutinated inflected rules based on phonological rules. The phono-morphological rules need to be derived from the sandhi rules of Malayalam and that is expeceted as non-trivial task.
+
+See usage section below for some more examples.
 
 Installation
 ============
@@ -27,7 +29,7 @@ Build the FST by
 
 ```$ make```
 
-This will create a file named `maayalam.a` which is the compiled analyser. Individual modules will get also created like `num.a` which is number analyser.
+This will create a file named `malayalam.a` which is the compiled analyser. Individual modules will get also created like `num.a` which is number analyser.
 
 To analyse Malayalam words, start the interactive analyser
 
@@ -42,6 +44,26 @@ analyze> കീശയിൽ
 മാലയ്ക്ക്
 മാല<Noun><dative>
 analyze>
+analyze> മഴകൾ
+മഴ<n><pl>
+analyze> നീലത്താമര
+നീല<n>താമര<n>
+analyze> ആൽത്തറ
+ആൽ<n>തറ<n>
+analyze> നീലപ്പീലി
+നീല<n>പീലി<n>
+analyze> പച്ചമരം
+പച്ച<n>മരം<n>
+analyze> പച്ചയ്ക്ക്
+പച്ച<n><dative>
+analyze> നല്ലമരംകൊണ്ട്
+നല്ല<adj>മരം<n>കൊണ്ട്<cnj>
+analyze> ആഹ!
+ആഹ<ij>!<Punct>
+analyze> അടിപ്പരപ്പ്
+അടി<n>പരപ്പ്<n>
+analyze> പ്ലാവുമരം
+പ്ലാവ്<n>മരം<n>
 ```
 
 Two swtich to generate mode, just press enter at prompt without entering any text.
