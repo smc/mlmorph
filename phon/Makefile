@@ -1,6 +1,8 @@
 FSTFILES = chillu-normalization.fst virama-vowel.fst \
  	virama-consonant.fst word-vowel.fst \
-	vowelsign-consonant.fst vowelsign-vowel.fst
+	vowelsign-consonant.fst consonant-consonant.fst \
+	chillu-consonant.fst \
+	vowelsign-vowel.fst
 FSAFILES=$(FSTFILES:.fst=.a)
 
 include ../Makefile.inc

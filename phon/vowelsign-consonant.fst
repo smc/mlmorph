@@ -12,12 +12,8 @@ $D$ = {[#=D#]}:{[#=D#][#Virama#][#=D#]}
 % സൂചി + തുള => സൂചിത്തുള
 
 $dup-vowelsign-hard-cons$ = [#VowelSigns#] [#POS##BM##Numbers##TMP#]+ $D$ ^-> (__ [#Consonants##VowelSigns#] )
-$dup-chillus-hard-cons$ = [#Chillus#] [#POS##BM##Numbers##TMP#]+ $D$ ^-> (__ [#Consonants##VowelSigns#] )
-$dup-cons-hard-cons$ = [#Consonants#] [#POS##BM##Numbers##TMP#]+ $D$ ^-> (__ [#Consonants##VowelSigns#] )
 
-$vowelsign-consonant$ = $dup-vowelsign-hard-cons$ \
-	|| $dup-chillus-hard-cons$ \
-	|| $dup-cons-hard-cons$
+$vowelsign-consonant$ = $dup-vowelsign-hard-cons$
 
 $tests$ = നൂറ്റി <hundreds> പതിനൊന്ന് <Noun> \
 	| അടി <Noun> പരപ്പ് <Noun> \

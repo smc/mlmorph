@@ -26,7 +26,8 @@ $MISC$ = "<misc.a>"
 $Num$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
 % Nouns
-$NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $NUMBERS$ | $PNSTEM$ ) ($CSTEM$? | $NINFL$?)
+$NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $NUMBERS$ | $PNSTEM$ ) \
+	($CSTEM$? | $NINFL$?)
 
 % Verbs
 $VERB$ =  $VSTEM$
