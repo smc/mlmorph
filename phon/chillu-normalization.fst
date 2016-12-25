@@ -3,7 +3,7 @@
 
 ALPHABET = [#AAsym#] [#POS##BM##Numbers#]
 
-% Convert atmoic chillus to cons+ virama form if followed by Vowel
+% Convert atomic chillus to cons+ virama form if followed by Vowel
 
 $replace-chillu-k$ = {ൿ}: {ക്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowels#] )
 $replace-chillu-l$ = {ൽ}: {ല്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowels#] )
@@ -23,4 +23,4 @@ $ChilluNorm$ = $replace-chillu-k$ \
 
 % Uncomment below line for testing
 %$tests$ ||\
-$ChilluNorm$  || .*
+$ChilluNorm$   || .*

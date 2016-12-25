@@ -1,5 +1,5 @@
 FSTFILES = chillu-normalization.fst virama-vowel.fst \
- 	virama-consonant.fst word-vowel.fst \
+ 	virama-consonant.fst vowel-to-vowelsign.fst consonant-vowel.fst \
 	vowelsign-consonant.fst consonant-consonant.fst \
 	chillu-consonant.fst \
 	vowelsign-vowel.fst
