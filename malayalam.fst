@@ -18,6 +18,7 @@ $CSTEM$ = "<conj.a>"
 $XSTEM$ = "<interj.a>"
 $NUMBERS$ = "<number.a>"
 $DEM$ = "<dem.a>"
+$ABBREV$ = "<abbrev.a>"
 % these following contains exceptional cases fully analyzed in the
 % lexicon.
 $MISC$ = "<misc.a>"
@@ -26,7 +27,7 @@ $MISC$ = "<misc.a>"
 $Num$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
 % Nouns
-$NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $NUMBERS$ | $PNSTEM$ ) \
+$NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ ) \
 	($CSTEM$? | $NINFL$?)
 
 % Verbs

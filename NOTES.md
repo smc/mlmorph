@@ -6,7 +6,7 @@ Cross check with Keralapanineeyam and have test coverage matching its examples.
 Lexicon
 =======
 1. Nouns with അ is taken from ml.wiktionary.org വർഗ്ഗം:മലയാളം നാമങ്ങൾ. Others need to add.
-2. 
+2. Abbreviations not integrated well
 
 TODO
 =====
@@ -22,6 +22,7 @@ TODO
 9. Standardize POS tags and document
 10. Exception dictionary
 11. Better way to test. See [Bindings]()
+12. Use names for variables that are not confusing
 
 
 Ideas

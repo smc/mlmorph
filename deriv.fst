@@ -20,7 +20,7 @@ $VSTEM$ = "lexicon/verbs.lex" <v><RB>
 $XSTEM$ = "lexicon/interjections.lex" <ij><RB>
 $DEM$ = "lexicon/demonstrative-prenominal-base.lex" <dem><RB>
 $MISC$ = "lexicon/misc.lex"
-
+$ABBREV$ = "lexicon/abbreviations.lex"
 %%%%%%%%%%%%%%%%%%%%% Write the FSTs
 
 $NSTEM$ >> "noun.a"
@@ -35,19 +35,22 @@ $CSTEM$ >> "conj.a"
 $VSTEM$ >> "verb.a"
 $MSTEM$ >> "number.a"
 $MISC$ >> "misc.a"
-
+$ABBREV$ >> "abbrev.a"
 % This is for testing. Individual files are already written to
 % correspondign FSA already.
 
-<>:<BoW> ($NSTEM$ |\
- $PNSTEM$|\
- $RSTEM$ |\
- $JSTEM$ |\
- $ASTEM$ |\
- $DEM$  |\
-% $PSTEM$ |\
- $XSTEM$ |\
- $CSTEM$ |\
- $MISC$ |\
- $VSTEM$ |\
- $MSTEM$ ) <>:<EoW> || "<phon/phon.a>"
+<>:<BoW> ( \
+	 $NSTEM$ |\
+	 $PNSTEM$|\
+	 $RSTEM$ |\
+	 $JSTEM$ |\
+	 $ASTEM$ |\
+	 $DEM$  |\
+	% $PSTEM$ |\
+	 $XSTEM$ |\
+	 $CSTEM$ |\
+	 $MISC$ |\
+	 $VSTEM$ |\
+	 $MSTEM$ |\
+	 $ABBREV$ \
+) <>:<EoW> || "<phon/phon.a>"
