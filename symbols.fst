@@ -9,7 +9,7 @@
 #Letters# = #Consonants##Vowels##VowelSigns##Anuswara##Chillus##Virama#
 
 % POS tags
-#POS# = <adj><adv><dem><n><np><prn><postp><ij><cnj><v><vaux><num><pnct><sg><pl>\
+#POS# = <adj><adv><dem><n><np><prn><postp><ij><cnj><v><vaux><num><pnct> \
 	<Noun><Punct>
 
 % Boundary markers
@@ -28,7 +28,7 @@
 
 % analysis symbols for inflectional suffixes
 #infl# = <accusative><nominative><vocative><genitive><dative>\
-	<instrumental><locative><sociative>
+	<instrumental><locative><sociative><sg><pl>
 
 %%%%% some character classes that are helpful
 #Lsym# = <del><dels><dup>

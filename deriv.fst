@@ -10,7 +10,10 @@ $ASTEM$ = "lexicon/adverbs.lex" <adv><RB>
 $CSTEM$ = "lexicon/conjunctions.lex" <cnj><RB>
 $JSTEM$ = "lexicon/adjectives.lex" <adj><RB>
 $MSTEM$ = "<num.a>" <num><RB>
-$PNSTEM$ = "lexicon/proper_nouns.lex" <np><RB>
+$PNSTEM$ = "lexicon/proper_nouns.lex" | \
+	"lexicon/person_names.lex"  | \
+	"lexicon/times.lex" |\
+	"lexicon/places.lex"  <np><RB>
 % $PSTEM$ = "lexicon/postpositions" <postp><RB>
 $RSTEM$ = "lexicon/pronouns.lex" <prn><RB>
 $VSTEM$ = "lexicon/verbs.lex" <v><RB>

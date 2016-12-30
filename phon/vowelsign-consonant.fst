@@ -1,6 +1,6 @@
 #include "../symbols.fst"
 
-ALPHABET = [#AAsym#] [#POS##BM##Numbers#]
+ALPHABET = [#AAsym#]
 
 #=D# = കുചടതപശ
 $D$ = {[#=D#]}:{[#=D#][#Virama#][#=D#]}
