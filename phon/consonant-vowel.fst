@@ -6,7 +6,7 @@ ALPHABET = [#AAsym#] [#POS##BM##Numbers#]
 
 #=C# = #Consonants#
 $C$ = {[#=C#]}:{[#=C#][യ]}
-$insert-ya$ =  $C$ ^-> (__ [#POS##BM##Numbers#]+ [#Vowels#] )
+$insert-ya$ =  $C$ ^-> (__ [#POS##BM##Numbers##infl#]+ [#Vowels#] )
 
 $cons-vowel$ = $insert-ya$
 

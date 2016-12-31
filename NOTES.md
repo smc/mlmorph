@@ -23,6 +23,8 @@ TODO
 10. Exception dictionary
 11. Better way to test. See [Bindings]()
 12. Use names for variables that are not confusing
+13. include #infl# in the vowel to vowel sign context - as possible tag in the word joining position.
+14. Avoid proper nouns like place names, person names agglutinating with another proper names.
 
 
 Ideas
