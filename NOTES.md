@@ -38,6 +38,30 @@ Ideas
 7. Syllabalzer
 
 
+Working with HFST
+=================
+To compile:
+
+`FSTC=HFST make`
+
+Generate 10 random strings the FST can produce:
+
+`hfst-fst2strings malayalam.a  -r 10`
+
+Lookup:
+
+`echo "നീല<n><pl>" | hfst-lookup malayalam.a`
+
+Optimize the FST
+
+`hfst-fst2fst -S -O -i malayalam.a -o malayalam.ao`
+
+Using fst-proc:
+```
+$ echo "നീല<n><pl>" | hfst-proc -a malayalam.ao
+^നീല<n><pl>/നീലകൾ$
+```
+
 Bindings
 =========
 
@@ -65,8 +89,19 @@ gives
 Python
 ------
 There is a SWIG based binding given at http://home.gna.org/pysfst/ looks outdated. Last update was in 2008.
-There is another binding which looks recent at
-https://github.com/hbuschme/pysfstmorph. Not tried either of them.
+There is another binding which looks recent at https://github.com/hbuschme/pysfstmorph.
+Both of them does not seem to work. Better use the HFST compiler and use HFST python bindings.
+
+HFST python bindings are not packaged for debian. Install  switg, python3-dev packages, go to python folder of HFST source code, run,
+
+```bash
+python3 setup.py build_ext --inplace
+sudo python3 setup.py install
+```
+
+Refer: https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPython
+and https://hfst.github.io/python/3.12.1/QuickStart.html
+
 
 Nodejs
 ------
