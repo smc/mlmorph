@@ -54,7 +54,7 @@ Lookup:
 
 Optimize the FST
 
-`hfst-fst2fst -S -O -i malayalam.a -o malayalam.ao`
+`hfst-fst2fst -S -i malayalam.a -o malayalam.ao`
 
 Using fst-proc:
 ```
@@ -92,7 +92,7 @@ There is a SWIG based binding given at http://home.gna.org/pysfst/ looks outdate
 There is another binding which looks recent at https://github.com/hbuschme/pysfstmorph.
 Both of them does not seem to work. Better use the HFST compiler and use HFST python bindings.
 
-HFST python bindings are not packaged for debian. Install  switg, python3-dev packages, go to python folder of HFST source code, run,
+HFST python bindings are not packaged for debian. Install swig, python3-dev packages, go to python folder of HFST source code, run,
 
 ```bash
 python3 setup.py build_ext --inplace
