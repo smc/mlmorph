@@ -94,7 +94,7 @@ def main():
             if not gens:
                 print(line, "\t?")
             for gen in gens:
-                print(line, "\t")
+                print(line, "\t",  gen[0])
 
     print()
     exit(0)
