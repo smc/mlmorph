@@ -21,7 +21,7 @@ TODO
 8. How to handle borrowed latin words?
 9. Standardize POS tags and document
 10. Exception dictionary
-11. Better way to test. See [Bindings]()
+11. Better way to test. Create CSV or TSV files with input and output, use ptyhon bindings to match results.
 12. Use names for variables that are not confusing
 13. include #infl# in the vowel to vowel sign context - as possible tag in the word joining position.
 14. Avoid proper nouns like place names, person names agglutinating with another proper names.
