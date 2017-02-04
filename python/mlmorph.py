@@ -46,10 +46,6 @@ class Mlmorph:
         analyser.lookup_optimize()
         self.analyser = analyser
 
-    def _analyse_str(self, s):
-        res = self.getGenerator().lookup(s)
-        return res
-
     def analyse(self, token):
         """Perform a simple morphological analysis lookup. """
         if not self.analyser:
