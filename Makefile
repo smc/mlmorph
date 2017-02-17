@@ -10,7 +10,7 @@ include Makefile.inc
 
 .PHONY: all  subdirs $(SUBDIRS)
 
-all: malayalam.a dot
+all: malayalam.a
 
 malayalam.a: malayalam.fst symbols.fst ninfl.fst deriv.a
 deriv.a: subdirs num.a symbols.fst $(LEXFILES)
@@ -20,27 +20,20 @@ subdirs:
 
 dot: malayalam.dot num.dot deriv.dot
 
-testset: ../data/data
-	awk '{print $$2}' ../data/data |sort |uniq > tests.all
-
 clean:
 	-rm -f *.a *.dot *~ Makefile.bak tests.all *.gen*.txt
 	-for dir in $(SUBDIRS); do  $(MAKE) -C $$dir clean; done
 
-test:
-	fst-mor malayalam.a  < testset.1 |tee /tmp/mlfst-testset1.out|less; \
-		(echo -n `date`" "; grep 'no result' </tmp/mlfst-testset1.out|wc -l) >> .testset1-results
+test: malayalam.a
+	python3 python/mlmorph-test.py
 
 # DO NOT DELETE
 
 malayalam.a: malayalam.fst
 malayalam.dot: malayalam.a
-malayalam.generate.txt: malayalam.a
 
 num.a: num.fst
 num.dot: num.a
-num.generate.txt: num.a
 
 deriv.a: deriv.fst
 deriv.dot: deriv.a
-deriv.generate.txt: deriv.a
