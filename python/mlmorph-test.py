@@ -17,18 +17,18 @@ class AnalyserGeneratorTests(unittest.TestCase):
     def test_analyse(self):
         for row in self.data:
             with self.subTest():
-                print(row)
                 anals = self.mlmorph.analyse(row[0])
                 self.assertTrue(len(anals) != 0, 'Analysis failed for ' + row[0])
+                print(row[0],'\t-->\t', anals)
                 for index in range(len(anals)):
-                    self.assertEqual(row[index+1], anals[index][0])
+                    self.assertEqual(row[1], anals[index][0])
 
     def test_generate(self):
         for row in self.data:
             with self.subTest():
-                print(row)
                 gens = self.mlmorph.generate(row[1])
                 self.assertTrue(len(gens) != 0, 'Generate failed for ' + row[1])
+                print(row[1],'\t<--\t', gens)
                 for index in range(len(gens)):
                     self.assertEqual(row[0], gens[index][0],  'Generate for ' + row[1])
 
