@@ -2,7 +2,7 @@
 
 % Note: If we can introduce an imaginary symbol for implicit 'a' in consonants
 % this can be merged with vowelsign-vowel.fst
-ALPHABET = [#AAsym#] [#POS##BM##Numbers#]
+ALPHABET = [#AAsym#]
 
 #=C# = #Consonants#
 $C$ = {[#=C#]}:{[#=C#][യ]}
