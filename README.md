@@ -2,7 +2,7 @@ Malayalam Morphological Analyzer using Finite State Transducer
 
 Introduction
 ============
-mlmorph is Malayalam Morphological Analyzer in development. It aims to build a morphological model for Malayalam language using  [Finite State Transducer technology](https://en.wikipedia.org/wiki/Finite-state_transducer). Specifically, the system is developed using [Stuttgart Finite State Toolkit(SFST)]( http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html). Malayalam is a heavily inflected and agglutinated language and the project attempt to iteratively develop a morphological model for it.
+mlmorph is Malayalam Morphological Analyzer in development. It aims to build a morphological model for Malayalam language using  [Finite State Transducer technology](https://en.wikipedia.org/wiki/Finite-state_transducer). Specifically, the system is developed using [Stuttgart Finite State Toolkit(SFST)]( http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html) formalism and uses [Helsinki Finite-State Technology(HFST)](Helsinki Finite-State Technology) as Toolkit. Malayalam is a heavily inflected and agglutinated language and the project attempt to iteratively develop a morphological model for it.
 
 Status
 ======
@@ -75,7 +75,7 @@ generate> ആശ<Noun><instrumental>
 
 ```
 
-Any words that is not knwon to the model will be rejected.
+Any words that is not known to the model will be rejected.
 
 The textual form of Malayalam numbers has an interesting characterstic that it is a limited vocalbulary set creating infinite number of words by agglutination of number parts. A number like 12345 is written as പന്ത്രണ്ടായിരത്തിമുന്നൂറ്റിനാൽപത്തഞ്ച്. This is composed from 12-പന്ത്രണ്ട്, 1000=ആയിരം, 300=മുന്നൂറ്, 40-നാല്പത്, 5 - അഞ്ച്. Agglutination happens at 5 places in this word. When agglutination happens the morpheme boundaries change in left side or right side or both. The number module of mlmorph analyser is powerful enough to analyse and generate any arbitrary number in its text format(or aims to do so). Some examples are given below.
 
