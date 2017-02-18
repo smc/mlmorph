@@ -5,7 +5,6 @@
 %
 
 #include "symbols.fst"
-#include "ninfl.fst"
 
 %%% The stems from the lexicon (possibly with derivation)
 $NSTEM$ = "<noun.a>"
@@ -22,13 +21,13 @@ $ABBREV$ = "<abbrev.a>"
 % these following contains exceptional cases fully analyzed in the
 % lexicon.
 $MISC$ = "<misc.a>"
-
+$NINFL$ = "<ninfl.a>"
 % Numbers using digits
 $Num$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
 % Nouns
-$NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ ) \
-	($CSTEM$? | $NINFL$?)
+$NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ ) ($CSTEM$?) [#infl#]? \
+	|| $NINFL$
 
 % Verbs
 $VERB$ =  $VSTEM$

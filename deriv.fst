@@ -3,7 +3,6 @@
 %
 
 #include "symbols.fst"
-#include "ninfl.fst"
 
 $NSTEM$ = "lexicon/nouns.lex" <n><RB>
 $ASTEM$ = "lexicon/adverbs.lex" <adv><RB>

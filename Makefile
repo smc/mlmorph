@@ -12,13 +12,13 @@ include Makefile.inc
 
 all: malayalam.a
 
-malayalam.a: malayalam.fst symbols.fst ninfl.fst deriv.a
+malayalam.a: malayalam.fst symbols.fst ninfl.a deriv.a
 deriv.a: subdirs num.a symbols.fst $(LEXFILES)
 
 subdirs:
 	for dir in $(SUBDIRS); do  $(MAKE) -C $$dir;  done
 
-dot: malayalam.dot num.dot deriv.dot
+dot: malayalam.dot
 
 clean:
 	-rm -f *.a *.dot *~ Makefile.bak tests.all *.gen*.txt
@@ -30,10 +30,8 @@ test: malayalam.a
 # DO NOT DELETE
 
 malayalam.a: malayalam.fst
-malayalam.dot: malayalam.a
-
 num.a: num.fst
-num.dot: num.a
-
+ninfl.a: ninfl.fst
 deriv.a: deriv.fst
-deriv.dot: deriv.a
+
+malayalam.dot: malayalam.a
