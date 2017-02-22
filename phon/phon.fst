@@ -2,7 +2,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Delete analysis only symbols from the surface string
-%
 
 ALPHABET = [#Ssym#] [#BM##POS##Numbers##TMP##Lsym#]:<>
 $delete-pos$ = .*
