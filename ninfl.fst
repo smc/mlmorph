@@ -10,7 +10,7 @@ ALPHABET = [#AAsym#]
 
 %%%%% plural
 
-$plural$ = {<pl>}:{കൾ} ^-> ([#POS##BM##Numbers##TMP#]+ __)
+$plural$ = {<pl>}:{<plural>കൾ} ^-> ([#POS##BM##Numbers##TMP#]+ __)
 
 % Vocative inflection rules- sambodhana - മരമേ, കാടേ, പൂച്ചേ, അവരേ, അവളേ, മലരേ, പട്ടികളേ, പട്ടീ
 $vocative$ = {<vocative>}:{ഏ} ^-> ([#POS##BM##Numbers##TMP#]* __)
@@ -31,8 +31,8 @@ $sociative$ = $sociative_virama$ | $sociative_samvruthokaram$
 
 % Instrumental inflection rules ആനയാൽ, വടിയാൽ, വടികൊണ്ട്
 $instrumental-form-1$ = {<instrumental>}:{ആൽ} ^-> ([#POS##BM##Numbers##TMP#]+ __)
-$instrumental-form-2a$ = {<instrumental>}:{കൊണ്ട്} ^-> ([#POS##BM##Numbers##TMP#]+ __)
-$instrumental-form-2b$ = {<instrumental>}:{കൊണ്ടു്} ^-> ([#POS##BM##Numbers##TMP#]+ __)
+$instrumental-form-2a$ = {<instrumental>}:{<ninfl>കൊണ്ട്} ^-> ([#POS##BM##Numbers##TMP#]+ __)
+$instrumental-form-2b$ = {<instrumental>}:{<ninfl>കൊണ്ടു്} ^-> ([#POS##BM##Numbers##TMP#]+ __)
 $instrumental$ = $instrumental-form-1$ | $instrumental-form-2a$ | $instrumental-form-2b$
 
 % Accusative inflection rules കടലിനെ, ആനയെ, പൂച്ചയെ, ആടിനെ, മരത്തെ
@@ -43,8 +43,8 @@ $accusative$ = $accusative-cons-vowels$ | $accusative-chillus$
 % Dative inflection rules മഴയ്ക്ക്, ഇലയ്ക്ക്, കാടിന്, വീടിന്
 $dative-cons-form-1a$ = {<dative>}:{യ്ക്ക്} ^-> ([#Consonants#] [#POS##BM##Numbers##TMP#]+ __)
 $dative-cons-form-1b$ = {<dative>}:{യ്ക്കു്} ^-> ([#Consonants#] [#POS##BM##Numbers##TMP#]+ __)
-$dative-cons-vowel-form-1a$ = {<dative>}:{ക്ക്} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __)
-$dative-cons-vowel-form-1b$ = {<dative>}:{ക്കു്} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __)
+$dative-cons-vowel-form-1a$ = {<dative>}:{<ninfl>ക്ക്} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __)
+$dative-cons-vowel-form-1b$ = {<dative>}:{<ninfl>ക്കു്} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __)
 $dative-virama-form-1a$ = {<dative>}: {ഇന്} ^-> ([#Virama#] [#POS##BM##Numbers##TMP#]+ __)
 $dative-virama-form-1b$ = {<dative>}: {ഇനു്} ^-> ([#Virama#] [#POS##BM##Numbers##TMP#]+ __)
 $dative$ = $dative-cons-form-1a$ | $dative-cons-form-1b$ \

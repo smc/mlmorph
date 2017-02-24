@@ -31,7 +31,7 @@
 	<instrumental><locative><sociative><sg><pl>
 
 %%%%% some character classes that are helpful
-#Lsym# = <del><dels><dup>
+#Lsym# = <del><dels><dup><plural><ninfl>
 
 % surface symbols
 #Ssym# =#Letters##Digit##Punct##Perc##Nsep##Apos#

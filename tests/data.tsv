@@ -5,6 +5,7 @@
 ആനയെ	ആന<n><accusative>
 ആനയാൽ	ആന<n><instrumental>
 ആനകൊണ്ട്	ആന<n><instrumental>
+ആനയെക്കൊണ്ട്	ആന<n><accusative>കൊണ്ട്<cnj>
 പതിനൊന്ന്	പതി<tens>നൊന്ന്<ones><num>
 പതിനൊന്നര	പതി<tens>നൊന്ന്<ones><num>അര<n>
 അറുപത്	അറുപത്<tens><num>
@@ -19,5 +20,6 @@
 മരത്തെ	മരം<n><accusative>
 വടിയാൽ	വടി<n><instrumental>
 വടികൊണ്ട്	വടി<n><instrumental>
+വടികൾകൊണ്ട്	വടി<n><pl>കൊണ്ട്<cnj>
 അട്ടപ്പാടിയിൽ	അട്ടപ്പാടി<np><locative>
 മരങ്ങൾ	മരം<n><p>
