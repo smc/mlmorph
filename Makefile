@@ -6,7 +6,8 @@ include Makefile.inc
 
 all: malayalam.a
 
-malayalam.a: subdirs ninfl.a num.a
+malayalam.a: morph.a afilter.a phon/phon.a
+morph.a: subdirs ninfl.a num.a
 subdirs: $(SUBDIRS)
 $(SUBDIRS):
 	$(MAKE) -C $@
