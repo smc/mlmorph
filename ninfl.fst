@@ -8,10 +8,6 @@
 
 ALPHABET = [#AAsym#]
 
-%%%%% plural
-
-$plural$ = {<pl>}:{<plural>കൾ} ^-> ([#POS##BM##Numbers##TMP#]+ __)
-
 % Vocative inflection rules- sambodhana - മരമേ, കാടേ, പൂച്ചേ, അവരേ, അവളേ, മലരേ, പട്ടികളേ, പട്ടീ
 $vocative$ = {<vocative>}:{ഏ} ^-> ([#POS##BM##Numbers##TMP#]* __)
 
@@ -52,7 +48,7 @@ $dative$ = $dative-cons-form-1a$ | $dative-cons-form-1b$ \
 	| $dative-virama-form-1a$ | $dative-virama-form-1b$
 
 %$tests$ = ആന<n> | കടൽ<n> | പേര്<n>
-$NINFL$ = $plural$ | $vocative$ | $genitive$ | $locative$ \
+$NINFL$ = "<plural.a>" | $vocative$ | $genitive$ | $locative$ \
 	| $sociative$ | $instrumental$ | $dative$ | $accusative$
 
 %$tests$ [#infl#] || $NINFL$

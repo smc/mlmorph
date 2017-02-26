@@ -8,6 +8,7 @@ all: malayalam.a
 
 malayalam.a: morph.a afilter.a phon/phon.a
 morph.a: subdirs ninfl.a num.a
+ninfl.a: plural.a
 subdirs: $(SUBDIRS)
 $(SUBDIRS):
 	$(MAKE) -C $@
