@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+	 <section class="analyse">
+  <h2>Analysis</h1>
+  <form action="{{ url_for('analyse') }}" method=post>
+    <dl>
+      <dt>Text to analyse:
+      <dd><textarea  name=text>{% if text %}{{text}}{% endif %}</textarea>
+      <dd><button type=submit class="blue button" >Analyse</button>
+    </dl>
+  </form>
+  {% if analyse_results %}
+  <div class=result>
+	  {% for anal in analyse_results %}
+      	<span class="anal segment">{{ anal }}</span>
+       {% endfor %}</div>
+  {% endif %}
+  </section>
+   <section class="generate">
+  <h2>Generation</h1>
+  <form action="{{ url_for('generate') }}" method=post>
+    <dl>
+      <dt>Word to generate:
+      <dd><input type=text name=word value="{% if word %}{{word}}{% endif %}">
+      <dd><button type=submit class="blue button">Generate</button>
+    </dl>
+  </form>
+
+  {% if generate_results %}
+  <div class=result>
+	  {% for gen in generate_results %}
+	  <span class="gen segment">{{ gen }}</span>
+	 {% endfor %}</div>
+  {% endif %}
+  </section>
+{% endblock %}
