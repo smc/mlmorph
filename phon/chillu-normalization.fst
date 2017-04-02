@@ -9,7 +9,7 @@ $replace-chillu-k$ = {ൿ}: {ക്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowel
 $replace-chillu-l$ = {ൽ}: {ല്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowels#] )
 $replace-chillu-L$ = {ൾ}: {ള്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowels#] )
 $replace-chillu-r$ = {ർ}: {ര്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowels#] )
-$replace-chillu-n$ = {ൻ}: {ന്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowels#] )
+$replace-chillu-n$ = {ൻ}: {ന്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [<del>#Vowels#] )
 $replace-chillu-N$ = {ൺ}: {ണ്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowels#] )
 
 $tests$ = അവൻ <Noun> അല്ല <Noun>
