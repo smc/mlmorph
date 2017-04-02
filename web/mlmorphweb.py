@@ -2,9 +2,12 @@ from datetime import datetime
 from flask import Flask, abort, flash, redirect, render_template, request, url_for
 import sys
 import re
-sys.path.insert(0, '../python')
-from mlmorph import Mlmorph
+import os
 
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+sys.path.insert(0, '../python')
+
+from mlmorph import Mlmorph
 app = Flask(__name__)
 morph = Mlmorph('../malayalam.a')
 
