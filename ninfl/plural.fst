@@ -2,7 +2,7 @@
 % FSTs for nominal inflections - plurals
 %
 
-#include "symbols.fst"
+#include "../symbols.fst"
 
 ALPHABET = [#AAsym#]
 

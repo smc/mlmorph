@@ -20,7 +20,7 @@ $ABBREV$ = "<lexicon/abbreviations.a>"
 % these following contains exceptional cases fully analyzed in the
 % lexicon.
 $MISC$ = "<lexicon/misc.a>"
-$NINFL$ = "<ninfl.a>"
+$NINFL$ = "<ninfl/ninfl.a>"
 % Numbers using digits
 $Num$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 

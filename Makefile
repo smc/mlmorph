@@ -1,4 +1,4 @@
-SUBDIRS = lexicon phon
+SUBDIRS = lexicon phon ninfl
 
 include Makefile.inc
 
@@ -7,8 +7,7 @@ include Makefile.inc
 all: malayalam.a
 
 malayalam.a: morph.a afilter.a phon/phon.a
-morph.a: subdirs ninfl.a num.a
-ninfl.a: plural.a
+morph.a: subdirs ninfl/ninfl.a num.a
 subdirs: $(SUBDIRS)
 $(SUBDIRS):
 	$(MAKE) -C $@
