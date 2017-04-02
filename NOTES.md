@@ -88,9 +88,8 @@ gives
 
 Python
 ------
-There is a SWIG based binding given at http://home.gna.org/pysfst/ looks outdated. Last update was in 2008.
-There is another binding which looks recent at https://github.com/hbuschme/pysfstmorph.
-Both of them does not seem to work. Better use the HFST compiler and use HFST python bindings.
+HFST python binding is available at pypi.
+https://pypi.python.org/pypi/hfst
 
 HFST python bindings are not packaged for debian. Install swig, python3-dev packages, go to python folder of HFST source code, run,
 
