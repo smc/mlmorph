@@ -17,23 +17,22 @@ morph = Mlmorph('../malayalam.a')
 def index():
     return render_template('mlmorph.html',)
 
-@app.route("/analyse", methods=['GET', 'POST'])
+@app.route("/analyse", methods=['GET'])
 def analyse():
     error = None
     text= None
-    analyse_results = []
-    if request.method == 'POST':
-        text = request.form['text']
-        words = re.split('(\s+)', text )
-        # real analysis
-        for windex in range(len(words)):
-            word = words[windex]
-            anals =  morph.analyse(word)
-            if len(anals) == 0:
-                analyse_results.append( word )
-            for aindex in range(len(anals)):
-                analyse_results.append( anals[aindex][0])
-    return render_template('mlmorph.html', text=text, analyse_results=analyse_results)
+    analyse_results = {}
+    text = request.args.get('text')
+    words = re.split('(\s+)', text )
+    # real analysis
+    for windex in range(len(words)):
+        word = words[windex]
+        anals =  morph.analyse(word)
+        if len(anals) == 0:
+            analyse_results[word] = ''
+        for aindex in range(len(anals)):
+            analyse_results[word] = anals[aindex][0]
+    return jsonify( result = analyse_results )
 
 @app.route("/generate", methods=['GET'] )
 def generate():

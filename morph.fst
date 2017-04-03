@@ -25,7 +25,7 @@ $NINFL$ = "<ninfl/ninfl.a>"
 $Num$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
 % Nouns
-$NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ ) [#infl#]? ($CSTEM$?)  \
+$NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $CSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ ) [#infl#]?  \
 	|| $NINFL$
 
 % Verbs

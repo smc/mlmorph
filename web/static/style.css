@@ -8,25 +8,39 @@ body {
 header {
     text-align: left;
     padding: 5px 20px;
-	background-color: #009688;
-	position: sticky;
-	top: 0;
-	z-index: 10;
+    background-color: #009688;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-a,  h2 {
-    color: #2196F3;
+a, h2 {
+    color: #2196f3;
 }
 
-.segment:hover {
-	outline: 1px dotted #607D8B;
-	background-color: yellow;
+.analresult {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 50%;
+}
+
+.analresult  tr {
+    border: 1px solid #efefef;
+    transition: all ease 0.2s;
+}
+
+.analresult  tr:hover {
+    background-color: #eee;
+}
+
+.analresult td {
+    padding: 5px;
 }
 
 h1 {
     font-family: serif;
     font-size: 1.5em;
-	color: #fff;
+    color: #fff;
     margin: 0;
     padding: 5px 10px;
     text-decoration: none;
@@ -53,7 +67,7 @@ h2 {
     font-size: 1em;
     background-color: #fff;
     color: #646464;
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 
 .button.blue {
@@ -67,15 +81,15 @@ h2 {
 }
 
 textarea {
-	width: 100%;
-	padding: 5px;
-	font-size: 1.2em;
-	min-height: 10em;
+    width: 100%;
+    padding: 5px;
+    font-size: 1.2em;
+    min-height: 5em;
 }
 
 input, select {
-	padding: 2px;
-	font-size: 1em;
+    padding: 2px;
+    font-size: 1em;
 }
 
 section {

@@ -8,10 +8,10 @@ ALPHABET = [#AAsym#]
 
 %%%%% plural
 % തലകൾ, തരങ്ങൾ, കാടുകൾ
-$plural-cons$ = {<pl>}:{<plural>കൾ} ^-> ([#Consonants#] [#POS##BM##Numbers##TMP#]+ __)
+$plural-cons-vowel$ = {<pl>}:{<plural>കൾ} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __)
 $plural-anuswara-step1$ = {<pl>}:{<plural>ൾ} ^-> ([#Anuswara#] [#POS##BM##Numbers##TMP#]+ __)
 $plural-virama-step1$ = {<pl>}:{<plural>കൾ} ^-> ([#Virama#] [#POS##BM##Numbers##TMP#]+ __)
-$plural-general$ = $plural-cons$ | $plural-anuswara-step1$ | $plural-virama-step1$
+$plural-general$ = $plural-cons-vowel$ | $plural-anuswara-step1$ | $plural-virama-step1$
 
 % Post process steps
 $plural-anuswara-step2$ = {[#Anuswara#]}:{ങ്ങ} ^-> (__ [#POS##BM##Numbers##TMP#]+ <plural> ൾ )

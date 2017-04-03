@@ -1,26 +1,19 @@
-{% extends "layout.html" %}
+{% extends 'layout.html' %}
 {% block body %}
   {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
-	 <section class="analyse">
+	 <section class='analyse'>
   <h2>Analysis</h1>
-  <form action="{{ url_for('analyse') }}" method=post>
     <dl>
       <dd><textarea placeholder='Text to analyse' name=text>{% if text %}{{text}}{% endif %}</textarea>
-      <dd><button type=submit class="blue button" >Analyse</button>
+      <dd><button type=submit id='analyse'  class='blue button' >Analyse</button>
     </dl>
-  </form>
-  {% if analyse_results %}
-  <div class=result>
-	  {% for anal in analyse_results %}
-      	<span class="anal segment">{{ anal }}</span>
-       {% endfor %}</div>
-  {% endif %}
+   <table class='analresult'></table>
   </section>
-   <section class="generate">
+   <section class='generate'>
   <h2>Generation</h1>
     <dl>
       <dd>
-        <input type=text name=word placeholder="Root word" value="{% if word %}{{word}}{% endif %}">
+        <input type=text name=word placeholder='Root word' value='{% if word %}{{word}}{% endif %}'>
         <select name=type>
             <option value='n'>നാമം Noun</option>
             <option value='v'>ക്രിയ Verb</option>
@@ -38,7 +31,7 @@
             <option value='sociative'>സംയോജിക Sociative</option>
             <option value='vocative'>സംബോധിക Vocative</option>
         </select>
-      <dd><button type=submit id=generate class="blue button">Generate</button>
+      <dd><button type=submit id=generate class='blue button'>Generate</button>
     </dl>
 
   <div class=genresult></div>
