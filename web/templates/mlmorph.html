@@ -5,8 +5,7 @@
   <h2>Analysis</h1>
   <form action="{{ url_for('analyse') }}" method=post>
     <dl>
-      <dt>Text to analyse:
-      <dd><textarea  name=text>{% if text %}{{text}}{% endif %}</textarea>
+      <dd><textarea placeholder='Text to analyse' name=text>{% if text %}{{text}}{% endif %}</textarea>
       <dd><button type=submit class="blue button" >Analyse</button>
     </dl>
   </form>
@@ -19,19 +18,29 @@
   </section>
    <section class="generate">
   <h2>Generation</h1>
-  <form action="{{ url_for('generate') }}" method=post>
     <dl>
-      <dt>Word to generate:
-      <dd><input type=text name=word value="{% if word %}{{word}}{% endif %}">
-      <dd><button type=submit class="blue button">Generate</button>
+      <dd>
+        <input type=text name=word placeholder="Root word" value="{% if word %}{{word}}{% endif %}">
+        <select name=type>
+            <option value='n'>നാമം Noun</option>
+            <option value='v'>ക്രിയ Verb</option>
+            <option value='v'>നാമവിശേഷണം Adjective</option>
+            <option value='v'>ക്രിയാവിശേഷണം Adverb</option>
+        </select>
+        <select name=infl>
+            <option value=''>Select Inflection</option>
+            <option value='pl'>ബഹുവചനം Plural </option>
+            <option value='accusative'>പ്രതിഗ്രാഹിക Accusative</option>
+            <option value='dative'>ഉദ്ദേശിക Dative</option>
+            <option value='genitive'>സംബന്ധിക Genitive</option>
+            <option value='instrumental'>പ്രയോജിക Instrumental</option>
+            <option value='locative'>ആധാരിക Locative</option>
+            <option value='sociative'>സംയോജിക Sociative</option>
+            <option value='vocative'>സംബോധിക Vocative</option>
+        </select>
+      <dd><button type=submit id=generate class="blue button">Generate</button>
     </dl>
-  </form>
 
-  {% if generate_results %}
-  <div class=result>
-	  {% for gen in generate_results %}
-	  <span class="gen segment">{{ gen }}</span>
-	 {% endfor %}</div>
-  {% endif %}
-  </section>
+  <div class=genresult></div>
+ </section>
 {% endblock %}

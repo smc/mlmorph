@@ -6,7 +6,8 @@ body {
 }
 
 header {
-    text-align: center;
+    text-align: left;
+    padding: 5px 20px;
 	background-color: #009688;
 	position: sticky;
 	top: 0;
@@ -21,15 +22,14 @@ a,  h2 {
 	outline: 1px dotted #607D8B;
 	background-color: yellow;
 }
-h1 {
-    font-family: 'Georgia', serif;
-	color: #fff;
-    margin: 0;
-}
 
 h1 {
-    border-bottom: 2px solid #eee;
-    padding: 10px;
+    font-family: serif;
+    font-size: 1.5em;
+	color: #fff;
+    margin: 0;
+    padding: 5px 10px;
+    text-decoration: none;
 }
 
 h2 {
@@ -46,12 +46,14 @@ h2 {
     display: inline-block;
     position: relative;
     width: 120px;
-    height: 32px;
-    line-height: 32px;
+    height: 2em;
+    line-height: 2em;
+    border: none;
     border-radius: 2px;
-    font-size: .9em;
+    font-size: 1em;
     background-color: #fff;
     color: #646464;
+    margin: 10px 0px;
 }
 
 .button.blue {
@@ -71,9 +73,9 @@ textarea {
 	min-height: 10em;
 }
 
-input {
-	padding: 5px;
-	font-size: 1.2em;
+input, select {
+	padding: 2px;
+	font-size: 1em;
 }
 
 section {
