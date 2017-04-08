@@ -28,10 +28,13 @@ def analyse():
     for windex in range(len(words)):
         word = words[windex]
         anals =  morph.analyse(word)
+        anals_results = []
         if len(anals) == 0:
-            analyse_results[word] = ''
-        for aindex in range(len(anals)):
-            analyse_results[word] = anals[aindex][0]
+            anals_results = []
+        else:
+            for aindex in range(len(anals)):
+                anals_results.append( anals[aindex][0] )
+        analyse_results[word] = anals_results
     return jsonify( result = analyse_results )
 
 @app.route("/generate", methods=['GET'] )
