@@ -1,3 +1,3 @@
-$NSTEM$ = "pronouns.lex" <n><RB>
+$NSTEM$ = "pronouns.lex" <prn><RB>
 
 $NSTEM$
