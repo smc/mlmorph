@@ -16,13 +16,20 @@ ALPHABET = [#AAsym#]
 $genitive-cons$ = {<genitive>}:{യുടെ} ^-> ([#Consonants#] [#POS##BM##Numbers##TMP#]+ __)
 $genitive-chillu-form1$ = {<genitive>}:{ഉടെ} ^-> ([#Chillus#] [#POS##BM##Numbers##TMP#]+ __)
 $genitive-half-cons$ = {<genitive>}:{ഇന്റെ} ^-> ([#Virama#] [#POS##BM##Numbers##TMP#]+ __)
+$genitive-anuswara$ =  {<genitive>}:{<del>ത്തിന്റെ} ^-> ([#Anuswara#] [#POS##BM##Numbers##TMP#]+ __)
 % ന്റെ = ന്+ റെ ആക്കാൻ ഇവിടെ ഒരു മാർക്കർ ഇട്ടുവെച്ച് ചില്ലു നോർമലൈസ് ചെയ്യുമ്പോൾ ഉപയോഗിക്കുന്നു.
 $genitive-chillu-n$ = {<genitive>}:{<del>റെ} ^-> ([ൻ] [#POS##BM##Numbers##TMP#]+ __)
 $genitive-chillu-others$ = {<genitive>}:{ഇന്റെ} ^-> ([ർൾൺൿൽ] [#POS##BM##Numbers##TMP#]+ __)
-$genitive$ = $genitive-cons$ ||\
+
+$genitive-step1$ = $genitive-cons$ ||\
  	$genitive-half-cons$ ||\
+    $genitive-anuswara$ ||\
 	$genitive-chillu-n$ ||\
 	$genitive-chillu-others$ ||\
 	$genitive-chillu-form1$
 
+% Post process steps
+$genitive-step2$ = {[#Anuswara#]}:{} ^-> (__ [#POS##BM##Numbers##TMP#]+ <del> )
+
+$genitive$ = $genitive-step1$ || $genitive-step2$
 $genitive$
