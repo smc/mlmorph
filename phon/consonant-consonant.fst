@@ -2,7 +2,7 @@
 
 ALPHABET = [#AAsym#]
 
-#=D# = കുചടതപശ
+#=D# = കചടതപശ
 $D$ = {[#=D#]}:{[#=D#][#Virama#][#=D#]}
 
 % consonant followed by hard consonants get duplicated
