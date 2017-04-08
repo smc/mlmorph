@@ -35,7 +35,7 @@ $NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $CSTEM$ | $NUMBERS$ | $ABBREV$* $PN
 $VERB$ =  $VSTEM$ [#vinfl#]? || $VINFL$
 
 $WORD$ = ( $NOUN$ $NOUN$? \
-	| $VERB$ \
+	| $VERB$ $VERB$? \
 	| $XSTEM$  \
 	| $Num$ \
 ) $MISC$?
