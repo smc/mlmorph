@@ -11,7 +11,6 @@ $PRONSTEM$ = "<lexicon/pronouns.a>"
 $PNSTEM$ = "<lexicon/proper-nouns.a>"
 $ASTEM$ = "<lexicon/adverbs.a>"
 $JSTEM$ = "<lexicon/adjectives.a>"
-$VSTEM$ = "<lexicon/verbs.a>"
 $CSTEM$ = "<lexicon/conjunctions.a>"
 $XSTEM$ = "<lexicon/interjections.a>"
 $NUMBERS$ = "<num.a>" <num><RB>
@@ -21,15 +20,19 @@ $ABBREV$ = "<lexicon/abbreviations.a>"
 % lexicon.
 $MISC$ = "<lexicon/misc.a>"
 $NINFL$ = "<ninfl/ninfl.a>"
+
+% Verbs
+$VSTEM$ = "<lexicon/verbs.a>"
+$VINFL$ = "<vinfl.a>"
 % Numbers using digits
 $Num$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
 % Nouns
-$NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $CSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ ) [#infl#]?  \
+$NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $CSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ ) [#ninfl#]?  \
 	|| $NINFL$
 
 % Verbs
-$VERB$ =  $VSTEM$
+$VERB$ =  $VSTEM$ [#vinfl#]? || $VINFL$
 
 $WORD$ = ( $NOUN$ $NOUN$? \
 	| $VERB$ \

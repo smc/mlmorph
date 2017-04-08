@@ -27,9 +27,10 @@
 #Punct# = \.\?\!\:\,\;
 
 % analysis symbols for inflectional suffixes
-#infl# = <accusative><nominative><vocative><genitive><dative>\
-	<instrumental><locative><sociative><sg><pl>
-
+#ninfl# = <accusative><nominative><vocative><genitive><dative>\
+	<instrumental><locative><sociative><sg><pl> 
+#vinfl# = <past><future><present>
+#infl# = #ninfl##vinfl#
 %%%%% some character classes that are helpful
 #Lsym# = <del><dels><dup><plural><ninfl>
 
