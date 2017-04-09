@@ -11,6 +11,7 @@ from sys import stderr, stdin
 
 import hfst
 
+
 class Mlmorph:
 
     def __init__(self, fsa, verbosity=False):

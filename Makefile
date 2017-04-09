@@ -17,4 +17,4 @@ clean:
 	-for dir in $(SUBDIRS); do  $(MAKE) -C $$dir clean; done
 
 test: malayalam.a
-	python3 python/mlmorph-test.py
+	python3 test/mlmorph-test.py
