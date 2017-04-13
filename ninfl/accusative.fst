@@ -8,7 +8,8 @@
 
 ALPHABET = [#AAsym#]
 % Accusative inflection rules കടലിനെ, ആനയെ, പൂച്ചയെ, ആടിനെ, മരത്തെ, മരത്തിനെ
-$accusative-special-cases$ = {ഞാൻ}:{എന്നെ} | {താൻ}:{തന്നെ} | {നാം}:{നമ്മെ}
+$accusative-special-cases$ = {ഞാൻ}:{എന്നെ} | {താൻ}:{തന്നെ} | {നാം}:{നമ്മെ} | \
+	{അവർ}:{അവരെ} | {ഇവൻ}: {ഇവനെ}
 $accusative-anuswara-forms$ = {<accusative>}:{<del>ത്തെ} | {<accusative>}:{<del>ത്തിനെ}
 
 $accusative-exceptions$ = $accusative-special-cases$ ^-> (__ [#POS##BM##Numbers##TMP#]+ <accusative> )

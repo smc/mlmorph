@@ -28,11 +28,11 @@ $VINFL$ = "<vinfl.a>"
 $Num$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
 % Nouns
-$NOUN$ = ($JSTEM$?)  ($NSTEM$ | $PRONSTEM$ | $CSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ ) [#ninfl#]?  \
+$NOUN$ = $JSTEM$?  ($NSTEM$ | $PRONSTEM$ | $CSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ ) [#ninfl#]?  \
 	|| $NINFL$
 
 % Verbs
-$VERB$ =  $VSTEM$ [#vinfl#]? || $VINFL$
+$VERB$ = $ASTEM$? $VSTEM$ [#vinfl#]? || $VINFL$
 
 $WORD$ = ( $NOUN$ $NOUN$? \
 	| $VERB$ $VERB$? \
