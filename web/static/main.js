@@ -1,12 +1,16 @@
 $(function() {
 
     $('#generate').on('click', function() {
+        $(".genresult").empty();
         $.getJSON('/generate', {
             word: $('input[name="word"]').val(),
             type: $('select[name="type"]').val(),
             infl: $('select[name="infl"]').val(),
         }, function(data) {
-            $(".genresult").text(data.result[0]);
+            var i, result = data.result;
+            $.each(result, function(key, value) {
+                $(".genresult").append($('<div>').text(value));
+            });
         });
     });
 
