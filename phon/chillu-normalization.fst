@@ -1,26 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 #include "../symbols.fst"
 
-ALPHABET = [#AAsym#] [#POS##BM##Numbers#]
+ALPHABET = [#AAsym#]
 
 % Convert atomic chillus to cons+ virama form if followed by Vowel
 
-$replace-chillu-k$ = {ൿ}: {ക്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowels#] )
-$replace-chillu-l$ = {ൽ}: {ല്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowels#] )
-$replace-chillu-L$ = {ൾ}: {ള്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowels#] )
-$replace-chillu-r$ = {ർ}: {ര്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowels#] )
-$replace-chillu-n$ = {ൻ}: {ന്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [<del>#Vowels#] )
-$replace-chillu-N$ = {ൺ}: {ണ്} ^-> ( __ [#POS##BM##Numbers##TMP#]+ [#Vowels#] )
+$chillu-normalization$ = {ൿ}: {ക്} | {ൽ}: {ല്} | {ൾ}: {ള്} | {ർ}: {ര്} |{ൻ}: {ന്} | {ൺ}: {ണ്}
+$replace-chillus$ = $chillu-normalization$ ^-> ( __ [#POS##BM##Numbers##TMP#]+ [<del>#Vowels#] )
 
-$tests$ = അവൻ <Noun> അല്ല <Noun>
-
-$ChilluNorm$ = $replace-chillu-k$ \
-	|| $replace-chillu-l$ \
-	|| $replace-chillu-L$ \
-	|| $replace-chillu-r$ \
-	|| $replace-chillu-n$ \
-	|| $replace-chillu-N$
+$ChilluNorm$ = $replace-chillus$
 
 % Uncomment below line for testing
+% $tests$ = അവൻ <Noun> അല്ല <Noun>
 %$tests$ ||\
-$ChilluNorm$   || .*
+$ChilluNorm$ || .*
