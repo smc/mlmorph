@@ -8,7 +8,7 @@ $virama-forms$ = {<locative>}:{ഇൽ} | {<locative>}:{ഇങ്കൽ}
 $ta-forms$ =  {<locative>}:{<dup>ടിൽ} | {<locative>}:{<dup>ടിങ്കൽ} | {<locative>}:{<dup>ടിങ്ങൽ}
 $anuswara-forms$ = {<locative>}:{<del>ത്തിൽ} | {<locative>}:{<del>ത്തിങ്കൽ}
 
-$locative-cons$ = {<locative>}:{ഇൽ} ^-> ([#Consonants#] [#POS##BM##Numbers##TMP#]+ __)
+$locative-cons$ = {<locative>}:{ഇൽ} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __)
 $locative-virama$ = $virama-forms$ ^-> ([#Virama##Chillus#] [#POS##BM##Numbers##TMP#]+ __)
 $locative-ta$ = $ta-forms$ ^-> ([#VowelSigns#] ട [#Virama#] [#POS##BM##Numbers##TMP#]+ __)
 $locative-anuswara$ = $anuswara-forms$ ^-> ([#Anuswara#] [#POS##BM##Numbers##TMP#]+ __)

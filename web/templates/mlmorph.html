@@ -16,9 +16,11 @@
         <input type=text name=word placeholder='Root word' value='{% if word %}{{word}}{% endif %}'>
         <select name=type>
             <option value='n'>നാമം Noun</option>
+            <option value='np'>സംജ്ഞാനാമം Proper Noun</option>
+            <option value='prn'>സർവനാമം Pronoun</option>
             <option value='v'>ക്രിയ Verb</option>
-            <option value='v'>നാമവിശേഷണം Adjective</option>
-            <option value='v'>ക്രിയാവിശേഷണം Adverb</option>
+            <option value='adj'>നാമവിശേഷണം Adjective</option>
+            <option value='adv'>ക്രിയാവിശേഷണം Adverb</option>
         </select>
         <select name=infl>
             <option value=''>Select Inflection</option>
