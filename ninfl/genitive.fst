@@ -8,6 +8,15 @@
 
 ALPHABET = [#AAsym#]
 
+$genitive-special-cases$ = {ഞാൻ}:{എന്റെ} | \
+    {ഞാൻ}:{എന്നുടെ} | \
+    {നീ}:{നിന്റെ} | \
+    {നീ}:{നിന്നുടെ} | \
+    {താൻ}:{തന്റെ} | \
+    {താൻ}:{തന്നുടെ} | \
+    {നാം}:{നമ്മുടെ} | \
+    {നാം}:{നമ്മളുടെ}
+
 % Genitive inflection rules -ആനയുടെ, കടലിന്റെ, പേരിന്റെ, പൂച്ചയുടെ, മുറ്റത്തിന്റെ
 % പൊതുവിൽ ചില്ലിൽ അവസാനിക്കുന്ന വാക്കുകൾക്ക് ഉടെ, ഇന്റെ എന്നീ രണ്ടും വിഭക്തികളും ചേരും. ഉദാഹരണം
 % അവൻ = അവനുടെ, അവന്റെ, ആൾ = ആളുടെ, ആളിന്റെ,  വാൾ - വാളിന്റെ, വാളുടെ(?) ,
@@ -16,6 +25,7 @@ ALPHABET = [#AAsym#]
 $genitive-cons$ = {<genitive>}:{യുടെ} ^-> ([#Consonants#] [#POS##BM##Numbers##TMP#]+ __)
 $genitive-half-cons$ = {<genitive>}:{ഇന്റെ} ^-> ([#Virama#] [#POS##BM##Numbers##TMP#]+ __)
 $genitive-anuswara$ =  {<genitive>}:{<del>ത്തിന്റെ} ^-> ([#Anuswara#] [#POS##BM##Numbers##TMP#]+ __)
+$genitive-exceptions$ = $genitive-special-cases$ ^-> ( __ [#POS##BM##Numbers##TMP#]+ <genitive> )
 
 % ന്റെ = ന്+ റെ ആക്കാൻ ഇവിടെ ഒരു മാർക്കർ ഇട്ടുവെച്ച് ചില്ലു നോർമലൈസ് ചെയ്യുമ്പോൾ ഉപയോഗിക്കുന്നു.
 $chillu-n-forms$ = {<genitive>}:{<del>റെ} | {<genitive>}:{ഉടെ}
@@ -31,6 +41,7 @@ $genitive-step1$ = $genitive-cons$ ||\
 
 % Post process steps
 $genitive-step2$ = {[#Anuswara#]}:{} ^-> (__ [#POS##BM##Numbers##TMP#]+ <del> )
+$remove-genitive-ninfl$ = {<genitive>}:{} ^-> ([#POS##BM##Numbers##TMP#]+ __)
 
-$genitive$ = $genitive-step1$ || $genitive-step2$
+$genitive$ = $genitive-exceptions$ || $genitive-step1$ || $genitive-step2$ || $remove-genitive-ninfl$
 $genitive$
