@@ -7,10 +7,9 @@
 %%%%%%%%%%%% Noun Inflections %%%%%%%%%%%%%%
 
 ALPHABET = [#AAsym#]
+$instrumental-forms$ = {<instrumental>}:{ആൽ} | \
+	{<instrumental>}:{<ninfl>കൊണ്ട്} | \
+	{<instrumental>}:{<ninfl>കൊണ്ടു്}
 % Instrumental inflection rules ആനയാൽ, വടിയാൽ, വടികൊണ്ട്
-$instrumental-form-1$ = {<instrumental>}:{ആൽ} ^-> ([#POS##BM##Numbers##TMP#]+ __)
-$instrumental-form-2a$ = {<instrumental>}:{<ninfl>കൊണ്ട്} ^-> ([#POS##BM##Numbers##TMP#]+ __)
-$instrumental-form-2b$ = {<instrumental>}:{<ninfl>കൊണ്ടു്} ^-> ([#POS##BM##Numbers##TMP#]+ __)
-$instrumental$ = $instrumental-form-1$ || $instrumental-form-2a$ || $instrumental-form-2b$
-
+$instrumental$  = $instrumental-forms$ ^-> ([#POS##BM##Numbers##TMP#]+ __)
 $instrumental$
