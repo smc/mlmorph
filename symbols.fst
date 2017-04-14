@@ -27,7 +27,7 @@
 #Punct# = \.\?\!\:\,\;
 
 % analysis symbols for inflectional suffixes
-#ninfl# = <accusative><nominative><vocative><genitive><dative>\
+#ninfl# = <accusative><vocative><nominative><genitive><dative>\
 	<instrumental><locative><sociative><sg><pl>
 #vinfl# = <past><future><present><cvb-adv-part-future><cvb-adv-part-conditional>
 #infl# = #ninfl##vinfl#
