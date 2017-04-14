@@ -10,7 +10,7 @@ ALPHABET = [#AAsym#]
 
 %$tests$ = ആന<n> | കടൽ<n> | പേര്<n>
 $NINFL$ = "<plural.a>" |\
- 	"<vocative.a"> |\
+ 	"<vocative.a>" |\
 	"<genitive.a>" |\
 	"<locative.a>" |\
 	"<sociative.a>" |\
