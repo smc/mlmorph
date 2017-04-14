@@ -70,10 +70,12 @@ $cvb-adv-part-absolute$ = $cvb-adv-part-absolute-forms$ ^-> ([#Letters#]+ __ [#P
 % ആൽ, ഇൽ, ആകിൽ, എങ്കിൽ എന്നിവയാണ് പ്രത്യയങ്ങൾ.
 $cvb-adv-part-conditional-forms$ = {ുക}:{ിൽ} | {ുക}:{യാൽ} | {ുക}:{യാകിൽ} | {ുക}:{യെങ്കിൽ}
 $cvb-adv-part-conditional$ = $cvb-adv-part-conditional-forms$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <cvb-adv-part-conditional>)
-$adverbs$ = $cvb-adv-part-future$ || $cvb-adv-part-absolute$ || $cvb-adv-part-conditional$
+$adverbs$ = $cvb-adv-part-future$ || \
+	%$cvb-adv-part-absolute$ || \
+	$cvb-adv-part-conditional$
 
 $remove-vinfl$ = $removable-vinfl-forms$ ^-> ([#POS##BM##Numbers##TMP#]+ __)
 $tests$ = അറിയിക്കുക<v><RB><past>
 %$tests$ || \
-$vinfl$ =( $tenses$ | $adverbs$ )|| $remove-vinfl$
+$vinfl$ = $tenses$ || $adverbs$ || $remove-vinfl$
 $vinfl$

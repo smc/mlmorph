@@ -29,7 +29,7 @@
 % analysis symbols for inflectional suffixes
 #ninfl# = <accusative><nominative><vocative><genitive><dative>\
 	<instrumental><locative><sociative><sg><pl>
-#vinfl# = <past><future><present><cvb-adv-part-future><cvb-adv-part-absolute><cvb-adv-part-conditional>
+#vinfl# = <past><future><present><cvb-adv-part-future><cvb-adv-part-conditional>
 #infl# = #ninfl##vinfl#
 %%%%% some character classes that are helpful
 #Lsym# = <del><dels><dup><plural><ninfl>
