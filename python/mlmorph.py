@@ -8,7 +8,7 @@ scientific studies, as far as python use goes.
 
 from argparse import ArgumentParser
 from sys import stderr, stdin
-
+import os
 import hfst
 
 
@@ -21,6 +21,7 @@ class Mlmorph:
         self.transducer = None
         self.analyser = None
         self.generator = None
+        self._cached_stamp = 0
 
     def load_filename(self, fsa):
         istr = hfst.HfstInputStream(fsa)
@@ -29,6 +30,11 @@ class Mlmorph:
             transducers.append(istr.read())
         istr.close()
         self.transducer = transducers[0]
+
+    def reload(self):
+        self.transducer = None
+        self.generator = self.getGenerator()
+        self.analyser = self.getAnalyser()
 
     def getGenerator(self):
         if not self.transducer:
@@ -49,12 +55,20 @@ class Mlmorph:
 
     def analyse(self, token):
         """Perform a simple morphological analysis lookup. """
+        stamp = os.stat(self.fsa).st_mtime
+        if stamp != self._cached_stamp:
+            self._cached_stamp = stamp
+            self.reload()
         if not self.analyser:
             self.getAnalyser()
         return self.analyser.lookup(token)
 
     def generate(self, token):
         """Perform a simple morphological generator lookup."""
+        stamp = os.stat(self.fsa).st_mtime
+        if stamp != self._cached_stamp:
+            self._cached_stamp = stamp
+            self.reload()
         if not self.generator:
             self.getGenerator()
         return self.generator.lookup(token)
