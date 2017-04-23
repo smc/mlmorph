@@ -8,17 +8,22 @@ ALPHABET = [#AAsym#]
 
 %%%%% plural
 % തലകൾ, തരങ്ങൾ, കാടുകൾ
-$plural-cons-vowel$ = {<pl>}:{<plural>കൾ} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __)
-$plural-anuswara-step1$ = {<pl>}:{<plural>ൾ} ^-> ([#Anuswara#] [#POS##BM##Numbers##TMP#]+ __)
-$plural-virama-step1$ = {<pl>}:{<plural>കൾ} ^-> ([#Virama#] [#POS##BM##Numbers##TMP#]+ __)
-$plural-general$ = $plural-cons-vowel$ | $plural-anuswara-step1$ | $plural-virama-step1$
+$plural-maps$ = {[#Virama#]}:{ുകൾ} | \
+	{[#Anuswara#]}:{ങ്ങൾ} | \
+	{[ൻ]}:{ൻമാർ} | \
+	{[ൽ]}:{ലുകൾ}  | \
+	{[ൾ]}:{ളുകൾ} | \
+	{[ൺ]}:{ണുുകൾ} | \
+	{[ർ]}:{റുകൾ} | \
+	{[ർ]}:{രുകൾ}
 
-% Post process steps
-$plural-anuswara-step2$ = {[#Anuswara#]}:{ങ്ങ} ^-> (__ [#POS##BM##Numbers##TMP#]+ <plural> ൾ )
-$plural-virama-step2$ = {[#Virama#]}:{ു} ^-> (__ [#POS##BM##Numbers##TMP#]+ <plural> ക ൾ )
+$plural-general$ = $plural-maps$ ^-> (__ [#POS##BM##Numbers##TMP#]+ <pl> )
+$plural-cons-vowel$ = {<pl>}:{<plural>കൾ} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __ )
+$plural-del-tmp$ = {<pl>}:{} ^->  ([#POS##BM##Numbers##TMP#]+ __ )
+$plural$ = $plural-general$ || $plural-cons-vowel$ || $plural-del-tmp$
 
-$plural$ = $plural-general$ ||  $plural-anuswara-step2$ || $plural-virama-step2$
 % TODO
-% 1. Do chillu normalization before plurals so that we can do മാൻ->മാനുകൾ
-% 2. മങ്കമാർ, അമ്മമാർ, പോലീസുകാർ...
+% മങ്കമാർ, അമ്മമാർ, പോലീസുകാർ...
+$test$ = മല<n><pl> | അവൻ<n><pl> | മരം<n><pl> | ഇതൾ<n><pl> | മുകിൽ<n><pl>
+%$test$ || \
 $plural$
