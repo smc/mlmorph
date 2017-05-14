@@ -11,16 +11,25 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='main.js') }}"></script>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
     <header>
-    <h1>Malayalam morphological analyser</h1>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">Malayalam morphological analyser</a>
+            </div>
+        </nav>
     </header>
     <div class="container">
-    {% for message in get_flashed_messages() %}
-      <div class=flash>{{ message }}</div>
-    {% endfor %}
     {% block body %}{% endblock %}
     </div>
   </div>
+  <footer class="page-footer">
+      <div class="footer-copyright">
+              <a class="grey-text text-lighten-4 right" href="https://github.com/santhoshtr/mlmorph">Malayalam morphological analyser</a>
+      </div>
+  </footer>
 </body>

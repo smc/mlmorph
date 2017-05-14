@@ -1,19 +1,31 @@
 {% extends 'layout.html' %}
 {% block body %}
   {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
-	 <section class='analyse'>
-  <h2>Analysis</h1>
-    <dl>
-      <dd><textarea placeholder='Text to analyse' name=text>{% if text %}{{text}}{% endif %}</textarea>
-      <dd><button type=submit id='analyse'  class='blue button' >Analyse</button>
-    </dl>
-   <table class='analresult'></table>
+	 <section class='section analyse row'>
+  <h5>Analysis</h5>
+  <div class="input-field col s12">
+    <textarea id="text_to_analyse" placeholder='Text to analyse' class="materialize-textarea" name="text">{% if text %}{{text}}{% endif %}</textarea>
+    <label for="text_to_analyse">Text to analyse</label>
+     <a  id='analyse' class="waves-effect waves-light btn">Analyse</a>
+    </div>
+   <table class='analresult highlight col s6'>
+       <thead>
+           <tr>
+              <th>Word</th>
+              <th>Analysis</th>
+          </tr>
+      </thead>
+      <tbody></tbody>
+   </table>
   </section>
-   <section class='generate'>
-  <h2>Generation</h1>
-    <dl>
-      <dd>
-        <input type=text name=word placeholder='Root word' value='{% if word %}{{word}}{% endif %}'>
+      <div class="divider"></div>
+   <section class='section generate row'>
+  <h5>Generation</h5>
+        <div class="input-field col s4">
+        <input type=text id="rootword" name=word placeholder='Root word' value='{% if word %}{{word}}{% endif %}'/>
+        <label for="rootword">Root word</label>
+        </div>
+        <div class="input-field col s4">
         <select name=type>
             <option value='n'>നാമം Noun</option>
             <option value='np'>സംജ്ഞാനാമം Proper Noun</option>
@@ -22,8 +34,10 @@
             <option value='adj'>നാമവിശേഷണം Adjective</option>
             <option value='adv'>ക്രിയാവിശേഷണം Adverb</option>
         </select>
+        <label>Word type</label>
+        </div>
+        <div class="input-field col s4">
         <select name=infl>
-            <option value=''>Select Inflection</option>
             <option value='pl'>ബഹുവചനം Plural </option>
             <option value='accusative'>പ്രതിഗ്രാഹിക Accusative</option>
             <option value='dative'>ഉദ്ദേശിക Dative</option>
@@ -33,9 +47,9 @@
             <option value='sociative'>സംയോജിക Sociative</option>
             <option value='vocative'>സംബോധിക Vocative</option>
         </select>
-      <dd><button type=submit id=generate class='blue button'>Generate</button>
-    </dl>
-
-  <div class=genresult></div>
+        <label>Inflection</label>
+        </div>
+        <a  id='generate' class="waves-effect waves-light btn">Generate</a>
+        <div class="genresult col s12"></div>
  </section>
 {% endblock %}

@@ -1,5 +1,6 @@
 $(function() {
-
+    $('select').material_select();
+    $(".analresult").hide();
     $('#generate').on('click', function() {
         $(".genresult").empty();
         $.getJSON('/generate', {
@@ -15,21 +16,21 @@ $(function() {
     });
 
     $('#analyse').on('click', function() {
-        $(".analresult").empty();
+        $(".analresult").find("tbody").empty();
+        $(".analresult").show();
         $.getJSON('/analyse', {
             text: $('textarea[name="text"]').val()
         }, function(data) {
             var i, result = data.result;
             $.each(result, function(key, value) {
                 if (key && key.trim())
-                    $(".analresult").append(
+                    $(".analresult tbody").append(
                         $('<tr>').append(
                             $('<td>').text(key),
                             $('<td>').text(value)
                         )
                     );
             });
-
         });
     });
 });
