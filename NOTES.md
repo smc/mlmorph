@@ -62,8 +62,14 @@ $ echo "നീല<n><pl>" | hfst-proc -a malayalam.ao
 ^നീല<n><pl>/നീലകൾ$
 ```
 
-Bindings
-=========
+
+Using with HFST
+---------------
+It can also be compiled with [Helsinki Finite-State Transducer Technology (HFST) ](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/). To compile using HFST tools, set
+FSTC envirionment to 'hfst', a command like ```FSTC=hfst make``` should do
+the trick. The resulting FSA will be usable with the HFST tools.  
+
+
 
 Ruby
 -----
@@ -85,23 +91,6 @@ $ruby test.rb
 gives
 
 `നീല<n>താമര<n>`
-
-Python
-------
-HFST python binding is available at pypi.
-https://pypi.python.org/pypi/hfst
-
-HFST python bindings are not packaged for debian. Install swig, python3-dev packages, go to python folder of HFST source code, run,
-
-```bash
-python3 setup.py build_ext --inplace
-sudo python3 setup.py install
-```
-
-Refer: https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPython
-and https://hfst.github.io/python/3.12.1/QuickStart.html
-
-
 Nodejs
 ------
 No known bindings. Worth to write one from scratch?
