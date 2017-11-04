@@ -22,10 +22,16 @@ $genitive-special-cases$ = {ഞാൻ}:{എന്റെ} | \
 % അവൻ = അവനുടെ, അവന്റെ, ആൾ = ആളുടെ, ആളിന്റെ,  വാൾ - വാളിന്റെ, വാളുടെ(?) ,
 % കാൽ - കാലിന്റെ, കാലുടെ(?) , അവൾ = അവളുടെ, അവളിന്റെ(?)  അവർ - അവരുടെ, അവരിന്റെ(?)
 % ഇതിൽ എല്ലാ രൂപങ്ങൾക്കും പ്രചാരമില്ല. അതുകൊണ്ട് ഏതെപ്പോൾ ചേർക്കണമെന്ന് കണ്ടുപിടിക്കേണ്ടിയിരിക്കുന്നു.
-$genitive-cons$ = {<genitive>}:{യുടെ} ^-> ([#Consonants#] [#POS##BM##Numbers##TMP#]+ __)
+$genitive-cons$ = {<genitive>}:{യുടെ} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __)
 $genitive-half-cons$ = {<genitive>}:{ഇന്റെ} ^-> ([#Virama#] [#POS##BM##Numbers##TMP#]+ __)
-$genitive-anuswara$ =  {<genitive>}:{<del>ത്തിന്റെ} ^-> ([#Anuswara#] [#POS##BM##Numbers##TMP#]+ __)
-$genitive-exceptions$ = $genitive-special-cases$ ^-> ( __ [#POS##BM##Numbers##TMP#]+ <genitive> )
+
+$genitive-anuswara-step1$ =  {<genitive>}:{<del>ത്തിന്റെ} ^-> ([#Anuswara#] [#POS##BM##Numbers##TMP#]+ __)
+$genitive-anuswara-step2$ = {[#Anuswara#]}:{} ^-> (__ [#POS##BM##Numbers##TMP#]+ <del> )
+$genitive-anuswara$ = $genitive-anuswara-step1$ || $genitive-anuswara-step2$
+
+$genitive-exceptions-step1$ = $genitive-special-cases$ ^-> ( __ [#POS##BM##Numbers##TMP#]+ <genitive> )
+$remove-genitive-ninfl$ = {<genitive>}:{} ^-> ([#POS##BM##Numbers##TMP#]+ __)
+$genitive-exceptions$ = $genitive-exceptions-step1$ || $remove-genitive-ninfl$
 
 % ന്റെ = ന്+ റെ ആക്കാൻ ഇവിടെ ഒരു മാർക്കർ ഇട്ടുവെച്ച് ചില്ലു നോർമലൈസ് ചെയ്യുമ്പോൾ ഉപയോഗിക്കുന്നു.
 $chillu-n-forms$ = {<genitive>}:{<del>റെ} | {<genitive>}:{ഉടെ}
@@ -33,15 +39,11 @@ $chillu-forms$ = {<genitive>}:{ഇന്റെ} | {<genitive>}:{ഉടെ}
 $genitive-chillu-n$ = $chillu-n-forms$  ^-> ([ൻ] [#POS##BM##Numbers##TMP#]+ __)
 $genitive-chillu-others$ = $chillu-forms$ ^-> ([ർൾൺൿൽ] [#POS##BM##Numbers##TMP#]+ __)
 
-$genitive-step1$ = $genitive-cons$ ||\
- 	$genitive-half-cons$ ||\
-    $genitive-anuswara$ ||\
-	$genitive-chillu-n$ ||\
+$genitive-cases$ = $genitive-cons$ |\
+ 	$genitive-half-cons$ |\
+    $genitive-anuswara$ |\
+	$genitive-chillu-n$ |\
 	$genitive-chillu-others$
 
-% Post process steps
-$genitive-step2$ = {[#Anuswara#]}:{} ^-> (__ [#POS##BM##Numbers##TMP#]+ <del> )
-$remove-genitive-ninfl$ = {<genitive>}:{} ^-> ([#POS##BM##Numbers##TMP#]+ __)
-
-$genitive$ = $genitive-exceptions$ || $genitive-step1$ || $genitive-step2$ || $remove-genitive-ninfl$
+$genitive$ =  $genitive-cases$ | $genitive-exceptions$
 $genitive$
