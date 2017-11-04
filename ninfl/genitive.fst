@@ -22,7 +22,7 @@ $genitive-special-cases$ = {ഞാൻ}:{എന്റെ} | \
 % അവൻ = അവനുടെ, അവന്റെ, ആൾ = ആളുടെ, ആളിന്റെ,  വാൾ - വാളിന്റെ, വാളുടെ(?) ,
 % കാൽ - കാലിന്റെ, കാലുടെ(?) , അവൾ = അവളുടെ, അവളിന്റെ(?)  അവർ - അവരുടെ, അവരിന്റെ(?)
 % ഇതിൽ എല്ലാ രൂപങ്ങൾക്കും പ്രചാരമില്ല. അതുകൊണ്ട് ഏതെപ്പോൾ ചേർക്കണമെന്ന് കണ്ടുപിടിക്കേണ്ടിയിരിക്കുന്നു.
-$genitive-cons$ = {<genitive>}:{യുടെ} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __)
+$genitive-cons-vowels$ = {<genitive>}:{യുടെ} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __)
 $genitive-half-cons$ = {<genitive>}:{ഇന്റെ} ^-> ([#Virama#] [#POS##BM##Numbers##TMP#]+ __)
 
 $genitive-anuswara-step1$ =  {<genitive>}:{<del>ത്തിന്റെ} ^-> ([#Anuswara#] [#POS##BM##Numbers##TMP#]+ __)
@@ -39,7 +39,7 @@ $chillu-forms$ = {<genitive>}:{ഇന്റെ} | {<genitive>}:{ഉടെ}
 $genitive-chillu-n$ = $chillu-n-forms$  ^-> ([ൻ] [#POS##BM##Numbers##TMP#]+ __)
 $genitive-chillu-others$ = $chillu-forms$ ^-> ([ർൾൺൿൽ] [#POS##BM##Numbers##TMP#]+ __)
 
-$genitive-cases$ = $genitive-cons$ |\
+$genitive-cases$ = $genitive-cons-vowels$ |\
  	$genitive-half-cons$ |\
     $genitive-anuswara$ |\
 	$genitive-chillu-n$ |\
