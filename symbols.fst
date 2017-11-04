@@ -24,7 +24,7 @@
 #Perc# = \%
 #Nsep# = \.\,
 #Apos# = \'
-#Punct# = \.\?\!\:\,\;
+#Punct# = \.\?\!\:\,\;\@\#\^\&\*\(\)\'\"\`\~\>\<
 
 % analysis symbols for inflectional suffixes
 #ninfl# = <accusative><vocative><nominative><genitive><dative>\

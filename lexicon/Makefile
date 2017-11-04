@@ -16,7 +16,6 @@ pronouns.fst: pronouns.lex
 adjectives.fst: adjectives.lex
 verbs.fst: verbs.lex
 interjections.fst: interjections.lex
-misc.fst: misc.lex
 demonstrative-prenominal-base.fst: demonstrative-prenominal-base.lex
 
 clean:
