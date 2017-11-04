@@ -57,7 +57,7 @@ $tenses$ = $past-tense$ || $present-tense$ || $future-tense$
 % ഉദാഹരണം:പഠിക്കാൻ ഇരുന്നു, കളിക്കാൻ പോയി, പാടാൻ പറഞ്ഞു.
 
 $cvb-adv-part-future$ =  {ുക}:{ാൻ} ^-> ([#Consonants#]+ __ [#POS##BM##Numbers##TMP#]+  <cvb-adv-part-future>)
-$removable-vinfl-forms$ =  {[#vinfl#]}:{}
+
 
 % നടുവിനയെച്ചം Absolute verb
 % കാലം,പ്രകാരം, പുരുഷൻ ഇത്യാദി ഉപാധികളൊന്നുമില്ലാതെ കേവലമായ ക്രിയയെയാണ് നടുവിനയെച്ചം കുറിക്കുന്നത്.
@@ -65,6 +65,7 @@ $removable-vinfl-forms$ =  {[#vinfl#]}:{}
 % എന്നാൽ അ, ക എന്നിവ എല്ലാ ധാതുക്കളോടും ചേർക്കാറില്ല. പറ, പറക, പറയുക എന്നിവയാണ് നടുവിനയെച്ച രൂപങ്ങൾ.
 $cvb-adv-part-absolute-forms$ = {ുക}:{} | {യ്യുക}:{യ്} | {ക്കുക}:{}
 $cvb-adv-part-absolute$ = $cvb-adv-part-absolute-forms$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <cvb-adv-part-absolute>)
+
 % പാക്ഷിക വിനയെച്ചം
 % പൂർണ്ണക്രിയ നടക്കണമെങ്കിൽ നടക്കേണ്ട അപൂർണ്ണക്രിയയാണ് പാക്ഷിക വിനയെച്ചം.
 % ആൽ, ഇൽ, ആകിൽ, എങ്കിൽ എന്നിവയാണ് പ്രത്യയങ്ങൾ.
@@ -74,8 +75,10 @@ $adverbs$ = $cvb-adv-part-future$ || \
 	%$cvb-adv-part-absolute$ || \
 	$cvb-adv-part-conditional$
 
+$removable-vinfl-forms$ =  {[#vinfl#]}:{}
 $remove-vinfl$ = $removable-vinfl-forms$ ^-> ([#POS##BM##Numbers##TMP#]+ __)
-$tests$ = അറിയിക്കുക<v><RB><past>
+
+%$tests$ = അറിയിക്കുക<v><RB><past>
 %$tests$ || \
 $vinfl$ = $tenses$ || $adverbs$ || $remove-vinfl$
 $vinfl$
