@@ -18,6 +18,9 @@ $plural-maps$ = {[#Virama#]}:{ുകൾ} | \
 	{[ർ]}:{രുകൾ}
 
 $plural-general$ = $plural-maps$ ^-> (__ [#POS##BM##Numbers##TMP#]+ <pl> )
+
+% <plural> Marks need to insert to avoid phonological rules in boundaries. 
+% for example: പൂച്ച + കൾ = പൂച്ചകൾ and not പൂച്ചക്കൾ as in പൂച്ച + കല്ല് => പൂച്ചക്കല്ല്
 $plural-cons-vowel$ = {<pl>}:{<plural>കൾ} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __ )
 $plural-del-tmp$ = {<pl>}:{} ^->  ([#POS##BM##Numbers##TMP#]+ __ )
 $plural$ = $plural-general$ || $plural-cons-vowel$ || $plural-del-tmp$
