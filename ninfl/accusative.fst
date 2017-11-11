@@ -8,11 +8,11 @@
 
 ALPHABET = [#AAsym#]
 % Accusative inflection rules കടലിനെ, ആനയെ, പൂച്ചയെ, ആടിനെ, മരത്തെ, മരത്തിനെ
-$accusative-special-cases$ = {ഞാൻ}:{എന്നെ} | {താൻ}:{തന്നെ} | {നാം}:{നമ്മെ} | \
-	{അവർ}:{അവരെ} | {ഇവൻ}: {ഇവനെ}
+$accusative-special-cases$ = {ഞാൻ}:{എന്നെ<del>} | {താൻ}:{തന്നെ<del>} | {നാം}:{നമ്മെ<del>} | \
+	{അവർ}:{അവരെ<del>} | {ഇവൻ}: {ഇവനെ<del>}
 
 $accusative-exceptions-step1$ = $accusative-special-cases$ ^-> (__ [#POS##BM##Numbers##TMP#]+ <accusative> )
-$remove-accusative-ninfl$ = {<accusative>}:{} ^-> ([#POS##BM##Numbers##TMP#]+ __)
+$remove-accusative-ninfl$ = {<accusative>}:{} ^-> (<del> [#POS##BM##Numbers##TMP#]+ __)
 $accusative-exceptions$ = $accusative-exceptions-step1$ || $remove-accusative-ninfl$
 
 $accusative-cons-vowels$ = {<accusative>}:{എ} ^-> ([#Consonants##VowelSigns#] [#POS##BM##Numbers##TMP#]+ __)
@@ -25,5 +25,5 @@ $accusative-anuswara$=  $accusative-anuswara-step1$ || $accusative-anuswara-step
 
 $accusative-cases$ = $accusative-cons-vowels$ | $accusative-chillus$ | $accusative-anuswara$
 
-$accusative$ =  $accusative-exceptions$ | $accusative-cases$
+$accusative$ =  $accusative-cases$ || $accusative-exceptions$ 
 $accusative$
