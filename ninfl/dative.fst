@@ -20,9 +20,11 @@ $dative-anuswara-form-2$ = {<dative>}: {<del>ത്തിനു്} ^-> ([#Anusw
 $dative-cons-form$ = $dative-cons-form-1a$ | $dative-cons-form-1b$
 $dative-virama-form$ = $dative-virama-form-1a$ | $dative-virama-form-1b$
 $dative-cons-vowel-form$ = $dative-cons-vowel-form-1a$ | $dative-cons-vowel-form-1b$
+
 $dative-anuswara-step-1$ = $dative-anuswara-form-1$ | $dative-anuswara-form-2$
 $dative-anuswara-step-2$ = {[#Anuswara#]}:{} ^-> (__ [#POS##BM##Numbers##TMP#]+ <del> )
 $dative-anuswara$ = $dative-anuswara-step-1$ || $dative-anuswara-step-2$
-$dative$ = $dative-cons-form$ || $dative-cons-vowel-form$ || $dative-virama-form$ || $dative-anuswara$
+
+$dative$ = $dative-cons-form$ | $dative-cons-vowel-form$ | $dative-virama-form$ | $dative-anuswara$
 
 $dative$

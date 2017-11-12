@@ -20,6 +20,7 @@ $ABBREV$ = "<lexicon/abbreviations.a>"
 % lexicon.
 $MISC$ = "<lexicon/misc.a>"
 $NINFL$ = "<ninfl/ninfl.a>"
+$PLURAL$ = "<ninfl/plural.a>"
 
 % Verbs
 $VSTEM$ = "<lexicon/verbs.a>"
@@ -29,7 +30,7 @@ $Num$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
 % Nouns
 $SINGULAR_NOUN$ = $NSTEM$ | $PRONSTEM$ | $CSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ 
-$PLURAL_NOUN$ = $SINGULAR_NOUN$ [<pl>] || $NINFL$ 
+$PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 
 $NOUN$ = $JSTEM$? ( $SINGULAR_NOUN$ | $PLURAL_NOUN$ <EoW><RB> ) [#ninfl#]? || $NINFL$
 

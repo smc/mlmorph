@@ -6,17 +6,12 @@
 
 %%%%%%%%%%%% Noun Inflections %%%%%%%%%%%%%%
 
-ALPHABET = [#AAsym#]
-
 %$tests$ = ആന<n> | കടൽ<n> | പേര്<n>
-$NINFL$ = "<plural.a>" |\
- 	"<vocative.a>" |\
-	"<genitive.a>" |\
-	"<locative.a>" |\
-	"<sociative.a>" |\
-	"<instrumental.a>" |\
-	"<dative.a>" |\
-	"<accusative.a>"
+$NINFL$ = "<vocative.a>" | "<genitive.a>" | "<locative.a>"
+$NINFL$ >> "ninfl.1.a"
+ 
+$NINFL$ = "<sociative.a>" | "<instrumental.a>" | "<dative.a>" | "<accusative.a>"
+$NINFL$ >> "ninfl.2.a"
 
-%$tests$ [#infl#] | $NINFL$
-$NINFL$
+% $tests$ [#infl#] | $NINFL$
+"<ninfl.1.a>" | "<ninfl.2.a>"
