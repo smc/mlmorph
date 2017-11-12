@@ -94,3 +94,22 @@ gives
 Nodejs
 ------
 No known bindings. Worth to write one from scratch?
+
+
+Debugging
+=========
+sfst tools are useful for debugging. Here is an example.
+To debug accusative.fst, it is better to test that file individually. Compiling the whole system and making modifications is very time consuming.
+
+Add the following lines towards the end of the file.
+```
+$tests$ = മഴ<n><RB><accusative> | മുറ്റം<n><RB><accusative> |  കിളി<n><RB><accusative> | താൻ<prn><RB><accusative>
+$tests$ || $accusative$ >> "accusative-test.a"
+```
+
+Compile the file using sfst: ```fst-compiler-utf8 accusative.fst accusative.a```
+
+Then generate all strings the fst can generate using ```fst-generate accusative.a```. Make sure this list is correct and does not output random values. Producing unwanted items in output will cause bigger time for compositions in other parts of system.
+
+You can keep the above test lines in FST as commented lines after debugging.
+
