@@ -28,8 +28,10 @@ $VINFL$ = "<vinfl.a>"
 $Num$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
 % Nouns
-$NOUN$ = $JSTEM$?  ($NSTEM$ | $PRONSTEM$ | $CSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ ) [#ninfl#]?  \
-	|| $NINFL$
+$SINGULAR_NOUN$ = $NSTEM$ | $PRONSTEM$ | $CSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ 
+$PLURAL_NOUN$ = $SINGULAR_NOUN$ [<pl>] || $NINFL$ 
+
+$NOUN$ = $JSTEM$? ( $SINGULAR_NOUN$ | $PLURAL_NOUN$ <EoW><RB> ) [#ninfl#]? || $NINFL$
 
 % Verbs
 $VERB$ = $ASTEM$? $VSTEM$ [#vinfl#]? || $VINFL$
