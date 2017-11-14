@@ -14,7 +14,7 @@ $JSTEM$ = "<lexicon/adjectives.a>"
 $CSTEM$ = "<lexicon/conjunctions.a>"
 $XSTEM$ = "<lexicon/interjections.a>"
 $NUMBERS$ = "<num.a>" <num><RB>
-$DEM$ = "<lexicon/demonstrative-prenominal-base.a>"
+$DEM$ = "<lexicon/demonstratives.a>"
 $ABBREV$ = "<lexicon/abbreviations.a>"
 % these following contains exceptional cases fully analyzed in the
 % lexicon.
