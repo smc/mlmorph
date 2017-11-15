@@ -1,6 +1,6 @@
 LEXFILES = nouns.fst proper-nouns.fst pronouns.fst \
 	adjectives.fst demonstratives.fst adverbs.fst interjections.fst \
-	conjunctions.fst verbs.fst misc.fst abbreviations.fst
+	conjunctions.fst verbs.fst misc.fst abbreviations.fst questions.fst
 LEXFSAFILES=$(LEXFILES:.fst=.a)
 
 include ../Makefile.inc
@@ -17,6 +17,7 @@ adjectives.fst: adjectives.lex
 verbs.fst: verbs.lex
 interjections.fst: interjections.lex
 demonstratives.fst: demonstratives.lex
+questions.fst: questions.lex
 
 clean:
 	-rm -f *.a *~ Makefile.bak

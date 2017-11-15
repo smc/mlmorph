@@ -13,6 +13,7 @@ $ASTEM$ = "<lexicon/adverbs.a>"
 $JSTEM$ = "<lexicon/adjectives.a>"
 $CSTEM$ = "<lexicon/conjunctions.a>"
 $XSTEM$ = "<lexicon/interjections.a>"
+$QN$ = "<lexicon/questions.a>"
 $NUMBERS$ = "<num.a>" <num><RB>
 $DEM$ = "<lexicon/demonstratives.a>"
 $ABBREV$ = "<lexicon/abbreviations.a>"
@@ -39,7 +40,8 @@ $VERB$ = $ASTEM$? $VSTEM$ [#vinfl#]? || $VINFL$
 
 $WORD$ = $MISC$? ( $NOUN$ $NOUN$? \
 	| $VERB$ $VERB$? \
-	| $XSTEM$  \
+	| $XSTEM$ \
+	| $QN$ \
 	| $Num$ \
 ) $MISC$?
 

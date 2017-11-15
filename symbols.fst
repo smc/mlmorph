@@ -9,7 +9,7 @@
 #Letters# = #Consonants##Vowels##VowelSigns##Anuswara##Chillus##Virama#
 
 % POS tags
-#POS# = <adj><adv><dem><n><np><prn><postp><ij><cnj><v><vaux><num><pnct> \
+#POS# = <adj><adv><dem><n><np><prn><postp><ij><cnj><qn><v><vaux><num><pnct> \
 	<Noun><Punct>
 
 % Boundary markers
