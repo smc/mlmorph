@@ -18,7 +18,7 @@ $(function() {
     $('#analyse').on('click', function() {
         $(".analresult").find("tbody").empty();
         $(".analresult").show();
-        $.getJSON('/analyse', {
+        $.post('/analyse', {
             text: $('textarea[name="text"]').val()
         }, function(data) {
             var i, result = data.result;

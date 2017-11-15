@@ -19,12 +19,15 @@ def index():
     return render_template('mlmorph.html',)
 
 
-@app.route("/analyse", methods=['GET'])
+@app.route("/analyse", methods=['GET', 'POST'])
 def analyse():
     error = None
     text = None
     analyse_results = {}
-    text = request.args.get('text')
+    if request.method == 'POST':
+        text = request.form['text']
+    else:
+        text = request.args.get('text')
     words = re.split('(\s+)', text)
     # real analysis
     for windex in range(len(words)):
