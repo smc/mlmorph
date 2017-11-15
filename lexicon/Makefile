@@ -9,7 +9,7 @@ include ../Makefile.inc
 
 all: $(LEXFSAFILES)
 nouns.fst: nouns.lex
-proper-nouns.fst: proper-nouns.lex person-names.lex software-names.lex times.lex places.lex
+proper-nouns.fst: proper-nouns.lex person-names.lex software-names.lex times.lex places.lex languages.lex
 conjunctions.fst: conjunctions.lex
 abbreviations.fst: abbreviations.lex
 pronouns.fst: pronouns.lex
