@@ -7,13 +7,13 @@
 
 %%% The stems from the lexicon (possibly with derivation)
 $NSTEM$ = "<lexicon/nouns.a>"
-$PRONSTEM$ = "<lexicon/pronouns.a>"
-$PNSTEM$ = "<lexicon/proper-nouns.a>"
+$PRONOUN$ = "<lexicon/pronouns.a>"
+$PROPERNOUN$ = "<lexicon/proper-nouns.a>"
 $ASTEM$ = "<lexicon/adverbs.a>"
-$JSTEM$ = "<lexicon/adjectives.a>"
-$CSTEM$ = "<lexicon/conjunctions.a>"
-$XSTEM$ = "<lexicon/interjections.a>"
-$QN$ = "<lexicon/questions.a>"
+$ADJECTIVE$ = "<lexicon/adjectives.a>"
+$CONJUNCTION$ = "<lexicon/conjunctions.a>"
+$INTERJECTION$ = "<lexicon/interjections.a>"
+$QUESTION$ = "<lexicon/questions.a>"
 $NUMBERS$ = "<num.a>" <num><RB>
 $DEM$ = "<lexicon/demonstratives.a>"
 $ABBREV$ = "<lexicon/abbreviations.a>"
@@ -27,22 +27,22 @@ $PLURAL$ = "<ninfl/plural.a>"
 $VSTEM$ = "<lexicon/verbs.a>"
 $VINFL$ = "<vinfl.a>"
 % Numbers using digits
-$Num$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
+$NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
 % Nouns
-$SINGULAR_NOUN$ = $NSTEM$ | $PRONSTEM$ | $CSTEM$ | $NUMBERS$ | $ABBREV$* $PNSTEM$ 
+$SINGULAR_NOUN$ = $NSTEM$ | $PRONOUN$ | $CONJUNCTION$ | $NUMBERS$ | ( $ABBREV$* $PROPERNOUN$ )
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 
-$NOUN$ = $JSTEM$? ( $SINGULAR_NOUN$ | $PLURAL_NOUN$ <EoW><RB> ) [#ninfl#]? || $NINFL$
+$NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? || $NINFL$
 
 % Verbs
 $VERB$ = $ASTEM$? $VSTEM$ [#vinfl#]? || $VINFL$
 
 $WORD$ = $MISC$? ( $NOUN$ $NOUN$? \
 	| $VERB$ $VERB$? \
-	| $XSTEM$ \
-	| $QN$ \
-	| $Num$ \
+	| $INTERJECTION$ \
+	| $QUESTION$ \
+	| $NUMBER$ \
 ) $MISC$?
 
 $WORD$
