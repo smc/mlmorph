@@ -18,7 +18,7 @@
   <ones><half><tens><hundreds><thousands><lakhs>
 
 % other intermediate symbols
-#TMP# = <LN><BoW><EoW>
+#TMP# = <LN><BoW><EoW><infl_marker>
 
 #Digit# = 0123456789
 #Perc# = \%

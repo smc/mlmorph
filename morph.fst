@@ -38,8 +38,8 @@ $NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#
 % Verbs
 $VERB$ = $ASTEM$? $VSTEM$ [#vinfl#]? || $VINFL$
 
-$WORD$ = $MISC$? ( $NOUN$* \
-	| $VERB$* \
+$WORD$ = $MISC$? ( $NOUN$+ \
+	| $VERB$+ \
 	| $INTERJECTION$ \
 	| $QUESTION$ \
 	| $NUMBER$ \

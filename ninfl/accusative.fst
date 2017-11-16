@@ -6,13 +6,13 @@
 
 %%%%%%%%%%%% Noun Inflections %%%%%%%%%%%%%%
 
-ALPHABET = [#Letters##POS##BM##TMP#] <accusative> <del>
+ALPHABET = [#Letters##POS##BM##TMP#] <accusative> <del> <infl_marker>
 
 % Accusative inflection rules കടലിനെ, ആനയെ, പൂച്ചയെ, ആടിനെ, മരത്തെ, മരത്തിനെ
-$accusative-special-cases$ = {ഞാൻ}:{എന്നെ<del>} | {താൻ}:{തന്നെ<del>} | {നാം}:{നമ്മെ<del>} | \
-	{അവർ}:{അവരെ<del>} | {ഇവൻ}: {ഇവനെ<del>}
+$accusative-special-cases$ = {ഞാൻ}:{എന്നെ<infl_marker>} | {താൻ}:{തന്നെ<infl_marker>} | {നാം}:{നമ്മെ<infl_marker>} | \
+	{അവർ}:{അവരെ<infl_marker>} | {ഇവൻ}: {ഇവനെ<infl_marker>}
 $accusative-exceptions-step1$ = $accusative-special-cases$ ^-> (__ [#POS##BM##TMP#]+ <accusative> )
-$remove-accusative-ninfl$ = {<accusative>}:{} ^-> (<del> [#POS##BM##TMP#]+ __)
+$remove-accusative-ninfl$ = {<accusative>}:{} ^-> (<infl_marker> [#POS##BM##TMP#]+ __)
 $accusative-exceptions$ = $accusative-exceptions-step1$ || $remove-accusative-ninfl$
 $accusative$ = $accusative-exceptions$ 
 
@@ -26,7 +26,7 @@ $accusative-anuswara-step2$ = {[#Anuswara#]}:{} ^-> (__ [#POS##BM##TMP#]+ <del> 
 $accusative-anuswara$ =  $accusative-anuswara-step1$ || $accusative-anuswara-step2$
 $accusative$ = $accusative$ ||  $accusative-anuswara$
 
-%$tests$ = മഴ<n><RB><accusative> | മുറ്റം<n><RB><accusative> |  കിളി<n><RB><accusative> | താൻ<prn><RB><accusative>
+%$tests$ = മഴ<n><RB><accusative> | മുറ്റം<n><RB><accusative> |  കിളി<n><RB><accusative> | താൻ<prn><RB><accusative> | ജനങ്ങൾ<del><RB><accusative>
 %$tests$ || $accusative$ >> "accusative-test.a"
 
 $accusative$

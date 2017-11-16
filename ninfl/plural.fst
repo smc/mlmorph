@@ -29,7 +29,7 @@ $plural$ = $plural-general$ || $plural-cons-vowel$
 
 % TODO
 % മങ്കമാർ, അമ്മമാർ, പോലീസുകാർ...
-$test$ = മല<n><pl> | അവൻ<n><pl> | മരം<n><pl> | ഇതൾ<n><pl> | മുകിൽ<n><pl> | പയർ<n><pl>
-$test$ || $plural$ >> "plural-test.a"
+% $test$ = മല<n><pl> | അവൻ<n><pl> | മരം<n><pl> | ഇതൾ<n><pl> | മുകിൽ<n><pl> | പയർ<n><pl>
+% $test$ || $plural$ >> "plural-test.a"
 
 $plural$
