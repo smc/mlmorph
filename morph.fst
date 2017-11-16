@@ -16,6 +16,7 @@ $INTERJECTION$ = "<lexicon/interjections.a>"
 $QUESTION$ = "<lexicon/questions.a>"
 $NUMBERS$ = "<num.a>" <num><RB>
 $DEM$ = "<lexicon/demonstratives.a>"
+$BORROWED$ = "<lexicon/borrowed-words.a>"
 $ABBREV$ = "<lexicon/abbreviations.a>"
 % these following contains exceptional cases fully analyzed in the
 % lexicon.
@@ -30,7 +31,7 @@ $VINFL$ = "<vinfl.a>"
 $NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
 % Nouns
-$SINGULAR_NOUN$ = $NSTEM$ | $PRONOUN$ | $CONJUNCTION$ | $NUMBERS$ | $ABBREV$ | $PROPERNOUN$
+$SINGULAR_NOUN$ = $NSTEM$ | $PRONOUN$ | $CONJUNCTION$ | $NUMBERS$ | $ABBREV$ | $PROPERNOUN$ | $BORROWED$
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 
 $NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? || $NINFL$
