@@ -6,6 +6,17 @@ ALPHABET = [#AAsym#]
 % വിനയെച്ചം - Adverbial participle
 % മുൻവിനയെച്ചം
 % പൂർണ്ണക്രിയക്ക് മുമ്പ് നടക്കുന്ന അപൂർണ്ണക്രിയയാണ് മുൻവിനയെച്ചം. ഇതിന് പ്രത്യയമൊന്നും ചേർക്കേണ്ടതില്ല.ഓടിക്കയറി, % ചാടിപ്പോയി എന്നിവ ഉദാഹരണം.
+% കുളിക്കുക-> കുളിച്ച് , വരുക-വന്ന് , തരുക-തന്ന്, തളരുക-തർന്ന്, കരയുക-കരഞ്ഞ്
+$cvb-adv-part-past-forms$ = {വരുക} : {വന്ന്} | {വരിക} : {വന്ന്} |\
+	{തരുക} : {തന്ന്} | {തരിക} : {തന്ന്} |\
+	{രുക}: {ർന്ന്} | {രുക}: {ർന്നു്} | \
+	{യുക}: {ഞ്ഞ്} |  {യുക}: {ഞ്ഞു്} |\
+	{യ്ക്കുക} : {ച്ച്} | {യ്ക്കുക} : {ച്ചു്} |\
+	{ക്കുക} : {ന്ന്} | {ക്കുക} : {ന്നു്} |\
+	{ിക്കുക} : {ിച്ച്} |  {ിക്കുക}  : {ിച്ചു്}
+
+$cvb-adv-part-past$ = $cvb-adv-part-past-forms$  ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+  <cvb-adv-part-past>)
+
 % പിൻവിനയെച്ചം - പൂർണ്ണക്രിയക്ക് പിമ്പ് നടക്കേണ്ട അപൂർണ്ണക്രിയയാണ് പിൻവിനയെച്ചം. ആൻ ആണ് ഇതിനുള്ള പ്രത്യയം.
 % ധാതുവിനോട് നേരിട്ടോ ഭാവികാലരൂപത്തോടോ ആൻ പ്രത്യയം ചേർക്കാം.
 % ഉദാഹരണം:പഠിക്കാൻ ഇരുന്നു, കളിക്കാൻ പോയി, പാടാൻ പറഞ്ഞു.
@@ -26,8 +37,9 @@ $cvb-adv-part-absolute$ = $cvb-adv-part-absolute-forms$ ^-> ([#Letters#]+ __ [#P
 
 $cvb-adv-part-conditional-forms$ = {ുക}:{ിൽ} | {ുക}:{യാൽ} | {ുക}:{യാകിൽ} | {ുക}:{യെങ്കിൽ}
 $cvb-adv-part-conditional$ = $cvb-adv-part-conditional-forms$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <cvb-adv-part-conditional>)
-$converbs$ = $cvb-adv-part-future$ || \
-	%$cvb-adv-part-absolute$ || \
+$converbs$ = $cvb-adv-part-future$ ||\
+	$cvb-adv-part-past$ ||\
+	$cvb-adv-part-absolute$ || \
 	$cvb-adv-part-conditional$
 
 $converbs$

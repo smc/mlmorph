@@ -9,7 +9,7 @@
 $NSTEM$ = "<lexicon/nouns.a>"
 $PRONOUN$ = "<lexicon/pronouns.a>"
 $PROPERNOUN$ = "<lexicon/proper-nouns.a>"
-$ASTEM$ = "<lexicon/adverbs.a>"
+$ADVERB$ = "<lexicon/adverbs.a>"
 $ADJECTIVE$ = "<lexicon/adjectives.a>"
 $CONJUNCTION$ = "<lexicon/conjunctions.a>"
 $INTERJECTION$ = "<lexicon/interjections.a>"
@@ -37,7 +37,7 @@ $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 $NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? || $NINFL$
 
 % Verbs
-$VERB$ = $ASTEM$? $VSTEM$ [#vinfl#]? || $VINFL$
+$VERB$ = $ADVERB$? $VSTEM$ [#vinfl#]? || $VINFL$
 
 $WORD$ = $MISC$? ( $NOUN$+ \
 	| $VERB$+ \
