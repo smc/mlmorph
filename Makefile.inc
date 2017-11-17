@@ -1,5 +1,5 @@
 DISTNAME=mlmorph-`cat VERSION`
-FSTC ?= hfst
+FSTC ?= sfst
 ifeq ($(FSTC),hfst)
 %.a: %.fst
 	hfst-sfstpl2fst -f openfst-tropical -v -i $< -o $@
