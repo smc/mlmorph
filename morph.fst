@@ -26,7 +26,7 @@ $PLURAL$ = "<ninfl/plural.a>"
 
 % Verbs
 $VSTEM$ = "<lexicon/verbs.a>"
-$VINFL$ = "<vinfl.a>"
+$VINFL$ = "<vinfl/vinfl.a>"
 % Numbers using digits
 $NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
