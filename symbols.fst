@@ -30,7 +30,8 @@
 #ninfl# = <accusative><vocative><nominative><genitive><dative>\
 	<instrumental><locative><sociative><sg><pl>
 #vinfl# = <past><future><present><cvb-adv-part-future><cvb-adv-part-conditional>\
-	<cvb-adv-part-past><cvb-adv-part-absolute>
+	<cvb-adv-part-past><cvb-adv-part-absolute><concessive>
+
 #infl# = #ninfl##vinfl#
 %%%%% some character classes that are helpful
 #Lsym# = <del><dels><dup><plural><ninfl>
