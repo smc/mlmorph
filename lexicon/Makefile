@@ -1,7 +1,7 @@
 LEXFILES = nouns.fst proper-nouns.fst pronouns.fst prepositions.fst \
 	adjectives.fst demonstratives.fst adverbs.fst interjections.fst \
 	conjunctions.fst verbs.fst misc.fst abbreviations.fst questions.fst \
-	borrowed-words.fst
+	indeclinables.fst borrowed-words.fst
 LEXFSAFILES=$(LEXFILES:.fst=.a)
 
 include ../Makefile.inc

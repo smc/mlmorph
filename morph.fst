@@ -14,6 +14,7 @@ $ADJECTIVE$ = "<lexicon/adjectives.a>"
 $CONJUNCTION$ = "<lexicon/conjunctions.a>"
 $INTERJECTION$ = "<lexicon/interjections.a>"
 $PREPOSITIONS$ = "<lexicon/prepositions.a>"
+$INDECLINABLE$= "<lexicon/indeclinables.a>"
 $QUESTION$ = "<lexicon/questions.a>"
 $NUMBERS$ = "<num.a>" <num><RB>
 $DEM$ = "<lexicon/demonstratives.a>"
@@ -35,10 +36,10 @@ $NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 $SINGULAR_NOUN$ = $NSTEM$ | $PRONOUN$ | $CONJUNCTION$ | $NUMBERS$ | $ABBREV$ | $PROPERNOUN$ | $BORROWED$
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 
-$NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? || $NINFL$
+$NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? $INDECLINABLE$? || $NINFL$
 
 % Verbs
-$VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? || $VINFL$
+$VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $INDECLINABLE$? || $VINFL$
 
 $WORD$ = $MISC$? ( $NOUN$+ \
 	| $VERB$+ \
