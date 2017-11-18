@@ -13,6 +13,7 @@ $ADVERB$ = "<lexicon/adverbs.a>"
 $ADJECTIVE$ = "<lexicon/adjectives.a>"
 $CONJUNCTION$ = "<lexicon/conjunctions.a>"
 $INTERJECTION$ = "<lexicon/interjections.a>"
+$PREPOSITIONS$ = "<lexicon/prepositions.a>"
 $QUESTION$ = "<lexicon/questions.a>"
 $NUMBERS$ = "<num.a>" <num><RB>
 $DEM$ = "<lexicon/demonstratives.a>"
@@ -41,6 +42,7 @@ $VERB$ = $ADVERB$? $VSTEM$ [#vinfl#]? || $VINFL$
 
 $WORD$ = $MISC$? ( $NOUN$+ \
 	| $VERB$+ \
+	| $PREPOSITIONS$ \
 	| $INTERJECTION$ \
 	| $QUESTION$ \
 	| $NUMBER$ \

@@ -1,4 +1,4 @@
-LEXFILES = nouns.fst proper-nouns.fst pronouns.fst \
+LEXFILES = nouns.fst proper-nouns.fst pronouns.fst prepositions.fst \
 	adjectives.fst demonstratives.fst adverbs.fst interjections.fst \
 	conjunctions.fst verbs.fst misc.fst abbreviations.fst questions.fst \
 	borrowed-words.fst
@@ -20,6 +20,7 @@ interjections.fst: interjections.lex
 demonstratives.fst: demonstratives.lex
 questions.fst: questions.lex
 borrowed-words.fst: english-borrowed.lex
+prepositions.fst: prepositions.lex
 
 clean:
 	-rm -f *.a *~ Makefile.bak
