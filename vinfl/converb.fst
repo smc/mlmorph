@@ -32,7 +32,7 @@ $cvb-adv-part-future$ =  {ുക}:{ാൻ} <>:<infl_marker> ^-> ([#Consonants#]+
 % ക, അ, ഉക എന്നിവയാണ് പ്രത്യയങ്ങൾ. ഉക എല്ലാ ധാതുക്കളോടും ചേർക്കാം.
 % എന്നാൽ അ, ക എന്നിവ എല്ലാ ധാതുക്കളോടും ചേർക്കാറില്ല. പറ, പറക, പറയുക എന്നിവയാണ് നടുവിനയെച്ച രൂപങ്ങൾ.
 
-$cvb-adv-part-absolute-forms$ = {ുക}:{} | {യ്യുക}:{യ്} | {ക്കുക}:{}
+$cvb-adv-part-absolute-forms$ = {യുക}:{യ} | {യ്യുക}:{യ്} | {കുക} : {ക} | {ടുക}:{ട}
 $cvb-adv-part-absolute$ = $cvb-adv-part-absolute-forms$ <>:<infl_marker> ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <cvb-adv-part-absolute>)
 
 % പാക്ഷിക വിനയെച്ചം
