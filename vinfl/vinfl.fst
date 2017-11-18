@@ -2,16 +2,15 @@
 #include "../symbols.fst"
 
 
-ALPHABET = [#AAsym#]
+ALPHABET = [#Letters##POS##BM##TMP##infl#]
 
 $tenses$  = "<past.a>" || "<present.a>" || "<future.a>"
 $converbs$ = "<converb.a>"
 $concessives$ = "<concessive.a>"
 
-$removable-vinfl-forms$ =  {[#vinfl#]}:{}
-$remove-vinfl$ = $removable-vinfl-forms$ ^-> ([#POS##BM##Numbers##TMP#]+ __)
+$remove-vinfl$ = {[#vinfl#]}:{} ^-> (<infl_marker> [#POS##BM##TMP#]+ __)
 
-$vinfl$ = $tenses$ || $converbs$ || $concessives$ || $remove-vinfl$
+$vinfl$ = ( $tenses$ | $converbs$ | $concessives$ ) || $remove-vinfl$
 
 
 $tests$ = അറിയിക്കുക<v><RB> [#vinfl#]

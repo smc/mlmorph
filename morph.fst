@@ -38,7 +38,7 @@ $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 $NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? || $NINFL$
 
 % Verbs
-$VERB$ = $ADVERB$? $VSTEM$ [#vinfl#]? || $VINFL$
+$VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? || $VINFL$
 
 $WORD$ = $MISC$? ( $NOUN$+ \
 	| $VERB$+ \

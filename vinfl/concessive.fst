@@ -15,5 +15,5 @@ $concessive-forms$ = {വരുക} : {വന്നാലും} | {വരിക
 	{ക്കുക} : {ന്നാലും} | {ക്കുക} : {ന്നാലും} |\
 	{ിക്കുക} : {ിച്ചാലും} |  {ിക്കുക}  : {ിച്ചാലും}
 
-$concessives$ = $concessive-forms$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+  <concessive>)
+$concessives$ = $concessive-forms$ <>:<infl_marker> ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+  <concessive>)
 $concessives$
