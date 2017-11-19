@@ -19,8 +19,8 @@ $PHON$ =  "<chillu-normalization.a>" \
 	% Delete all analysis strings
  	|| $delete-pos$
 
-$test$ = <>:<BoW>മീശ<n><RB><locative>:ഇ<>:ൽഎ<indeclinable><RB><>:<EoW> |\
-	<>:<BoW>മോർ<n><RB><locative>:ഇ<>:ൽ<del><RB>എ<indeclinable><RB><>:<EoW>
-$test$ || $PHON$ >> "phon.test.a"
+$test$ = <>:<BoW>മാല<n><RB><accusative>:യ<>:എ<del><LB>ഒ<indeclinable><RB><>:<EoW> |\
+	<>:<BoW>മോർ<n><RB><locative>:ഇ<>:ൽ<del><LB>എ<indeclinable><RB><>:<EoW>
+% $test$ || $PHON$ >> "phon.test.a"
 
 $PHON$
