@@ -6,11 +6,16 @@ ALPHABET = [#AAsym#]
 
 #=C# = #Consonants#
 $C$ = {[#=C#]}:{[#=C#][യ]}
-$insert-ya$ =  $C$ ^-> (__ [#POS##BM##Numbers##infl#]+ [#Vowels#] )
+$insert-ya$ =  $C$ ^-> (__ [#POS##BM##Numbers##infl##TMP#<del>]+ [#Vowels#] )
 
 $cons-vowel$ = $insert-ya$
 
 $tests$ = തറ <hundreds> അടി <Noun>
 % Uncomment below line for testing
 % $tests$ ||\
-$cons-vowel$ || .*
+
+
+$test$ = <>:<BoW>ഓല<n><RB><locative>ഏ<indeclinable><RB><>:<EoW>
+$test$ || $cons-vowel$  >> "cv.test.a"
+
+$cons-vowel$

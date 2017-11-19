@@ -36,13 +36,13 @@ $NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 $SINGULAR_NOUN$ = $NSTEM$ | $PRONOUN$ | $CONJUNCTION$ | $NUMBERS$ | $ABBREV$ | $PROPERNOUN$ | $BORROWED$
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 
-$NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? $INDECLINABLE$? || $NINFL$
+$NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? || $NINFL$
 
 % Verbs
-$VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $INDECLINABLE$? || $VINFL$
+$VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? || $VINFL$
 
-$WORD$ = $MISC$? ( $NOUN$+ \
-	| $VERB$+ \
+$WORD$ = $MISC$? ( $NOUN$+ $INDECLINABLE$? \
+	| $VERB$+ $INDECLINABLE$?  \
 	| $PREPOSITIONS$ \
 	| $INTERJECTION$ \
 	| $QUESTION$ \
