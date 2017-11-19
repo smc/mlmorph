@@ -7,7 +7,7 @@ $vowel-to-vowelsign-map$ = {അ}:{<del>} |\
 	{ആ}:{ാ} | {ഇ}:{ി} | {ഈ}:{ീ} | {ഉ}:{ു} | {ഊ}: {ൂ} | {ഋ}:{ൃ} |\
 	{എ}:{െ} | {ഏ}:{േ} | {ഐ}:{ൈ} | {ഒ}:{ൊ} | {ഓ}:{ോ} | {ഔ}:{ൗ}
 
-$vowel-to-vowelsign$ = $vowel-to-vowelsign-map$ ^-> ( [#POS##BM##Numbers##TMP##infl##Lsym#] [#BM##TMP#] __ )
+$vowel-to-vowelsign$ = $vowel-to-vowelsign-map$ ^-> ( [#Letters#]+ [#POS##BM##Numbers##TMP##infl##Lsym#]+ __ )
 
 $tests$ =<>:<BoW>പൂവ്<n><>:<RB><>:<EoW><>:<BoW>ആയിരം<n><>:<RB><>:<EoW> \
 	<>:<BoW>പൂവ്<n><>:<RB><>:<EoW><>:<BoW>അമ്പലം<n><>:<RB><>:<EoW>
