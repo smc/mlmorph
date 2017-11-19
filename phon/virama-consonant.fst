@@ -1,6 +1,6 @@
 #include "../symbols.fst"
 
-ALPHABET = [#AAsym#] [#POS##BM##Numbers#]
+ALPHABET = [#AAsym#]
 
 % Virama get replaced by u sign if followed by consonant
 
