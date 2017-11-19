@@ -13,7 +13,7 @@
 	<Noun><Punct><prep><indeclinable><interrogative>
 
 % Boundary markers
-#BM#  = <RB><MB>
+#BM#  = <LB><RB><MB>
 #Numbers# = <one><two><three><four><five><six><seven><eight><nine><ten><zero>\
   <ones><half><tens><hundreds><thousands><lakhs>
 
