@@ -7,3 +7,35 @@ header {
     top: 0;
     z-index: 10;
 }
+
+.component {
+    display: inline;
+    border: 1px solid slategray;
+    border-radius: 5px;
+    background-color: ivory;
+    padding: 5px;
+    margin-right: 1em;
+}
+
+.root {
+    display: inline;
+    font-size: 1em;
+    font-family: 'Manjari', 'Meera', sans-serif;
+}
+
+.tags {
+    display: inline;
+}
+
+.tag {
+    display: inline;
+    background-color: yellowgreen;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+    font-family: monospace
+}
+
+.result {
+    margin-bottom: 1em;
+}
