@@ -20,6 +20,8 @@ $NUMBERS$ = "<num.a>" <num><RB>
 $DEM$ = "<lexicon/demonstratives.a>"
 $BORROWED$ = "<lexicon/borrowed-words.a>"
 $ABBREV$ = "<lexicon/abbreviations.a>"
+$POLARITY$ = "<lexicon/polarity.a>"
+
 % these following contains exceptional cases fully analyzed in the
 % lexicon.
 $MISC$ = "<lexicon/misc.a>"
@@ -36,16 +38,17 @@ $NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 $SINGULAR_NOUN$ = $NSTEM$ | $PRONOUN$ | $CONJUNCTION$ | $NUMBERS$ | $ABBREV$ | $PROPERNOUN$ | $BORROWED$
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 
-$NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? || $NINFL$
+$NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? $POLARITY$? || $NINFL$
 
 % Verbs
-$VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? || $VINFL$
+$VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $POLARITY$? || $VINFL$
 
 $WORD$ = $MISC$? ( $NOUN$+ $INDECLINABLE$? \
 	| $VERB$+ $INDECLINABLE$?  \
 	| $PREPOSITIONS$ \
 	| $INTERJECTION$ \
 	| $QUESTION$ \
+	| $POLARITY$ \
 	| $NUMBER$ \
 ) $MISC$?
 

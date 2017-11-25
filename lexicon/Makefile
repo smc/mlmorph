@@ -1,7 +1,7 @@
 LEXFILES = nouns.fst proper-nouns.fst pronouns.fst prepositions.fst \
 	adjectives.fst demonstratives.fst adverbs.fst interjections.fst \
 	conjunctions.fst verbs.fst misc.fst abbreviations.fst questions.fst \
-	indeclinables.fst borrowed-words.fst
+	indeclinables.fst borrowed-words.fst polarity.fst
 LEXFSAFILES=$(LEXFILES:.fst=.a)
 
 include ../Makefile.inc
@@ -21,6 +21,7 @@ demonstratives.fst: demonstratives.lex
 questions.fst: questions.lex
 borrowed-words.fst: english-borrowed.lex
 prepositions.fst: prepositions.lex
+polarity.fst: affirmatives.lex negations.lex
 
 clean:
 	-rm -f *.a *~ Makefile.bak

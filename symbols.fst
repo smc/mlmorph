@@ -10,7 +10,7 @@
 
 % POS tags
 #POS# = <adj><adv><dem><n><np><prn><postp><ij><cnj><qn><v><vaux><num><pnct><eng> \
-	<Noun><Punct><prep><indeclinable><interrogative>
+	<Noun><Punct><prep><indeclinable><interrogative><aff><neg>
 
 % Boundary markers
 #BM#  = <LB><RB><MB>
