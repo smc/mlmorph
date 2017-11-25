@@ -15,13 +15,15 @@ $plural-maps$ = {[#Virama#]}:{ുകൾ<del>} | \
 	{[ൾ]}:{ളുകൾ<del>} | \
 	{[ൺ]}:{ണുുകൾ<del>} | \
 	{[ർ]}:{റുകൾ<del>} | \
-	{[ർ]}:{രുകൾ<del>}
+	{[ർ]}:{രുകൾ<del>} | \
+	{ഞാൻ}:{ഞങ്ങൾ<del>} | \
+	{നീ}:{നിങ്ങൾ<del>}
 
 $plural-general_step1$ = $plural-maps$ ^-> (__ [#POS##BM##TMP#]+ <pl> )
 $plural-del-tmp$ = {<pl>}:{} ^->  (<del> [#POS##BM##TMP#]+ __ )
 $plural-general$= $plural-general_step1$ || $plural-del-tmp$
 
-% <plural> Marks need to insert to avoid phonological rules in boundaries. 
+% <plural> Marks need to insert to avoid phonological rules in boundaries.
 % for example: പൂച്ച + കൾ = പൂച്ചകൾ and not പൂച്ചക്കൾ as in പൂച്ച + കല്ല് => പൂച്ചക്കല്ല്
 $plural-cons-vowel$ = {<pl>}:{<plural>കൾ} ^-> ([#Consonants##VowelSigns#] [#POS##BM##TMP#]+ __ )
 
