@@ -6,23 +6,25 @@
 
 %%%%%%%%%%%% Noun Inflections %%%%%%%%%%%%%%
 
-ALPHABET = [#Letters##POS##BM##TMP#] <accusative> <del> <infl_marker>
+ALPHABET = [#Letters##POS##BM##TMP##Lsym#] <accusative> <del> <pl> <infl_marker>
+
+#inflboundary# = #POS##BM##TMP##Lsym#
 
 % Accusative inflection rules കടലിനെ, ആനയെ, പൂച്ചയെ, ആടിനെ, മരത്തെ, മരത്തിനെ
 $accusative-special-cases$ = {ഞാൻ}:{എന്നെ<infl_marker>} | {താൻ}:{തന്നെ<infl_marker>} | {നാം}:{നമ്മെ<infl_marker>} | \
 	{അവർ}:{അവരെ<infl_marker>} | {ഇവൻ}: {ഇവനെ<infl_marker>}
-$accusative-exceptions-step1$ = $accusative-special-cases$ ^-> (__ [#POS##BM##TMP#]+ <accusative> )
-$remove-accusative-ninfl$ = {<accusative>}:{} ^-> (<infl_marker> [#POS##BM##TMP#]+ __)
+$accusative-exceptions-step1$ = $accusative-special-cases$ ^-> (__ [#inflboundary#]+ <accusative> )
+$remove-accusative-ninfl$ = {<accusative>}:{} ^-> (<infl_marker> [#inflboundary#]+ __)
 $accusative-exceptions$ = $accusative-exceptions-step1$ || $remove-accusative-ninfl$
-$accusative$ = $accusative-exceptions$ 
+$accusative$ = $accusative-exceptions$
 
-$accusative-cons-vowels$ = {<accusative>}:{എ} ^-> ([#Consonants##VowelSigns#] [#POS##BM##TMP#]+ __)
-$accusative-chillus$ = {<accusative>}:{ഇനെ} ^-> ([#Chillus##Virama#] [#POS##BM##TMP#]+ __)
-$accusative$ = $accusative$ || $accusative-cons-vowels$ || $accusative-chillus$
+$accusative-cons-vowels-LL$ = {<accusative>}:{എ} ^-> ([#Consonants##VowelSigns#ൾ] [#inflboundary#]+ __)
+$accusative-chillus$ = {<accusative>}:{ഇനെ} ^-> ([ർൻൺൿൽ#Virama#] [#inflboundary#]+ __)
+$accusative$ = $accusative$ || $accusative-cons-vowels-LL$ || $accusative-chillus$
 
 $accusative-anuswara-forms$ = {<accusative>}:{<del>ത്തെ} | {<accusative>}:{<del>ത്തിനെ}
-$accusative-anuswara-step1$ = $accusative-anuswara-forms$ ^-> ([#Anuswara#] [#POS##BM##TMP#]+ __)
-$accusative-anuswara-step2$ = {[#Anuswara#]}:{} ^-> (__ [#POS##BM##TMP#]+ <del> )
+$accusative-anuswara-step1$ = $accusative-anuswara-forms$ ^-> ([#Anuswara#] [#inflboundary#]+ __)
+$accusative-anuswara-step2$ = {[#Anuswara#]}:{} ^-> (__ [#inflboundary#]+ <del> )
 $accusative-anuswara$ =  $accusative-anuswara-step1$ || $accusative-anuswara-step2$
 $accusative$ = $accusative$ ||  $accusative-anuswara$
 
