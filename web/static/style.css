@@ -10,11 +10,13 @@ header {
 
 .component {
     display: inline;
-    border: 1px solid slategray;
+    border: 1px solid orange;
+    border-left: 4px solid orange;
     border-radius: 5px;
     background-color: ivory;
     padding: 5px;
     margin-right: 1em;
+    color: #263238;
 }
 
 .root {
@@ -29,7 +31,7 @@ header {
 
 .tag {
     display: inline;
-    background-color: yellowgreen;
+    background-color: #aed581;
     border-radius: 5px;
     padding: 5px;
     margin-left: 5px;
