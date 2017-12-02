@@ -28,7 +28,7 @@ $(function () {
     $(".analresult").hide();
     $('#generate').on('click', function () {
         $(".genresult").empty();
-        $.getJSON('/generate', {
+        $.getJSON('/api/generate', {
             word: $('input[name="word"]').val(),
             type: $('select[name="type"]').val(),
             infl: $('select[name="infl"]').val(),
@@ -43,13 +43,16 @@ $(function () {
     $('#analyse').on('click', function () {
         $(".analresult").find("tbody").empty();
         $(".analresult").show();
-        $.post('/analyse', {
+        $.post('/api/analyse', {
             text: $('textarea[name="text"]').val()
         }, function (data) {
             var i, result = data.result;
             $.each(result, function (key, values) {
                 if (key && key.trim()) {
                     var formattedValues = '';
+                    values = values.filter(function (item, pos) {
+                        return values.indexOf(item) == pos;
+                    })
                     for (var i = 0; i < values.length; i++) {
                         formattedValues += '<div class="result">' + formatResult(values[i]) + '</div>';
                     }
