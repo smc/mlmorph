@@ -35,7 +35,7 @@ $VINFL$ = "<vinfl/vinfl.a>"
 $NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
 
 % Nouns
-$SINGULAR_NOUN$ = $NSTEM$ | $PRONOUN$ | $CONJUNCTION$ | $NUMBERS$ | $ABBREV$ | $PROPERNOUN$ | $BORROWED$
+$SINGULAR_NOUN$ = $NSTEM$ | $PRONOUN$ | $CONJUNCTION$ | $ABBREV$ | $PROPERNOUN$ | $BORROWED$
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 
 $NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? $POLARITY$? || $NINFL$
@@ -44,12 +44,13 @@ $NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#
 $VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $POLARITY$? || $VINFL$
 
 $WORD$ = $MISC$? ( $NOUN$+ $INDECLINABLE$? \
-	| $VERB$+ $INDECLINABLE$?  \
+	| $VERB$+ $INDECLINABLE$? \
 	| $PREPOSITIONS$ \
 	| $INTERJECTION$ \
 	| $QUESTION$ \
 	| $POLARITY$ \
 	| $NUMBER$ \
+	| ( $NUMBERS$ || $NINFL$ ) \
 ) $MISC$?
 
 $WORD$

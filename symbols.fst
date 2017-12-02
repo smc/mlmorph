@@ -15,7 +15,7 @@
 % Boundary markers
 #BM#  = <LB><RB><MB>
 #Numbers# = <one><two><three><four><five><six><seven><eight><nine><ten><zero>\
-  <ones><half><tens><hundreds><thousands><lakhs>
+  <ones><half><tens><hundreds><thousands><lakhs><crores>
 
 % other intermediate symbols
 #TMP# = <LN><BoW><EoW><infl_marker>
