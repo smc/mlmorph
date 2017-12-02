@@ -19,7 +19,7 @@ def index():
     return render_template('mlmorph.html',)
 
 
-@app.route("/analyse", methods=['GET', 'POST'])
+@app.route("/api/analyse", methods=['GET', 'POST'])
 def analyse():
     error = None
     text = None
@@ -43,7 +43,7 @@ def analyse():
     return jsonify(result=analyse_results)
 
 
-@app.route("/generate", methods=['GET'])
+@app.route("/api/generate", methods=['GET'])
 def generate():
     genInput = None
     error = None
