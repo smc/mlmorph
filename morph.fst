@@ -14,7 +14,8 @@ $ADJECTIVE$ = "<lexicon/adjectives.a>"
 $CONJUNCTION$ = "<lexicon/conjunctions.a>"
 $INTERJECTION$ = "<lexicon/interjections.a>"
 $PREPOSITIONS$ = "<lexicon/prepositions.a>"
-$INDECLINABLE$= "<lexicon/indeclinables.a>"
+$INDECLINABLE$ = "<lexicon/indeclinables.a>"
+$QUANTIFIERS$ = "<lexicon/quantifiers.a>"
 $QUESTION$ = "<lexicon/questions.a>"
 $NUMBERS$ = "<num.a>"
 $DEM$ = "<lexicon/demonstratives.a>"
@@ -32,7 +33,7 @@ $PLURAL$ = "<ninfl/plural.a>"
 $VSTEM$ = "<lexicon/verbs.a>"
 $VINFL$ = "<vinfl/vinfl.a>"
 % Numbers using digits
-$NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)?  [#Perc#]?  <num><RB>
+$NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)? [#Perc#]? <num><RB>
 
 % Nouns
 $SINGULAR_NOUN$ = $NSTEM$ | $PRONOUN$ | $CONJUNCTION$ | $ABBREV$ | $PROPERNOUN$ | $BORROWED$
@@ -43,6 +44,10 @@ $NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#
 % Verbs
 $VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $POLARITY$? || $VINFL$
 
+% Quantifiers, cardinals, ordinals
+$ordinal$= ({}:{ആം}|{}:{ആമത്തെ}|{}:{ആമത്}|{}:{ആമതു്}) <ordinal>
+$QUANTIFIER$ = $QUANTIFIERS$ | ( $NUMBERS$ $ordinal$? || $NINFL$ )
+
 $WORD$ = $MISC$? ( $NOUN$+ $INDECLINABLE$? \
 	| $VERB$+ $INDECLINABLE$? \
 	| $PREPOSITIONS$ \
@@ -50,7 +55,7 @@ $WORD$ = $MISC$? ( $NOUN$+ $INDECLINABLE$? \
 	| $QUESTION$ \
 	| $POLARITY$ \
 	| $NUMBER$ \
-	| ( $NUMBERS$ || $NINFL$ ) \
+	| $QUANTIFIER$ \
 ) $MISC$?
 
 $WORD$

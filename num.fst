@@ -115,4 +115,4 @@ $N1C$ = ( $N1$|$N10$|$N100$|$N1K$|$N1L$ )? $n1c$ <crores> ($N1L$|$N1K$|$N100$|$N
 
 $numbers$ = ( $n0$ | $N1$ | $N10$ | $N100$ | $N1K$ | $N1L$ | $N1C$ ) $half$?
 
-<LB> $numbers$ <num><RB>
+<LB> $numbers$ <cardinal><RB>
