@@ -13,5 +13,5 @@ $instrumental-forms$ = {<instrumental>}:{ആൽ} | \
 	{<instrumental>}:{<ninfl>കൊണ്ട്} | \
 	{<instrumental>}:{<ninfl>കൊണ്ടു്}
 % Instrumental inflection rules ആനയാൽ, ആനകൊണ്ട്, ആനയെക്കൊണ്ട്, വടിയാൽ, വടികൊണ്ട്, വട്ടിയെക്കൊണ്ട്
-$instrumental$  = $instrumental-forms$ ^-> ([#POS##BM##Numbers##TMP#]+ __)
+$instrumental$  = $instrumental-forms$ ^-> ([#POS##BM##Numbers##TMP##Numbers#]+ __)
 $instrumental$

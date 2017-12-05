@@ -6,9 +6,11 @@
 
 %%%%%%%%%%%% Noun Inflections %%%%%%%%%%%%%%
 
-ALPHABET = [#Letters##POS##BM##TMP#] <sociative> <del> <pl>
+ALPHABET = [#Letters##POS##BM##TMP##Numbers#] <sociative> <del> <pl>
 % Sociative inflection rules
-$sociative_virama$ = {<sociative>}:{ഓട്} ^-> ([#POS##BM##TMP#]+ __)
-$sociative_samvruthokaram$ = {<sociative>}:{ഓടു്} ^-> ([#POS##BM##TMP#]+ __)
-$sociative$ = $sociative_virama$ || $sociative_samvruthokaram$
+$sociative_form_1$ = {<sociative>}:{ഓട്} ^-> ([#Consonants##Chillus##VowelSigns##Virama#] [#POS##BM##TMP##Numbers#]+ __)
+$sociative_form_2$ = {<sociative>}:{ഓടു്} ^-> ([#Consonants##Chillus##VowelSigns##Virama#] [#POS##BM##TMP##Numbers#]+ __)
+$sociative_form_3$ = {<sociative>}:{ഇനോട്} ^-> ([#Virama#] [#POS##BM##TMP##Numbers#]+ __)
+$sociative_form_4$ = {<sociative>}:{ഇനോടു്} ^-> ([#Virama#] [#POS##BM##TMP##Numbers#]+ __)
+$sociative$ = $sociative_form_1$ | $sociative_form_2$ | $sociative_form_3$ | $sociative_form_4$
 $sociative$

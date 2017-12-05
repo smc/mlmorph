@@ -46,7 +46,7 @@ $VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $POLARITY$? || $VINFL$
 
 % Quantifiers, cardinals, ordinals
 $ordinal$= ({}:{ആം}|{}:{ആമത്തെ}|{}:{ആമത്}|{}:{ആമതു്}) <ordinal>
-$QUANTIFIER$ = $QUANTIFIERS$ | ( $NUMBERS$ $ordinal$? || $NINFL$ )
+$QUANTIFIER$ = $QUANTIFIERS$ | ( $NUMBERS$ $ordinal$? [#ninfl#]? || $NINFL$ )
 
 $WORD$ = $MISC$? ( $NOUN$+ $INDECLINABLE$? \
 	| $VERB$+ $INDECLINABLE$? \

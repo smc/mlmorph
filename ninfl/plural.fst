@@ -4,7 +4,7 @@
 
 #include "../symbols.fst"
 
-ALPHABET = [#Letters##POS##BM##TMP#] <plural> <pl> <del>
+ALPHABET = [#Letters##POS##BM##TMP##Numbers#] <plural> <pl> <del>
 
 %%%%% plural
 % തലകൾ, തരങ്ങൾ, കാടുകൾ
@@ -19,8 +19,8 @@ $plural-maps$ = {[#Virama#]}:{ുകൾ<del>} | \
 	{ഞാൻ}:{ഞങ്ങൾ<del>} | \
 	{നീ}:{നിങ്ങൾ<del>}
 
-$plural-general_step1$ = $plural-maps$ ^-> (__ [#POS##BM##TMP#]+ <pl> )
-$plural-del-tmp$ = {<pl>}:{} ^->  (<del> [#POS##BM##TMP#]+ __ )
+$plural-general_step1$ = $plural-maps$ ^-> (__ [#POS##BM##TMP##Numbers#]+ <pl> )
+$plural-del-tmp$ = {<pl>}:{} ^->  (<del> [#POS##BM##TMP##Numbers#]+ __ )
 $plural-general$= $plural-general_step1$ || $plural-del-tmp$
 
 % <plural> Marks need to insert to avoid phonological rules in boundaries.

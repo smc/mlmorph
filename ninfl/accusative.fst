@@ -6,9 +6,9 @@
 
 %%%%%%%%%%%% Noun Inflections %%%%%%%%%%%%%%
 
-ALPHABET = [#Letters##POS##BM##TMP##Lsym#] <accusative> <del> <pl> <infl_marker>
+ALPHABET = [#Letters##POS##BM##TMP##Lsym##Numbers#] <accusative> <del> <pl> <infl_marker>
 
-#inflboundary# = #POS##BM##TMP##Lsym#
+#inflboundary# = #POS##BM##TMP##Lsym##Numbers#
 
 % Accusative inflection rules കടലിനെ, ആനയെ, പൂച്ചയെ, ആടിനെ, മരത്തെ, മരത്തിനെ
 $accusative-special-cases$ = {ഞാൻ}:{എന്നെ<infl_marker>} | {താൻ}:{തന്നെ<infl_marker>} | {നാം}:{നമ്മെ<infl_marker>} | \
@@ -26,7 +26,7 @@ $accusative-anuswara-forms$ = {<accusative>}:{<del>ത്തെ} | {<accusative>
 $accusative-anuswara-step1$ = $accusative-anuswara-forms$ ^-> ([#Anuswara#] [#inflboundary#]+ __)
 $accusative-anuswara-step2$ = {[#Anuswara#]}:{} ^-> (__ [#inflboundary#]+ <del> )
 $accusative-anuswara$ =  $accusative-anuswara-step1$ || $accusative-anuswara-step2$
-$accusative$ = $accusative$ ||  $accusative-anuswara$
+$accusative$ = $accusative$ || $accusative-anuswara$
 
 %$tests$ = മഴ<n><RB><accusative> | മുറ്റം<n><RB><accusative> |  കിളി<n><RB><accusative> | താൻ<prn><RB><accusative> | ജനങ്ങൾ<del><RB><accusative>
 %$tests$ || $accusative$ >> "accusative-test.a"

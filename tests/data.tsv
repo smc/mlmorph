@@ -179,3 +179,16 @@
 തൊണ്ണൂറായിരത്തിരുന്നൂറ്	ഒമ്പത്<tens><thousands>രണ്ട്<hundreds><cardinal>
 പത്തായിരത്തൊമ്പത്	ഒന്ന്<tens><thousands>ഒമ്പത്<ones><cardinal>
 ഒമ്പതിന്	ഒമ്പത്<ones><cardinal><dative>
+പതിമൂന്നിൽ	ഒന്ന്<tens>മൂന്ന്<ones><cardinal><locative>
+പത്തിൽ	ഒന്ന്<tens><cardinal><locative>
+ആയിരമേ	<thousands><cardinal><vocative>
+എട്ടേ	എട്ട്<ones><cardinal><vocative>
+പത്തേ	ഒന്ന്<tens><cardinal><vocative>
+വീടേ	വീട്<n><vocative>
+ലക്ഷത്തിൽ	<lakhs><cardinal><locative>
+ആറിനെ	ആറ്<ones><cardinal><accusative>
+എട്ടോട്	എട്ട്<ones><cardinal><sociative>
+എട്ടിനോട്	എട്ട്<ones><cardinal><sociative>
+മുട്ടിനോട്	മുട്ട്<n><sociative>
+വീടിനോടു്	വീട്<n><sociative>
+ആയിരങ്ങൾ	<thousands><cardinal><pl>

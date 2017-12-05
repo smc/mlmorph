@@ -6,9 +6,9 @@
 
 %%%%%%%%%%%% Noun Inflections - Dative  %%%%%%%%%%%%%%
 
-ALPHABET = [#Letters##POS##BM##TMP##Lsym#] <dative> <del> <pl> <infl_marker>
+ALPHABET = [#Letters##POS##BM##TMP##Lsym##Numbers#] <dative> <del> <pl> <infl_marker>
 
-#inflboundary# = #POS##BM##TMP##Lsym#
+#inflboundary# = #POS##BM##TMP##Lsym##Numbers#
 
 $dative-del$ = {[#Anuswara#ൻർ]}:{} ^-> (__ [#inflboundary# ]+ <del> )
 
