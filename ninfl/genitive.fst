@@ -17,9 +17,9 @@ $genitive-special-cases$ = {ഞാൻ}:{എന്റെ<infl_marker>} | \
     {താൻ}:{തന്റെ<infl_marker>} | \
     {താൻ}:{തന്നുടെ<infl_marker>} | \
     {നാം}:{നമ്മുടെ<infl_marker>} | \
-    {നാം}:{നമ്മളുടെ<infl_marker>} | \
-    {അവൻ}:{അവന്റെ<infl_marker>} |\
-    {അവൻ}:{അവനുടെ<infl_marker>}
+    {നാം}:{നമ്മളുടെ<infl_marker>}
+
+$genitive-del$ = {[#Anuswara#ൻർ]}:{} ^-> (__ [#inflboundary# ]+ <del> )
 
 % Genitive inflection rules -ആനയുടെ, കടലിന്റെ, പേരിന്റെ, പൂച്ചയുടെ, മുറ്റത്തിന്റെ
 % പൊതുവിൽ ചില്ലിൽ അവസാനിക്കുന്ന വാക്കുകൾക്ക് ഉടെ, ഇന്റെ എന്നീ രണ്ടും വിഭക്തികളും ചേരും. ഉദാഹരണം
@@ -38,17 +38,24 @@ $genitive$ = $genitive$ || $genitive-cons-vowels$
 $genitive-half-cons$ = {<genitive>}:{ഇന്റെ} ^-> ([#Virama#] [#inflboundary#]+ __)
 $genitive$ = $genitive$ || $genitive-half-cons$
 
-$genitive-anuswara-step1$ =  {<genitive>}:{<del>ത്തിന്റെ} ^-> ([#Anuswara#] [#inflboundary#]+ __)
-$genitive-anuswara-step2$ = {[#Anuswara#]}:{} ^-> (__ [#inflboundary#]+ <del> )
-$genitive-anuswara$ = $genitive-anuswara-step1$ || $genitive-anuswara-step2$
+$genitive-anuswara$ =  {<genitive>}:{<del>ത്തിന്റെ} ^-> ([#Anuswara#] [#inflboundary#]+ __)
+$genitive-anuswara$ = $genitive-anuswara$ || $genitive-del$
 $genitive$ = $genitive$ || $genitive-anuswara$
 
-% ന്റെ = ന്+ റെ ആക്കാൻ ഇവിടെ ഒരു മാർക്കർ ഇട്ടുവെച്ച് ചില്ലു നോർമലൈസ് ചെയ്യുമ്പോൾ ഉപയോഗിക്കുന്നു.
-$chillu-n-forms$ = {<genitive>}:{<infl_marker>റെ} | {<genitive>}:{ഉടെ}
+% ൻ - ന്റെ ആവുന്നു. നുടെ എന്നുമാകാം. ഭടൻ - ഭടന്റെ, ഭടനുടെ
+$genitive-chillu-n-forms$ = {<genitive>}:{<del>ന്റെ} | {<genitive>}:{ഉടെ}
+$genitive-chillu-n$ = $genitive-chillu-n-forms$ ^-> ([ൻ] [#inflboundary#]+ __)
+$genitive-chillu-n$  = $genitive-chillu-n$ || $genitive-del$
+
+% ർ - രിന്റെ, റിന്റെ എന്നിവയിലേതെങ്കിലുമാവാം. കാറിന്റെ, തൃശ്ശൂരിന്റെ, തരൂരിന്റെ ...
+% രിന്റെ എന്നത് ചില്ലുകളുടെ പൊതുവെയുള്ള നിയമത്തിൽ ചെയ്തുകൊള്ളും. താഴെ നോക്കുക.
+% റിന്റെ എന്നു വരുവാൻ പ്രത്യേക നിയമം ചേർക്കുന്നു.
+$genitive-chillu-r$ = {<genitive>}: {<del>റിന്റെ} ^-> ([ർ] [#inflboundary# ]+ __)
+$genitive-chillu-r$ = $genitive-chillu-r$ || $genitive-del$
+
 $chillu-forms$ = {<genitive>}:{ഇന്റെ} | {<genitive>}:{ഉടെ}
-$genitive-chillu-n$ = $chillu-n-forms$  ^-> ([ൻ] [#inflboundary#]+ __)
 $genitive-chillu-others$ = $chillu-forms$ ^-> ([ർൾൺൿൽ] [#inflboundary#<pl>]+ __)
-$genitive$ = $genitive$ || $genitive-chillu-n$ || $genitive-chillu-others$
+$genitive$ = $genitive$ | $genitive-chillu-n$ | $genitive-chillu-r$ | $genitive-chillu-others$
 
 %$tests$ = മഴ<n><RB><genitive> | മുറ്റം<n><RB><genitive> |  കിളി<n><RB><genitive> | താൻ<n><RB><genitive> | പയർ<n><genitive>
 %$tests$ || $genitive$ >> "genitive-test.a"
