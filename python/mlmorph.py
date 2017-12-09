@@ -7,7 +7,7 @@ scientific studies, as far as python use goes.
 """
 
 from argparse import ArgumentParser
-from sys import stderr, stdin
+from sys import stdin
 import os
 import hfst
 

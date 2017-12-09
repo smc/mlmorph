@@ -1,8 +1,7 @@
-from datetime import datetime
-from flask import Flask, abort, flash, jsonify, redirect, render_template, request, url_for
 import sys
-import re
+import regex
 import os
+from flask import Flask, jsonify, render_template, request
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 sys.path.insert(0, '../python')
@@ -14,6 +13,33 @@ app.config['DEBUG'] = True
 morph = Mlmorph('../malayalam.a')
 
 
+def format_result(analysis_result):
+    result = {}
+    if analysis_result is None:
+        return result
+
+    result['weight'] = analysis_result[1]
+    analysis = analysis_result[0]
+    if analysis[0] == '<':
+        analysis = ' ' + analysis
+    match = regex.match(r"((?P<root>([^<])+)(?P<tags>(<[^>]+>)+))+", analysis)
+    roots = match.captures("root")
+    morphemes = []
+    print(roots)
+    for rindex in range(len(roots)):
+        morpheme = {}
+        print(roots[rindex])
+        morpheme['root'] = roots[rindex]
+        tags = match.captures("tags")[rindex]
+        morpheme['pos'] = regex.match(
+            r"(<(?P<tag>([^>]+))>)+", tags).captures("tag")
+        morphemes.append(morpheme)
+
+    result['morphemes'] = morphemes
+
+    return result
+
+
 @app.route("/")
 def index():
     return render_template('mlmorph.html',)
@@ -21,14 +47,13 @@ def index():
 
 @app.route("/api/analyse", methods=['GET', 'POST'])
 def analyse():
-    error = None
     text = None
     analyse_results = {}
     if request.method == 'POST':
         text = request.form['text']
     else:
         text = request.args.get('text')
-    words = re.split('(\s+)', text)
+    words = regex.split(r'(\s+)', text)
     # real analysis
     for windex in range(len(words)):
         word = words[windex]
@@ -38,22 +63,19 @@ def analyse():
             anals_results = []
         else:
             for aindex in range(len(anals)):
-                anals_results.append(anals[aindex][0])
+                anals_results.append(format_result(anals[aindex]))
         analyse_results[word] = anals_results
     return jsonify(result=analyse_results)
 
 
 @app.route("/api/generate", methods=['GET'])
 def generate():
-    genInput = None
-    error = None
-    word = None
     generate_results = []
     word = request.args.get('word')
-    type = request.args.get('type')
+    wordtype = request.args.get('type')
     genInput = word
-    if type:
-        genInput += '<' + type + '>'
+    if wordtype:
+        genInput += '<' + wordtype + '>'
     infl = request.args.get('infl')
     if infl:
         genInput += '<' + infl + '>'
@@ -62,7 +84,7 @@ def generate():
         generate_results.append(genInput)
     for gindex in range(len(gens)):
         generate_results.append(gens[gindex][0])
-    return jsonify(word=word, type=type, infl=infl, result=generate_results)
+    return jsonify(word=word, type=wordtype, infl=infl, result=generate_results)
 
 if __name__ == "__main__":
     app.run()

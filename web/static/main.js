@@ -1,27 +1,24 @@
 $(function () {
 
-    function formatResult(textValue) {
-        var i, j, root, tags,
-            resultHTML = '',
-            components;
+    function formatResult(result) {
+        var i, j, root, tags,morphemes,
+            $resultHTML =  $('<div>').addClass('result')
 
-        if (!textValue) {
-            return textValue;
-        }
-        components = textValue.match(/([^<]+)(<[^>]+>)+/g);
-
-        for (i = 0; i < components.length; i++) {
-            root = components[i].match(/[^<]+/g)[0];
-            tags = components[i].match(/<[^>]+>/g)
-            resultHTML += '<div class="component">';
-            resultHTML += '<div class="root">' + root + '</div>';
-            resultHTML += '<div class="tags">';
+        morphemes = result.morphemes;
+        for (i = 0; i < morphemes.length; i++) {
+            morpheme = morphemes[i];
+            root = morpheme.root;
+            tags = morpheme.pos;
+            $tags = $('<div>').addClass('tags');
             for (j = 0; j < tags.length; j++) {
-                resultHTML += '<div class="tag">' + tags[j].replace(/[><]/g, '') + '</div>';
+                $tags.append($('<div>').addClass('tag').text(tags[j]));
             }
-            resultHTML += '</div></div>';
+            $resultHTML.append($('<div>').addClass('component')
+                .append( $('<div>').addClass('root').text(root))
+                .append( $tags )
+            )
         }
-        return resultHTML;
+        return $resultHTML;
     }
 
     $('select').material_select();
@@ -48,21 +45,19 @@ $(function () {
         }, function (data) {
             var i, result = data.result;
             $.each(result, function (key, values) {
-                if (key && key.trim()) {
-                    var formattedValues = '';
-                    values = values.filter(function (item, pos) {
-                        return values.indexOf(item) == pos;
-                    })
-                    for (var i = 0; i < values.length; i++) {
-                        formattedValues += '<div class="result">' + formatResult(values[i]) + '</div>';
-                    }
-                    $(".analresult tbody").append(
-                        $('<tr>').append(
-                            $('<td>').text(key),
-                            $('<td>').html(formattedValues)
-                        )
-                    );
+                if (!key || !key.trim()) {
+                    return;
                 }
+                var formattedValues =  $('<td>')
+                for (var i = 0; i < values.length; i++) {
+                    formattedValues.append( formatResult(values[i]) );
+                }
+                $(".analresult tbody").append(
+                    $('<tr>').append(
+                        $('<td>').text(key),
+                        formattedValues
+                    )
+                );
             });
         });
     });
