@@ -15,7 +15,7 @@ $locative-cons-vowel$ = {<locative>}:{ഇൽ} ^-> ([#Consonants##VowelSigns#] [#
 $virama-forms$ = {<locative>}:{ഇൽ} | {<locative>}:{ഇങ്കൽ}
 $locative-virama-chillus$ = $virama-forms$ ^-> ([#Virama##Chillus#] [#inflboundary#]+ __)
 
-$ta-forms$ =  {<locative>}:{<dup>ടിൽ} | {<locative>}:{<dup>ടിങ്കൽ} | {<locative>}:{<dup>ടിങ്ങൽ}
+$ta-forms$ = {<locative>}:{<dup>ടിൽ} | {<locative>}:{<dup>ടിങ്കൽ} | {<locative>}:{<dup>ടിങ്ങൽ}
 $locative-ta$ = $ta-forms$ ^-> ([#VowelSigns#] ട [#Virama#] [#inflboundary#]+ __)
 
 $locative$ = $locative-cons-vowel$ || $locative-ta$ ||  $locative-virama-chillus$ || $locative-anuswara$

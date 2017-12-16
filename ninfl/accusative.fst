@@ -18,11 +18,11 @@ $remove-accusative-ninfl$ = {<accusative>}:{} ^-> (<infl_marker> [#inflboundary#
 $accusative-exceptions$ = $accusative-exceptions-step1$ || $remove-accusative-ninfl$
 $accusative$ = $accusative-exceptions$
 
-$accusative-cons-vowels-LL$ = {<accusative>}:{എ} ^-> ([#Consonants##VowelSigns#ൾ] [#inflboundary#]+ __)
-$accusative-chillus$ = {<accusative>}:{ഇനെ} ^-> ([ർൻൺൿൽ#Virama#] [#inflboundary#]+ __)
+$accusative-cons-vowels-LL$ = {<accusative>}:{എ<infl_marker>} ^-> ([#Consonants##VowelSigns#ൾ] [#inflboundary#]+ __)
+$accusative-chillus$ = {<accusative>}:{ഇനെ<infl_marker>} ^-> ([ർൻൺൿൽ#Virama#] [#inflboundary#]+ __)
 $accusative$ = $accusative$ || $accusative-cons-vowels-LL$ || $accusative-chillus$
 
-$accusative-anuswara-forms$ = {<accusative>}:{<del>ത്തെ} | {<accusative>}:{<del>ത്തിനെ}
+$accusative-anuswara-forms$ = {<accusative>}:{<del>ത്തെ<infl_marker>} | {<accusative>}:{<del>ത്തിനെ<infl_marker>}
 $accusative-anuswara-step1$ = $accusative-anuswara-forms$ ^-> ([#Anuswara#] [#inflboundary#]+ __)
 $accusative-anuswara-step2$ = {[#Anuswara#]}:{} ^-> (__ [#inflboundary#]+ <del> )
 $accusative-anuswara$ =  $accusative-anuswara-step1$ || $accusative-anuswara-step2$
