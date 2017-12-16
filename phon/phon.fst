@@ -6,7 +6,8 @@
 ALPHABET = [#Ssym#] [#BM##POS##Numbers##TMP##Lsym#]:<>
 $delete-pos$ = .*
 
-$PHON$ =  "<chillu-normalization.a>" \
+$PHON$ = "<exceptions.a>" \
+	|| "<chillu-normalization.a>" \
 	|| "<vowelsign-consonant.a>" \
 	|| "<consonant-consonant.a>" \
 	|| "<chillu-consonant.a>" \
