@@ -8,19 +8,19 @@ ALPHABET = [#Letters##POS##BM##TMP##Numbers#] <plural> <pl> <del>
 
 %%%%% plural
 % തലകൾ, തരങ്ങൾ, കാടുകൾ
-$plural-maps$ = {[#Virama#]}:{ുകൾ<del>} | \
-	{[#Anuswara#]}:{ങ്ങൾ<del>} | \
-	{[ൻ]}:{ൻമാർ<del>} | \
-	{[ൽ]}:{ലുകൾ<del>}  | \
-	{[ൾ]}:{ളുകൾ<del>} | \
-	{[ൺ]}:{ണുുകൾ<del>} | \
-	{[ർ]}:{റുകൾ<del>} | \
-	{[ർ]}:{രുകൾ<del>} | \
-	{ഞാൻ}:{ഞങ്ങൾ<del>} | \
-	{നീ}:{നിങ്ങൾ<del>}
+$plural-maps$ = {[#Virama#]}:{ുകൾ} | \
+	{[#Anuswara#]}:{ങ്ങൾ} | \
+	{[ൻ]}:{ൻമാർ} | \
+	{[ൽ]}:{ലുകൾ}  | \
+	{[ൾ]}:{ളുകൾ} | \
+	{[ൺ]}:{ണുുകൾ} | \
+	{[ർ]}:{റുകൾ} | \
+	{[ർ]}:{രുകൾ} | \
+	{ഞാൻ}:{ഞങ്ങൾ} | \
+	{നീ}:{നിങ്ങൾ}
 
-$plural-general_step1$ = $plural-maps$ ^-> (__ [#POS##BM##TMP##Numbers#]+ <pl> )
-$plural-del-tmp$ = {<pl>}:{} ^-> (<del> [#POS##BM##TMP##Numbers#]+ __ )
+$plural-general_step1$ = $plural-maps$ <>:<del> ^-> (__ [#POS##BM##TMP##Numbers#]+ <pl> )
+$plural-del-tmp$ = {<pl>}:{} ^-> ( [#POS##BM##TMP##Numbers#]+ __ )
 $plural-general$= $plural-general_step1$ || $plural-del-tmp$
 
 % ഉ, ഊ എന്നിവയൊഴികെയുള്ള സ്വരചിഹ്നങ്ങളിലോ, ഖരാക്ഷരങ്ങളിലോ അവസാനിക്കുന്നവയുടെ കൂടെ കൾ ചേർത്താൽ
