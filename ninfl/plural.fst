@@ -20,7 +20,7 @@ $plural-maps$ = {[#Virama#]}:{ുകൾ} | \
 	{നീ}:{നിങ്ങൾ}
 
 $plural-general_step1$ = $plural-maps$ <>:<del> ^-> (__ [#POS##BM##TMP##Numbers#]+ <pl> )
-$plural-del-tmp$ = {<pl>}:{} ^-> ( [#POS##BM##TMP##Numbers#]+ __ )
+$plural-del-tmp$ = {<pl>}:{} ^-> ( <del> [#POS##BM##TMP##Numbers#]+ __ )
 $plural-general$= $plural-general_step1$ || $plural-del-tmp$
 
 % ഒാഷ്ഠ്യസ്വരമാകാത്തിടത്തോ ഖരാക്ഷരങ്ങളിലോ അവസാനിക്കുന്നവയുടെ കൂടെ കൾ ചേർത്താൽ
