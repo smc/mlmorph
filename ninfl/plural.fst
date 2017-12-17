@@ -23,21 +23,26 @@ $plural-general_step1$ = $plural-maps$ <>:<del> ^-> (__ [#POS##BM##TMP##Numbers#
 $plural-del-tmp$ = {<pl>}:{} ^-> ( [#POS##BM##TMP##Numbers#]+ __ )
 $plural-general$= $plural-general_step1$ || $plural-del-tmp$
 
-% ഉ, ഊ എന്നിവയൊഴികെയുള്ള സ്വരചിഹ്നങ്ങളിലോ, ഖരാക്ഷരങ്ങളിലോ അവസാനിക്കുന്നവയുടെ കൂടെ കൾ ചേർത്താൽ
+% ഒാഷ്ഠ്യസ്വരമാകാത്തിടത്തോ ഖരാക്ഷരങ്ങളിലോ അവസാനിക്കുന്നവയുടെ കൂടെ കൾ ചേർത്താൽ
 % ബഹുവചനം കിട്ടും. ഈ കൾ-ലെ ക ഫോണോളജിക്കൽ നിയമങ്ങളിൽ നിന്ന് വിട്ട് നിൽക്കണം.
-% ഉ, ഊ എന്നിവയുടെ ചിഹ്നങ്ങളിലാണവസാനിക്കുന്നതെങ്കിൽ ക്കൾ ആണ് ബഹുവചനം കിട്ടാനായി ചേർക്കേണ്ടതു്.
+% "കൾ' എന്ന പ്രത്യയത്തിന്റെ മുമ്പിലുള്ള വർണ്ണം ഒാഷ്ഠ്യസ്വരമാകുന്നിടത്തെല്ലാം അതിലെ ("കൾ' എന്നതിലെ) കകാരം ഇരട്ടിക്കും.
 
 % <plural> Marks need to insert to avoid phonological rules in boundaries.
 % for example: പൂച്ച + കൾ = പൂച്ചകൾ and not പൂച്ചക്കൾ as in പൂച്ച + കല്ല് => പൂച്ചക്കല്ല്
-#VowelSigns-except-u# = ാിീെേൊോൗോൌൃ
-$plural-cons-vowel$ = {<pl>}:{<plural>കൾ} ^-> ([#Consonants##VowelSigns-except-u#] [#POS##BM##TMP#]+ __ )
+#VowelSigns-labial# = ുൂൊോാ
+#VowelSigns-non-labial# = ിീൃെേ
+$plural-cons-vowel$ = {<pl>}:{<plural>കൾ} ^-> ([#Consonants##VowelSigns-non-labial#] [#POS##BM##TMP#]+ __ )
 % പശു - പശുക്കൾ, ഗുരു-ഗുരുക്കൾ
-$plural-u-vowelsign$ = {<pl>}:{<plural>ക്കൾ} ^-> ([ുൂ] [#POS##BM##TMP#]+ __ )
+$plural-u-vowelsign$ = {<pl>}:{<plural>ക്കൾ} ^-> ( [#VowelSigns-labial#] [#POS##BM##TMP#]+ __ )
 
 $plural$ = $plural-general$ | $plural-cons-vowel$ | $plural-u-vowelsign$
 
-% TODO
-% മങ്കമാർ, അമ്മമാർ, പോലീസുകാർ...
+% പുരുഷന്മാരോ സ്ത്രീകളോ വെവ്വേറെ ചേർന്നുണ്ടാകുന്ന ബഹുത്വത്തെക്കുറിക്കുന്ന സലിംഗബഹുവചനപ്രത്യയം സാമാന്യമായി "മാർ' എന്നാണു്.
+% ഉദാ: രാമൻ-രാമന്മാർ, നമ്പൂരി-നമ്പൂരിമാർ, തട്ടാൻ-തട്ടാന്മാർ അമ്മ-അമ്മമാർ, ഭാര്യ-ഭാര്യമാർ തള്ള-തള്ളമാർ. മന്ത്രിമാർ?
+% പുരുഷന്മാരും സ്ത്രീകളുംകൂടിയുണ്ടാകുന്ന ബഹുത്വത്തെക്കുറിപ്പാനുള്ള അലിംഗബഹുവചനപ്രത്യയം "അർ' എന്നാകുന്നു.
+% ഉദാ: മിടുക്കർ, ശൂദ്രർ, അധ്യാപകർ, പോലീസുകാർ(പോലീസുകാരൻ + പോലീസുകാരി)
+% Looks like we need gender tagging in lexicon.
+
 $test$ = മല<n><pl> | അവൻ<n><pl> | മരം<n><pl> | ഇതൾ<n><pl> | മുകിൽ<n><pl> | പയർ<n><pl>
 $test$ || $plural$ >> "plural-test.a"
 
