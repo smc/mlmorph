@@ -1,4 +1,4 @@
-#Vowels# = അആഇഈഉഊഋഎഏഐഒഓഔഔഅം
+#Vowels# = അആഇഈഉഊഋഎഏഐഒഓഔഔ
 #VowelSigns# = ാിീുൃെേൊോൗൂൈ
 #Anuswara# = ം
 #Virama# = ്
