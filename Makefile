@@ -1,4 +1,4 @@
-SUBDIRS = lexicon phon ninfl vinfl
+SUBDIRS = lexicon phon ninfl vinfl deriv
 
 include Makefile.inc
 
