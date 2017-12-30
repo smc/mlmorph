@@ -1,4 +1,4 @@
-FSTFILES = noun-from-verb.fst
+FSTFILES = noun-from-verb.fst noun-from-noun.fst
 
 FSAFILES=$(FSTFILES:.fst=.a)
 
