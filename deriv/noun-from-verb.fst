@@ -20,7 +20,7 @@ $noun-forms-1$ = {രുക}: {രൽ} |\
 	{തുക} : {തൽ} |\
 	{വുക} : {വൽ} |\
 	{ഴുക} : {ഴൽ}
-$nouns-1$ = $noun-forms-1$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <n>)
+$nouns-1$ = $noun-forms-1$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <n> <deriv>)
 
 $noun-forms-2$ = {രുക}: {ർച്ച} |\
 	{റുക} : {റ്റം} |\
@@ -33,7 +33,7 @@ $noun-forms-2$ = {രുക}: {ർച്ച} |\
 	{തുക} : {ത്ത്} | {തുക} : {ത്തു്} |\
 	{ഴുക} : {ഴ്ച}
 
-$nouns-2$ = $noun-forms-2$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <n>)
+$nouns-2$ = $noun-forms-2$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <n> <deriv> )
 
 
 % Incomplete.
