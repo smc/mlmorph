@@ -39,7 +39,8 @@ $NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)? [#Perc#]? <num><RB>
 $NOUNFROMVERB$ = "<deriv/noun-from-verb.a>"
 $NOUNFROMNOUN$ = "<deriv/noun-from-noun.a>"
 $DERIVEDNOUNS$ = (($VSTEM$ <n>) || $NOUNFROMVERB$) |\
-	( ($NSTEM$ <n><deriv>) || $NOUNFROMNOUN$)
+	( ($NSTEM$ [<masculine><feminine><neutral>] <n> <deriv>) || $NOUNFROMNOUN$)
+
 $SINGULAR_NOUN$ = $NSTEM$ | $PRONOUN$ | $CONJUNCTION$ | $ABBREV$ | $PROPERNOUN$ | $BORROWED$ | $DERIVEDNOUNS$
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 

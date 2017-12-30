@@ -10,11 +10,15 @@ ALPHABET = [#AAsym#]
 
 #=D# = #Consonants##Chillus#
 
-$noun-forms$ = {്}: {ുകാരൻ} | {്}: {ുകാരി} | {്}: {ുകാർ}  |\
-	{ി} : {ിയൻ} |  {ി} : {ിയത്തി} |  {ി} : {ിയർ}  |\
-	{ം} : {ക്കാരൻ} | {ം} : {ക്കാരി} |  {ം} : {ക്കാർ} |\
-	{[#=D#]}:{[#=D#]ക്കാരൻ} | {[#=D#]}:{[#=D#]ക്കാരി} | {[#=D#]}:{[#=D#]ക്കാർ}
+$noun-forms-masculine$ = {്}: {ുകാരൻ} | {ി} : {ിയൻ} | {ം} : {ക്കാരൻ} | {[#=D#]}:{[#=D#]ക്കാരൻ}
 
-$nouns$ = $noun-forms$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <n><deriv>)
+$noun-forms-feminine$ = {്}: {ുകാരി} | {ി} : {ിയത്തി} | {ം} : {ക്കാരി} | {[#=D#]}:{[#=D#]ക്കാരി}
 
+$noun-forms-neutral$ = {്}: {ുകാർ} | {ി} : {ിയർ} | {ം} : {ക്കാർ} | {[#=D#]}:{[#=D#]ക്കാർ}
+
+$nouns-masculine$ = $noun-forms-masculine$ ^-> ([#Letters#]+ __ [#POS##BM##TMP#]+ <masculine> <n> <deriv>)
+$nouns-feminine$ = $noun-forms-feminine$ ^-> ([#Letters#]+ __ [#POS##BM##TMP#]+ <feminine> <n> <deriv>)
+$nouns-neutral$ = $noun-forms-neutral$ ^-> ([#Letters#]+ __ [#POS##BM##TMP#]+ <neutral> <n> <deriv>)
+
+$nouns$ = $nouns-masculine$ || $nouns-feminine$ || $nouns-neutral$
 $nouns$
