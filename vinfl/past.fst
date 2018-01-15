@@ -16,8 +16,18 @@ $past-tense-exceptions$ = {ഉണ്ണുക}:{ഉണ്ടു} | \
 	{ചാവുക}:{ചത്തു} | \
 	{ഇരിക്കുക}:{ഇരുന്നു} |\
 	{കാക്കുക}:{കാത്തു} |\
+	{കക്കുക}:{കട്ടു} |\
 	{തോൽക്കുക}:{തോറ്റു} |\
-	{ൾക്കുക}:{ട്ടു}
+	{നോവുക}:{നൊന്തു} |\
+	{കൊള്ളുക}:{കൊണ്ടു} |\
+	{തിന്നുക}:{തിന്നു} |\
+	{ചുമക്കുക}:{ചുമന്നു} |\
+	{വിശക്കുക}: {വിശന്നു} |\
+	{അളക്കുക}:{അളന്നു} |\
+	{നീളുക}:{നീണ്ടു} |\
+	{ൾക്കുക}:{ട്ടു} |\
+	{ർക്കുക}:{ർത്തു} |\
+	{ർത്തുക}:{ർത്തി}
 
 $past-tense-ex$ = $past-tense-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##Numbers##TMP#]+ <past>)
 % പറിക്കുക - പറിച്ചു, അടയ്ക്കുക - അടച്ചു
@@ -33,6 +43,6 @@ $past-tense-2$ = {ക്കുക}:{ത്തു} <>:<infl_marker> ^-> ([#Conson
 % പിച്ചുക - പിച്ചി
 $past-tense-3$ = $past-tense-map$ <>:<infl_marker> ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <past>)
 
-$past-tense$ = $past-tense-ex$ || $past-tense-1$ || $past-tense-2$ || $past-tense-3$ 
+$past-tense$ = $past-tense-ex$ || $past-tense-1$ || $past-tense-2$ || $past-tense-3$
 
-$past-tense$ 
+$past-tense$
