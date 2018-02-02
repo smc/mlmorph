@@ -5,7 +5,7 @@ ALPHABET = [#Letters##POS##BM##TMP##Lsym##Numbers#] <locative> <pl> <del> <dup>
 % Locative inflection rules
 #inflboundary# = #POS##BM##TMP##Lsym##Numbers#
 
-$anuswara-forms$ = {<locative>}:{<del>ത്തിൽ} | {<locative>}:{<del>ത്തിങ്കൽ}
+$anuswara-forms$ = {<locative>}:{<del>ത്തിൽ} | {<locative>}:{<del>ത്തിങ്കൽ} | {<locative>}:{<del>ത്ത്} | {<locative>}:{<del>ത്തു്}
 $locative-anuswara-step1$ = $anuswara-forms$ ^-> ([#Anuswara#] [#inflboundary#]+ __)
 $locative-anuswara-step2$ = {[#Anuswara#]}:{} ^-> (__ [#inflboundary#]+ <del> )
 $locative-anuswara$ = $locative-anuswara-step1$ || $locative-anuswara-step2$
