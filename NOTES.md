@@ -14,17 +14,14 @@ TODO
 1. Expand lexicon
 2. More proper nouns - places, people where to get?
 3. Verbs
-4. A web utility to demo
-5. Documentation
-6. Expand number to cover all edge cases.
-7. Abbreviations
-8. How to handle borrowed latin words?
-9. Standardize POS tags and document
-10. Exception dictionary
-11. Better way to test. Create CSV or TSV files with input and output, use ptyhon bindings to match results.
-12. Use names for variables that are not confusing
-13. include #infl# in the vowel to vowel sign context - as possible tag in the word joining position.
-14. Avoid proper nouns like place names, person names agglutinating with another proper names.
+4. Documentation
+5. Expand number to cover all edge cases.
+6. Abbreviations
+7. Standardize POS tags and document
+8. Exception dictionary
+9. Use names for variables that are not confusing
+10. include #infl# in the vowel to vowel sign context - as possible tag in the word joining position.
+11. Avoid proper nouns like place names, person names agglutinating with another proper names.
 
 
 Ideas
@@ -113,3 +110,14 @@ Then generate all strings the fst can generate using ```fst-generate accusative.
 
 You can keep the above test lines in FST as commented lines after debugging.
 
+ദ്വിത്വസന്ധി
+=========
+Duplication is more complicated than what is implemented now. Current implmentation is purely a
+phonological one. But actually, duplication is conditional on the characteristics of participating
+words.
+1. The duplication of കചടതപശ is when the first word is adjective. So it should happen only at
+word<n><adj>+word<n>
+2. Duplication also happens after demonstratives. അക്കാര്യം, ഇത്തല, ഇവ്വണ്ണം. But in this case even weak consonants get duplicated - ഇ + വണ്ണം = ഇവ്വണ്ണം, ഈവിധം. Also, elongation of demonstratives is
+suggested for the weak consontants - ഈവിധം
+3. In case of ദ്വന്ദസമാസം - no duplication happens- ആനകുതിര
+4. മുൻവിനയെച്ചം, ആധാരികാഭാസം, ഇൽ, കൽ പ്രത്യയങ്ങൾ -ഇവയ്ക്കപ്പുറം ഇരട്ടിക്കും. പക്ഷേ തന്നുപോയി എന്നതിൽ എങ്ങനെ പ ഇരട്ടിക്കില്ല എന്നതിനു നിയമമില്ല?
