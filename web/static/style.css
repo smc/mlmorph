@@ -35,9 +35,18 @@ header {
     border-radius: 5px;
     padding: 5px;
     margin-left: 5px;
-    font-family: monospace
+    font-family: monospace;
 }
 
 .result {
     margin-bottom: 1em;
+}
+
+.morphemes .chip {
+    background-color: #aed581;
+    font-family: monospace;
+}
+
+.morphemes .autocomplete-content img {
+    display: none;
 }

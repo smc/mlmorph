@@ -20,36 +20,14 @@
 	<div class="divider"></div>
 	<section class='section generate row'>
 		<h5>Generation</h5>
+		<!--
 		<div class="input-field col s4">
 			<input type=text id="rootword" name=word placeholder='Root word' value='{% if word %}{{word}}{% endif %}' />
 			<label for="rootword">Root word</label>
 		</div>
-		<div class="input-field col s4">
-			<select name=type>
-			<option value=''>Select</option>
-            <option value='n'>നാമം Noun</option>
-            <option value='np'>സംജ്ഞാനാമം Proper Noun</option>
-            <option value='prn'>സർവനാമം Pronoun</option>
-            <option value='v'>ക്രിയ Verb</option>
-            <option value='adj'>നാമവിശേഷണം Adjective</option>
-            <option value='adv'>ക്രിയാവിശേഷണം Adverb</option>
-        </select>
-			<label>Word type</label>
-		</div>
-		<div class="input-field col s4">
-			<select name=infl>
-			<option value=''>Select</option>
-            <option value='pl'>ബഹുവചനം Plural </option>
-            <option value='accusative'>പ്രതിഗ്രാഹിക Accusative</option>
-            <option value='dative'>ഉദ്ദേശിക Dative</option>
-            <option value='genitive'>സംബന്ധിക Genitive</option>
-            <option value='instrumental'>പ്രയോജിക Instrumental</option>
-            <option value='locative'>ആധാരിക Locative</option>
-            <option value='sociative'>സംയോജിക Sociative</option>
-            <option value='vocative'>സംബോധിക Vocative</option>
-        </select>
-			<label>Inflection</label>
-		</div>
+	-->
+		<div class="chips chips-autocomplete  morphemes"></div>
+
 		<a id='generate' class="waves-effect waves-light btn">Generate</a>
 		<div class="genresult col s12"></div>
 	</section>
