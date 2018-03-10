@@ -30,6 +30,7 @@ $( function () {
 		{ id: 'interrogative', tag: 'Interrogative' },
 		{ id: 'Punct', tag: 'Punctuation' },
 		{ id: 'cardinal', tag: 'Cardinal' },
+		{ id: 'ordinal', tag: 'Ordinal' },
 		{ id: 'half', tag: 'Half' },
 		{ id: 'deriv', tag: 'Derviative' },
 		{ id: 'feminine', tag: 'Feminine' },
