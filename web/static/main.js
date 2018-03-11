@@ -10,7 +10,7 @@ $( function () {
 		{ id: 'pl', tag: 'Plural' },
 		{ id: 'accusative', tag: 'Accusative' },
 		{ id: 'dative', tag: 'Dative' },
-		{ id: 'genitive', tag: 'Gentive' },
+		{ id: 'genitive', tag: 'Genitive' },
 		{ id: 'instrumental', tag: 'Instrumental' },
 		{ id: 'locative', tag: 'Locative' },
 		{ id: 'sociative', tag: 'Sociative' },
@@ -68,8 +68,8 @@ $( function () {
 		return $resultHTML;
 	}
 
-	//    $('select').material_select();
 	$( '.analresult' ).hide();
+
 	$( '#generate' ).on( 'click', function () {
 		$( '.genresult' ).empty();
 		$.getJSON( '/api/generate', {

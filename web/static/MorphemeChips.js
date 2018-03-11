@@ -21,41 +21,25 @@
 			if ( !chip.tag ) {
 				return;
 			}
-
-			let renderedChip = document.createElement( 'div' );
-			let closeIcon = document.createElement( 'i' );
-			renderedChip.classList.add( 'chip' );
+			let renderedChip = super._renderChip( chip );
 			renderedChip.classList.add( 'morphemechip' );
-			renderedChip.textContent = chip.tag;
-			renderedChip.setAttribute( 'tabindex', 0 );
-			$( closeIcon ).addClass( 'material-icons close' );
-			closeIcon.textContent = 'close';
-
-			// attach image if needed
-			if ( chip.image ) {
-				let img = document.createElement( 'img' );
-				img.setAttribute( 'src', chip.image );
-				renderedChip.insertBefore( img, renderedChip.firstChild );
-			}
-
-			renderedChip.appendChild( closeIcon );
 			return renderedChip;
 		}
+
 		/**
-	     * Check if chip is valid
-	     * @param {chip} chip
-	     * @return {boolean}
-	     */
+		 * Check if chip is valid
+		 * @param {chip} chip
+		 * @return {boolean}
+		 */
 		_isValid( chip ) {
 			return !!chip;
 		}
 
 		/**
-		* Setup Autocomplete
-		*/
+		 * Setup Autocomplete
+		 */
 		_setupAutocomplete() {
-			var autocompleteData, i, onAutocomplete;
-			onAutocomplete = ( val ) => {
+			let onAutocomplete = ( val ) => {
 				this.addChip( {
 					tag: val,
 					id: this.autocompleteData[ val ] ? this.autocompleteData[ val ].id : val
@@ -64,7 +48,7 @@
 				this.$input[ 0 ].focus();
 			};
 			this.autocompleteData = {};
-			for ( i = 0; i < this.options.autocompleteOptions.data.length; i++ ) {
+			for ( let i = 0; i < this.options.autocompleteOptions.data.length; i++ ) {
 				this.autocompleteData[ this.options.autocompleteOptions.data[ i ].tag ] = this.options.autocompleteOptions.data[ i ];
 			}
 
@@ -72,10 +56,8 @@
 		}
 
 		getDataString() {
-			var i, dataString = '';
-			if ( this.chipsData.length === 0 ) { return dataString; }
-			dataString += this.chipsData[ 0 ].tag;
-			for ( i = 1; i < this.chipsData.length; i++ ) {
+			let dataString = '';
+			for ( let i = 0; i < this.chipsData.length; i++ ) {
 				if ( this.chipsData[ i ].id ) {
 					dataString += '<' + this.chipsData[ i ].id + '>';
 				} else {
