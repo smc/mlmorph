@@ -32,7 +32,7 @@
 		 * @return {boolean}
 		 */
 		_isValid( chip ) {
-			return !!chip;
+			return chip && chip.tag;
 		}
 
 		/**
