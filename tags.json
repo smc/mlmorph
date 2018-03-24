@@ -1,0 +1,173 @@
+[
+	{
+		"id": "n",
+		"tag": "Noun",
+		"desc":{
+			"ml": "നാമം"
+		}
+	},
+	{
+		"id": "np",
+		"tag": "Proper Noun"
+	},
+	{
+		"id": "v",
+		"tag": "Verb"
+	},
+	{
+		"id": "prn",
+		"tag": "Pronoun"
+	},
+	{
+		"id": "adj",
+		"tag": "Adjective"
+	},
+	{
+		"id": "adv",
+		"tag": "Adverb"
+	},
+	{
+		"id": "pl",
+		"tag": "Plural"
+	},
+	{
+		"id": "accusative",
+		"tag": "Accusative"
+	},
+	{
+		"id": "dative",
+		"tag": "Dative"
+	},
+	{
+		"id": "genitive",
+		"tag": "Genitive"
+	},
+	{
+		"id": "instrumental",
+		"tag": "Instrumental"
+	},
+	{
+		"id": "locative",
+		"tag": "Locative"
+	},
+	{
+		"id": "sociative",
+		"tag": "Sociative"
+	},
+	{
+		"id": "vocative",
+		"tag": "Vocative"
+	},
+	{
+		"id": "indeclinable",
+		"tag": "Indeclinable"
+	},
+	{
+		"id": "past",
+		"tag": "Past"
+	},
+	{
+		"id": "future",
+		"tag": "Future"
+	},
+	{
+		"id": "present",
+		"tag": "present"
+	},
+	{
+		"id": "eng",
+		"tag": "English"
+	},
+	{
+		"id": "cvb-adv-part-future",
+		"tag": "Future adverbial participle"
+	},
+	{
+		"id": "cvb-adv-part-conditional",
+		"tag": "Conditional adverbial participle"
+	},
+	{
+		"id": "cvb-adv-part-absolute",
+		"tag": "Absolute adverbial participle"
+	},
+	{
+		"id": "cvb-adv-part-past",
+		"tag": "Past adverbial participle"
+	},
+	{
+		"id": "concessive",
+		"tag": "Concessive"
+	},
+	{
+		"id": "cnj",
+		"tag": "Conjunction"
+	},
+	{
+		"id": "aff",
+		"tag": "Affirmative"
+	},
+	{
+		"id": "neg",
+		"tag": "Negation"
+	},
+	{
+		"id": "interrogative",
+		"tag": "Interrogative"
+	},
+	{
+		"id": "Punct",
+		"tag": "Punctuation"
+	},
+	{
+		"id": "cardinal",
+		"tag": "Cardinal"
+	},
+	{
+		"id": "ordinal",
+		"tag": "Ordinal"
+	},
+	{
+		"id": "half",
+		"tag": "Half"
+	},
+	{
+		"id": "deriv",
+		"tag": "Derviative"
+	},
+	{
+		"id": "feminine",
+		"tag": "Feminine"
+	},
+	{
+		"id": "masculine",
+		"tag": "Masculine"
+	},
+	{
+		"id": "neutral",
+		"tag": "Neutral"
+	},
+	{
+		"id": "ones",
+		"tag": "Ones"
+	},
+	{
+		"id": "tens",
+		"tag": "Tens"
+	},
+	{
+		"id": "hundreds",
+		"tag": "Hundreds"
+	},
+	{
+		"id": "thousands",
+		"tag": "Thousands"
+	},
+	{
+		"id": "crores",
+		"tag": "Crores"
+	},
+	{
+		"id": "lakhs",
+		"tag": "Lakhs"
+	}
+]
