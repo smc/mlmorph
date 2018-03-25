@@ -12,8 +12,7 @@ $remove-vinfl$ = {[#vinfl#]}:{} ^-> (<infl_marker> [#POS##BM##TMP#]+ __)
 
 $vinfl$ = ( $tenses$ | $converbs$ | $concessives$ ) || $remove-vinfl$
 
-
-$tests$ = അറിയിക്കുക<v><RB> [#vinfl#]
-$tests$ || $vinfl$ >> "vinfl.test.a"
+% $tests$ = അറിയിക്കുക<v><RB> [#vinfl#]
+% $tests$ || $vinfl$ >> "vinfl.test.a"
 
 $vinfl$
