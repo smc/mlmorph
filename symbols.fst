@@ -28,6 +28,10 @@
 #Apos# = \'
 #Punct# = \.\?\!\:\,\;\@\#\^\&\*\(\)\'\"\`\~\>\<
 
+% analysis symbols for compounding(സമാസം)
+% determinative is Tatpuruṣa, coordinative is Dwanda Samasam, possessive is Bahuvrihi
+#compounds# = <coordinative><determinative><possessive>
+
 % analysis symbols for inflectional suffixes
 #ninfl# = <accusative><vocative><nominative><genitive><dative>\
 	<instrumental><locative><sociative><sg><pl>
@@ -45,7 +49,7 @@
 % the intermediate symbols like morpheme boundaries,)
 %
 
-#Asym# = #Ssym##POS##Numbers##infl#
+#Asym# = #Ssym##POS##Numbers##infl##compounds#
 
 %
 % All analysis symbols, including the intermediate ones.
