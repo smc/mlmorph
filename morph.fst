@@ -53,7 +53,10 @@ $VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $POLARITY$? || $VINFL$
 $ordinal$= ({}:{ആം}|{}:{ആമത്തെ}|{}:{ആമത്}|{}:{ആമതു്}) <ordinal>
 $QUANTIFIER$ = $QUANTIFIERS$ | ( $NUMBERS$ $ordinal$? [#ninfl#]? || $NINFL$ )
 
-$WORD$ = $MISC$? ( $NOUN$+ $INDECLINABLE$? \
+$COMPOUND_NOUN$ = $NOUN$+ |\
+	( ($NSTEM$ <adj>)+ $NOUN$ ) |\ % വിശേഷണവിശേഷ്യങ്ങൾ
+	( $NOUN$ <coordinative> $NOUN$ ) % ദ്വന്ദസമാസം
+$WORD$ = $MISC$? ( $COMPOUND_NOUN$ $INDECLINABLE$? \
 	| $VERB$+ $INDECLINABLE$? \
 	| $PREPOSITIONS$ \
 	| $INTERJECTION$ \

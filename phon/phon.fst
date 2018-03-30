@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Delete analysis only symbols from the surface string
 
-ALPHABET = [#Ssym#] [#BM##POS##Numbers##TMP##Lsym#]:<>
+ALPHABET = [#Ssym#] [#BM##POS##Numbers##TMP##Lsym##compounds#]:<>
 $delete-pos$ = .*
 
 $PHON$ = "<exceptions.a>" \
@@ -18,7 +18,7 @@ $PHON$ = "<exceptions.a>" \
 	% Replace all vowels with its signs appearing anywhere in string except at beginning
 	|| "<vowel-to-vowelsign.a>" \
 	% Delete all analysis strings
- 	|| $delete-pos$
+	|| $delete-pos$
 
 $test$ = <>:<BoW>മാല<n><RB><accusative>:യ<>:എ<del><LB>ഒ<indeclinable><RB><>:<EoW> |\
 	<>:<BoW>മോർ<n><RB><locative>:ഇ<>:ൽ<del><LB>എ<indeclinable><RB><>:<EoW>
