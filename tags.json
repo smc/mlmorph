@@ -31,6 +31,10 @@
 		"tag": "Plural"
 	},
 	{
+		"id": "coordinative",
+		"tag": "Co-ordinative"
+	},
+	{
 		"id": "accusative",
 		"tag": "Accusative"
 	},
