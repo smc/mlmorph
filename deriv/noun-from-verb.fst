@@ -9,8 +9,10 @@ ALPHABET = [#AAsym#]
 % Verbal nouns that are unmarked for tense are formed through the addition of one
 % of a range of suffixes, and they vary to the extent to which they are productive.
 
-$noun-forms-1$ = {രുക}: {രൽ} |\
+$noun-forms$ = {രുക}: {രൽ} |\
 	{റുക} : {റൽ} |\
+	{ൽകുക} : {ൽകൽ} |\
+	{ാകുക} : {ാകൽ} |\
 	{യുക} : {യൽ} |\
 	{യുക} : {ച്ചിൽ} |\
 	{യ്ക്കുക} : {യ്ക്കൽ} |\
@@ -19,11 +21,10 @@ $noun-forms-1$ = {രുക}: {രൽ} |\
 	{ങ്ങുക} : {ങ്ങൽ} |\
 	{തുക} : {തൽ} |\
 	{വുക} : {വൽ} |\
-	{ഴുക} : {ഴൽ}
-$nouns-1$ = $noun-forms-1$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <n> <deriv>)
-
-$noun-forms-2$ = {രുക}: {ർച്ച} |\
+	{ഴുക} : {ഴൽ} |\
+	{രുക}: {ർച്ച} |\
 	{റുക} : {റ്റം} |\
+	{ോകുക} : {ോക്ക്} |\
 	{യുക} : {വ്} |\
 	{യ്ക്കുക} : {യ്പ്പ്} |\
 	{യ്ക്കുക} : {പ്പ്} |\
@@ -33,11 +34,10 @@ $noun-forms-2$ = {രുക}: {ർച്ച} |\
 	{തുക} : {ത്ത്} | {തുക} : {ത്തു്} |\
 	{ഴുക} : {ഴ്ച}
 
-$nouns-2$ = $noun-forms-2$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <n> <deriv> )
-
+$nouns$ = $noun-forms$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <n> <deriv> )
 
 % Incomplete.
 % Refer: കേരളപാണിനീയം - കൃതികൃത്തുക്കൾ. 20 പ്രത്യയങ്ങൾ
 % May be we need tagging for verbs as കേവലക്രിയ, പ്രയോജകക്രിയ to aid this processing of 20 different forms.
 
-$nouns-1$ | $nouns-2$
+$nouns$
