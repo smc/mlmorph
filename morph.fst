@@ -7,7 +7,6 @@
 
 %%% The stems from the lexicon (possibly with derivation)
 $ADVERB$ = "<lexicon/adverbs.a>"
-$ADJECTIVE$ = "<lexicon/adjectives.a>"
 $CONJUNCTION$ = "<lexicon/conjunctions.a>"
 $INTERJECTION$ = "<lexicon/interjections.a>"
 $PREPOSITIONS$ = "<lexicon/prepositions.a>"
@@ -15,7 +14,6 @@ $INDECLINABLE$ = "<lexicon/indeclinables.a>"
 $QUANTIFIERS$ = "<lexicon/quantifiers.a>"
 $QUESTION$ = "<lexicon/questions.a>"
 $NUMBERS$ = "<num.a>"
-$DEM$ = "<lexicon/demonstratives.a>"
 $BORROWED$ = "<lexicon/borrowed-words.a>"
 $ABBREV$ = "<lexicon/abbreviations.a>"
 $POLARITY$ = "<lexicon/polarity.a>"

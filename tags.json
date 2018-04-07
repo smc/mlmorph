@@ -34,6 +34,10 @@
 		"id": "coordinative",
 		"tag": "Co-ordinative"
 	},
+    {
+		"id": "dem",
+		"tag": "Demonstrative"
+	},
 	{
 		"id": "accusative",
 		"tag": "Accusative"

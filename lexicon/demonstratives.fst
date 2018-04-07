@@ -1,3 +1,3 @@
-$DEM$ = "demonstratives.lex" <RB>
+$DEM$ = "demonstratives.lex" <dem> <RB>
 
 $DEM$
