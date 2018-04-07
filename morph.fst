@@ -6,9 +6,6 @@
 #include "symbols.fst"
 
 %%% The stems from the lexicon (possibly with derivation)
-$NSTEM$ = "<lexicon/nouns.a>"
-$PRONOUN$ = "<lexicon/pronouns.a>"
-$PROPERNOUN$ = "<lexicon/proper-nouns.a>"
 $ADVERB$ = "<lexicon/adverbs.a>"
 $ADJECTIVE$ = "<lexicon/adjectives.a>"
 $CONJUNCTION$ = "<lexicon/conjunctions.a>"
@@ -27,7 +24,6 @@ $POLARITY$ = "<lexicon/polarity.a>"
 % lexicon.
 $MISC$ = "<lexicon/misc.a>"
 $NINFL$ = "<ninfl/ninfl.a>"
-$PLURAL$ = "<ninfl/plural.a>"
 
 % Verbs
 $VSTEM$ = "<lexicon/verbs.a>"
@@ -36,15 +32,7 @@ $VINFL$ = "<vinfl/vinfl.a>"
 $NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)? [#Perc#]? <num><RB>
 
 % Nouns
-$NOUNFROMVERB$ = "<deriv/noun-from-verb.a>"
-$NOUNFROMNOUN$ = "<deriv/noun-from-noun.a>"
-$DERIVEDNOUNS$ = (($VSTEM$ <n> <deriv> ) || $NOUNFROMVERB$) |\
-	( ($NSTEM$ [<masculine><feminine><neutral>] <n> <deriv>) || $NOUNFROMNOUN$)
-
-$SINGULAR_NOUN$ = $NSTEM$ | $PRONOUN$ | $CONJUNCTION$ | $ABBREV$ | $PROPERNOUN$ | $BORROWED$ | $DERIVEDNOUNS$
-$PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
-
-$NOUN$ = $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? $POLARITY$? || $NINFL$
+$NOUNS$ = "<noun.a>"
 
 % Verbs
 $VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $POLARITY$? || $VINFL$
@@ -53,10 +41,7 @@ $VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $POLARITY$? || $VINFL$
 $ordinal$= ({}:{ആം}|{}:{ആമത്തെ}|{}:{ആമത്}|{}:{ആമതു്}) <ordinal>
 $QUANTIFIER$ = $QUANTIFIERS$ | ( $NUMBERS$ $ordinal$? [#ninfl#]? || $NINFL$ )
 
-$COMPOUND_NOUN$ = $NOUN$+ |\
-	( ($NSTEM$ <adj>)+ $NOUN$ ) |\ % വിശേഷണവിശേഷ്യങ്ങൾ
-	( $NOUN$ <coordinative> $NOUN$ ) % ദ്വന്ദസമാസം
-$WORD$ = $MISC$? ( $COMPOUND_NOUN$ $INDECLINABLE$? \
+$WORD$ = $MISC$? ( $NOUNS$ \
 	| $VERB$+ $INDECLINABLE$? \
 	| $PREPOSITIONS$ \
 	| $INTERJECTION$ \
