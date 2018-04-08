@@ -10,9 +10,9 @@ header {
 
 .component {
     display: inline;
-    border: 1px solid orange;
-    border-left: 4px solid orange;
-    border-radius: 5px;
+    border: 1px solid #ffb74d;
+    border-left: 4px solid #ffb74d;
+    border-radius: 2px;
     background-color: ivory;
     padding: 5px;
     margin-right: 1em;
@@ -32,14 +32,14 @@ header {
 .tag {
     display: inline;
     background-color: #aed581;
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 5px;
     margin-left: 5px;
     font-family: monospace;
 }
 
 .result {
-    margin-bottom: 1em;
+    line-height: 2.5em;
 }
 
 .morphemes .chip {
