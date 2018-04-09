@@ -10,7 +10,7 @@ from mlmorph import Mlmorph
 class AnalyserGeneratorTests(unittest.TestCase):
 
     def setUp(self):
-        self.csvfile = open('data.tsv')
+        self.csvfile = open('data.tsv', newline='', encoding='utf-8')
         fsa = '../malayalam.a'
         dialect = csv.Sniffer().sniff(self.csvfile.read(1024))
         # rewind
