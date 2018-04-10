@@ -11,11 +11,11 @@ build:
     paths:
     - malayalam.a
 
-test:
-  stage: test
-  before_script:
-    - apt-get update -y
-    - apt-get install -y make python3-pip libreadline-dev sfst hfst
-    - pip3 install hfst
-  script:
-    - make test
+#test:
+#  stage: test
+#  before_script:
+#    - apt-get update -y
+#    - apt-get install -y make python3-pip libreadline-dev sfst hfst
+#    - pip3 install hfst
+#  script:
+#    - make test
