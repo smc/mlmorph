@@ -127,6 +127,10 @@
 		"tag": "Punctuation"
 	},
 	{
+		"id": "qn",
+		"tag": "Question"
+	},
+	{
 		"id": "cardinal",
 		"tag": "Cardinal"
 	},
