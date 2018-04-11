@@ -1,5 +1,5 @@
 #include "../symbols.fst"
 
-$MISC$ = ([#Punct#] | \.\.\.) <Punct> <RB>
+$MISC$ = ([#Punct#] | \.\.\.) <punct> <RB>
 
 $MISC$

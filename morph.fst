@@ -47,6 +47,6 @@ $WORD$ = $MISC$? ( $NOUNS$ \
 	| $POLARITY$ \
 	| $NUMBER$ \
 	| $QUANTIFIER$ \
-) $MISC$?
+) $MISC$*
 
 $WORD$

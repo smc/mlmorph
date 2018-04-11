@@ -132,7 +132,7 @@
 പോകുകയാണ്	പോകുക<v>ആണ്<aff>
 കേരളത്തിലരുത്	കേരളം<np><locative>അരുത്<neg>
 ഡിജിറ്റൈസേഷൻ	ഡിജിറ്റൈസേഷൻ<eng>
-സാധിക്കുമോ?	സാധിക്കുക<v><future>ഓ<interrogative><indeclinable>?<Punct>
+സാധിക്കുമോ?	സാധിക്കുക<v><future>ഓ<interrogative><indeclinable>?<punct>
 പാലക്കാടല്ല	പാലക്കാട്<np>അല്ല<neg>
 സന്തോഷമില്ല	സന്തോഷം<n>ഇല്ല<neg>
 സന്തോഷില്ല	സന്തോഷ്<np>ഇല്ല<neg>
@@ -275,3 +275,4 @@
 അടിച്ചു്	അടിക്കുക<v><cvb-adv-part-past>
 വന്ന്	വരുക<v><cvb-adv-part-past>
 സമ്മാനിച്ച്	സമ്മാനിയ്ക്കുക<v><cvb-adv-part-past>
+ക്ഷീണം...	ക്ഷീണം<n>.<punct>.<punct>.<punct>
