@@ -22,13 +22,16 @@ class AnalyserGeneratorTests(unittest.TestCase):
         self.csvfile.close()
 
     def test_analyse(self):
+        print('\t**** Analyse tests ****\t')
+        line=0
         for row in self.data:
-            with self.subTest():
+            line += 1
+            with self.subTest(row[0]):
                 anals = self.mlmorph.analyse(row[0])
                 match = False
                 self.assertTrue(len(anals) != 0,
                                 'Analysis failed for ' + row[0])
-                print(row[0], '\t-->\t', anals)
+                print('%3d %s\t<--\t%s' % (line, row[0], anals))
                 for index in range(len(anals)):
                     if row[1] == anals[index][0]:
                         match = True
@@ -36,13 +39,16 @@ class AnalyserGeneratorTests(unittest.TestCase):
                 self.assertEqual(match, True, 'Analysis for ' + row[1])
 
     def test_generate(self):
+        print('\t**** Generate tests ****\t')
+        line=0
         for row in self.data:
-            with self.subTest():
+            line += 1
+            with self.subTest(row[0]):
                 match = False
                 gens = self.mlmorph.generate(row[1])
                 self.assertTrue(
                     len(gens) != 0, 'Generate failed for ' + row[1])
-                print(row[1], '\t<--\t', gens)
+                print('%3d %s\t<--\t%s' % (line, row[1], gens))
                 for index in range(len(gens)):
                     if row[0] == gens[index][0]:
                         match = True
