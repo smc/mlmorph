@@ -1,6 +1,6 @@
 include ../Makefile.inc
 
-ninfl.a: plural.a genitive.a dative.a instrumental.a sociative.a accusative.a vocative.a locative.a
+ninfl.a: plural.a genitive.a dative.a instrumental.a sociative.a accusative.a vocative.a locative.a adjective.a
 
 .PHONY: all
 

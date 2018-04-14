@@ -7,10 +7,10 @@
 %%%%%%%%%%%% Noun Inflections %%%%%%%%%%%%%%
 
 %$tests$ = ആന<n> | കടൽ<n> | പേര്<n>
-$NINFL$ = "<vocative.a>" | "<genitive.a>" | "<locative.a>"
+$NINFL$ = "<vocative.a>" | "<genitive.a>" | "<locative.a>" | "<sociative.a>"
 $NINFL$ >> "ninfl.1.a"
  
-$NINFL$ = "<sociative.a>" | "<instrumental.a>" | "<dative.a>" | "<accusative.a>"
+$NINFL$ = "<instrumental.a>" | "<dative.a>" | "<accusative.a>" | "<adjective.a>"
 $NINFL$ >> "ninfl.2.a"
 
 % $tests$ [#infl#] | $NINFL$
