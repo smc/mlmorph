@@ -8,7 +8,7 @@ ALPHABET = [#AAsym#]
 % Verbal nouns that are unmarked for tense are formed through the addition of one
 % of a range of suffixes, and they vary to the extent to which they are productive.
 
-#=D# = #Consonants##Chillus#
+#=D# = #Consonants##Chillus#ുിൂ
 
 $noun-forms-masculine$ = {്}: {ുകാരൻ} | {ി} : {ിയൻ} | {ം} : {ക്കാരൻ} | {[#=D#]}:{[#=D#]ക്കാരൻ}
 
