@@ -12,7 +12,7 @@ $locative-anuswara$ = $locative-anuswara-step1$ || $locative-anuswara-step2$
 
 $locative-cons-vowel$ = {<locative>}:{ഇൽ} ^-> ([#Consonants##VowelSigns#] [#inflboundary#]+ __)
 
-$virama-forms$ = {<locative>}:{ഇൽ} | {<locative>}:{ഇങ്കൽ}
+$virama-forms$ = {<locative>}:{ഇൽ} | {<locative>}:{ഇങ്കൽ} | {<locative>}:{അത്ത്} | {<locative>}:{അത്തു്}
 $locative-virama-chillus$ = $virama-forms$ ^-> ([#Virama##Chillus#] [#inflboundary#]+ __)
 
 $ta-forms$ = {<locative>}:{<dup>ടിൽ} | {<locative>}:{<dup>ടിങ്കൽ} | {<locative>}:{<dup>ടിങ്ങൽ}

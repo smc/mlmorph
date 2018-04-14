@@ -15,7 +15,7 @@ $tests$ = തറ <hundreds> അടി <Noun>
 % $tests$ ||\
 
 
-$test$ = <>:<BoW>ഓല<n><RB><locative>ഏ<indeclinable><RB><>:<EoW>
-$test$ || $cons-vowel$  >> "cv.test.a"
+%$test$ = <>:<BoW>ഓല<n><RB><locative>ഏ<indeclinable><RB><>:<EoW>
+%$test$ || $cons-vowel$  >> "cv.test.a"
 
 $cons-vowel$
