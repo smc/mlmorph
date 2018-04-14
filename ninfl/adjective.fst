@@ -6,7 +6,7 @@
 
 %%%%%%%%%%%% adjective Inflections %%%%%%%%%%%%%%
 
-ALPHABET = [#Letters##POS##BM##TMP##Lsym##Numbers#]
+ALPHABET = [#Letters##POS##BM##TMP##Lsym##Numbers##compounds#] <del> <pl> <infl_marker>
 
 #inflboundary# = #POS##BM##TMP#
 
