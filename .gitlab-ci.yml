@@ -4,18 +4,18 @@ build:
   stage: build
   before_script:
     - apt-get update -y
-    - apt-get install -y make python3-pip libreadline-dev sfst hfst
+    - apt-get install -y make python3-pip sfst hfst python3-libhfst
   script:
     - make
   artifacts:
     paths:
     - malayalam.a
 
-#test:
-#  stage: test
-#  before_script:
-#    - apt-get update -y
-#    - apt-get install -y make python3-pip libreadline-dev sfst hfst
-#    - pip3 install hfst
-#  script:
-#    - make test
+test:
+  stage: test
+  before_script:
+    - apt-get update -y
+    - apt-get install -y make python3-pip sfst hfst python3-libhfst
+    - pip3 install hfst
+  script:
+    - make test

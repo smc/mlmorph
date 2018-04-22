@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Simple python interface for omorfi using libhfst-python. Consider this
+Simple python interface for omorfi using liblibhfst-python. Consider this
 class as a standard python interface to omorfi and standard reference for
 scientific studies, as far as python use goes.
 """
@@ -9,7 +9,7 @@ scientific studies, as far as python use goes.
 from argparse import ArgumentParser
 from sys import stdin
 import os
-import hfst
+import libhfst
 
 
 class Mlmorph:
@@ -24,7 +24,7 @@ class Mlmorph:
         self._cached_stamp = 0
 
     def load_filename(self, fsa):
-        istr = hfst.HfstInputStream(fsa)
+        istr = libhfst.HfstInputStream(fsa)
         transducers = []
         while not (istr.is_eof()):
             transducers.append(istr.read())
@@ -39,7 +39,7 @@ class Mlmorph:
     def getGenerator(self):
         if not self.transducer:
             self.load_filename(self.fsa)
-        generator = hfst.HfstTransducer(self.transducer)
+        generator = libhfst.HfstTransducer(self.transducer)
         generator.remove_epsilons()
         generator.lookup_optimize()
         self.generator = generator
@@ -47,7 +47,7 @@ class Mlmorph:
     def getAnalyser(self):
         if not self.transducer:
             self.load_filename(self.fsa)
-        analyser = hfst.HfstTransducer(self.transducer)
+        analyser = libhfst.HfstTransducer(self.transducer)
         analyser.invert()
         analyser.remove_epsilons()
         analyser.lookup_optimize()
@@ -78,7 +78,7 @@ def main():
     """Invoke a simple CLI analyser or generator."""
     a = ArgumentParser()
     a.add_argument('-f', '--fsa', metavar='FSAPATH',
-                   help="Path to directory of HFST format automata")
+                   help="Path to directory of libhfst format automata")
     a.add_argument('-i', '--input', metavar="INFILE", type=open,
                    dest="infile", help="source of analysis data")
     a.add_argument('-a', '--analyse', action='store_true',

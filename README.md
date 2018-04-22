@@ -17,7 +17,7 @@ The Makefile provided compiles compiles all the sources and produces the binary 
 
 In a debian/ubuntu based GNU/Linux, SFST and HFST can be installed as follows
 
-```$ sudo apt install sfst hfst```
+```$ sudo apt install sfst hfst python3-libhfst```
 
 Usage
 =====
@@ -69,26 +69,6 @@ For more details and a demo, please refer https://thottingal.in/blog/2017/12/10/
 
 Python Interface
 ===============
-
-HFST Python binding
--------------------
-HFST python binding is available at pypi.
-https://pypi.python.org/pypi/hfst
-
-It can be installed using
-
-```bash
-$ pypi install hfst
-```
-
-Or build from source code of hfst. Install swig, python3-dev packages, go to python folder of HFST source code, run,
-
-```bash
-sudo python3 setup.py install
-```
-
-Refer: https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPython
-and https://hfst.github.io/python/3.12.1/QuickStart.html
 
 CLI interface
 -------------
