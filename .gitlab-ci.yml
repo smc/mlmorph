@@ -4,7 +4,7 @@ build:
   stage: build
   before_script:
     - apt-get update -y
-    - apt-get install -y make python3-pip sfst hfst python3-libhfst
+    - apt-get install -y make sfst hfst python3-libhfst
   script:
     - make
   artifacts:
@@ -15,7 +15,6 @@ test:
   stage: test
   before_script:
     - apt-get update -y
-    - apt-get install -y make python3-pip sfst hfst python3-libhfst
-    - pip3 install hfst
+    - apt-get install -y make sfst hfst python3-libhfst
   script:
     - make test
