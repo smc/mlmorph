@@ -1,10 +1,10 @@
-image: "debian:stretch"
+image: "ubuntu:bionic"
 
 build:
   stage: build
   before_script:
     - apt-get update -y
-    - apt-get install -y make sfst hfst python3-libhfst
+    - apt-get install -y make sfst
   script:
     - make
   artifacts:
@@ -15,6 +15,7 @@ test:
   stage: test
   before_script:
     - apt-get update -y
-    - apt-get install -y make sfst hfst python3-libhfst
+    - apt-get install -y make sfst python3-libhfst locales
+    - locale-gen ml_IN.UTF-8
   script:
-    - make test
+    - LC_ALL=ml_IN.UTF-8 make test
