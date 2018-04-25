@@ -4,7 +4,7 @@ Introduction
 ============
 mlmorph is Malayalam Morphological Analyzer and Generator. It aims to build a morphological model for Malayalam language using  [Finite State Transducer technology](https://en.wikipedia.org/wiki/Finite-state_transducer). Specifically, the system is developed using [Stuttgart Finite State Toolkit(SFST)]( http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html) formalism and uses [Helsinki Finite-State Technology(HFST)](Helsinki Finite-State Technology) as Toolkit. Malayalam is a heavily inflected and agglutinated language and the project attempt to iteratively develop a morphological model for it.
 
-For a detailed introduction and explanation of approach, please refer For more details and a demo, please refer https://thottingal.in/blog/2017/11/26/towards-a-malayalam-morphology-analyser/
+For a detailed introduction and explanation of approach, please refer https://thottingal.in/blog/2017/11/26/towards-a-malayalam-morphology-analyser/
 
 Status
 ======
