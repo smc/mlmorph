@@ -433,13 +433,15 @@
     },
     {
         "word": "ചെയ്യൽ",
-        "analysis": "ചെയ്യുക<v><cvb-adv-part-absolute>",
-        "skip": true
+        "analysis": "ചെയ്യുക<v><cvb-adv-part-absolute>"
     },
     {
         "word": "കുളിച്ച്",
-        "analysis": "കുളിക്കുക<v><cvb-adv-part-past>",
-        "skip": true
+        "analysis": "കുളിക്കുക<v><cvb-adv-part-past>"
+    },
+    {
+        "word": "കുളിച്ചു്",
+        "analysis": "കുളിക്കുക<v><cvb-adv-part-past>"
     },
     {
         "word": "കരഞ്ഞ്",
@@ -455,8 +457,7 @@
     },
     {
         "word": "കിടന്ന്",
-        "analysis": "കിടക്കുക<v><cvb-adv-part-past>",
-        "skip": true
+        "analysis": "കിടക്കുക<v><cvb-adv-part-past>"
     },
     {
         "word": "കിടന്നാലും",
@@ -464,8 +465,7 @@
     },
     {
         "word": "ഇളകി",
-        "analysis": "ഇളകുക<v><cvb-adv-part-past>",
-        "skip": true
+        "analysis": "ഇളകുക<v><cvb-adv-part-past>"
     },
     {
         "word": "കേരളമേ",
@@ -514,8 +514,7 @@
     },
     {
         "word": "കണ്ടില്ല",
-        "analysis": "കാണുക<v><past>ഇല്ല<neg>",
-        "skip": true
+        "analysis": "കാണുക<v><past>ഇല്ല<neg>"
     },
     {
         "word": "കിട്ടാൻ",

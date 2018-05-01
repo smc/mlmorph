@@ -15,9 +15,9 @@ $cvb-adv-part-past-suffix-1$ = $cvb-adv-part-past-suffix-forms$ <>:<infl_marker>
 
 
 % പറിക്കുക - പറിച്ചു
-$cvb-adv-part-past-suffix-2$ = {ക്കുക}:{ച്ച[ു]്} <>:<infl_marker> ^-> ([#Consonants#]+ [ി] __ [#POS##BM##Numbers##TMP#]+  <cvb-adv-part-past>)
+$cvb-adv-part-past-suffix-2$ = ( {ക്കുക}:{ച്ച്} | {ക്കുക}:{ച്ചു്} ) <>:<infl_marker> ^-> ([#Consonants#]+ [ി] __ [#POS##BM##Numbers##TMP#]+  <cvb-adv-part-past>)
 % അടുക്കുക - അടുത്തു, കൊടുക്കുക- കൊടുത്തു്
-$cvb-adv-part-past-suffix-3$ = {ക്കുക}:{ത്ത[ു]്} <>:<infl_marker> ^-> ([#Consonants#]+ [ു] __ [#POS##BM##Numbers##TMP#]+  <cvb-adv-part-past>)
+$cvb-adv-part-past-suffix-3$ = ({ക്കുക}:{ത്ത്} | {ക്കുക}:{ത്തു്})  <>:<infl_marker> ^-> ([#Consonants#]+ [ു] __ [#POS##BM##Numbers##TMP#]+  <cvb-adv-part-past>)
 % നോക്കുക-നോക്കി, പൊക്കി, ഉടക്കി, കറക്കി,
 $cvb-adv-part-past-suffix-4$ = {ക്കുക}:{ക്കി} <>:<infl_marker> ^-> ([#Consonants#] [ാെൊോേ]? __ [#POS##BM##Numbers##TMP#]+  <cvb-adv-part-past>)
 
