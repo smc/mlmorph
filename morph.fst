@@ -13,7 +13,8 @@ $PREPOSITIONS$ = "<lexicon/prepositions.a>"
 $INDECLINABLE$ = "<lexicon/indeclinables.a>"
 $QUANTIFIERS$ = "<lexicon/quantifiers.a>"
 $QUESTION$ = "<lexicon/questions.a>"
-$NUMBERS$ = "<num.a>"
+$PLURAL$ = "<ninfl/plural.a>"
+$NUMBERSPELLOUT$ = "<num.a>"
 $BORROWED$ = "<lexicon/borrowed-words.a>"
 $ABBREV$ = "<lexicon/abbreviations.a>"
 $POLARITY$ = "<lexicon/polarity.a>"
@@ -37,7 +38,11 @@ $VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $POLARITY$? || $VINFL$
 
 % Quantifiers, cardinals, ordinals
 $ordinal$= ({}:{ആം}|{}:{ആമത്തെ}|{}:{ആമത്}|{}:{ആമതു്}) <ordinal>
-$QUANTIFIER$ = $QUANTIFIERS$ | ( $NUMBERS$ $ordinal$? [#ninfl#]? || $NINFL$ )
+$NUMBERSPELLOUT_PLURAL$ = $NUMBERSPELLOUT$ <pl> || $PLURAL$
+
+$QUANTIFIER$ = $QUANTIFIERS$ | \
+	$NUMBER$ | \
+	( ( ( $NUMBERSPELLOUT$ $ordinal$? ) | $NUMBERSPELLOUT_PLURAL$ ) [#ninfl#]? || $NINFL$ )
 
 $WORD$ = $MISC$? ( $NOUNS$ \
 	| $VERB$+ $INDECLINABLE$? \
@@ -45,7 +50,6 @@ $WORD$ = $MISC$? ( $NOUNS$ \
 	| $INTERJECTION$ \
 	| $QUESTION$ \
 	| $POLARITY$ \
-	| $NUMBER$ \
 	| $QUANTIFIER$ \
 ) $MISC$*
 

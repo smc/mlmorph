@@ -799,8 +799,7 @@
     },
     {
         "word": "ആയിരങ്ങൾ",
-        "analysis": "<thousands><cardinal><pl>",
-        "skip": true
+        "analysis": "<thousands><cardinal><pl>"
     },
     {
         "word": "സെബിന്റെ",
