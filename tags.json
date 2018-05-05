@@ -103,6 +103,18 @@
 		"tag": "Past adverbial participle"
 	},
 	{
+		"id": "simple-perfect-aspect",
+		"tag": "Simple perfect aspect"
+	},
+	{
+		"id": "cont-perfect-aspect",
+		"tag": "Contemporaneous perfect aspect"
+	},
+	{
+		"id": "remote-perfect-aspect",
+		"tag": "Remote perfect aspect"
+	},
+	{
 		"id": "concessive",
 		"tag": "Concessive"
 	},
