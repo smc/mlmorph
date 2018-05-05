@@ -35,7 +35,7 @@ $plural-cons-vowel$ = {<pl>}:{<plural>കൾ} ^-> ([#Consonants##VowelSigns-non-
 % പശു - പശുക്കൾ, ഗുരു-ഗുരുക്കൾ
 $plural-u-vowelsign$ = {<pl>}:{<plural>ക്കൾ} ^-> ( [#VowelSigns-labial#] [#POS##BM##TMP#]+ __ )
 
-$plural$ = $plural-general$ | $plural-cons-vowel$ | $plural-u-vowelsign$
+$plural$ = $plural-general$ || $plural-cons-vowel$ || $plural-u-vowelsign$
 
 % പുരുഷന്മാരോ സ്ത്രീകളോ വെവ്വേറെ ചേർന്നുണ്ടാകുന്ന ബഹുത്വത്തെക്കുറിക്കുന്ന സലിംഗബഹുവചനപ്രത്യയം സാമാന്യമായി "മാർ' എന്നാണു്.
 % ഉദാ: രാമൻ-രാമന്മാർ, നമ്പൂരി-നമ്പൂരിമാർ, തട്ടാൻ-തട്ടാന്മാർ അമ്മ-അമ്മമാർ, ഭാര്യ-ഭാര്യമാർ തള്ള-തള്ളമാർ. മന്ത്രിമാർ?
@@ -43,7 +43,7 @@ $plural$ = $plural-general$ | $plural-cons-vowel$ | $plural-u-vowelsign$
 % ഉദാ: മിടുക്കർ, ശൂദ്രർ, അധ്യാപകർ, പോലീസുകാർ(പോലീസുകാരൻ + പോലീസുകാരി)
 % Looks like we need gender tagging in lexicon.
 
-$test$ = മല<n><pl> | അവൻ<n><pl> | മരം<n><pl> | ഇതൾ<n><pl> | മുകിൽ<n><pl> | പയർ<n><pl>
+$test$ = മല<n><pl> | അവൻ<n><pl> | മരം<n><pl> | ഇതൾ<n><pl> | മുകിൽ<n><pl> | പയർ<n><pl> | <LB>പതിനഞ്ച്<RB><cardinal><pl>
 $test$ || $plural$ >> "plural-test.a"
 
 $plural$
