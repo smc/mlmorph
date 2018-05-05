@@ -34,7 +34,7 @@ $NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)? [#Perc#]? <num><RB>
 $NOUNS$ = "<noun.a>"
 
 % Verbs
-$VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? [#aspects#]? $POLARITY$? || $VINFL$
+$VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $POLARITY$? || $VINFL$
 
 % Quantifiers, cardinals, ordinals
 $ordinal$= ({}:{ആം}|{}:{ആമത്തെ}|{}:{ആമത്}|{}:{ആമതു്}) <ordinal>

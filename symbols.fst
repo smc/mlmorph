@@ -39,9 +39,9 @@
 #aspects# = <simple-perfect-aspect><cont-perfect-aspect><remote-perfect-aspect>
 
 #vinfl# = <past><future><present><cvb-adv-part-future><cvb-adv-part-conditional>\
-	<cvb-adv-part-past><cvb-adv-part-absolute><concessive> \
+	<cvb-adv-part-past><cvb-adv-part-absolute><concessive>#aspects#  \
 
-#infl# = #ninfl##vinfl##aspects#
+#infl# = #ninfl##vinfl#
 %%%%% some character classes that are helpful
 #Lsym# = <del><dels><dup><plural><ninfl>
 

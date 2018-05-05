@@ -10,13 +10,17 @@
 ALPHABET = [#AAsym#]
 
 $past-tense$ = "<../past.a>"
+#perfect-aspects# = <simple-perfect-aspect><cont-perfect-aspect><remote-perfect-aspect>
+% We need to wrap the verb into past form first. For that, fake a past tag and pass
+% it through the past.a. Only when the input has #perfect-aspects# at end.
+$fake-past$ = {<RB>}:{<past>} ^-> ([<v>] __ [#perfect-aspects#])
+
 % --------------------------------------------------------------------------------
 % == Simple perfect ==
 % By adding –irunnu to the past stem of the verb, simple perfect forms are derived. They
 % indicate a state that is different from the one denoted by the past.
 
-$past-to-simple-perfect$ = {<simple-perfect-aspect>}:{ഇരുന്നു<infl_marker>} ^-> ([<past>] __ )
-$simple-perfect-aspect$ = $past-tense$ || $past-to-simple-perfect$
+$simple-perfect-aspect$ = {<simple-perfect-aspect>}:{ഇരുന്നു<infl_marker>} ^-> ([<past>] __ )
 
 % --------------------------------------------------------------------------------
 % == Contemporaneous perfect ==
@@ -25,8 +29,7 @@ $simple-perfect-aspect$ = $past-tense$ || $past-to-simple-perfect$
 % denote a state of affairs when the effect of the past action is still experienced or
 % when the result of the past action is being expected.
 
-$past-to-cont-perfect$ = {<cont-perfect-aspect>}:{ഇരിക്കുന്നു<infl_marker>} ^-> ([<past>] __ )
-$cont-perfect-aspect$ = $past-tense$ || $past-to-cont-perfect$
+$cont-perfect-aspect$ = {<cont-perfect-aspect>}:{ഇരിക്കുന്നു<infl_marker>} ^-> ([<past>] __ )
 
 % --------------------------------------------------------------------------------
 % == Remote perfect ==
@@ -35,15 +38,16 @@ $cont-perfect-aspect$ = $past-tense$ || $past-to-cont-perfect$
 % action which occurred only once or a few times (that is, not regular or habitual) or du`ring
 % an unspecified time in the past, far removed from the present.
 
-$past-to-remote-perfect$ = {<remote-perfect-aspect>}:{ഇട്ട്<infl_marker>} ^-> ([<past>] __ )
-$remote-perfect-aspect$ = $past-tense$ || $past-to-remote-perfect$
+$remote-perfect-aspect$ = {<remote-perfect-aspect>}:{ഇട്ട്<infl_marker>} ^-> ([<past>] __ )
 
 % ----------
 
-$aspects$ = $simple-perfect-aspect$ | $cont-perfect-aspect$ | $remote-perfect-aspect$
+$aspects$ = $fake-past$ || $past-tense$ || ( \
+    $simple-perfect-aspect$ | $cont-perfect-aspect$ | $remote-perfect-aspect$ \
+)
 
-% $tests$ = അറിയിക്കുക<infl_marker><v><RB> [<past>] <simple-perfect-aspect> | അറിയിക്കുക<infl_marker><v><RB> [<past>] <remote-perfect-aspect>
-% $tests$ || $aspects$ >> "aspects.test.a"
+$tests$ = അറിയിക്കുക<v><RB> <simple-perfect-aspect> | അറിയിക്കുക<v><RB> <remote-perfect-aspect>
+$tests$ || $aspects$ >> "aspects.test.a"
 
 $aspects$
 
