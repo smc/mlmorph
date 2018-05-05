@@ -1162,5 +1162,27 @@
     {
         "word": "മലയാളഭാഷയുടെ",
         "analysis": "മലയാളം<np><adj>ഭാഷ<n><genitive>"
+    },
+    {
+        "word": "പോയിരുന്നു",
+        "analysis": "പോകുക<v><simple-perfect-aspect>",
+        "skip": true,
+        "comment": "Now gets പോയിയിരുന്നു"
+    },
+    {
+        "word": "നടന്നിരുന്നു",
+        "analysis": "നടക്കുക<v><simple-perfect-aspect>"
+    },
+    {
+        "word": "വന്നിട്ട്",
+        "analysis": "വരുക<v><remote-perfect-aspect>"
+    },
+    {
+        "word": "വന്നിട്ടില്ല",
+        "analysis": "വരുക<v><remote-perfect-aspect>ഇല്ല<neg>"
+    },
+    {
+        "word": "വന്നിരിക്കുന്നു",
+        "analysis": "വരുക<v><cont-perfect-aspect>"
     }
 ]
