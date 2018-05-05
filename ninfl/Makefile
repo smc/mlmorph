@@ -5,5 +5,4 @@ ninfl.a: plural.a genitive.a dative.a instrumental.a sociative.a accusative.a vo
 .PHONY: all
 
 all: ninfl.a
-clean:
-	-rm -f *.a *~ Makefile.bak
+

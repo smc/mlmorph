@@ -1,11 +1,16 @@
 include ../Makefile.inc
 
-vinfl.a: past.a future.a present.a converb-past.a converb.a concessive.a
+SUBDIRS = aspects
 
-.PHONY: all
+vinfl.a: past.a future.a present.a converb-past.a converb.a concessive.a subdirs
+
+.PHONY: all subdirs $(SUBDIRS)
 
 all: vinfl.a
 past.a: past-forms.fst
 converb.a: past-forms.fst converb-past.a
-clean:
-	-rm -f *.a *~ Makefile.bak
+
+subdirs: $(SUBDIRS)
+$(SUBDIRS):
+	$(MAKE) -C $@
+

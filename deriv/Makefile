@@ -8,5 +8,4 @@ include ../Makefile.inc
 
 all: phon.a
 phon.a: $(FSAFILES)
-clean:
-	-rm -f *.a *~ Makefile.bak
+

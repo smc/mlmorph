@@ -1,4 +1,5 @@
 DISTNAME=mlmorph-`cat VERSION`
+.DEFAULT_GOAL := all
 FSTC ?= sfst
 ifeq ($(FSTC),hfst)
 %.a: %.fst
@@ -10,3 +11,7 @@ endif
 
 %.dot: %.a
 	hfst-fst2txt -D -f dot -i $< -o $@
+
+clean:
+	@rm -f *.a *.dot *~ Makefile.bak tests.all *.gen*.txt
+	@for dir in $(SUBDIRS); do  $(MAKE) -C $$dir clean; done

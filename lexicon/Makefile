@@ -23,5 +23,4 @@ borrowed-words.fst: english-borrowed.lex
 prepositions.fst: prepositions.lex
 polarity.fst: affirmatives.lex negations.lex
 quantifiers.fst: quantifiers.lex
-clean:
-	-rm -f *.a *~ Makefile.bak
+
