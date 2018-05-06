@@ -1188,5 +1188,13 @@
     {
         "word": "വരാറില്ല",
         "analysis": "വരുക<v><habitual-aspect>ഇല്ല<neg>"
+    },
+    {
+        "word": "ഓടിക്കൊണ്ടേയിരുന്നു",
+        "analysis": "ഓടുക<v><emphatic-iterative-aspect>"
+    },
+    {
+        "word": "പഠിച്ചുകൊണ്ടിരുന്നു",
+        "analysis": "പഠിക്കുക<v><iterative-aspect>"
     }
 ]

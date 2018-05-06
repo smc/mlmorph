@@ -11,7 +11,7 @@ $past-to-cvb-past$ = {ു}:{്} ^-> (__ [<RB>])
 
 $past-tense-suffix-map-wrapped$ = $past-tense-suffix-map$ <>:<RB>
 $cvb-adv-part-past-suffix-forms$ = $past-tense-suffix-map-wrapped$ || $past-to-cvb-past$
-$cvb-adv-part-past-suffix-1$ = $cvb-adv-part-past-suffix-forms$ <>:<infl_marker> ^-> ([#Consonants##VowelSigns#] __ [#POS##BM##Numbers##TMP#]+ <cvb-adv-part-past>)
+$cvb-adv-part-past-suffix-1$ = $cvb-adv-part-past-suffix-forms$ <>:<infl_marker> ^-> ([#Consonants##Vowels##VowelSigns#] __ [#POS##BM##Numbers##TMP#]+ <cvb-adv-part-past>)
 
 
 % പറിക്കുക - പറിച്ചു

@@ -2,7 +2,7 @@
 	{
 		"id": "n",
 		"tag": "Noun",
-		"desc":{
+		"desc": {
 			"ml": "നാമം"
 		}
 	},
@@ -34,7 +34,7 @@
 		"id": "coordinative",
 		"tag": "Co-ordinative"
 	},
-    {
+	{
 		"id": "dem",
 		"tag": "Demonstrative"
 	},
@@ -117,6 +117,14 @@
 	{
 		"id": "habitual-aspect",
 		"tag": "Habitual aspect"
+	},
+	{
+		"id": "iterative-aspect",
+		"tag": "Iterative aspect"
+	},
+	{
+		"id": "emphatic-iterative-aspect",
+		"tag": "Emphatic iterative aspect"
 	},
 	{
 		"id": "concessive",

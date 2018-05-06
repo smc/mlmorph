@@ -37,7 +37,7 @@
 	<instrumental><locative><sociative><sg><pl>
 
 #aspects# = <simple-perfect-aspect><cont-perfect-aspect><remote-perfect-aspect> \
-	<habitual-aspect>
+	<habitual-aspect><iterative-aspect><emphatic-iterative-aspect>
 
 #vinfl# = <past><future><present><cvb-adv-part-future><cvb-adv-part-conditional> \
 	<cvb-adv-part-past><cvb-adv-part-absolute><concessive>#aspects#
