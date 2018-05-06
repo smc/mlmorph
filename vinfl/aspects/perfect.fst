@@ -42,12 +42,9 @@ $remote-perfect-aspect$ = {<remote-perfect-aspect>}:{ഇട്ട്<infl_marker
 
 % ----------
 
-$aspects$ = $fake-past$ || $past-tense$ || ( \
+$perfect-aspects$ = $fake-past$ || $past-tense$ || ( \
     $simple-perfect-aspect$ | $cont-perfect-aspect$ | $remote-perfect-aspect$ \
 )
 
-$tests$ = അറിയിക്കുക<v><RB> <simple-perfect-aspect> | അറിയിക്കുക<v><RB> <remote-perfect-aspect>
-$tests$ || $aspects$ >> "aspects.test.a"
-
-$aspects$
+$perfect-aspects$
 

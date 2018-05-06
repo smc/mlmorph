@@ -115,6 +115,10 @@
 		"tag": "Remote perfect aspect"
 	},
 	{
+		"id": "habitual-aspect",
+		"tag": "Habitual aspect"
+	},
+	{
 		"id": "concessive",
 		"tag": "Concessive"
 	},

@@ -36,10 +36,11 @@
 #ninfl# = <accusative><vocative><nominative><genitive><dative>\
 	<instrumental><locative><sociative><sg><pl>
 
-#aspects# = <simple-perfect-aspect><cont-perfect-aspect><remote-perfect-aspect>
+#aspects# = <simple-perfect-aspect><cont-perfect-aspect><remote-perfect-aspect> \
+	<habitual-aspect>
 
-#vinfl# = <past><future><present><cvb-adv-part-future><cvb-adv-part-conditional>\
-	<cvb-adv-part-past><cvb-adv-part-absolute><concessive>#aspects#  \
+#vinfl# = <past><future><present><cvb-adv-part-future><cvb-adv-part-conditional> \
+	<cvb-adv-part-past><cvb-adv-part-absolute><concessive>#aspects#
 
 #infl# = #ninfl##vinfl#
 %%%%% some character classes that are helpful

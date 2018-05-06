@@ -2,5 +2,5 @@ include ../../Makefile.inc
 
 .PHONY: all
 
-all: perfect.a
-
+all: aspects.a
+aspects.a: perfect.a habitual.a
