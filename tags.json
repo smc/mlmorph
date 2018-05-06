@@ -123,6 +123,10 @@
 		"tag": "Iterative aspect"
 	},
 	{
+		"id": "imperative-mood",
+		"tag":"Imperative mood"
+	},
+	{
 		"id": "emphatic-iterative-aspect",
 		"tag": "Emphatic iterative aspect"
 	},

@@ -1196,5 +1196,17 @@
     {
         "word": "പഠിച്ചുകൊണ്ടിരുന്നു",
         "analysis": "പഠിക്കുക<v><iterative-aspect>"
+    },
+    {
+        "word": "ഓടൂ",
+        "analysis": "ഓടുക<v><imperative-mood>"
+    },
+    {
+        "word": "ഓടണം",
+        "analysis": "ഓടുക<v><imperative-mood>"
+    },
+    {
+        "word": "ഓടേണ്ടതാണ്",
+        "analysis": "ഓടുക<v><imperative-mood>"
     }
 ]

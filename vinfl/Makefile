@@ -1,6 +1,6 @@
 include ../Makefile.inc
 
-SUBDIRS = aspects
+SUBDIRS = aspects moods
 
 vinfl.a: past.a future.a present.a converb-past.a converb.a concessive.a subdirs
 
