@@ -39,7 +39,7 @@
 #aspects# = <simple-perfect-aspect><cont-perfect-aspect><remote-perfect-aspect> \
 	<habitual-aspect><iterative-aspect><emphatic-iterative-aspect>
 
-#moods# = <imperative-mood>
+#moods# = <imperative-mood><compulsive-mood><compulsive-mood-neg>
 
 #vinfl# = <past><future><present><cvb-adv-part-future><cvb-adv-part-conditional> \
 	<cvb-adv-part-past><cvb-adv-part-absolute><concessive>#aspects##moods#

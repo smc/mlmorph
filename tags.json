@@ -127,6 +127,14 @@
 		"tag":"Imperative mood"
 	},
 	{
+		"id": "compulsive-mood",
+		"tag":"Compulsive mood"
+	},
+	{
+		"id": "compulsive-mood-neg",
+		"tag":"Negative compulsive mood"
+	},
+	{
 		"id": "emphatic-iterative-aspect",
 		"tag": "Emphatic iterative aspect"
 	},

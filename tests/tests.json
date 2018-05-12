@@ -1212,5 +1212,13 @@
     {
         "word": "ഓടേണ്ടതാണ്",
         "analysis": "ഓടുക<v><imperative-mood>"
+    },
+    {
+        "word": "പതറിയേ",
+        "analysis": "പതറുക<v><compulsive-mood>"
+    },
+    {
+        "word": "പതറാതെ",
+        "analysis": "പതറുക<v><compulsive-mood-neg>"
     }
 ]
