@@ -1220,5 +1220,13 @@
     {
         "word": "പതറാതെ",
         "analysis": "പതറുക<v><compulsive-mood-neg>"
+    },
+    {
+        "word": "ഓടാം",
+        "analysis": "ഓടുക<v><promissive-mood>"
+    },
+    {
+        "word": "പറയാം",
+        "analysis": "പറയുക<v><promissive-mood>"
     }
 ]

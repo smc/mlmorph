@@ -135,6 +135,10 @@
 		"tag":"Negative compulsive mood"
 	},
 	{
+		"id": "promissive-mood",
+		"tag":"Promissive mood"
+	},
+	{
 		"id": "emphatic-iterative-aspect",
 		"tag": "Emphatic iterative aspect"
 	},
