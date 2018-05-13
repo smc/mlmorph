@@ -29,7 +29,8 @@ $simple-perfect-aspect$ = {<simple-perfect-aspect>}:{ഇരുന്നു<infl_
 % denote a state of affairs when the effect of the past action is still experienced or
 % when the result of the past action is being expected.
 
-$cont-perfect-aspect$ = {<cont-perfect-aspect>}:{ഇരിക്കുന്നു<infl_marker>}
+$cont-perfect-aspect$ = {<cont-perfect-aspect>}:{ഇരിക്കുന്നു<infl_marker>} | \
+	{<cont-perfect-aspect>}:{ഇരിയ്ക്കുന്നു<infl_marker>}
 
 % --------------------------------------------------------------------------------
 % == Remote perfect ==
@@ -38,7 +39,8 @@ $cont-perfect-aspect$ = {<cont-perfect-aspect>}:{ഇരിക്കുന്ന�
 % action which occurred only once or a few times (that is, not regular or habitual) or du`ring
 % an unspecified time in the past, far removed from the present.
 
-$remote-perfect-aspect$ = {<remote-perfect-aspect>}:{ഇട്ട്<infl_marker>}
+$remote-perfect-aspect$ = {<remote-perfect-aspect>}:{ഇട്ട്<infl_marker>} |\
+	 {<remote-perfect-aspect>}:{ഇട്ടു്<infl_marker>}
 
 % ----------
 
