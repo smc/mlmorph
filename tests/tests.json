@@ -1230,7 +1230,11 @@
         "analysis": "പറയുക<v><promissive-mood>"
     },
     {
-        "word": "പറയട്ടെ",
-        "analysis": "പറയുക<v><optative-mood>"
+        "word": "പറയാൻ",
+        "analysis": "പറയുക<v><purposive-mood>"
+    },
+    {
+        "word": "പറയാവുന്നതേ",
+        "analysis": "പറയുക<v><abilitative-mood>"
     }
 ]

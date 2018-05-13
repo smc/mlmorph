@@ -143,6 +143,14 @@
 		"tag":"Optative mood"
 	},
 	{
+		"id": "abilitative-mood",
+		"tag":"Abilitative mood"
+	},
+	{
+		"id": "purposive-mood",
+		"tag":"Purposive mood"
+	},
+	{
 		"id": "emphatic-iterative-aspect",
 		"tag": "Emphatic iterative aspect"
 	},
