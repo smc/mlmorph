@@ -1228,5 +1228,9 @@
     {
         "word": "പറയാം",
         "analysis": "പറയുക<v><promissive-mood>"
+    },
+    {
+        "word": "പറയട്ടെ",
+        "analysis": "പറയുക<v><optative-mood>"
     }
 ]
