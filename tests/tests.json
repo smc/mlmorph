@@ -1236,5 +1236,29 @@
     {
         "word": "പറയാവുന്നതേ",
         "analysis": "പറയുക<v><abilitative-mood>"
+    },
+    {
+        "word": "പതറാം",
+        "analysis": "പതറുക<v><promissive-mood>"
+    },
+    {
+        "word": "പതറിക്കോളാം",
+        "analysis": "പതറുക<v><promissive-mood>"
+    },
+    {
+        "word": "പതറിയിരിയ്ക്കും",
+        "analysis": "പതറുക<v><promissive-mood>"
+    },
+    {
+        "word": "പതറിയിരിക്കും",
+        "analysis": "പതറുക<v><promissive-mood>"
+    },
+    {
+        "word": "പതറിയേക്കാം",
+        "analysis": "പതറുക<v><promissive-mood>"
+    },
+    {
+        "word": "വന്നിരിയ്ക്കും",
+        "analysis": "വരുക<v><promissive-mood>"
     }
 ]
