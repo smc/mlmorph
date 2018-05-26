@@ -1264,5 +1264,37 @@
     {
         "word": "പോകാം",
         "analysis": "പോകുക<v><permissive-mood>"
+    },
+    {
+        "word": "ചാടട്ടെ",
+        "analysis": "ചാടുക<v><permissive-mood>"
+    },
+    {
+        "word": "ചാടാം",
+        "analysis": "ചാടുക<v><permissive-mood>"
+    },
+    {
+        "word": "ചാടാവുന്നതാണു്",
+        "analysis": "ചാടുക<v><permissive-mood>"
+    },
+    {
+        "word": "ചാടാവുന്നതാണ്",
+        "analysis": "ചാടുക<v><permissive-mood>"
+    },
+    {
+        "word": "ചാടിക്കോ",
+        "analysis": "ചാടുക<v><permissive-mood>"
+    },
+    {
+        "word": "ചാടിക്കോട്ടെ",
+        "analysis": "ചാടുക<v><permissive-mood>"
+    },
+    {
+        "word": "ചാടിക്കോളൂ",
+        "analysis": "ചാടുക<v><permissive-mood>"
+    },
+    {
+        "word": "ചാടിയ്ക്കോ",
+        "analysis": "ചാടുക<v><permissive-mood>"
     }
 ]
