@@ -1260,5 +1260,9 @@
     {
         "word": "വന്നിരിയ്ക്കും",
         "analysis": "വരുക<v><promissive-mood>"
+    },
+    {
+        "word": "പോകാം",
+        "analysis": "പോകുക<v><permissive-mood>"
     }
 ]

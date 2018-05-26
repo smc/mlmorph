@@ -139,6 +139,10 @@
 		"tag":"Promissive mood"
 	},
 	{
+		"id": "permissive-mood",
+		"tag":"Permissive mood"
+	},
+	{
 		"id": "optative-mood",
 		"tag":"Optative mood"
 	},
