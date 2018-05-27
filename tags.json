@@ -151,6 +151,10 @@
 		"tag":"Precative mood"
 	},
 	{
+		"id": "precative-neg-mood",
+		"tag":"Negative precative mood"
+	},
+	{
 		"id": "abilitative-mood",
 		"tag":"Abilitative mood"
 	},

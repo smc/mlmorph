@@ -18,4 +18,8 @@ ALPHABET = [#AAsym#]
 $verb-suffix-map$ = {ുക}:{ണേ} | {ുക}:{േണമേ}
 $precative-mood$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##Numbers##TMP#]+ <precative-mood>)
 
-$precative-mood$
+% Negative precative mood
+$verb-suffix-map$ = {ുക}:{രുതേ}
+$precative-mood-neg$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##Numbers##TMP#]+ <precative-neg-mood>)
+
+$precative-mood$ | $precative-mood-neg$

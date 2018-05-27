@@ -1304,5 +1304,9 @@
     {
         "word": "അനുഗ്രഹിക്കേണമേ",
         "analysis": "അനുഗ്രഹിക്കുക<v><precative-mood>"
+    },
+    {
+        "word": "അനുഗ്രഹിക്കരുതേ",
+        "analysis": "അനുഗ്രഹിക്കുക<v><precative-neg-mood>"
     }
 ]
