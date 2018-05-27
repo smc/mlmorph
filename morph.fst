@@ -6,8 +6,6 @@
 #include "symbols.fst"
 
 %%% The stems from the lexicon (possibly with derivation)
-$ADVERB$ = "<lexicon/adverbs.a>"
-$CONJUNCTION$ = "<lexicon/conjunctions.a>"
 $INTERJECTION$ = "<lexicon/interjections.a>"
 $PREPOSITIONS$ = "<lexicon/prepositions.a>"
 $INDECLINABLE$ = "<lexicon/indeclinables.a>"
@@ -24,9 +22,6 @@ $POLARITY$ = "<lexicon/polarity.a>"
 $MISC$ = "<lexicon/misc.a>"
 $NINFL$ = "<ninfl/ninfl.a>"
 
-% Verbs
-$VSTEM$ = "<lexicon/verbs.a>"
-$VINFL$ = "<vinfl/vinfl.a>"
 % Numbers using digits
 $NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)? [#Perc#]? <num><RB>
 
@@ -34,7 +29,7 @@ $NUMBER$ = [#Digit#]+ (\, [#Digit#]*)? (\. [#Digit#]*)? [#Perc#]? <num><RB>
 $NOUNS$ = "<noun.a>"
 
 % Verbs
-$VERB$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $POLARITY$? || $VINFL$
+$VERB$ = "<verb.a>"
 
 % Quantifiers, cardinals, ordinals
 $ordinal$= ({}:{ആം}|{}:{ആമത്തെ}|{}:{ആമത്}|{}:{ആമതു്}) <ordinal>

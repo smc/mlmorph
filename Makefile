@@ -7,8 +7,9 @@ include Makefile.inc
 all: malayalam.a
 
 malayalam.a: morph.a afilter.a
-noun.a: subdirs
-morph.a: noun.a subdirs num.a
+noun.a: ninfl lexicon deriv phon
+verb.a: vinfl lexicon phon
+morph.a: noun.a verb.a num.a
 subdirs: $(SUBDIRS)
 $(SUBDIRS):
 	$(MAKE) -C $@
