@@ -16,4 +16,9 @@ $VERB-ASPECTS$ = $VERB-PREFIX$ || $ASPECTS$
 
 $VERB$ = $VERB-TENSES$ | $VERB-MOODS$ | $VERB-ASPECTS$
 
+% Tests
+$tests$ = ചിരിക്കുക<v><RB> [#vinfl#]
+$tests$ || ( $TENSES$ |  $MOODS$ | $ASPECTS$ )  >> "verb.test.a"
+
 $VERB$
+
