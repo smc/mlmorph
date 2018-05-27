@@ -1296,5 +1296,13 @@
     {
         "word": "ചാടിയ്ക്കോ",
         "analysis": "ചാടുക<v><permissive-mood>"
+    },
+    {
+        "word": "അനുഗ്രഹിക്കണേ",
+        "analysis": "അനുഗ്രഹിക്കുക<v><precative-mood>"
+    },
+    {
+        "word": "അനുഗ്രഹിക്കേണമേ",
+        "analysis": "അനുഗ്രഹിക്കുക<v><precative-mood>"
     }
 ]

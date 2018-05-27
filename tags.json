@@ -147,6 +147,10 @@
 		"tag":"Optative mood"
 	},
 	{
+		"id": "precative-mood",
+		"tag":"Precative mood"
+	},
+	{
 		"id": "abilitative-mood",
 		"tag":"Abilitative mood"
 	},
