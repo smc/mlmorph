@@ -1,3 +1,9 @@
+#include "../../symbols.fst"
+
+ALPHABET = [#Letters##POS##BM##TMP##infl#]
+
+$remove-vinfl$ = {[#vinfl#]}:{} ^-> (<infl_marker> [#POS##BM##TMP#]+ __)
+
 $imperative-mood$ = "<imperative.a>"
 $compulsive-mood$ = "<compulsive.a>"
 $promissive-mood$ = "<promissive.a>"
@@ -7,7 +13,7 @@ $purposive-mood$ = "<purposive.a>"
 $permissive-mood$ = "<permissive.a>"
 
 $moods$ = $imperative-mood$ || $compulsive-mood$ || $promissive-mood$ || $optative-mood$ || \
-	$abilitative-mood$ || $purposive-mood$ || $permissive-mood$
+	$abilitative-mood$ || $purposive-mood$ || $permissive-mood$ || $remove-vinfl$
 
 $tests$ = അറിയിക്കുക<v><RB> <imperative-mood> | അറിയിക്കുക<v><RB> <compulsive-mood> | അറിയിക്കുക<v><RB> <compulsive-mood-neg> | പതറുക<v><RB><compulsive-mood>
 $tests$ || $moods$ >> "moods.test.a"

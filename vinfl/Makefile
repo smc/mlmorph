@@ -4,8 +4,8 @@ SUBDIRS = aspects moods
 
 .PHONY: all subdirs $(SUBDIRS)
 
-all: vinfl.a
-vinfl.a: past.a future.a present.a converb-past.a converb.a concessive.a subdirs
+all: tense.a subdirs
+tense.a: past.a future.a present.a converb-past.a converb.a concessive.a
 converb.a: converb-past.a
 
 subdirs: $(SUBDIRS)
