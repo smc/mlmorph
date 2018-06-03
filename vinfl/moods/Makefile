@@ -4,4 +4,4 @@ include ../../Makefile.inc
 
 all: moods.a
 moods.a: imperative.a compulsive.a promissive.a optative.a abilitative.a purposive.a permissive.a \
-	precative.a irrealis.a
+	precative.a irrealis.a monitory.a

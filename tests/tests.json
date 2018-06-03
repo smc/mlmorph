@@ -1316,5 +1316,9 @@
     {
         "word": "പോയേനെ",
         "analysis": "പോകുക<v><irrealis-mood>"
+    },
+    {
+        "word": "പോകുമേ",
+        "analysis": "പോകുക<v><monitory-mood>"
     }
 ]
