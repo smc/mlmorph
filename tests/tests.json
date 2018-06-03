@@ -1320,5 +1320,17 @@
     {
         "word": "പോകുമേ",
         "analysis": "പോകുക<v><monitory-mood>"
+    },
+    {
+        "word": "പോയാൽ",
+        "analysis": "പോകുക<v><conditional-mood>"
+    },
+    {
+        "word": "പോയാൽ",
+        "analysis": "പോകുക<v><conditional-mood>"
+    },
+    {
+        "word": "പാടിയാൽ",
+        "analysis": "പാടുക<v><conditional-mood>"
     }
 ]

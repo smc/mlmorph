@@ -151,6 +151,10 @@
 		"tag":"Monitory mood"
 	},
 	{
+		"id": "conditional-mood",
+		"tag":"Conditional mood"
+	},
+	{
 		"id": "precative-mood",
 		"tag":"Precative mood"
 	},
