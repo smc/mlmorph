@@ -1332,5 +1332,17 @@
     {
         "word": "പാടിയാൽ",
         "analysis": "പാടുക<v><conditional-mood>"
+    },
+    {
+        "word": "പാടിയല്ലോ",
+        "analysis": "പാടുക<v><satisfactive-mood>"
+    },
+    {
+        "word": "വന്നുവല്ലോ",
+        "analysis": "വരുക<v><satisfactive-mood>"
+    },
+    {
+        "word": "പോയല്ലോ",
+        "analysis": "പോകുക<v><satisfactive-mood>"
     }
 ]

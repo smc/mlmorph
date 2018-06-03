@@ -155,6 +155,10 @@
 		"tag":"Conditional mood"
 	},
 	{
+		"id": "satisfactive-mood",
+		"tag":"Satisfactive mood"
+	},
+	{
 		"id": "precative-mood",
 		"tag":"Precative mood"
 	},

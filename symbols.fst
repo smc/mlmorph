@@ -41,7 +41,8 @@
 
 #moods# = <imperative-mood><compulsive-mood><compulsive-mood-neg><promissive-mood> \
 	<optative-mood><purposive-mood><abilitative-mood><permissive-mood> \
-	<precative-mood><precative-neg-mood><irrealis-mood><monitory-mood><conditional-mood>
+	<precative-mood><precative-neg-mood><irrealis-mood><monitory-mood> \
+	<conditional-mood><satisfactive-mood>
 
 #vinfl# = <past><future><present><cvb-adv-part-future><cvb-adv-part-conditional> \
 	<cvb-adv-part-past><cvb-adv-part-absolute><concessive>#aspects##moods#
