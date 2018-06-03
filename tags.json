@@ -155,6 +155,10 @@
 		"tag":"Negative precative mood"
 	},
 	{
+		"id": "irrealis-mood",
+		"tag": "Irrealis mood"
+	},
+	{
 		"id": "abilitative-mood",
 		"tag":"Abilitative mood"
 	},

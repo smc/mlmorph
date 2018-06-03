@@ -1308,5 +1308,13 @@
     {
         "word": "അനുഗ്രഹിക്കരുതേ",
         "analysis": "അനുഗ്രഹിക്കുക<v><precative-neg-mood>"
+    },
+    {
+        "word": "വന്നേനെ",
+        "analysis": "വരുക<v><irrealis-mood>"
+    },
+    {
+        "word": "പോയേനെ",
+        "analysis": "പോകുക<v><irrealis-mood>"
     }
 ]

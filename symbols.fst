@@ -40,7 +40,8 @@
 	<habitual-aspect><iterative-aspect><emphatic-iterative-aspect>
 
 #moods# = <imperative-mood><compulsive-mood><compulsive-mood-neg><promissive-mood> \
-	<optative-mood><purposive-mood><abilitative-mood><permissive-mood><precative-mood><precative-neg-mood>
+	<optative-mood><purposive-mood><abilitative-mood><permissive-mood> \
+	<precative-mood><precative-neg-mood><irrealis-mood>
 
 #vinfl# = <past><future><present><cvb-adv-part-future><cvb-adv-part-conditional> \
 	<cvb-adv-part-past><cvb-adv-part-absolute><concessive>#aspects##moods#

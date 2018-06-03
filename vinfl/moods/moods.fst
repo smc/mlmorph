@@ -12,9 +12,11 @@ $abilitative-mood$ = "<abilitative.a>"
 $purposive-mood$ = "<purposive.a>"
 $permissive-mood$ = "<permissive.a>"
 $precative-mood$ = "<precative.a>"
+$irrealis-mood$ = "<irrealis.a>"
 
-$moods$ = $imperative-mood$ || $compulsive-mood$ || $promissive-mood$ || $optative-mood$ || \
-	$abilitative-mood$ || $purposive-mood$ || $permissive-mood$ || $precative-mood$ || \
+$moods$ = $imperative-mood$ || $compulsive-mood$ || $promissive-mood$ || \
+	$optative-mood$ || $abilitative-mood$ || $purposive-mood$ || \
+	$permissive-mood$ || $precative-mood$ || $irrealis-mood$ || \
 	$remove-vinfl$
 
 $tests$ = അറിയിക്കുക<v><RB> <imperative-mood> | അറിയിക്കുക<v><RB> <compulsive-mood> | അറിയിക്കുക<v><RB> <compulsive-mood-neg> | പതറുക<v><RB><compulsive-mood>
