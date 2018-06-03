@@ -1,19 +1,29 @@
 #include "../symbols.fst"
 
+% ഉദാഹരണം: പോവുക - പോയാലും, പാടുക - പാടിയാലും , ചാടുക - ചാടിയാലും , തരിക-തന്നാലും
+% കരയും - കരഞ്ഞാലും കുളിക്കുക - കുളിച്ചാലും
+
 ALPHABET = [#AAsym#]
 
 %%%% Concessives അനുവാദകങ്ങൾ %%%%%%%%%
 
-% ഉദാഹരണം: പോവുക - പോയാലും, പാടുക - പാടിയാലും , ചാടുക - ചാടിയാലും , തരിക-തന്നാലും 
-% കരയും - കരഞ്ഞാലും കുളിക്കുക - കുളിച്ചാലും 
+$past-tense$ = "<past.a>"
 
-$concessive-forms$ = {വരുക} : {വന്നാലും} | {വരിക} : {വന്നാലും} |\
-	{തരുക} : {തന്നാലും} | {തരിക} : {തന്നാലും} |\
-	{രുക}: {ർന്നാലും} | {രുക}: {ർന്നാലും} | \
-	{യുക}: {ഞ്ഞാലും} |  {യുക}: {ഞ്ഞാലും} |\
-	{യ്ക്കുക} : {ച്ചാലും} | {യ്ക്കുക} : {ച്ചാലും} |\
-	{ക്കുക} : {ന്നാലും} | {ക്കുക} : {ന്നാലും} |\
-	{ിക്കുക} : {ിച്ചാലും} |  {ിക്കുക}  : {ിച്ചാലും}
+$concessive-exceptions$ = {പോകുക}:{പോയാലും}
 
-$concessives$ = $concessive-forms$ <>:<infl_marker> ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+  <concessive>)
-$concessives$
+% We need to wrap the verb into past form first. For that, fake a past tag and pass
+% it through the past.a. Only when the input has <concessive> at end.
+$fake-past$ = <RB>:<past> ^-> ([<v>] __ [<concessive>])
+$remove-past$ = <past>:<RB> ^-> ([<v>] __ [<concessive>])
+
+$verb-suffix-map$ = {ു<infl_marker>}:{ാലും<infl_marker>} | \
+	{ി<infl_marker>} :{യാലും<infl_marker>}
+% The <infl_marker> in above line has no functional effecet. But without that 3 duplicate results
+% are generated. 3 is the length of ിയേ. I have not figured out the reason.
+
+$concessive-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP#<v><past>]+ <concessive> )
+$concessive$ = $fake-past$ || $past-tense$ || $concessive-form$ || $remove-past$
+
+$concessive-ex$ = $concessive-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##Numbers##TMP#]+ <concessive>)
+
+$concessive-ex$ || $concessive$
