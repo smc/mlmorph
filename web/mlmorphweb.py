@@ -25,10 +25,8 @@ def format_result(analysis_result):
     match = regex.match(r"((?P<root>([^<])+)(?P<tags>(<[^>]+>)+))+", analysis)
     roots = match.captures("root")
     morphemes = []
-    print(roots)
     for rindex in range(len(roots)):
         morpheme = {}
-        print(roots[rindex])
         morpheme['root'] = roots[rindex]
         tags = match.captures("tags")[rindex]
         morpheme['pos'] = regex.match(

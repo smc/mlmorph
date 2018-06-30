@@ -192,15 +192,18 @@
 	},
 	{
 		"id": "aff",
-		"tag": "Affirmative"
+		"tag": "Affirmative",
+		"url": "http://universaldependencies.org/u/feat/Polarity.html#Pos"
 	},
 	{
 		"id": "neg",
-		"tag": "Negation"
+		"tag": "Negation",
+		"url": "http://universaldependencies.org/u/feat/Polarity.html#Neg"
 	},
 	{
 		"id": "interrogative",
-		"tag": "Interrogative"
+		"tag": "Interrogative",
+		"url": "http://universaldependencies.org/u/feat/PronType.html#Int"
 	},
 	{
 		"id": "punct",

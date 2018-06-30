@@ -1,20 +1,23 @@
 var morphemechipsInstance, tagInfo;
 
 function formatResult( result ) {
-	var i, j, root, tags, morphemes, morpheme, $tags, tagLabel, $resultHTML;
+	var $resultHTML = $( '<div>' ).addClass( 'result' );
 
-	$resultHTML = $( '<div>' ).addClass( 'result' );
-
-	morphemes = result.morphemes;
-	for ( i = 0; i < morphemes.length; i++ ) {
-		morpheme = morphemes[ i ];
-		root = morpheme.root;
-		tags = morpheme.pos;
-		$tags = $( '<div>' ).addClass( 'tags' );
-		for ( j = 0; j < tags.length; j++ ) {
-			tagLabel = tagInfo.find( item => item.id === tags[ j ] );
-			tagLabel = tagLabel ? tagLabel.tag : tags[ j ];
-			$tags.append( $( '<div>' ).addClass( 'tag' ).text( tagLabel ) );
+	let morphemes = result.morphemes;
+	for ( let i = 0; i < morphemes.length; i++ ) {
+		let morpheme = morphemes[ i ];
+		let root = morpheme.root;
+		let tags = morpheme.pos;
+		let $tags = $( '<div>' ).addClass( 'tags' );
+		for ( let j = 0; j < tags.length; j++ ) {
+			let tagData = tagInfo.find( item => item.id === tags[ j ] );
+			if ( tagData && tagData.url ) {
+				$tags.append( $( '<div>' ).addClass( 'tag' ).append(
+					$( '<a>' ).attr( 'href', tagData.url ).text( tagData.tag ) ) );
+			} else {
+				let tagLabel = tagData ? tagData.tag : tags[ j ];
+				$tags.append( $( '<div>' ).addClass( 'tag' ).text( tagLabel ) );
+			}
 		}
 		$resultHTML.append( $( '<div>' ).addClass( 'component' )
 			.append( $( '<div>' ).addClass( 'root' ).text( root ) )
