@@ -26,6 +26,7 @@ function formatResult( result ) {
 
 function onGenerateClick() {
 	$( '.genresult' ).empty();
+	$( '#genresult-progress' ).show();
 	$.getJSON( '/api/generate', {
 		word: morphemechipsInstance.getDataString()
 	}, ( data ) => {
@@ -33,15 +34,18 @@ function onGenerateClick() {
 		$.each( result, ( key, value ) => {
 			$( '.genresult' ).append( $( '<div>' ).addClass( 'result' ).text( value ) );
 		} );
+		$( '#genresult-progress' ).hide();
 	} );
 }
 
 function onAnalysisClick() {
 	$( '.analresult' ).find( 'tbody' ).empty();
 	$( '.analresult' ).show();
+	$( '#analresult-progress' ).show();
 	$.post( '/api/analyse', {
 		text: $( 'textarea[name="text"]' ).val()
 	}, ( data ) => {
+		$( '#analresult-progress' ).hide();
 		let result = data.result;
 		$.each( result, ( key, values ) => {
 			if ( !key || !key.trim() ) {
@@ -80,6 +84,8 @@ function fetchTags() {
 }
 
 $( function () {
+	$( '#analresult-progress' ).hide();
+	$( '#genresult-progress' ).hide();
 	fetchTags().then( ( tags )=>{
 		tagInfo = tags;
 		init();
