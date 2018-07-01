@@ -13,19 +13,23 @@
 	},
 	{
 		"id": "v",
-		"tag": "Verb"
+		"tag": "Verb",
+		"url": "http://universaldependencies.org/u/pos/VERB.html"
 	},
 	{
 		"id": "prn",
-		"tag": "Pronoun"
+		"tag": "Pronoun",
+		"url": "http://universaldependencies.org/u/pos/PRON.html"
 	},
 	{
 		"id": "adj",
-		"tag": "Adjective"
+		"tag": "Adjective",
+		"url": "http://universaldependencies.org/u/pos/ADJ.html"
 	},
 	{
 		"id": "adv",
-		"tag": "Adverb"
+		"tag": "Adverb",
+		"url": "http://universaldependencies.org/u/pos/ADV.html"
 	},
 	{
 		"id": "pl",
@@ -195,6 +199,11 @@
 		"tag": "Conjunction"
 	},
 	{
+		"id": "ij",
+		"tag": "Interjection",
+		"url": "http://universaldependencies.org/u/pos/INTJ.html"
+	},
+	{
 		"id": "aff",
 		"tag": "Affirmative",
 		"url": "http://universaldependencies.org/u/feat/Polarity.html#Pos"
@@ -211,7 +220,8 @@
 	},
 	{
 		"id": "punct",
-		"tag": "Punctuation"
+		"tag": "Punctuation",
+		"url": "http://universaldependencies.org/u/pos/PUNCT.html"
 	},
 	{
 		"id": "qn",
