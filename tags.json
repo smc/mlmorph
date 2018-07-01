@@ -4,7 +4,8 @@
 		"tag": "Noun",
 		"desc": {
 			"ml": "നാമം"
-		}
+		},
+		"url": "http://universaldependencies.org/u/pos/NOUN.html"
 	},
 	{
 		"id": "np",
@@ -56,15 +57,18 @@
 	},
 	{
 		"id": "locative",
-		"tag": "Locative"
+		"tag": "Locative",
+		"url": "http://universaldependencies.org/u/feat/Case.html#Loc"
 	},
 	{
 		"id": "sociative",
-		"tag": "Sociative"
+		"tag": "Sociative",
+		"url": "http://universaldependencies.org/u/feat/Case.html#com-comitative--associative"
 	},
 	{
 		"id": "vocative",
-		"tag": "Vocative"
+		"tag": "Vocative",
+		"url": "http://universaldependencies.org/u/feat/Case.html#voc-vocative"
 	},
 	{
 		"id": "indeclinable",
