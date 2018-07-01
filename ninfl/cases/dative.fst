@@ -2,7 +2,7 @@
 % FSTs for nominal dative(ഉദ്ദേശിക) inflections
 %
 
-#include "../symbols.fst"
+#include "../../symbols.fst"
 
 %%%%%%%%%%%% Noun Inflections - Dative  %%%%%%%%%%%%%%
 

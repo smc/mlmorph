@@ -2,7 +2,7 @@
 % FSTs for nominal Accusative/പ്രതിഗ്രാഹിക inflections
 %
 
-#include "../symbols.fst"
+#include "../../symbols.fst"
 
 %%%%%%%%%%%% Noun Inflections %%%%%%%%%%%%%%
 

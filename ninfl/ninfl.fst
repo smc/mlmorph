@@ -6,9 +6,9 @@
 
 %%%%%%%%%%%% Noun Inflections %%%%%%%%%%%%%%
 
-$NINFL$ = "<vocative.a>" | "<genitive.a>" | "<locative.a>" | "<sociative.a>" | "<instrumental.a>" | "<dative.a>" | "<accusative.a>"
+$NINFL$ = "<cases/cases.a>" || "<adjective.a>"
 
 %$tests$ = ആന<n> | കടൽ<n> | പേര്<n>
 % $tests$ [#infl#] | $NINFL$
 
-$NINFL$ || "<adjective.a>"
+$NINFL$

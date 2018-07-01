@@ -2,7 +2,7 @@
 % FSTs for nominal Instrumental inflections
 %
 
-#include "../symbols.fst"
+#include "../../symbols.fst"
 
 %%%%%%%%%%%% Noun Inflections %%%%%%%%%%%%%%
 

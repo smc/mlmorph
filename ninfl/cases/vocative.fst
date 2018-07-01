@@ -1,4 +1,4 @@
-#include "../symbols.fst"
+#include "../../symbols.fst"
 
 ALPHABET = [#Letters##POS##BM##TMP##Numbers#] <vocative>
 % Vocative inflection rules- sambodhana - മരമേ, കാടേ, പൂച്ചേ, അവരേ, അവളേ, മലരേ, പട്ടികളേ, പട്ടീയേ
