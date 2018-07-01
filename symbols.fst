@@ -34,7 +34,8 @@
 
 % analysis symbols for inflectional suffixes
 #ninfl# = <accusative><vocative><nominative><genitive><dative>\
-	<instrumental><locative><sociative><sg><pl>
+	<instrumental><locative><sociative><allative><ablative><perlative>\
+	<sg><pl>
 
 #aspects# = <simple-perfect-aspect><cont-perfect-aspect><remote-perfect-aspect> \
 	<habitual-aspect><iterative-aspect><emphatic-iterative-aspect>

@@ -75,6 +75,16 @@
 		"url": "http://universaldependencies.org/u/feat/Case.html#voc-vocative"
 	},
 	{
+		"id": "ablative",
+		"tag": "Ablative",
+		"url": "http://universaldependencies.org/u/feat/Case.html#abl-ablative"
+	},
+	{
+		"id": "allative",
+		"tag": "Allative",
+		"url": "http://universaldependencies.org/u/feat/Case.html#all-allative"
+	},
+	{
 		"id": "indeclinable",
 		"tag": "Indeclinable"
 	},

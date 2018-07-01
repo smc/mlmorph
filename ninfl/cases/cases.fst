@@ -6,6 +6,6 @@
 
 %%%%%%%%%%%% Noun Inflections %%%%%%%%%%%%%%
 
-$CASES$ = "<vocative.a>" | "<genitive.a>" | "<locative.a>" | "<sociative.a>" | "<instrumental.a>" | "<dative.a>" | "<accusative.a>"
+$CASES$ = "<vocative.a>" | "<genitive.a>" | "<locative.a>" | "<sociative.a>" | "<instrumental.a>" | "<dative.a>" | "<accusative.a>" | "<allative.a>"
 
 $CASES$
