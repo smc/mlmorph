@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 
 """
-Simple python interface for omorfi using liblibhfst-python. Consider this
-class as a standard python interface to omorfi and standard reference for
-scientific studies, as far as python use goes.
+Simple python interface for mlmorph using liblibhfst-python.
 """
 
 from argparse import ArgumentParser
