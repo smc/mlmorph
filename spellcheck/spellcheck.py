@@ -29,7 +29,8 @@ class Suggestion:
 
 
 def getSuggestions(word):
-    STRATEGIES = ['VowelElongation', 'VowelShortening']
+    STRATEGIES = ['VowelElongation', 'VowelShortening', 'NtaFixes',
+                  'ChilluToConsonantVirama', 'ConsonantViramaToChillu', 'MpaFixes']
     suggestions = []
     for i in range(len(STRATEGIES)):
         strategy = getattr(importlib.import_module(
@@ -64,4 +65,6 @@ if __name__ == "__main__":
     main('സന്തോഷ്')
     main('കോഴിക്കൊട്')
     main('ഓടിപ്പൊയി')
-    main('ചാടിക്കടനു')
+    main('കാര്ത്തിക')
+    main('പംപ')
+    main('സെൻറർ')

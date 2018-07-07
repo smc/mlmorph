@@ -1,3 +1,7 @@
 from strategies.suggestion_strategy import SuggestionStrategy
 from strategies.vowel_elongation import VowelElongation
 from strategies.vowel_shortening import VowelShortening
+from strategies.chillu_to_virama_form import ChilluToConsonantVirama
+from strategies.consonant_virama_to_chillu import ConsonantViramaToChillu
+from strategies.mpa_fixes import MpaFixes
+from strategies.nta_fixes import NtaFixes
