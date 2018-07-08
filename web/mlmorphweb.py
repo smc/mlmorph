@@ -5,8 +5,11 @@ from flask import Flask, jsonify, render_template, request
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 sys.path.insert(0, '../python')
+sys.path.insert(0, '../')
 
 from mlmorph import Mlmorph
+import spellcheck
+
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
@@ -44,7 +47,7 @@ def index():
 
 
 @app.route("/api/analyse", methods=['GET', 'POST'])
-def analyse():
+def do_analyse():
     text = None
     analyse_results = {}
     if request.method == 'POST':
@@ -67,7 +70,7 @@ def analyse():
 
 
 @app.route("/api/generate", methods=['GET'])
-def generate():
+def do_generate():
     generate_results = []
     word = request.args.get('word')
     wordtype = request.args.get('type')
@@ -83,6 +86,15 @@ def generate():
     for gindex in range(len(gens)):
         generate_results.append(gens[gindex][0])
     return jsonify(word=word, type=wordtype, infl=infl, result=generate_results)
+
+@app.route("/api/spellcheck", methods=['GET'])
+def do_spellcheck():
+    word = request.args.get('word')
+    isCorrect = spellcheck.spellcheck(word, morph)
+    suggestions=[]
+    if not isCorrect:
+        suggestions = spellcheck.getSuggestions(word, morph)
+    return jsonify(word=word, correct=isCorrect, suggestions=suggestions)
 
 if __name__ == "__main__":
     app.run()

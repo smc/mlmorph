@@ -1,7 +1,7 @@
-from strategies import SuggestionStrategy
+from .suggestion_strategy import SuggestionStrategy
 
 
-class MpaFixes(SuggestionStrategy):
+class MpaCorrection(SuggestionStrategy):
     """
     Replace ന്പ, ൻപ, ംപ, ംമ്പ with മ്പ
     """

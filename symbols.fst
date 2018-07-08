@@ -2,11 +2,12 @@
 #VowelSigns# = ാിീുൃെേൊോൗൂൈ
 #Anuswara# = ം
 #Virama# = ്
+#Visarga# = ഃ
 #Consonants# = കഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ
 #Chillus# = ൻർൽൾൿൺ
 
 % all possible character in Malayalam
-#Letters# = #Consonants##Vowels##VowelSigns##Anuswara##Chillus##Virama#
+#Letters# = #Consonants##Vowels##VowelSigns##Anuswara##Chillus##Virama##Visarga#
 
 % POS tags
 #POS# = <adj><adv><dem><n><np><prn><postp><ij><cnj><qn><v><vaux><num><pnct><eng><deriv> \

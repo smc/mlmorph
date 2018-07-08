@@ -1,4 +1,5 @@
 import abc
+import re
 
 
 class SuggestionStrategy(metaclass=abc.ABCMeta):
@@ -11,3 +12,6 @@ class SuggestionStrategy(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def suggest(self):
         pass
+
+    def isConsonant(self, char):
+        return re.compile(r'([ക-ഹ])').search(char) != None

@@ -1,7 +1,7 @@
-from strategies import SuggestionStrategy
+from .suggestion_strategy import SuggestionStrategy
 
 
-class NtaFixes(SuggestionStrategy):
+class NtaCorrection(SuggestionStrategy):
     """
     Replace ൻറ, ൻ്റ with ന്റ
     """

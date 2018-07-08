@@ -1,4 +1,4 @@
-from strategies import SuggestionStrategy
+from .suggestion_strategy import SuggestionStrategy
 
 
 class VowelShortening(SuggestionStrategy):

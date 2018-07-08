@@ -1,4 +1,4 @@
-from strategies import SuggestionStrategy
+from .suggestion_strategy import SuggestionStrategy
 
 
 class ConsonantViramaToChillu(SuggestionStrategy):
@@ -11,7 +11,8 @@ class ConsonantViramaToChillu(SuggestionStrategy):
         'ല്': 'ൽ',
         'ന്': 'ൻ',
         'ണ്': 'ൺ',
-        'ള്': 'ൾ'
+        'ള്': 'ൾ',
+        'മ്': 'ം'
     }
 
     def suggest(self, word):
