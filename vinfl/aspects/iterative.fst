@@ -8,7 +8,7 @@
 
 #include "../../symbols.fst"
 
-ALPHABET = [#AAsym#]
+ALPHABET = [#Letters##POS##BM##TMP##infl#]
 
 $past-tense$ = "<../converb-past.a>"
 #iterative-aspects# = <iterative-aspect><emphatic-iterative-aspect>

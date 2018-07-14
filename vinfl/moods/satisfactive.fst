@@ -19,6 +19,6 @@ $verb-suffix-map$ = {ു<infl_marker>}:{ല്ലോ<infl_marker>} |  {ു<infl_
 
 $satisfactive-mood-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP#<v><past>]+ <satisfactive-mood> )
 $satisfactive-mood$ = $fake-past$ || $past-tense$ || $satisfactive-mood-form$ || $remove-past$
-$satisfactive-mood-ex$ = $satisfactive-mood-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##Numbers##TMP#]+ <satisfactive-mood>)
+$satisfactive-mood-ex$ = $satisfactive-mood-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##TMP#]+ <satisfactive-mood>)
 
 $satisfactive-mood-ex$ || $satisfactive-mood$

@@ -5,7 +5,7 @@
 
 #include "../../symbols.fst"
 
-ALPHABET = [#AAsym#]
+ALPHABET = [#Letters##POS##BM##TMP##infl#]
 
 $past-tense$ = "<../past.a>"
 
@@ -16,7 +16,7 @@ $remove-past$ = <past>:<RB> ^-> ([<v>] __ [<promissive-mood>])
 
 % വരാം, സഹായിക്കാം, ഓടാം, പാടാം, പറയാം
 $verb-suffix-map$ = {ുക}:{ാം}
-$promissive-mood-1$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##Numbers##TMP#]+ <promissive-mood>)
+$promissive-mood-1$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <promissive-mood>)
 
 % A stronger degree of promise is indicated by the suffix –eek + -aam added to the past
 % tense stem of the verb. വന്നേക്കാം, പോയേക്കാം

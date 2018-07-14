@@ -19,7 +19,6 @@ $remove-past$ = <past>:<RB> ^-> ([<v>] __ [<conditional-mood>])
 $verb-suffix-map$ = {ു<infl_marker>}:{ാൽ<infl_marker>} | {ി<infl_marker>} : {ിയാൽ<infl_marker>}
 $conditional-mood$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP#<v><past>]+ <conditional-mood>)
 
-$conditional-mood-ex$ = $conditional-mood-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##Numbers##TMP#]+ <conditional-mood>)
+$conditional-mood-ex$ = $conditional-mood-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##TMP#]+ <conditional-mood>)
 
 $conditional-mood-ex$ || ( $fake-past$ || $past-tense$ || $conditional-mood$ || $remove-past$ )
-

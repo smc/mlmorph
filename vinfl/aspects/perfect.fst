@@ -7,7 +7,7 @@
 
 #include "../../symbols.fst"
 
-ALPHABET = [#AAsym#]
+ALPHABET = [#Letters##POS##BM##TMP##infl#]
 
 $past-tense$ = "<../past.a>"
 #perfect-aspects# = <simple-perfect-aspect><cont-perfect-aspect><remote-perfect-aspect>
@@ -51,4 +51,3 @@ $perfect-aspects$ = $perfect-aspects-forms$ ^-> ([<past>] __ )
 $perfect-aspects$ = $fake-past$ || $past-tense$ || $perfect-aspects$
 
 $perfect-aspects$
-

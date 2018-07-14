@@ -6,7 +6,7 @@
 
 #include "../../symbols.fst"
 
-ALPHABET = [#AAsym#]
+ALPHABET = [#Letters##POS##BM##TMP##infl#]
 
 % The precative construction of verb root + anee is a contracted form of verb root+
 % uka(infinitive) + veenam (defective verb) + -ee (emphatic particle).Forms like
@@ -16,10 +16,10 @@ ALPHABET = [#AAsym#]
 % contracted form.
 
 $verb-suffix-map$ = {ുക}:{ണേ} | {ുക}:{േണമേ}
-$precative-mood$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##Numbers##TMP#]+ <precative-mood>)
+$precative-mood$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <precative-mood>)
 
 % Negative precative mood
 $verb-suffix-map$ = {ുക}:{രുതേ}
-$precative-mood-neg$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##Numbers##TMP#]+ <precative-neg-mood>)
+$precative-mood-neg$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <precative-neg-mood>)
 
 $precative-mood$ | $precative-mood-neg$

@@ -6,7 +6,7 @@
 
 #include "../../symbols.fst"
 
-ALPHABET = [#AAsym#]
+ALPHABET = [#Letters##POS##BM##TMP##infl#]
 
 $past-tense$ = "<../past.a>"
 
@@ -19,4 +19,3 @@ $verb-suffix-map$ = {ു<infl_marker>}:{േനെ<infl_marker>} | {ി<infl_mark
 $irrealis-mood$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP#<v><past>]+ <irrealis-mood>)
 
 $fake-past$ || $past-tense$ || $irrealis-mood$ || $remove-past$
-

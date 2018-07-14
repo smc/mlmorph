@@ -8,8 +8,8 @@
 
 #include "../../symbols.fst"
 
-ALPHABET = [#AAsym#]
+ALPHABET = [#Letters##POS##BM##TMP##infl#]
 $verb-suffix-map$ = {ുക}:{ാറ്} | {ിക}:{ാറ്}
-$habitual-aspect$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##Numbers##TMP#]+ <habitual-aspect>)
+$habitual-aspect$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <habitual-aspect>)
 
 $habitual-aspect$

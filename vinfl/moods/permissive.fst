@@ -6,7 +6,7 @@
 
 #include "../../symbols.fst"
 
-ALPHABET = [#AAsym#]
+ALPHABET = [#Letters##POS##BM##TMP##infl#]
 
 
 $past-tense$ = "<../past.a>"
@@ -50,7 +50,7 @@ $verb-suffix-map-2$ = {ുക}:{ട്ടെ}
 
 $verb-suffix-map-3$ = {ുക}:{ാവുന്നതാണ്} | {ുക}:{ാവുന്നതാണു്}
 $verb-suffix-map$ = $verb-suffix-map-1$ | $verb-suffix-map-2$ | $verb-suffix-map-3$
-$permissive-mood-1$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##Numbers##TMP#]+ <permissive-mood>)
+$permissive-mood-1$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <permissive-mood>)
 
 $permissive-mood$ = $permissive-mood-1$ | \
 	( $fake-past$ || $past-tense$ || $permissive-mood-2$ || $remove-past$ )

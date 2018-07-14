@@ -3,7 +3,7 @@
 % ഉദാഹരണം: പോവുക - പോയാലും, പാടുക - പാടിയാലും , ചാടുക - ചാടിയാലും , തരിക-തന്നാലും
 % കരയും - കരഞ്ഞാലും കുളിക്കുക - കുളിച്ചാലും
 
-ALPHABET = [#AAsym#]
+ALPHABET = [#Letters##POS##BM##TMP##infl#]
 
 %%%% Concessives അനുവാദകങ്ങൾ %%%%%%%%%
 
@@ -24,6 +24,6 @@ $verb-suffix-map$ = {ു<infl_marker>}:{ാലും<infl_marker>} | \
 $concessive-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP#<v><past>]+ <concessive> )
 $concessive$ = $fake-past$ || $past-tense$ || $concessive-form$ || $remove-past$
 
-$concessive-ex$ = $concessive-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##Numbers##TMP#]+ <concessive>)
+$concessive-ex$ = $concessive-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##TMP#]+ <concessive>)
 
 $concessive-ex$ || $concessive$

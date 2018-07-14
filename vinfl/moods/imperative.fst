@@ -5,7 +5,7 @@
 
 #include "../../symbols.fst"
 
-ALPHABET = [#AAsym#]
+ALPHABET = [#Letters##POS##BM##TMP##infl#]
 $special_cases$ = {വരുക} : {വാ} | {വരിക} :{വാ} | {തരുക}:{താ} | {തരിക}:{താ} | {പോകുക} : {പോ}
 
 $verb-suffix-map$ = {ുക}:{ൂ} | {ിക}:{ൂ} | \ % Less formal. വരൂ, പോകൂ, പാടൂ
@@ -16,7 +16,7 @@ $verb-suffix-map$ = {ുക}:{ൂ} | {ിക}:{ൂ} | \ % Less formal. വരൂ
 	{ുക}: {്} | \ % കേൾക്ക്, പാട്
 	{ുക}: {ുവിൻ} % പോകുവിൻ, പാടുവിൻ
 
-$imperative-mood-1$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##Numbers##TMP#]+ <imperative-mood>)
-$imperative-mood-ex$ = $special_cases$ <>:<infl_marker> ^-> ( __ [#POS##BM##Numbers##TMP#]+ <imperative-mood>)
+$imperative-mood-1$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <imperative-mood>)
+$imperative-mood-ex$ = $special_cases$ <>:<infl_marker> ^-> ( __ [#POS##BM##TMP#]+ <imperative-mood>)
 
 $imperative-mood-ex$ || $imperative-mood-1$
