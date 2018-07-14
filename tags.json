@@ -142,7 +142,8 @@
 	},
 	{
 		"id": "imperative-mood",
-		"tag":"Imperative mood"
+		"tag":"Imperative mood",
+		"url":"http://universaldependencies.org/u/feat/Mood.html#imp-imperative"
 	},
 	{
 		"id": "compulsive-mood",
@@ -162,7 +163,8 @@
 	},
 	{
 		"id": "optative-mood",
-		"tag":"Optative mood"
+		"tag":"Optative mood",
+		"url": "http://universaldependencies.org/u/feat/Mood.html#Opt"
 	},
 	{
 		"id": "monitory-mood",
@@ -170,7 +172,8 @@
 	},
 	{
 		"id": "conditional-mood",
-		"tag":"Conditional mood"
+		"tag":"Conditional mood",
+		"url":"http://universaldependencies.org/u/feat/Mood.html#Cnd"
 	},
 	{
 		"id": "satisfactive-mood",
