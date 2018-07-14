@@ -2,4 +2,4 @@ include ../../Makefile.inc
 
 .PHONY: all
 
-all: passive.a
+all: passive.a causative.a

@@ -209,6 +209,11 @@
 		"url": "http://universaldependencies.org/u/feat/Voice.html#Pass"
 	},
 	{
+		"id": "causative-voice",
+		"tag": "Causative voice",
+		"url": "http://universaldependencies.org/u/feat/Voice.html#cau-causative-voice"
+	},
+	{
 		"id": "concessive",
 		"tag": "Concessive"
 	},

@@ -13,7 +13,7 @@ $past-tense$ = "<../past.a>"
 #perfect-aspects# = <simple-perfect-aspect><cont-perfect-aspect><remote-perfect-aspect>
 % We need to wrap the verb into past form first. For that, fake a past tag and pass
 % it through the past.a. Only when the input has #perfect-aspects# at end.
-$fake-past$ = {<RB>}:{<past>} ^-> ([<v>] __ [#perfect-aspects#])
+$fake-past$ = {<RB>}:{<past>} ^-> ([<v><passive-voice><causative-voice>]+ __ [#perfect-aspects#])
 
 % --------------------------------------------------------------------------------
 % == Simple perfect ==
