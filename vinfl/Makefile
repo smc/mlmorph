@@ -1,6 +1,6 @@
 include ../Makefile.inc
 
-SUBDIRS = aspects moods
+SUBDIRS = aspects moods voices
 
 .PHONY: all subdirs $(SUBDIRS)
 
@@ -12,4 +12,3 @@ converb.a: converb-past.a
 subdirs: $(SUBDIRS)
 $(SUBDIRS):
 	$(MAKE) -C $@
-

@@ -204,6 +204,11 @@
 		"tag": "Emphatic iterative aspect"
 	},
 	{
+		"id": "passive-voice",
+		"tag": "Passive voice",
+		"url": "http://universaldependencies.org/u/feat/Voice.html#Pass"
+	},
+	{
 		"id": "concessive",
 		"tag": "Concessive"
 	},

@@ -1364,5 +1364,21 @@
     {
         "word": "പോയല്ലോ",
         "analysis": "പോകുക<v><satisfactive-mood>"
+    },
+    {
+        "word": "എഴുതപ്പെടുക",
+        "analysis": "എഴുതുക<v><passive-voice>"
+    },
+    {
+        "word": "എഴുതപ്പെടും",
+        "analysis": "എഴുതുക<v><passive-voice><future>"
+    },
+    {
+        "word": "എഴുതപ്പെടട്ടെ",
+        "analysis": "എഴുതുക<v><passive-voice><optative-mood>"
+    },
+    {
+        "word": "കാണപ്പെട്ടു",
+        "analysis": "കാണുക<v><passive-voice><past>"
     }
 ]
