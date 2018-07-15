@@ -1380,5 +1380,33 @@
     {
         "word": "കാണപ്പെട്ടു",
         "analysis": "കാണുക<v><passive-voice><past>"
+    },
+    {
+        "word": "ചിരിപ്പിക്കുക",
+        "analysis": "ചിരിക്കുക<v><causative-voice>"
+    },
+    {
+        "word": "ചിരിപ്പിച്ചു",
+        "analysis": "ചിരിക്കുക<v><causative-voice><past>"
+    },
+    {
+        "word": "ചിരിപ്പിക്കും",
+        "analysis": "ചിരിക്കുക<v><causative-voice><future>"
+    },
+    {
+        "word": "ചിരിപ്പിച്ചു്",
+        "analysis": "ചിരിക്കുക<v><causative-voice><cvb-adv-part-past>"
+    },
+    {
+        "word": "ചിരിപ്പിച്ചുകൊണ്ടേയിരുന്നു",
+        "analysis": "ചിരിക്കുക<v><causative-voice><emphatic-iterative-aspect>"
+    },
+    {
+        "word": "പഠിപ്പിച്ചുകൊണ്ടിരുന്നു",
+        "analysis": "പഠിക്കുക<v><causative-voice><iterative-aspect>"
+    },
+    {
+        "word": "ചിരിപ്പിക്കാതെ",
+        "analysis": "ചിരിക്കുക<v><causative-voice><compulsive-mood-neg>"
     }
 ]
