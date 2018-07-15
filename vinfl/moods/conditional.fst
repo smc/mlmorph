@@ -13,11 +13,11 @@ $conditional-mood-exceptions$ = {പോകുക}:{പോയാൽ}
 
 % We need to wrap the verb into past form first. For that, fake a past tag and pass
 % it through the past.a. Only when the input has <conditional-mood> at end.
-$fake-past$ = {<RB>}:{<past>} ^-> ([<v><passive-voice><causative-voice>]+ __ [<conditional-mood>])
-$remove-past$ = <past>:<RB> ^-> ([<v><passive-voice><causative-voice>]+ __ [<conditional-mood>])
+$fake-past$ = {<RB>}:{<past>} ^-> ([#verbs#]+ __ [<conditional-mood>])
+$remove-past$ = <past>:<RB> ^-> ([#verbs#]+ __ [<conditional-mood>])
 
 $verb-suffix-map$ = {ു<infl_marker>}:{ാൽ<infl_marker>} | {ി<infl_marker>} : {ിയാൽ<infl_marker>}
-$conditional-mood$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP#<v><passive-voice><causative-voice><past>]+ <conditional-mood>)
+$conditional-mood$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <conditional-mood>)
 
 $conditional-mood-ex$ = $conditional-mood-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##TMP#]+ <conditional-mood>)
 

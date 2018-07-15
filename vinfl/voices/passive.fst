@@ -2,7 +2,7 @@
 
 % ഉദാഹരണം: കൊല്ലപ്പെടുക, എഴുതപ്പെടുക
 
-ALPHABET = [#Letters##POS##BM##TMP##infl#]
+ALPHABET = [#Letters##POS##TMP##infl#] [#BM#]:<>
 
 %%%% കർമ്മണിപ്രയോഗങ്ങൾ %%%%%%%%%
 
@@ -12,4 +12,4 @@ $passive-voice$ = $verb-suffix-map$  ^-> ([#Consonants#]+ __  [<v>#BM##TMP#]+ <p
 $tests$ = പതറുക<v><RB><passive-voice>
 $tests$ || $passive-voice$  >> "passive.test.a"
 
-$passive-voice$
+$passive-voice$ || .*

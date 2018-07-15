@@ -10,11 +10,12 @@
 #Letters# = #Consonants##Vowels##VowelSigns##Anuswara##Chillus##Virama##Visarga#
 
 % POS tags
-#POS# = <adj><adv><dem><n><np><prn><postp><ij><cnj><qn><v><vaux><num><pnct><eng><deriv> \
+#verbs# = <v><passive-voice><causative-voice>
+#POS# = <adj><adv><dem><n><np><prn><postp><ij><cnj><qn><vaux><num><pnct><eng><deriv> \
 	<Noun><punct><prep><indeclinable><interrogative><aff><neg><quantifier><cardinal><ordinal> \
 	<0><1><2><3><4><5><6><7><8><9> \
 	<masculine><feminine><neutral> \
-	<passive-voice><causative-voice>
+	#verbs#
 
 % Boundary markers
 #BM#  = <LB><RB><MB>

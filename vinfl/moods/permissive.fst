@@ -17,8 +17,8 @@ $verb-suffix-map-1$ = {ുക}:{ാം}
 
 % We need to wrap the verb into past form first. For that, fake a past tag and pass
 % it through the past.a. Only when the input has <permissive-mood> at end.
-$fake-past$ = {<RB>}:{<past>} ^-> ([<v><passive-voice><causative-voice>]+ __ [<permissive-mood>])
-$remove-past$ = <past>:<RB> ^-> ([<v><passive-voice><causative-voice>]+ __ [<permissive-mood>])
+$fake-past$ = {<RB>}:{<past>} ^-> ([#verbs#]+ __ [<permissive-mood>])
+$remove-past$ = <past>:<RB> ^-> ([#verbs#]+ __ [<permissive-mood>])
 
 % An informal permissive form is derived by adding the suffix –oo to the past tense stem.
 % വന്നോ, ചെയ്തോ, പാടിക്കോ, ചാടിക്കോ
@@ -39,7 +39,7 @@ $verb-suffix-map-past-2$ = {ു<infl_marker>}:{ോളൂ<infl_marker>} | {ി<in
 
 $verb-suffix-map-past-3$ = {ു<infl_marker>}:{ോട്ടെ<infl_marker>} | {ി<infl_marker>} : {ിക്കോട്ടെ<infl_marker>}
 $verb-suffix-map-past$ = $verb-suffix-map-past-1$ | $verb-suffix-map-past-2$ | $verb-suffix-map-past-3$
-$permissive-mood-2$ = $verb-suffix-map-past$ ^-> ([#Consonants#]+ __ [#BM##TMP#<v><passive-voice><causative-voice><past>]+ <permissive-mood>)
+$permissive-mood-2$ = $verb-suffix-map-past$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <permissive-mood>)
 
 % -atte added to the verb root also denotes a meaning similar to the above.
 % വരട്ടെ, പറയട്ടെ, ഓടട്ടെ

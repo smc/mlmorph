@@ -11,8 +11,8 @@ $past-tense$ = "<../past.a>"
 
 % We need to wrap the verb into past form first. For that, fake a past tag and pass
 % it through the past.a. Only when the input has <promissive-mood> at end.
-$fake-past$ = {<RB>}:{<past>} ^-> ([<v><passive-voice><causative-voice>]+ __ [<promissive-mood>])
-$remove-past$ = <past>:<RB> ^-> ([<v><passive-voice><causative-voice>]+ __ [<promissive-mood>])
+$fake-past$ = {<RB>}:{<past>} ^-> ([#verbs#]+ __ [<promissive-mood>])
+$remove-past$ = <past>:<RB> ^-> ([#verbs#]+ __ [<promissive-mood>])
 
 % വരാം, സഹായിക്കാം, ഓടാം, പാടാം, പറയാം
 $verb-suffix-map$ = {ുക}:{ാം}
@@ -33,7 +33,7 @@ $verb-suffix-map-2$ = {ു<infl_marker>}:{ോളാം<infl_marker>} | {ി<infl
 
 $verb-suffix-map-3$ = {ു<infl_marker>}:{ിരിയ്ക്കും<infl_marker>} | {ി<infl_marker>} : {ിയിരിയ്ക്കും<infl_marker>} |  {ി<infl_marker>} : {ിയിരിക്കും<infl_marker>}
 $verb-suffix-map$ = $verb-suffix-map-1$ | $verb-suffix-map-2$ | $verb-suffix-map-3$
-$promissive-mood-2$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP#<v><passive-voice><causative-voice><past>]+ <promissive-mood>)
+$promissive-mood-2$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <promissive-mood>)
 
 $promissive-mood$ = $promissive-mood-1$ | \
 	( $fake-past$ || $past-tense$ || $promissive-mood-2$ || $remove-past$ )

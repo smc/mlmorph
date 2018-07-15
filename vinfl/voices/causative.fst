@@ -2,7 +2,7 @@
 %%%% Causative voice forms - പ്രയോജകക്രിയകൾ %%%%
 % ഉദാഹരണം: ഉറങ്ങുക-ഉറക്കുക, എഴുതിക്കുക, പഠിപ്പിക്കുക, ഓടിക്കുക
 
-ALPHABET = [#Letters##POS##BM##TMP##infl#]
+ALPHABET = [#Letters##POS##TMP##infl#] [#BM#]:<>
 
 % സചേതന കർമ്മകങ്ങളാണ് കൂടുതലും സ്പെഷ്യൽ കേസുകൾ
 $special-cases$ = {കേൾക്കുക}:{കേൾപ്പിക്കുക} |\
@@ -32,11 +32,11 @@ $verb-suffix-map$ = {രുക}:{ർത്തുക} | {ലുക}:{ത്തു
 	{ഴുതുക}:{ഴുതിക്കുക} |\
 	{യുക}: {യ്ക്കുക} | {യുക}: {യിക്കുക}
 
-$causative-voice$ = $verb-suffix-map$  ^-> ( __  [<v>#BM##TMP#]+ <causative-voice> )
-$causative-voice-ex$ = $verb-suffix-map$  ^-> (__  [<v>#BM##TMP#]+ <causative-voice> )
+$causative-voice$ = $verb-suffix-map$  ^-> ( __ [<v>#BM##TMP#]+ <causative-voice> )
+$causative-voice-ex$ = $verb-suffix-map$  ^-> (__ [<v>#BM##TMP#]+ <causative-voice> )
 
 $special-cases$ = $causative-voice-ex$ || $causative-voice$
 $tests$ = പതറുക<v><RB><causative-voice>
 $tests$ || $causative-voice$  >> "causative.test.a"
 
-$causative-voice$
+$causative-voice$ || .*

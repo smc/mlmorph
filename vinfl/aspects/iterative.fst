@@ -14,7 +14,7 @@ $past-tense$ = "<../converb-past.a>"
 #iterative-aspects# = <iterative-aspect><emphatic-iterative-aspect>
 % We need to wrap the verb into past form first. For that, fake a past tag and pass
 % it through the past.a. Only when the input has #perfect-aspects# at end.
-$fake-past$ = {<RB>}:{<cvb-adv-part-past>} ^-> ([<v><passive-voice><causative-voice>]+ __ [#iterative-aspects#])
+$fake-past$ = {<RB>}:{<cvb-adv-part-past>} ^-> ([#verbs#]+ __ [#iterative-aspects#])
 
 $iterative-aspect$ = {<iterative-aspect>}:{കൊണ്ടിരുന്നു<infl_marker>} ^-> ([<cvb-adv-part-past>] __ )
 

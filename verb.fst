@@ -13,7 +13,7 @@ $CAUSATIVEVOICE$ = "<vinfl/voices/causative.a>"
 
 $VSTEM-PASSIVE$ = $VSTEM$ <passive-voice> || $PASSIVEVOICE$
 $VSTEM-CAUSATIVE$ = $VSTEM$ <causative-voice> || $CAUSATIVEVOICE$
-$VSTEM$ = $VSTEM$ | $VSTEM-PASSIVE$ | $VSTEM-CAUSATIVE$
+$VSTEM$ = $VSTEM$ | $VSTEM-PASSIVE$ <RB> | $VSTEM-CAUSATIVE$ <RB>
 $VERB-PREFIX$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $POLARITY$?
 $VERB-TENSES$ = $VERB-PREFIX$ || $TENSES$
 $VERB-MOODS$ = $VERB-PREFIX$ || $MOODS$
@@ -22,8 +22,9 @@ $VERB-ASPECTS$ = $VERB-PREFIX$ || $ASPECTS$
 $VERB$ = $VERB-TENSES$ | $VERB-MOODS$ | $VERB-ASPECTS$
 
 % Tests
-% $tests$ = (ചിരിക്കുക<v><RB><passive-voice> | സ്വീകരിക്കപ്പെടുക<v><RB><passive-voice>) [#vinfl#]
-% $tests$ || ( $TENSES$ |  $MOODS$ | $ASPECTS$ )  >> "verb.test.a"
-% $VSTEM-PASSIVE$ >>  "vstem-passive.test.a"
+$tests$ = (ചിരിക്കുക<v><RB> | സ്വീകരിക്കപ്പെടുക<v><RB><passive-voice> | ചിരിക്കുക<v><RB><causative-voice> ) [#vinfl#]
+$tests$ || ( $TENSES$ | $MOODS$ | $ASPECTS$ )  >> "verb.test.a"
+$VSTEM-PASSIVE$ >>  "vstem-passive.test.a"
+$VSTEM-CAUSATIVE$ >>  "vstem-causative.test.a"
 
 $VERB$
