@@ -1,6 +1,6 @@
 include ../Makefile.inc
 
-SUBDIRS = aspects moods voices adverbs
+SUBDIRS = adverbs aspects moods voices
 
 .PHONY: all subdirs $(SUBDIRS)
 

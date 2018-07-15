@@ -10,6 +10,7 @@ $CONJUNCTION$ = "<lexicon/conjunctions.a>"
 $POLARITY$ = "<lexicon/polarity.a>"
 $PASSIVEVOICE$ = "<vinfl/voices/passive.a>"
 $CAUSATIVEVOICE$ = "<vinfl/voices/causative.a>"
+$ADVERBSTEMS$ = "<vinfl/adverbs/adverbs.a>"
 
 $VSTEM-PASSIVE$ = $VSTEM$ <passive-voice> || $PASSIVEVOICE$
 $VSTEM-CAUSATIVE$ = $VSTEM$ <causative-voice> || $CAUSATIVEVOICE$
@@ -18,8 +19,9 @@ $VERB-PREFIX$ = $ADVERB$? $VSTEM$ $CONJUNCTION$? [#vinfl#]? $POLARITY$?
 $VERB-TENSES$ = $VERB-PREFIX$ || $TENSES$
 $VERB-MOODS$ = $VERB-PREFIX$ || $MOODS$
 $VERB-ASPECTS$ = $VERB-PREFIX$ || $ASPECTS$
+$VERB-ADVERBS$ = $VSTEM$ [#adv#] || $ADVERBSTEMS$
 
-$VERB$ = $VERB-TENSES$ | $VERB-MOODS$ | $VERB-ASPECTS$
+$VERB$ = $VERB-TENSES$ | $VERB-MOODS$ | $VERB-ASPECTS$ | $VERB-ADVERBS$
 
 % Tests
 $tests$ = (ചിരിക്കുക<v><RB> | സ്വീകരിക്കപ്പെടുക<v><RB><passive-voice> | ചിരിക്കുക<v><RB><causative-voice> ) [#vinfl#]

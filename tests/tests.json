@@ -1408,5 +1408,17 @@
     {
         "word": "ചിരിപ്പിക്കാതെ",
         "analysis": "ചിരിക്കുക<v><causative-voice><compulsive-mood-neg>"
+    },
+    {
+        "word": "ചിരിച്ച",
+        "analysis": "ചിരിക്കുക<v><adv-clause-rp-past>"
+    },
+    {
+        "word": "ചിരിക്കുന്ന",
+        "analysis": "ചിരിക്കുക<v><adv-clause-rp-present>"
+    },
+    {
+        "word": "പറയുന്ന",
+        "analysis": "പറയുക<v><adv-clause-rp-present>"
     }
 ]

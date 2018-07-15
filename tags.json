@@ -121,6 +121,14 @@
 		"tag": "Past adverbial participle"
 	},
 	{
+		"id":"adv-clause-rp-past",
+		"tag": "Adverb clause - Relative participle - Past"
+	},
+	{
+		"id":"adv-clause-rp-present",
+		"tag": "Adverb clause - Relative participle - Present"
+	},
+	{
 		"id": "simple-perfect-aspect",
 		"tag": "Simple perfect aspect"
 	},

@@ -10,7 +10,7 @@
 
 ALPHABET = [#Letters##POS##BM##TMP##infl#]
 
-$past-tense$ = "<../converb-past.a>"
+$past-tense$ = "<../adverbs/converb-past.a>"
 #iterative-aspects# = <iterative-aspect><emphatic-iterative-aspect>
 % We need to wrap the verb into past form first. For that, fake a past tag and pass
 % it through the past.a. Only when the input has #perfect-aspects# at end.
