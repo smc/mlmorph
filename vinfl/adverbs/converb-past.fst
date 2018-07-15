@@ -1,4 +1,4 @@
-#include "../symbols.fst"
+#include "../../symbols.fst"
 
 ALPHABET = [#Letters##POS##BM##TMP##infl#]
 
@@ -6,7 +6,7 @@ ALPHABET = [#Letters##POS##BM##TMP##infl#]
 % പൂർണ്ണക്രിയക്ക് മുമ്പ് നടക്കുന്ന അപൂർണ്ണക്രിയയാണ് മുൻവിനയെച്ചം. ഇതിന് പ്രത്യയമൊന്നും ചേർക്കേണ്ടതില്ല.ഓടിക്കയറി, % ചാടിപ്പോയി എന്നിവ ഉദാഹരണം.
 % കുളിക്കുക-> കുളിച്ച് , വരുക-വന്ന് , തരുക-തന്ന്, തളരുക-തളർന്ന്, കരയുക-കരഞ്ഞ്, പാടുക - പാടി, ഇളകുക->ഇളകി
 
-#include "past-forms.fst"
+#include "../past-forms.fst"
 $past-to-cvb-past$ = {ു}:{്} ^-> (__ [<RB>])
 
 $past-tense-suffix-map-wrapped$ = $past-tense-suffix-map$ <>:<RB>

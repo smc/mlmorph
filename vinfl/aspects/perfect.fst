@@ -36,7 +36,7 @@ $cont-perfect-aspect$ = {<cont-perfect-aspect>}:{ഇരിക്കുന്ന�
 % == Remote perfect ==
 
 % Remote perfect forms are derived by adding –ittu to the past stem. They denote an
-% action which occurred only once or a few times (that is, not regular or habitual) or du`ring
+% action which occurred only once or a few times (that is, not regular or habitual) or during
 % an unspecified time in the past, far removed from the present.
 
 $remote-perfect-aspect$ = {<remote-perfect-aspect>}:{ഇട്ട്<infl_marker>} |\

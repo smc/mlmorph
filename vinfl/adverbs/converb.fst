@@ -1,4 +1,4 @@
-#include "../symbols.fst"
+#include "../../symbols.fst"
 
 ALPHABET = [#Letters##POS##BM##TMP##infl#]
 %%%% Converbs %%%%%%%%%%
