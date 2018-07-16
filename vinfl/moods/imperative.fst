@@ -27,7 +27,8 @@ $verb-suffix-del$ = {ക്കുക}: {} | \ % കേൾ
 $imperative-mood-2$ = $verb-suffix-del$  <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <imperative-mood>)
 
 $verb-suffix-map-2$ = {ി<infl_marker>} : {ക്കോണം<infl_marker>}  | \ % ചാടിക്കോണം
- 	{ി<infl_marker>} : {ിയേക്കണം<infl_marker>} | \ % ചാടിയേക്കണം
+	{ി<infl_marker>} : {ിയേക്കണം<infl_marker>} | \ % ചാടിയേക്കണം
+	{ു<infl_marker>} : {േ<infl_marker>} | \  % തിന്നേ, തന്നേ, ചിരിച്ചേ
 	{ു<infl_marker>} : {േക്കണം<infl_marker>} | \  % തിന്നേക്കണം, തന്നേക്കണം
 	{ു<infl_marker>} : {ോണം<infl_marker>} % തിന്നോണം, തന്നോണം, മറന്നോണം
 
