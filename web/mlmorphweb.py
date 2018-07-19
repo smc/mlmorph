@@ -16,6 +16,14 @@ app.config['DEBUG'] = True
 morph = Mlmorph('../malayalam.a')
 
 
+def sort_key_analysis(item):
+    morpheme_length = len(item['morphemes'])
+    weight = morpheme_length*100
+    for i in range(morpheme_length):
+        weight += len(item['morphemes'][i]['pos'])
+    return weight
+
+
 def format_result(analysis_result):
     result = {}
     if analysis_result is None:
@@ -65,7 +73,10 @@ def do_analyse():
         else:
             for aindex in range(len(anals)):
                 anals_results.append(format_result(anals[aindex]))
+
+        anals_results.sort(key=sort_key_analysis)
         analyse_results[word] = anals_results
+
     return jsonify(result=analyse_results)
 
 
@@ -87,14 +98,16 @@ def do_generate():
         generate_results.append(gens[gindex][0])
     return jsonify(word=word, type=wordtype, infl=infl, result=generate_results)
 
+
 @app.route("/api/spellcheck", methods=['GET'])
 def do_spellcheck():
     word = request.args.get('word')
     isCorrect = spellcheck.spellcheck(word, morph)
-    suggestions=[]
+    suggestions = []
     if not isCorrect:
         suggestions = spellcheck.getSuggestions(word, morph)
     return jsonify(word=word, correct=isCorrect, suggestions=suggestions)
+
 
 if __name__ == "__main__":
     app.run()

@@ -51,11 +51,15 @@ function onAnalysisClick() {
 		$( '#analresult-progress' ).hide();
 		let result = data.result;
 		$.each( result, ( key, values ) => {
+			var length = 0;
 			if ( !key || !key.trim() ) {
 				return;
 			}
 			let formattedValues = $( '<td>' );
-			for ( let i = 0; i < values.length; i++ ) {
+			if ( values.length > 0 ) {
+				length = 1;
+			}
+			for ( let i = 0; i < length; i++ ) {
 				formattedValues.append( formatResult( values[ i ] ) );
 			}
 			$( '.analresult tbody' ).append(
