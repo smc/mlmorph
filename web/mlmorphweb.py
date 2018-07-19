@@ -20,7 +20,10 @@ def sort_key_analysis(item):
     morpheme_length = len(item['morphemes'])
     weight = morpheme_length*100
     for i in range(morpheme_length):
-        weight += len(item['morphemes'][i]['pos'])
+        pos = item['morphemes'][i]['pos']
+        root = item['morphemes'][i]['root']
+        for j in range(len(pos)):
+            weight += len(pos)*5 + len(root)*5 + len(pos[j])
     return weight
 
 
