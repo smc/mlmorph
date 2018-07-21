@@ -1,3 +1,0 @@
-import sys
-sys.path.insert(0, '/home/user/path/to/mlmorph/web')
-from mlmorphweb import app as application
