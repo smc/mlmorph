@@ -15,7 +15,7 @@ test:
   stage: test
   before_script:
     - apt-get update -y
-    - apt-get install -y make sfst python3-libhfst locales
+    - apt-get install -y make sfst python3-libhfst python3-regex locales
     - locale-gen ml_IN.UTF-8
   script:
     - LC_ALL=ml_IN.UTF-8 make test
