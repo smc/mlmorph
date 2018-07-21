@@ -7,6 +7,7 @@ Simple python interface for mlmorph using liblibhfst-python.
 from argparse import ArgumentParser
 from sys import stdin
 import os
+import regex
 import libhfst
 
 
@@ -71,6 +72,40 @@ class Mlmorph:
             self.getGenerator()
         return self.generator.lookup(token)
 
+    def parse_analysis(self, analysis_result):
+        result = {}
+        if analysis_result is None:
+            return result
+
+        analysis = analysis_result[0]
+        if analysis[0] == '<':
+            analysis = ' ' + analysis
+        match = regex.match(
+            r"((?P<root>([^<])+)(?P<tags>(<[^>]+>)+))+", analysis)
+        roots = match.captures("root")
+        morphemes = []
+        for rindex in range(len(roots)):
+            morpheme = {}
+            morpheme['root'] = roots[rindex]
+            tags = match.captures("tags")[rindex]
+            morpheme['pos'] = regex.match(
+                r"(<(?P<tag>([^>]+))>)+", tags).captures("tag")
+            morphemes.append(morpheme)
+
+        result['morphemes'] = morphemes
+        result['weight'] = self.get_weight(morphemes)
+        return result
+
+    def get_weight(self, analysis):
+        morpheme_length = len(analysis)
+        weight = morpheme_length*100
+        for i in range(morpheme_length):
+            pos = analysis[i]['pos']
+            root = analysis[i]['root']
+            for j in range(len(pos)):
+                weight += len(pos)*5 + len(root)*5 + len(pos[j])
+        return weight
+
 
 def main():
     """Invoke a simple CLI analyser or generator."""
@@ -111,6 +146,7 @@ def main():
 
     print()
     exit(0)
+
 
 if __name__ == "__main__":
     main()

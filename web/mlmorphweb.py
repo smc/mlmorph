@@ -16,42 +16,6 @@ app.config['DEBUG'] = True
 morph = Mlmorph('../malayalam.a')
 
 
-def sort_key_analysis(item):
-    morpheme_length = len(item['morphemes'])
-    weight = morpheme_length*100
-    for i in range(morpheme_length):
-        pos = item['morphemes'][i]['pos']
-        root = item['morphemes'][i]['root']
-        for j in range(len(pos)):
-            weight += len(pos)*5 + len(root)*5 + len(pos[j])
-    return weight
-
-
-def format_result(analysis_result):
-    result = {}
-    if analysis_result is None:
-        return result
-
-    result['weight'] = analysis_result[1]
-    analysis = analysis_result[0]
-    if analysis[0] == '<':
-        analysis = ' ' + analysis
-    match = regex.match(r"((?P<root>([^<])+)(?P<tags>(<[^>]+>)+))+", analysis)
-    roots = match.captures("root")
-    morphemes = []
-    for rindex in range(len(roots)):
-        morpheme = {}
-        morpheme['root'] = roots[rindex]
-        tags = match.captures("tags")[rindex]
-        morpheme['pos'] = regex.match(
-            r"(<(?P<tag>([^>]+))>)+", tags).captures("tag")
-        morphemes.append(morpheme)
-
-    result['morphemes'] = morphemes
-
-    return result
-
-
 @app.route("/")
 def index():
     return render_template('mlmorph.html',)
@@ -75,9 +39,9 @@ def do_analyse():
             anals_results = []
         else:
             for aindex in range(len(anals)):
-                anals_results.append(format_result(anals[aindex]))
+                anals_results.append(morph.parse_analysis(anals[aindex]))
 
-        anals_results.sort(key=sort_key_analysis)
+        anals_results.sort(key=lambda analysis: analysis['weight'])
         analyse_results[word] = anals_results
 
     return jsonify(result=analyse_results)
