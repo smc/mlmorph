@@ -5,6 +5,7 @@
     <Directory /home/user/path/to/mlmorph/web/>
         WSGIProcessGroup mlmorph
         WSGIApplicationGroup %{GLOBAL}
+        WSGIScriptReloading On
         Require all granted
     </Directory>
      ErrorLog ${APACHE_LOG_DIR}/error-mlmorph.log

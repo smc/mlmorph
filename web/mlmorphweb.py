@@ -11,7 +11,6 @@ from mlmorph import Mlmorph
 import spellcheck
 
 app = Flask(__name__)
-app.config['DEBUG'] = True
 
 morph = Mlmorph('../malayalam.a')
 
