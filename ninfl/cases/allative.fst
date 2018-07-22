@@ -26,7 +26,4 @@ $allative$ = $allative-cons-vowel$ || $allative-ta$ || $allative-virama-chillus$
 %$tests$ = മഴ<n><RB><allative> | മുറ്റം<n><RB><allative> |  കിളി<n><RB><allative> | മഴ<plural>കൾ<EoW><RB><allative> | കേരളം<n><RB><allative>
 %$tests$ || $allative$ >> "allative-test.a"
 
-%TODO വിഭക്ത്യാഭാസം: കാട്ടിലെ, കേരളത്തിൽ, മുറ്റത്ത്, പാടത്ത്, മഴയത്ത്
-% See https://ml.wikipedia.org/wiki/വിഭക്ത്യാഭാസം
-
 $allative$

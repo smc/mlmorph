@@ -23,7 +23,4 @@ $locative$ = $locative-cons-vowel$ || $locative-ta$ ||  $locative-virama-chillus
 %$tests$ = മഴ<n><RB><locative> | മുറ്റം<n><RB><locative> |  കിളി<n><RB><locative> | മഴ<plural>കൾ<EoW><RB><locative> | കേരളം<n><RB><locative>
 %$tests$ || $locative$ >> "locative-test.a"
 
-%TODO വിഭക്ത്യാഭാസം: കാട്ടിലെ, കേരളത്തിൽ, മുറ്റത്ത്, പാടത്ത്, മഴയത്ത്
-% See https://ml.wikipedia.org/wiki/വിഭക്ത്യാഭാസം
-
 $locative$
