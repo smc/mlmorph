@@ -18,9 +18,14 @@ $locative-virama-chillus$ = $virama-forms$ ^-> ([#Virama##Chillus#] [#inflbounda
 $ta-forms$ = {<locative>}:{<dup>ടിൽ} | {<locative>}:{<dup>ടേൽ} | {<locative>}:{<dup>ടിങ്കൽ} | {<locative>}:{<dup>ടിങ്ങൽ}
 $locative-ta$ = $ta-forms$ ^-> ([#VowelSigns#] ട [#Virama#] [#inflboundary#]+ __)
 
-$locative$ = $locative-cons-vowel$ || $locative-ta$ ||  $locative-virama-chillus$ || $locative-anuswara$
+% മറയത്ത്, ഇറയത്ത്,
+$exceptions$ = മഴ | മറ | ഇറ | ചിറ
 
-%$tests$ = മഴ<n><RB><locative> | മുറ്റം<n><RB><locative> |  കിളി<n><RB><locative> | മഴ<plural>കൾ<EoW><RB><locative> | കേരളം<n><RB><locative>
+$special_cases$ = ( {<locative>}:{അത്ത്} | {<locative>}:{അത്തു്} ) ^-> ($exceptions$ [#inflboundary#]+ __ )
+
+$locative$ = $special_cases$ | ( $locative-cons-vowel$ || $locative-ta$ || $locative-virama-chillus$ || $locative-anuswara$ )
+
+%$tests$ = മഴ<n><RB><locative> | മുറ്റം<n><RB><locative> | കിളി<n><RB><locative> | മഴ<plural>കൾ<EoW><RB><locative> | കേരളം<n><RB><locative>
 %$tests$ || $locative$ >> "locative-test.a"
 
 $locative$
