@@ -5,6 +5,7 @@ $NSTEM$ = "<lexicon/nouns.a>"
 $PRONOUN$ = "<lexicon/pronouns.a>"
 $PROPERNOUN$ = "<lexicon/proper-nouns.a>"
 $CONJUNCTION$ = "<lexicon/conjunctions.a>"
+$POSTPOSITIONS$ = "<lexicon/postpositions.a>"
 $INDECLINABLE$ = "<lexicon/indeclinables.a>"
 $ABBREV$ = "<lexicon/abbreviations.a>"
 $DEM$ = "<lexicon/demonstratives.a>"
@@ -26,6 +27,8 @@ $COMPOUND_NSTEM$ = ( ( ( $NSTEM$ | $PROPERNOUN$ ) <adj>)* ( $NSTEM$ | $PROPERNOU
 $SINGULAR_NOUN$ = $COMPOUND_NSTEM$ | $PRONOUN$ | $ABBREV$ | $BORROWED$ | $DERIVEDNOUNS$
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 
-$NOUN$ = $DEM$? $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? $CONJUNCTION$? $POLARITY$? || $NINFL$
+$SUFFIXES$ = $POSTPOSITIONS$ | $CONJUNCTION$ | $POLARITY$
+$SUFFIXES$ = $SUFFIXES$? $SUFFIXES$ % Atmost 2 times
+$NOUN$ = $DEM$? $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? $SUFFIXES$? || $NINFL$
 
 $NOUN$ $INDECLINABLE$?

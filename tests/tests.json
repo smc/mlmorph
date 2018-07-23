@@ -1420,5 +1420,9 @@
     {
         "word": "പറയുന്ന",
         "analysis": "പറയുക<v><adv-clause-rp-present>"
+    },
+    {
+        "word": "മിഴിയിൽനിന്നും",
+        "analysis": "മിഴി<n><locative>നിന്ന്<postp>ഉം<cnj>"
     }
 ]

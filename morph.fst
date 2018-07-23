@@ -7,7 +7,7 @@
 
 %%% The stems from the lexicon (possibly with derivation)
 $INTERJECTION$ = "<lexicon/interjections.a>"
-$PREPOSITIONS$ = "<lexicon/prepositions.a>"
+$POSTPOSITIONS$ = "<lexicon/postpositions.a>"
 $INDECLINABLE$ = "<lexicon/indeclinables.a>"
 $QUANTIFIERS$ = "<lexicon/quantifiers.a>"
 $QUESTION$ = "<lexicon/questions.a>"
@@ -41,7 +41,7 @@ $QUANTIFIER$ = $QUANTIFIERS$ | \
 
 $WORD$ = $MISC$? ( $NOUNS$ \
 	| $VERB$+ $INDECLINABLE$? \
-	| $PREPOSITIONS$ \
+	| $POSTPOSITIONS$ \
 	| $INTERJECTION$ \
 	| $QUESTION$ \
 	| $POLARITY$ \

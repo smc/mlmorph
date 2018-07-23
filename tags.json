@@ -85,6 +85,11 @@
 		"url": "http://universaldependencies.org/u/feat/Case.html#all-allative"
 	},
 	{
+		"id": "postp",
+		"tag": "Postposition",
+		"url": "http://universaldependencies.org/u/pos/ADP.html"
+	},
+	{
 		"id": "indeclinable",
 		"tag": "Indeclinable"
 	},
