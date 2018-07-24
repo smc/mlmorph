@@ -1211,11 +1211,11 @@
     },
     {
         "word": "ഓടിക്കൊണ്ടേയിരുന്നു",
-        "analysis": "ഓടുക<v><emphatic-iterative-aspect>"
+        "analysis": "ഓടുക<v><emphatic-iterative-past-aspect>"
     },
     {
         "word": "പഠിച്ചുകൊണ്ടിരുന്നു",
-        "analysis": "പഠിക്കുക<v><iterative-aspect>"
+        "analysis": "പഠിക്കുക<v><iterative-past-aspect>"
     },
     {
         "word": "ഓടൂ",
@@ -1399,11 +1399,23 @@
     },
     {
         "word": "ചിരിപ്പിച്ചുകൊണ്ടേയിരുന്നു",
-        "analysis": "ചിരിക്കുക<v><causative-voice><emphatic-iterative-aspect>"
+        "analysis": "ചിരിക്കുക<v><causative-voice><emphatic-iterative-past-aspect>"
+    },
+    {
+        "word": "ചിരിപ്പിച്ചുകൊണ്ടേയിരിക്കും",
+        "analysis": "ചിരിക്കുക<v><causative-voice><emphatic-iterative-future-aspect>"
     },
     {
         "word": "പഠിപ്പിച്ചുകൊണ്ടിരുന്നു",
-        "analysis": "പഠിക്കുക<v><causative-voice><iterative-aspect>"
+        "analysis": "പഠിക്കുക<v><causative-voice><iterative-past-aspect>"
+    },
+    {
+        "word": "പഠിപ്പിച്ചുകൊണ്ടിരിക്കുന്നു",
+        "analysis": "പഠിക്കുക<v><causative-voice><iterative-present-aspect>"
+    },
+    {
+        "word": "പഠിപ്പിച്ചുകൊണ്ടിരിക്കും",
+        "analysis": "പഠിക്കുക<v><causative-voice><iterative-future-aspect>"
     },
     {
         "word": "ചിരിപ്പിക്കാതെ",

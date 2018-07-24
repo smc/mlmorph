@@ -41,7 +41,8 @@
 	<sg><pl>
 
 #aspects# = <simple-perfect-aspect><cont-perfect-aspect><remote-perfect-aspect> \
-	<habitual-aspect><iterative-aspect><emphatic-iterative-aspect>
+	<habitual-aspect><iterative-past-aspect><iterative-present-aspect><iterative-future-aspect> \
+	<emphatic-iterative-past-aspect><emphatic-iterative-present-aspect><emphatic-iterative-future-aspect>
 
 #moods# = <imperative-mood><compulsive-mood><compulsive-mood-neg><promissive-mood> \
 	<optative-mood><purposive-mood><abilitative-mood><permissive-mood> \

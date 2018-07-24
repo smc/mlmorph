@@ -150,8 +150,16 @@
 		"tag": "Habitual aspect"
 	},
 	{
-		"id": "iterative-aspect",
-		"tag": "Iterative aspect"
+		"id": "iterative-past-aspect",
+		"tag": "Past iterative aspect"
+	},
+	{
+		"id": "iterative-present-aspect",
+		"tag": "Present iterative aspect"
+	},
+	{
+		"id": "iterative-future-aspect",
+		"tag": "Future iterative aspect"
 	},
 	{
 		"id": "imperative-mood",
@@ -213,8 +221,16 @@
 		"tag":"Purposive mood"
 	},
 	{
-		"id": "emphatic-iterative-aspect",
-		"tag": "Emphatic iterative aspect"
+		"id": "emphatic-iterative-past-aspect",
+		"tag": "Emphatic past iterative aspect"
+	},
+	{
+		"id": "emphatic-iterative-present-aspect",
+		"tag": "Emphatic present iterative aspect"
+	},
+	{
+		"id": "emphatic-iterative-future-aspect",
+		"tag": "Emphatic future iterative aspect"
 	},
 	{
 		"id": "passive-voice",
