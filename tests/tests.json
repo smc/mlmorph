@@ -1436,5 +1436,9 @@
     {
         "word": "മിഴിയിൽനിന്നും",
         "analysis": "മിഴി<n><locative>നിന്ന്<postp>ഉം<cnj>"
+    },
+    {
+        "word": "പോയില്ല",
+        "analysis": "പോകുക<v><past>ഇല്ല<neg>"
     }
 ]
