@@ -45,16 +45,15 @@ function onAnalysisClick() {
 	$( '.analresult' ).find( 'tbody' ).empty();
 	$( '.analresult' ).show();
 	$( '#analresult-progress' ).show();
-	$.post( '/api/analyse', {
-		text: $( 'textarea[name="text"]' ).val()
-	}, ( data ) => {
+	let text= $( 'textarea[name="text"]' ).val();
+	$.post( '/api/analyse', { text }, ( data ) => {
 		$( '#analresult-progress' ).hide();
 		let result = data.result;
-		$.each( result, ( key, values ) => {
-			var length = 0;
-			if ( !key || !key.trim() ) {
-				return;
-			}
+		let tokens=text.split(/\s+/);
+		for (let i=0;i<tokens.length;i++ ) {
+			let length = 0;
+			let key = tokens[i]
+			let values = result[key];
 			let formattedValues = $( '<td>' );
 			if ( values.length > 0 ) {
 				length = 1;
@@ -68,7 +67,7 @@ function onAnalysisClick() {
 					formattedValues
 				)
 			);
-		} );
+		};
 	} );
 }
 
