@@ -38,6 +38,10 @@ header {
     font-family: monospace;
 }
 
+.tag::before {
+    content: '🏷️';
+}
+
 .result {
     line-height: 2.5em;
 }
