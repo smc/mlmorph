@@ -280,6 +280,10 @@
 		"tag": "Question"
 	},
 	{
+		"id": "num",
+		"tag": "Number"
+	},
+	{
 		"id": "quantifier",
 		"tag": "Quantifier"
 	},
