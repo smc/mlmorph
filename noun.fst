@@ -22,7 +22,7 @@ $NOUNFROMNOUN$ = "<deriv/noun-from-noun.a>"
 $DERIVEDNOUNS$ = (($VSTEM$ <n> <deriv> ) || $NOUNFROMVERB$) |\
 	( ($NSTEM$ [<masculine><feminine><neutral>] <n> <deriv>) || $NOUNFROMNOUN$)
 
-$ADJPART$ = ( ( $NSTEM$ | $PROPERNOUN$ ) <adj>)
+$ADJPART$ = ( ( $NSTEM$ | $PROPERNOUN$ ) <adj>) || "<ninfl/adjective.a>"
 $COMPOUND_NSTEM$ = ( $ADJPART$* ( $NSTEM$ | $PROPERNOUN$ ) ) |\ % വിശേഷണവിശേഷ്യങ്ങൾ
 	( $NSTEM$ <coordinative> $NSTEM$ ) % ദ്വന്ദസമാസം - ആനകുതിര, അച്ഛനമ്മ..
 $SINGULAR_NOUN$ = $COMPOUND_NSTEM$ | $PRONOUN$ | $ABBREV$ | $BORROWED$ | $DERIVEDNOUNS$
