@@ -22,13 +22,18 @@ $NOUNFROMNOUN$ = "<deriv/noun-from-noun.a>"
 $DERIVEDNOUNS$ = (($VSTEM$ <n> <deriv> ) || $NOUNFROMVERB$) |\
 	( ($NSTEM$ [<masculine><feminine><neutral>] <n> <deriv>) || $NOUNFROMNOUN$)
 
-$COMPOUND_NSTEM$ = ( ( ( $NSTEM$ | $PROPERNOUN$ ) <adj>)* ( $NSTEM$ | $PROPERNOUN$ ) ) |\
-	( $NSTEM$ <coordinative> $NSTEM$ )
+$ADJPART$ = ( ( $NSTEM$ | $PROPERNOUN$ ) <adj>)
+$COMPOUND_NSTEM$ = ( $ADJPART$* ( $NSTEM$ | $PROPERNOUN$ ) ) |\ % വിശേഷണവിശേഷ്യങ്ങൾ
+	( $NSTEM$ <coordinative> $NSTEM$ ) % ദ്വന്ദസമാസം - ആനകുതിര, അച്ഛനമ്മ..
 $SINGULAR_NOUN$ = $COMPOUND_NSTEM$ | $PRONOUN$ | $ABBREV$ | $BORROWED$ | $DERIVEDNOUNS$
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 
 $SUFFIXES$ = $POSTPOSITIONS$ | $CONJUNCTION$ | $POLARITY$
 $SUFFIXES$ = $SUFFIXES$? $SUFFIXES$ % Atmost 2 times
-$NOUN$ = $DEM$? $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? $SUFFIXES$? || $NINFL$
 
+$NOUN$ = $DEM$ |\
+	$ADJPART$+ |\ % Words ending with adjevtives alone. തീരദേശ, മലയാള, സമുദ്ര etc
+	( $DEM$? $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? $SUFFIXES$? )
+
+$NOUN$ = $NOUN$ || $NINFL$
 $NOUN$ $INDECLINABLE$?

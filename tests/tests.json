@@ -1440,5 +1440,13 @@
     {
         "word": "പോയില്ല",
         "analysis": "പോകുക<v><past>ഇല്ല<neg>"
+    },
+    {
+        "word": "മലയാള",
+        "analysis": "മലയാളം<np><adj>"
+    },
+    {
+        "word": "തീരദേശനിയമ",
+        "analysis": "തീരം<n><adj>ദേശം<n><adj>നിയമം<n><adj>"
     }
 ]
