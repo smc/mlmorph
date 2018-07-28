@@ -22,8 +22,11 @@ $NOUNFROMNOUN$ = "<deriv/noun-from-noun.a>"
 $DERIVEDNOUNS$ = (($VSTEM$ <n> <deriv> ) || $NOUNFROMVERB$) |\
 	( ($NSTEM$ [<masculine><feminine><neutral>] <n> <deriv>) || $NOUNFROMNOUN$)
 
-$ADJPART$ = ( ( $NSTEM$ | $PROPERNOUN$ ) <adj>) || "<ninfl/adjective.a>"
-$COMPOUND_NSTEM$ = ( $ADJPART$* ( $NSTEM$ | $PROPERNOUN$ ) ) |\ % വിശേഷണവിശേഷ്യങ്ങൾ
+$ENDS_WITH_ANUSWARA_FILTER$ = [#Letters#]+ ം [<n><np><RB>]+
+$ADJ_CANDIDATES$ = ( $NSTEM$ | $PROPERNOUN$ ) || $ENDS_WITH_ANUSWARA_FILTER$
+$ADJ_PART$ = ( $ADJ_CANDIDATES$ <adj>) || "<ninfl/adjective.a>"
+
+$COMPOUND_NSTEM$ = ( ( ( $NSTEM$ | $PROPERNOUN$ ) <adj>)* ( $NSTEM$ | $PROPERNOUN$ ) ) |\ % വിശേഷണവിശേഷ്യങ്ങൾ
 	( $NSTEM$ <coordinative> $NSTEM$ ) % ദ്വന്ദസമാസം - ആനകുതിര, അച്ഛനമ്മ..
 $SINGULAR_NOUN$ = $COMPOUND_NSTEM$ | $PRONOUN$ | $ABBREV$ | $BORROWED$ | $DERIVEDNOUNS$
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
@@ -32,7 +35,7 @@ $SUFFIXES$ = $POSTPOSITIONS$ | $CONJUNCTION$ | $POLARITY$
 $SUFFIXES$ = $SUFFIXES$? $SUFFIXES$ % Atmost 2 times
 
 $NOUN$ = $DEM$ |\
-	$ADJPART$+ |\ % Words ending with adjevtives alone. തീരദേശ, മലയാള, സമുദ്ര etc
+	$ADJ_PART$+ |\ % Words ending with adjevtives alone. തീരദേശ, മലയാള, സമുദ്ര etc
 	( $DEM$? $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? $SUFFIXES$? )
 
 $NOUN$ = $NOUN$ || $NINFL$
