@@ -1452,5 +1452,10 @@
     {
         "word": "തീരദേശനിയമ",
         "analysis": "തീരം<n><adj>ദേശം<n><adj>നിയമം<n><adj>"
+    },
+    {
+        "word": "ചിരിക്കവേ",
+        "analysis": "ചിരിക്കുക<v><cvb-adv-part-simul>"
     }
 ]
+

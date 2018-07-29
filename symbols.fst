@@ -50,7 +50,8 @@
 	<conditional-mood><satisfactive-mood>
 
 #adv# = <cvb-adv-part-future><cvb-adv-part-conditional> \
-	<cvb-adv-part-past><cvb-adv-part-absolute><adv-clause-rp-past><adv-clause-rp-present>
+	<cvb-adv-part-past><cvb-adv-part-absolute><adv-clause-rp-past><adv-clause-rp-present> \
+	<cvb-adv-part-simul>
 
 #vinfl# = <past><future><present><concessive>#aspects##moods##adv#
 
