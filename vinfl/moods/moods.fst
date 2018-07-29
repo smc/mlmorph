@@ -1,4 +1,6 @@
 #include "../../symbols.fst"
+% പ്രകാരം - Moods.
+% All mood forms are finite verbs.
 
 ALPHABET = [#Letters##POS##BM##TMP##infl#]
 

@@ -2,7 +2,7 @@
 #include "../../symbols.fst"
 
 ALPHABET = [#Letters##POS##BM##TMP##infl#]
-$converbs$ = "<converb.a>"
+$converbs$ = "<converb-present.a>" || "<converb-past.a>" || "<converb-future.a>"
 $clauses$ = "<clauses.a>"
 $remove-vinfl$ = {[#vinfl#]}:{} ^-> (<infl_marker> [#POS##BM##TMP#]+ __)
 
