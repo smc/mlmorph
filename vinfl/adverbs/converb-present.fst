@@ -21,7 +21,7 @@ $cvb-adv-part-conditional$ = $cvb-adv-part-conditional-forms$ <>:<infl_marker> ^
 
 
 % Simultaneous infinitive - കേൾക്കവേ, പറയവേ, ഓടവേ, ഓടുമ്പോൾ
-$cvb-adv-part-simul-forms$ = {ുക}:{വേ}
+$cvb-adv-part-simul-forms$ = {ുക}:{വേ} | {ുക}:{േ} | {ുക} : {ുമ്പോൾ}
 $cvb-adv-part-simul$ = $cvb-adv-part-simul-forms$ <>:<infl_marker> ^-> ([#Letters#]+ __ [#POS##BM##TMP#]+ <cvb-adv-part-simul>)
 
 $converbs$ = $cvb-adv-part-absolute$ || \

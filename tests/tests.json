@@ -1454,7 +1454,15 @@
         "analysis": "തീരം<n><adj>ദേശം<n><adj>നിയമം<n><adj>"
     },
     {
+        "word": "ചിരിക്കേ",
+        "analysis": "ചിരിക്കുക<v><cvb-adv-part-simul>"
+    },
+    {
         "word": "ചിരിക്കവേ",
+        "analysis": "ചിരിക്കുക<v><cvb-adv-part-simul>"
+    },
+    {
+        "word": "ചിരിക്കുമ്പോൾ",
         "analysis": "ചിരിക്കുക<v><cvb-adv-part-simul>"
     }
 ]
