@@ -1464,6 +1464,14 @@
     {
         "word": "ചിരിക്കുമ്പോൾ",
         "analysis": "ചിരിക്കുക<v><cvb-adv-part-simul>"
+    },
+    {
+        "word": "നടന്നപ്പോൾ",
+        "analysis": "നടക്കുക<v><cvb-adv-part-past-simul>"
+    },
+    {
+        "word": "ഓടിയപ്പോൾ",
+        "analysis": "ഓടുക<v><cvb-adv-part-past-simul>"
     }
 ]
 

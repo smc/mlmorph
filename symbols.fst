@@ -51,7 +51,7 @@
 
 #adv# = <cvb-adv-part-future><cvb-adv-part-conditional> \
 	<cvb-adv-part-past><cvb-adv-part-absolute><adv-clause-rp-past><adv-clause-rp-present> \
-	<cvb-adv-part-simul>
+	<cvb-adv-part-simul><cvb-adv-part-past-simul>
 
 #vinfl# = <past><future><present><concessive>#aspects##moods##adv#
 

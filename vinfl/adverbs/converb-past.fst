@@ -10,13 +10,19 @@ $past-tense$ = "<../past.a>"
 
 % We need to wrap the verb into past form first. For that, fake a past tag and pass
 % it through the past.a. Only when the input has <adv-clause-rp-past> at end.
-$fake-past$ = <RB>:<past> ^-> ([#verbs#]+ __ [<cvb-adv-part-past>])
-$remove-past$ = <past>:<RB> ^-> ([#verbs#]+ __ [<cvb-adv-part-past>])
+$fake-past$ = <RB>:<past> ^-> ([#verbs#]+ __ [<cvb-adv-part-past><cvb-adv-part-past-simul>])
+$remove-past$ = <past>:<RB> ^-> ([#verbs#]+ __ [<cvb-adv-part-past><cvb-adv-part-past-simul>])
 
 $verb-suffix-map$ = {ു}:{്} | {ു}:{ു്}
 
 $cvb-adv-part-past-form$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#<past>]+ <cvb-adv-part-past> )
-$cvb-adv-part-past$ = $fake-past$ || $past-tense$ || $cvb-adv-part-past-form$ || $remove-past$
+
+$verb-suffix-map$ = {ു<infl_marker>}:{പ്പോൾ<infl_marker>} | {ി<infl_marker>}:{ിയപ്പോൾ<infl_marker>}
+% NOTE: The <infl_marker> in above line is important to avoid multiple repeated results in generation output.
+
+$cvb-adv-part-past-simul-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#POS##BM##TMP#<past>]+ <cvb-adv-part-past-simul> )
+
+$cvb-adv-part-past$ = $fake-past$ || $past-tense$ || ($cvb-adv-part-past-form$ || $cvb-adv-part-past-simul-form$) || $remove-past$
 
 $cvb-adv-part-past$
 

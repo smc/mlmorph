@@ -130,6 +130,10 @@
 		"tag": "Present adverbial participle - Simultaneous"
 	},
 	{
+		"id": "cvb-adv-part-past-simul",
+		"tag": "Past adverbial participle - Simultaneous"
+	},
+	{
 		"id":"adv-clause-rp-past",
 		"tag": "Adverb clause - Relative participle - Past"
 	},
