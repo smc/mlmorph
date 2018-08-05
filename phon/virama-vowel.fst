@@ -6,10 +6,14 @@ ALPHABET = [#AAsym#]
 % ആട് + അല്ല => ആടല്ല
 % പൂവ് + അമ്പലം => പൂവമ്പലം
 
-$virama-vowel$ = [#Virama#]:<del> ^-> ( __ [#POS##BM##Numbers##TMP##Lsym#]+ [#Vowels#] )
+$samvruthokara-del$ = {ു്}:{<del>} ^-> ( __ [#POS##BM##Numbers##TMP##Lsym#]+ [#Vowels#] )
+$virama-del$ = {്}:<del> ^-> ( __ [#POS##BM##Numbers##TMP##Lsym#]+ [#Vowels#] )
 
-$tests$ =<>:<BoW>പൂവ്<n><>:<RB><>:<EoW><>:<BoW>അമ്പലം<n><>:<RB><>:<EoW>
+$virama-vowel$= $samvruthokara-del$ || $virama-del$
+$tests$ =<>:<BoW>പൂവ്<n><>:<RB><>:<EoW><>:<BoW>അമ്പലം<n><>:<RB><>:<EoW> |\
+	<>:<BoW>പൂവു്<n><>:<RB><>:<EoW><>:<BoW>അമ്പലം<n><>:<RB><>:<EoW>
 
 % Uncomment below line for testing
-% $tests$ ||\
-$virama-vowel$ || .*
+% $tests$ ||$virama-vowel$ >> "virama-vowel.test.a"
+
+$virama-vowel$
