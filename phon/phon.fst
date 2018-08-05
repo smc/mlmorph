@@ -21,7 +21,9 @@ $PHON$ = "<exceptions.a>" \
 	|| $delete-pos$
 
 $test$ = <>:<BoW>മാല<n><RB><accusative>:യ<>:എ<del><LB>ഒ<indeclinable><RB><>:<EoW> |\
-	<>:<BoW>മോർ<n><RB><locative>:ഇ<>:ൽ<del><LB>എ<indeclinable><RB><>:<EoW>
+	<>:<BoW>മോർ<n><RB><locative>:ഇ<>:ൽ<del><LB>എ<indeclinable><RB><>:<EoW> |\
+	<>:<BoW>മോർ<n><RB><locative>:ഇ<>:ൽ<del><LB>കൂടി<cnj><RB><>:<EoW>
+
 % $test$ || $PHON$ >> "phon.test.a"
 
 $PHON$

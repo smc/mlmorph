@@ -39,4 +39,8 @@ $NOUN$ = $DEM$ |\
 	( $DEM$? $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? $SUFFIXES$? )
 
 $NOUN$ = $NOUN$ || $NINFL$
+
+% $test$ = വഴി<n><RB><locative>കൂടി<cnj><RB> |  വഴി<n><RB><locative>
+$ $test$ || $NOUN$ >> "noun.test.a"
+
 $NOUN$ $INDECLINABLE$?

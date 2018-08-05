@@ -5,23 +5,27 @@ ALPHABET = [#Letters##POS##BM##TMP##Lsym##Numbers#] <locative> <pl> <del> <dup>
 % Locative inflection rules
 #inflboundary# = #POS##BM##TMP##Lsym##Numbers#
 
-$anuswara-forms$ = {<locative>}:{<del>ത്തിൽ} | {<locative>}:{<del>ത്തേൽ}  | {<locative>}:{<del>ത്തിങ്കൽ} | {<locative>}:{<del>ത്ത്} | {<locative>}:{<del>ത്തു്}
+$anuswara-forms$ = {<locative>}:{<del>ത്തിൽ<infl_marker>} | {<locative>}:{<del>ത്തേൽ<infl_marker>}  |\
+	{<locative>}:{<del>ത്തിങ്കൽ<infl_marker>}\
+	| {<locative>}:{<del>ത്ത്<infl_marker>} | {<locative>}:{<del>ത്തു്<infl_marker>}
 $locative-anuswara-step1$ = $anuswara-forms$ ^-> ([#Anuswara#] [#inflboundary#]+ __)
 $locative-anuswara-step2$ = {[#Anuswara#]}:{} ^-> (__ [#inflboundary#]+ <del> )
 $locative-anuswara$ = $locative-anuswara-step1$ || $locative-anuswara-step2$
 
-$locative-cons-vowel$ = {<locative>}:{ഇൽ} ^-> ([#Consonants##VowelSigns#] [#inflboundary#]+ __)
+$locative-cons-vowel$ = {<locative>}:{ഇൽ<infl_marker>} ^-> ([#Consonants##VowelSigns#] [#inflboundary#]+ __)
 
-$virama-forms$ = {<locative>}:{ഇൽ} | {<locative>}:{ഏൽ} | {<locative>}:{ഇങ്കൽ} | {<locative>}:{അത്ത്} | {<locative>}:{അത്തു്}
+$virama-forms$ = {<locative>}:{ഇൽ<infl_marker>} | {<locative>}:{ഏൽ<infl_marker>} | {<locative>}:{ഇങ്കൽ<infl_marker>} \
+	| {<locative>}:{അത്ത്<infl_marker>} | {<locative>}:{അത്തു്<infl_marker>}
 $locative-virama-chillus$ = $virama-forms$ ^-> ([#Virama##Chillus#] [#inflboundary#]+ __)
 
-$ta-forms$ = {<locative>}:{<dup>ടിൽ} | {<locative>}:{<dup>ടേൽ} | {<locative>}:{<dup>ടിങ്കൽ} | {<locative>}:{<dup>ടിങ്ങൽ}
+$ta-forms$ = {<locative>}:{<dup>ടിൽ<infl_marker>} | {<locative>}:{<dup>ടേൽ<infl_marker>} \
+	| {<locative>}:{<dup>ടിങ്കൽ} | {<locative>}:{<dup>ടിങ്ങൽ}
 $locative-ta$ = $ta-forms$ ^-> ([#VowelSigns#] ട [#Virama#] [#inflboundary#]+ __)
 
 % മറയത്ത്, ഇറയത്ത്,
 $exceptions$ = മഴ | മറ | ഇറ | ചിറ
 
-$special_cases$ = ( {<locative>}:{അത്ത്} | {<locative>}:{അത്തു്} ) ^-> ($exceptions$ [#inflboundary#]+ __ )
+$special_cases$ = ( {<locative>}:{അത്ത്<infl_marker>} | {<locative>}:{അത്തു്<infl_marker>} ) ^-> ($exceptions$ [#inflboundary#]+ __ )
 
 $locative$ = $special_cases$ | ( $locative-cons-vowel$ || $locative-ta$ || $locative-virama-chillus$ || $locative-anuswara$ )
 

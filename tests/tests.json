@@ -1472,6 +1472,33 @@
     {
         "word": "ഓടിയപ്പോൾ",
         "analysis": "ഓടുക<v><cvb-adv-part-past-simul>"
+    },
+    {
+        "word": "പഞ്ചസാരമണൽത്തരികളിലുമാണ്",
+        "analysis": "പഞ്ചസാര<n><adj>മണൽ<n><adj>തരി<n><pl><locative>ഉം<cnj>ആണ്<aff>"
+    },
+    {
+        "word": "വടിയാലും",
+        "analysis": "വടി<n><instrumental>ഉം<cnj>"
+    },
+    {
+        "word": "വടികൊണ്ടും",
+        "analysis": "വടി<n><instrumental>ഉം<cnj>"
+    },
+    {
+        "word": "തോട്ടത്തിലേയ്ക്കും",
+        "analysis": "തോട്ടം<n><allative>ഉം<cnj>"
+    },
+    {
+        "word": "തോട്ടത്തിലും",
+        "analysis": "തോട്ടം<n><locative>ഉം<cnj>"
+    },
+    {
+        "word": "സന്തോഷിന്റെയും",
+        "analysis": "സന്തോഷ്<np><genitive>ഉം<cnj>"
+    },
+    {
+        "word": "അവന്റെയും",
+        "analysis": "അവൻ<prn><genitive>ഉം<cnj>"
     }
 ]
-
