@@ -10,17 +10,20 @@
 
 ALPHABET = [#Letters##POS##BM##TMP##infl#]
 
-$past-tense$ = "<../adverbs/converb-past.a>"
+$converb-past$ = "<../adverbs/converb-past.a>"
 #iterative-aspects# = <iterative-past-aspect><iterative-present-aspect><iterative-future-aspect> \
 	<emphatic-iterative-past-aspect><emphatic-iterative-present-aspect><emphatic-iterative-future-aspect>
 
 % We need to wrap the verb into past form first. For that, fake a past tag and pass
-% it through the past.a. Only when the input has #perfect-aspects# at end.
-$fake-past$ = {<RB>}:{<cvb-adv-part-past>} ^-> ([#verbs#]+ __ [#iterative-aspects#])
+% it through the past.a. Only when the input has #iterative-aspects# at end.
 
-$iterative-past-aspect$ = {<iterative-past-aspect>}:{കൊണ്ടിരുന്നു<infl_marker>} ^-> ([<cvb-adv-part-past>] __ )
-$iterative-present-aspect$ = {<iterative-present-aspect>}:{കൊണ്ടിരിക്കുന്നു<infl_marker>} ^-> ([<cvb-adv-part-past>] __ )
-$iterative-future-aspect$ = {<iterative-future-aspect>}:{കൊണ്ടിരിക്കും<infl_marker>} ^-> ([<cvb-adv-part-past>] __ )
+% NOTE: The reason for retaining <RB> below is, it is required for $fake-past$ in converb-past.fst
+$fake-converb-past$ = {<RB>}:{<RB><cvb-adv-part-past>} ^-> ([#verbs#]+ __ [#iterative-aspects#])
+$remove-converb-past$ = <cvb-adv-part-past>:<RB> ^-> ([#verbs#]+ __ [#iterative-aspects#])
+
+$iterative-past-aspect$ = {<iterative-past-aspect>}:{കൊണ്ടിരുന്നു<infl_marker>} ^-> ([#POS##BM##TMP#<cvb-adv-part-past>]+ __ )
+$iterative-present-aspect$ = {<iterative-present-aspect>}:{കൊണ്ടിരിക്കുന്നു<infl_marker>} ^-> ([#POS##BM##TMP#<cvb-adv-part-past>]+ __ )
+$iterative-future-aspect$ = {<iterative-future-aspect>}:{കൊണ്ടിരിക്കും<infl_marker>} ^-> ([#POS##BM##TMP#<cvb-adv-part-past>]+ __ )
 $iterative-aspect$ = $iterative-past-aspect$ || $iterative-present-aspect$ || $iterative-future-aspect$
 
 % --------------------------------------------------------------------------------
@@ -28,9 +31,14 @@ $iterative-aspect$ = $iterative-past-aspect$ || $iterative-present-aspect$ || $i
 % In this aspect the action is shown as happening without break. Past stem is followed by
 % kontu + ee + irikku + tense suffix.
 
-$emphatic-iterative-past-aspect$ = {<emphatic-iterative-past-aspect>}:{കൊണ്ടേയിരുന്നു<infl_marker>} ^-> ([<cvb-adv-part-past>] __ )
-$emphatic-iterative-present-aspect$ = {<emphatic-iterative-present-aspect>}:{കൊണ്ടേയിരിക്കുന്നു<infl_marker>} ^-> ([<cvb-adv-part-past>] __ )
-$emphatic-iterative-future-aspect$ = {<emphatic-iterative-future-aspect>}:{കൊണ്ടേയിരിക്കും<infl_marker>} ^-> ([<cvb-adv-part-past>] __ )
+$emphatic-iterative-past-aspect$ = {<emphatic-iterative-past-aspect>}:{കൊണ്ടേയിരുന്നു<infl_marker>} ^-> ([#POS##BM##TMP#<cvb-adv-part-past>]+ __ )
+$emphatic-iterative-present-aspect$ = {<emphatic-iterative-present-aspect>}:{കൊണ്ടേയിരിക്കുന്നു<infl_marker>} ^-> ([#POS##BM##TMP#<cvb-adv-part-past>]+ __ )
+$emphatic-iterative-future-aspect$ = {<emphatic-iterative-future-aspect>}:{കൊണ്ടേയിരിക്കും<infl_marker>} ^-> ([#POS##BM##TMP#<cvb-adv-part-past>]+ __ )
 $emphatic-iterative-aspect$ = $emphatic-iterative-past-aspect$ || $emphatic-iterative-present-aspect$ || $emphatic-iterative-future-aspect$
 
-$fake-past$ || $past-tense$ || ( $iterative-aspect$ | $emphatic-iterative-aspect$ )
+$iterative$ = $fake-converb-past$ || $converb-past$|| ( $iterative-aspect$ || $emphatic-iterative-aspect$ ) || $remove-converb-past$
+
+% $test$ = പഠിക്കുക<v><RB><iterative-past-aspect>
+% $test$ || $iterative$ >> "iterative-test.a"
+
+$iterative$
