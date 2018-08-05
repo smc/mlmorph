@@ -20,6 +20,10 @@ def index():
     return render_template('mlmorph.html',)
 
 
+@app.route("/spellchecker")
+def spellchecker():
+    return render_template('spellcheck.html',)
+
 @app.route("/api/analyse", methods=['GET', 'POST'])
 def do_analyse():
     text = None

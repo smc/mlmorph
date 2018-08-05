@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block body %}
+<script src="{{ url_for('static', filename='spellcheck.js') }}"></script>
+
+{% if error %}
+<p class=error>
+	<strong>Error:</strong> {{ error }}{% endif %}</p>
+<section class='section row'>
+	<h5>Spellchecker</h5>
+	<div class="sp-container">
+		<div class="sp-editor" spellcheck="false" contenteditable="true" contextmenu="suggestionsmenu">
+			ഒന്ന് രണ്ട് മൂന്ന് നാല് നീലക്കാ൪ഡ്
+		</div>
+
+		<menu type="context" id="suggestionsmenu">
+			<menuitem label="Spellcheck" onclick="doSpellcheck()" ></menuitem>
+			<menu label="suggestions" id="suggestions"></menu>
+		</menu>
+	</div>
+</section>
+
+{% endblock %}
