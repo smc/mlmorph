@@ -41,6 +41,6 @@ $NOUN$ = $DEM$ |\
 $NOUN$ = $NOUN$ || $NINFL$
 
 % $test$ = വഴി<n><RB><locative>കൂടി<cnj><RB> |  വഴി<n><RB><locative>
-$ $test$ || $NOUN$ >> "noun.test.a"
+% $ $test$ || $NOUN$ >> "noun.test.a"
 
 $NOUN$ $INDECLINABLE$?
