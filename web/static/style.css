@@ -73,8 +73,8 @@ progress {
 	font-size: 1.4em;
 }
 
-.word:hover {
-	background-color: palegoldenrod;
+.word.error:hover {
+	background-color: ivory;
 }
 
 .word.error {
