@@ -28,6 +28,7 @@ function addMenuItem(label, word) {
 		let word = event.target.for;
 		resultDictionary[word].node.innerText = event.target.label;
 		resultDictionary[word].node.classList.remove("error");
+		resultDictionary[word].node.result.suggestions=[];
 	});
 }
 
@@ -41,15 +42,14 @@ function process() {
 		}
 		resultDictionary[word].node = words[i];
 		resultDictionary[word].node.classList.remove("error");
-		checkWord(word).then(() => onResult(word) );
+		checkWord(word).then(() => onResult(word));
 	}
 }
 
 function onResult(word) {
-	if (resultDictionary[word].result.correct) {
-		return false;
+	if (!resultDictionary[word].result.correct) {
+		resultDictionary[word].node.classList.add("error");
 	}
-	resultDictionary[word].node.classList.add("error");
 	resultDictionary[word].node.addEventListener(
 		"contextmenu",
 		onContextClick,
@@ -57,9 +57,22 @@ function onResult(word) {
 	);
 }
 function onContextClick() {
-	document.querySelector("#suggestions").innerHTML = "";
 	let word = this.innerText;
+	if (!word || !resultDictionary[word]) {
+		return;
+	}
+	let suggestionsNode = document.getElementById("suggestions")
+	if (suggestionsNode) {
+		document.getElementById("suggestionsmenu").removeChild(suggestionsNode);
+	}
 	let suggestions = resultDictionary[word].result.suggestions;
+	if (!suggestions || !suggestions.length) {
+		return;
+	}
+	menu = document.createElement("menu");
+	menu.label = "Suggestions";
+	menu.id = "suggestions"
+	document.getElementById("suggestionsmenu").appendChild(menu);
 	for (let i = 0; i < suggestions.length; i++) {
 		addMenuItem(suggestions[i], word);
 	}
