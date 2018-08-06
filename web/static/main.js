@@ -89,11 +89,11 @@ function fetchTags() {
 	return fetch( 'static/tags.json' ).then( ( response ) => response.json() );
 }
 
-$( function () {
-	$( '#analresult-progress' ).hide();
-	$( '#genresult-progress' ).hide();
+window.onload = function() {
+	document.getElementById('analresult-progress' ).style.display = 'none';
+	document.getElementById('genresult-progress' ).style.display = 'none';
 	fetchTags().then( ( tags )=>{
 		tagInfo = tags;
 		init();
 	} );
-} );
+};
