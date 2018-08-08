@@ -1,9 +1,46 @@
 var resultDictionary = {};
-function doSpellcheck() {
+
+function toggleSpellcheck() {
+	let checkbox = document.getElementById("sp-toggle");
+	if (checkbox.checked) {
+		enable();
+	} else {
+		disable();
+	}
+
+}
+
+function disable() {
 	let editor = document.querySelector('.sp-editor');
 	prepare(editor);
-	process();
+	setCursorAtEnd(editor);
+	editor.oninput = null;
+}
 
+function enable() {
+	let editor = document.querySelector('.sp-editor');
+	let timeout;
+	editor.addEventListener("input", () => {
+		clearTimeout(timeout);
+		timeout = setTimeout(() => {
+			check(editor);
+		}, 2000);
+	});
+}
+
+function check(editor) {
+	prepare(editor);
+	setCursorAtEnd(editor);
+	process();
+}
+
+function setCursorAtEnd(editor) {
+	range = document.createRange();
+	range.selectNodeContents(editor);
+	range.collapse(false);
+	selection = window.getSelection();
+	selection.removeAllRanges();
+	selection.addRange(range);
 }
 
 function prepare(editor) {
@@ -28,7 +65,9 @@ function addMenuItem(label, word) {
 		let word = event.target.for;
 		resultDictionary[word].node.innerText = event.target.label;
 		resultDictionary[word].node.classList.remove("error");
-		resultDictionary[word].node.result.suggestions=[];
+		if (resultDictionary[word].node.result) {
+			resultDictionary[word].node.result.suggestions = [];
+		}
 	});
 }
 
@@ -56,6 +95,7 @@ function onResult(word) {
 		false
 	);
 }
+
 function onContextClick() {
 	let word = this.innerText;
 	if (!word || !resultDictionary[word]) {
@@ -77,3 +117,13 @@ function onContextClick() {
 		addMenuItem(suggestions[i], word);
 	}
 }
+
+window.onload = function () {
+	let checkbox = document.getElementById("sp-toggle");
+	if (checkbox.checked) {
+		let editor = document.querySelector('.sp-editor');
+		check(editor);
+		enable();
+	}
+};
+
