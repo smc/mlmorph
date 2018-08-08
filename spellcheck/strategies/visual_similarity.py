@@ -13,21 +13,16 @@ class VisualSimilarity(SuggestionStrategy):
         ')': 'ാ',
         '൯': 'ൻ',
         '൪': 'ർ',
-        'ഝ': 'ത്സ'
+        'ഝ': 'ത്സ',
+        'ത്സ': 'ഝ',
+        'ഞ്ജ': 'ജ്ഞ',
+        'ജ്ഞ': 'ഞ്ജ'
     }
 
     def suggest(self, word):
         candidates = []
-        candidate = word.replace('ത്സ', 'ഝ')
-        if candidate != word:
-            candidates.append(candidate)
-        start = 1
-        for i in range(start, len(word)):
-            candidate = list(word)
-            char = candidate[i]
-            if char in self.conversion_map:
-                candidate[i] = self.conversion_map[char]
-                start = i+1
-                candidates.append(''.join(candidate))
-                continue
+        for key in self.conversion_map:
+            candidate = word.replace(key, self.conversion_map[key])
+            if candidate != word:
+                candidates.append(candidate)
         return candidates
