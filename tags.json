@@ -346,5 +346,9 @@
 	{
 		"id": "lakhs",
 		"tag": "Lakhs"
+	},
+	{
+		"id":"v-n-compound",
+		"tag": "Verb noun compound"
 	}
 ]

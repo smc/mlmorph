@@ -39,8 +39,10 @@ $QUANTIFIER$ = $QUANTIFIERS$ | \
 	$NUMBER$ | \
 	( ( ( $NUMBERSPELLOUT$ $ordinal$? ) | $NUMBERSPELLOUT_PLURAL$ ) [#ninfl#]? || $NINFL$ )
 
+$NOUN_VERB_COMPOUNDS$ = $NOUNS$ <v-n-compound> $VERB$ %വീട്ടിലെത്തി, വണ്ടികയറി
 $WORD$ = $MISC$? ( $NOUNS$ \
 	| $VERB$+ $INDECLINABLE$? \
+	| $NOUN_VERB_COMPOUNDS$ \
 	| $POSTPOSITIONS$ \
 	| $INTERJECTION$ \
 	| $QUESTION$ \

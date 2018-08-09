@@ -1500,5 +1500,25 @@
     {
         "word": "അവന്റെയും",
         "analysis": "അവൻ<prn><genitive>ഉം<cnj>"
+    },
+    {
+        "word": "വീടുകണ്ടു",
+        "analysis": "വീട്<n><v-n-compound>കാണുക<v><past>"
+    },
+    {
+        "word": "തെറിപറഞ്ഞു",
+        "analysis": "തെറി<n><v-n-compound>പറയുക<v><past>"
+    },
+    {
+        "word": "വീട്ടിലെത്തി",
+        "analysis": "വീട്<n><locative><v-n-compound>എത്തുക<v><past>"
+    },
+    {
+        "word": "അവരെത്തി",
+        "analysis": "അവർ<prn><v-n-compound>എത്തുക<v><past>"
+    },
+    {
+        "word": "ചിരികണ്ടാൽ",
+        "analysis": "ചിരി<n><v-n-compound>കാണുക<v><conditional-mood>"
     }
 ]
