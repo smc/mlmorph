@@ -69,23 +69,29 @@ class AnalyserGeneratorTests(unittest.TestCase):
 
     def test_total_coverage(self):
         start = time.clock()
-        tokens_count=0
-        analysed_tokens_count=0
-        files=['coverage-test-1.txt','coverage-test-2.txt', 'coverage-test-3.txt']
+        tokens_count = 0
+        analysed_tokens_count = 0
+        files = ['coverage-test-1.txt',
+                 'coverage-test-2.txt',
+                 'coverage-test-3.txt',
+                 'coverage-test-4.txt',
+                 'coverage-test-5.txt',
+                 'coverage-test-6.txt',
+                 'coverage-test-7.txt']
         for file in files:
-            with open(file,'r') as f:
+            with open(file, 'r') as f:
                 for line in f:
                     for word in line.split():
                         tokens_count += 1
                         analysis = self.mlmorph.analyse(word)
                         if len(analysis) > 0:
-                            analysed_tokens_count +=1
+                            analysed_tokens_count += 1
         percentage = (analysed_tokens_count/tokens_count)*100
         time_taken = time.clock() - start
         print('\nCoverage test')
-        print('Total words: %5d \nAnalysed words: %5d \nCoverage : %3d %% ' % ( tokens_count, analysed_tokens_count, percentage) )
-        print('Time taken: %5d seconds' % ( time_taken) )
-
+        print('Total words: %5d \nAnalysed words: %5d \nCoverage : %3d %% ' %
+              (tokens_count, analysed_tokens_count, percentage))
+        print('Time taken: %5d seconds' % (time_taken))
 
 
 if __name__ == '__main__':
