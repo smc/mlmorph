@@ -10,13 +10,12 @@
 	<link rel="icon" href="../../favicon.ico">
 	<title>Malayalam morphological analyser</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	 crossorigin="anonymous"></script>
-	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+	{% block scripts %}{% endblock %}
+	{% block styles %}{% endblock %}
 </head>
 
 <body>

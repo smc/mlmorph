@@ -1,4 +1,14 @@
-{% extends 'layout.html' %} {% block body %} {% if error %}
+{% extends 'layout.html' %}
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='MorphemeChips.js') }}"></script>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+{% endblock %}
+{% block styles %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+{% block body %} {% if error %}
 <p class=error><strong>Error:</strong> {{ error }}{% endif %}
 	<section class='section analyse row'>
 		<h5>Analysis</h5>
@@ -33,6 +43,4 @@
 		<progress id="genresult-progress"></progress>
 		<div class="genresult col s12"></div>
 	</section>
-	<script src="{{ url_for('static', filename='MorphemeChips.js') }}"></script>
-	<script src="{{ url_for('static', filename='main.js') }}"></script>
 	{% endblock %}

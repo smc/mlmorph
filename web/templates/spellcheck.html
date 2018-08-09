@@ -1,7 +1,11 @@
 {% extends 'layout.html' %}
-{% block body %}
+{% block scripts %}
 <script src="{{ url_for('static', filename='spellcheck.js') }}"></script>
-
+{% endblock %}
+{% block styles %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='spellcheck.css') }}">
+{% endblock %}
+{% block body %}
 {% if error %}
 <p class=error>
 	<strong>Error:</strong> {{ error }}{% endif %}</p>

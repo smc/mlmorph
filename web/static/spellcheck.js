@@ -47,12 +47,28 @@ function prepare(editor) {
 	editor.innerHTML = editor.innerText.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="word">$2</span>');
 }
 
+/**
+ * @param {String} word
+ * @returns {Promise}
+ */
 function checkWord(word) {
 	if (resultDictionary[word] && resultDictionary[word].result) {
 		return new Promise((resolve, reject) => { resolve("Value already checked"); });
 	}
-	return $.getJSON('/api/spellcheck', { word }, (data) => {
-		resultDictionary[word].result = data;
+	return new Promise((resolve, reject) => {
+		let request = new XMLHttpRequest();
+
+		request.open('GET', '/api/spellcheck?word=' + word, true);
+		request.onload = function (data) {
+			if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+				resultDictionary[word].result = JSON.parse(data.target.response);
+				resolve();
+			} else {
+				reject();
+			}
+		};
+		request.onerror = reject;
+		request.send();
 	});
 }
 
@@ -81,7 +97,7 @@ function process() {
 		}
 		resultDictionary[word].node = words[i];
 		resultDictionary[word].node.classList.remove("error");
-		checkWord(word).then(() => onResult(word));
+		checkWord(word).then(() => onResult(word), (e) => {	/* handle errors*/ });
 	}
 }
 
