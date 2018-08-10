@@ -7,7 +7,6 @@ class VowelElongation(SuggestionStrategy):
     For example, if w is കോഴിക്കൊട്, this strategy outputs കോഴിക്കോട്
     """
     elongation_map = {
-        'അ': 'ാ',
         'ി': 'ീ',
         'ു': 'ൂ',
         'െ': 'േ',
@@ -25,4 +24,10 @@ class VowelElongation(SuggestionStrategy):
                 start = i+1
                 candidates.append(''.join(candidate))
                 continue
+            if i == len(word)-1:
+                continue
+            next_char = candidate[i+1]
+            if self.isConsonant(char) and self.isConsonant(next_char):
+                candidate[i] = char+'ാ'
+                candidates.append(''.join(candidate))
         return candidates
