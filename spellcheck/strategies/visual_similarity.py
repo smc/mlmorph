@@ -16,7 +16,10 @@ class VisualSimilarity(SuggestionStrategy):
         'ഝ': 'ത്സ',
         'ത്സ': 'ഝ',
         'ഞ്ജ': 'ജ്ഞ',
-        'ജ്ഞ': 'ഞ്ജ'
+        'ജ്ഞ': 'ഞ്ജ',
+        'ൃ': '്യ', # Swap ്യ with ൃ and reverse. ക്യ <-> കൃ
+        '്യ': 'ൃ',
+        '്രു': 'ൃ' # Replace ്ര with ൃ - ഹ്രുദയം - ഹൃദയം
     }
 
     def suggest(self, word):
