@@ -1520,5 +1520,9 @@
     {
         "word": "ചിരികണ്ടാൽ",
         "analysis": "ചിരി<n><v-n-compound>കാണുക<v><conditional-mood>"
+    },
+    {
+        "word": "വിലയിരുത്താൻ",
+        "analysis": "വില<n><v-n-compound>ഇരിക്കുക<v><causative-voice><purposive-mood>"
     }
 ]
