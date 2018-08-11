@@ -146,12 +146,24 @@
 		"tag": "Simple perfect aspect"
 	},
 	{
+		"id": "simple-perfect-aspect-neg",
+		"tag": "Simple perfect aspect - negative"
+	},
+	{
 		"id": "cont-perfect-aspect",
 		"tag": "Contemporaneous perfect aspect"
 	},
 	{
+		"id": "cont-perfect-aspect-neg",
+		"tag": "Contemporaneous perfect aspect - negative"
+	},
+	{
 		"id": "remote-perfect-aspect",
 		"tag": "Remote perfect aspect"
+	},
+	{
+		"id": "remote-perfect-aspect-neg",
+		"tag": "Remote perfect aspect - negative"
 	},
 	{
 		"id": "habitual-aspect",

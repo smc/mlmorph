@@ -1524,5 +1524,17 @@
     {
         "word": "വിലയിരുത്താൻ",
         "analysis": "വില<n><v-n-compound>ഇരിക്കുക<v><causative-voice><purposive-mood>"
+    },
+    {
+        "word": "പറയാഞ്ഞിട്ട്",
+        "analysis": "പറയുക<v><remote-perfect-aspect-neg>"
+    },
+    {
+        "word": "വരാതിരുന്നു",
+        "analysis": "വരുക<v><simple-perfect-aspect-neg>"
+    },
+    {
+        "word": "വരാതിരിക്കുന്നു",
+        "analysis": "വരുക<v><cont-perfect-aspect-neg>"
     }
 ]

@@ -22,6 +22,9 @@ $fake-past$ = {<RB>}:{<past>} ^-> ([#verbs#]+ __ [#perfect-aspects#])
 
 $simple-perfect-aspect$ = {<simple-perfect-aspect>}:{ഇരുന്നു<infl_marker>}
 
+$verb-suffix-map$ = {ുക}:{ാതിരുന്നു}
+$simple-perfect-aspect-neg$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <simple-perfect-aspect-neg> )
+
 % --------------------------------------------------------------------------------
 % == Contemporaneous perfect ==
 
@@ -32,6 +35,10 @@ $simple-perfect-aspect$ = {<simple-perfect-aspect>}:{ഇരുന്നു<infl_
 $cont-perfect-aspect$ = {<cont-perfect-aspect>}:{ഇരിക്കുന്നു<infl_marker>} | \
 	{<cont-perfect-aspect>}:{ഇരിയ്ക്കുന്നു<infl_marker>}
 
+
+$verb-suffix-map$ = {ുക}:{ാതിരിയ്ക്കുന്നു} |  {ുക}:{ാതിരിക്കുന്നു}
+$cont-perfect-aspect-neg$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <cont-perfect-aspect-neg> )
+
 % --------------------------------------------------------------------------------
 % == Remote perfect ==
 
@@ -40,7 +47,10 @@ $cont-perfect-aspect$ = {<cont-perfect-aspect>}:{ഇരിക്കുന്ന�
 % an unspecified time in the past, far removed from the present.
 
 $remote-perfect-aspect$ = {<remote-perfect-aspect>}:{ഇട്ട്<infl_marker>} |\
-	 {<remote-perfect-aspect>}:{ഇട്ടു്<infl_marker>}
+	{<remote-perfect-aspect>}:{ഇട്ടു്<infl_marker>}
+
+$verb-suffix-map$ = {ുക}:{ാഞ്ഞിട്ട്} | {ുക}:{ാഞ്ഞിട്ടു്}
+$remote-perfect-aspect-neg$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <remote-perfect-aspect-neg> )
 
 % ----------
 
@@ -50,4 +60,4 @@ $perfect-aspects$ = $perfect-aspects-forms$ ^-> ([<past>] __ )
 
 $perfect-aspects$ = $fake-past$ || $past-tense$ || $perfect-aspects$
 
-$perfect-aspects$
+$perfect-aspects$ | $simple-perfect-aspect-neg$ | $cont-perfect-aspect-neg$ | $remote-perfect-aspect-neg$
