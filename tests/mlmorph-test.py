@@ -89,9 +89,9 @@ class AnalyserGeneratorTests(unittest.TestCase):
         percentage = (analysed_tokens_count/tokens_count)*100
         time_taken = time.clock() - start
         print('\nCoverage test')
-        print('Total words: %5d \nAnalysed words: %5d \nCoverage : %3d %% ' %
+        print('Total words: %d \nAnalysed words: %d \nCoverage: %3.2f %% ' %
               (tokens_count, analysed_tokens_count, percentage))
-        print('Time taken: %5d seconds' % (time_taken))
+        print('Time taken: %5.3f seconds' % (time_taken))
 
 
 if __name__ == '__main__':
