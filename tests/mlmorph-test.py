@@ -3,6 +3,7 @@ import unittest
 import sys
 import os
 import time
+from collections import Counter
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 sys.path.insert(0, '../python')
 from mlmorph import Mlmorph
@@ -71,6 +72,7 @@ class AnalyserGeneratorTests(unittest.TestCase):
         start = time.clock()
         tokens_count = 0
         analysed_tokens_count = 0
+        missed_words = []
         files = ['coverage-test-1.txt',
                  'coverage-test-2.txt',
                  'coverage-test-3.txt',
@@ -86,12 +88,16 @@ class AnalyserGeneratorTests(unittest.TestCase):
                         analysis = self.mlmorph.analyse(word)
                         if len(analysis) > 0:
                             analysed_tokens_count += 1
+                        else:
+                            missed_words.append(word)
         percentage = (analysed_tokens_count/tokens_count)*100
         time_taken = time.clock() - start
         print('\nCoverage test')
         print('Total words: %d \nAnalysed words: %d \nCoverage: %3.2f %% ' %
               (tokens_count, analysed_tokens_count, percentage))
         print('Time taken: %5.3f seconds' % (time_taken))
+        print('Top 10 missed words are:\n%s' %
+              (Counter(missed_words).most_common(10)))
 
 
 if __name__ == '__main__':
