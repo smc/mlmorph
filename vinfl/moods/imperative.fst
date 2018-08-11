@@ -24,7 +24,7 @@ $imperative-mood-1$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __
 $verb-suffix-del$ = {ക്കുക}: {} | \ % കേൾ
 	{ക്കുക}: {ക്ക} | \ % കേൾക്ക
 	{യുക}: {യ്} % പറയ് തുഴയ്
-$imperative-mood-2$ = $verb-suffix-del$  <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <imperative-mood>)
+$imperative-mood-2$ = $verb-suffix-del$  <>:<infl_marker> ^-> ([#Letters#]+ [#Consonants#]+ __ [#POS##BM##TMP#]+ <imperative-mood>)
 
 $verb-suffix-map-2$ = {ി<infl_marker>} : {ക്കോണം<infl_marker>}  | \ % ചാടിക്കോണം
 	{ി<infl_marker>} : {ിയേക്കണം<infl_marker>} | \ % ചാടിയേക്കണം
