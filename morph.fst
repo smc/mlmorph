@@ -16,6 +16,7 @@ $NUMBERSPELLOUT$ = "<num.a>"
 $BORROWED$ = "<lexicon/borrowed-words.a>"
 $ABBREV$ = "<lexicon/abbreviations.a>"
 $POLARITY$ = "<lexicon/polarity.a>"
+$CONJUNCTION$ = "<lexicon/conjunctions.a>"
 
 % these following contains exceptional cases fully analyzed in the
 % lexicon.
@@ -47,6 +48,7 @@ $WORD$ = $MISC$? ( $NOUNS$ \
 	| $INTERJECTION$ \
 	| $QUESTION$ \
 	| $POLARITY$ \
+	| $CONJUNCTION$ \
 	| $QUANTIFIER$ \
 ) $MISC$*
 

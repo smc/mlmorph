@@ -97,7 +97,7 @@ class AnalyserGeneratorTests(unittest.TestCase):
               (tokens_count, analysed_tokens_count, percentage))
         print('Time taken: %5.3f seconds' % (time_taken))
         print('Top 10 missed words are:\n%s' %
-              (Counter(missed_words).most_common(10)))
+              (Counter(missed_words).most_common(20)))
 
 
 if __name__ == '__main__':
