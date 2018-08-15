@@ -1552,5 +1552,13 @@
     {
         "word": "വരാതിരിക്കുന്നു",
         "analysis": "വരുക<v><cont-perfect-aspect-neg>"
+    },
+    {
+        "word": "വരാതിരിക്കുന്ന",
+        "analysis": "വരുക<v><cont-perfect-aspect-neg><adv-clause-rp-past>"
+    },
+    {
+        "word": "ചിരിച്ചുകൊണ്ടിരുന്ന",
+        "analysis": "ചിരിക്കുക<v><iterative-past-aspect><adv-clause-rp-past>"
     }
 ]
