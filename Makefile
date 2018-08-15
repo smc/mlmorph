@@ -9,7 +9,7 @@ all: malayalam.a
 malayalam.a: morph.a afilter.a
 noun.a: ninfl lexicon deriv phon
 verb.a: vinfl lexicon phon
-morph.a: noun.a verb.a num.a
+morph.a: verb.a noun.a num.a
 subdirs: $(SUBDIRS)
 $(SUBDIRS):
 	$(MAKE) -C $@

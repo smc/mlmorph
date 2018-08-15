@@ -1560,5 +1560,13 @@
     {
         "word": "ചിരിച്ചുകൊണ്ടിരുന്ന",
         "analysis": "ചിരിക്കുക<v><iterative-past-aspect><adv-clause-rp-past>"
+    },
+    {
+        "word": "വരാതിരിക്കുന്നത്",
+        "analysis": "വരുക<v><cont-perfect-aspect-neg><adv-clause-rp-past><n><deriv>"
+    },
+    {
+        "word": "ചിരിച്ചുകൊണ്ടിരുന്നത്",
+        "analysis": "ചിരിക്കുക<v><iterative-past-aspect><adv-clause-rp-past><n><deriv>"
     }
 ]

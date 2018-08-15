@@ -29,11 +29,14 @@ $VERB-ADVERBS$ = $VERB-ADVERBS$ | $VERB-ADVERBS-FROM-INFLECTIONS$
 
 $VERB$ = $VERB-TENSES$ | $VERB-MOODS$ | $VERB-ASPECTS$ | $VERB-ADVERBS$
 
+
 % Tests
 $tests$ = (ചിരിക്കുക<v><RB> | വായിക്കുക<v><RB> ) [#vinfl#]
 ( $tests$ || $ASPECTS$ || $ENDS_WITH_U_FILTER$ ) <RB> [<adv-clause-rp-past>] || $ADVERBSTEMS$ >> "verb.test.a"
 $VSTEM-PASSIVE$ >> "vstem-passive.test.a"
 $VSTEM-CAUSATIVE$ >> "vstem-causative.test.a"
 $VERB-ADVERBS-FROM-INFLECTIONS$ >> "verb-adverbs.test.a"
+
+$VERB-ADVERBS$ >> "verb-adverbs.a"
 
 $VERB$
