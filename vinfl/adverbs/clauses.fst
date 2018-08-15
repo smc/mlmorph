@@ -28,10 +28,17 @@ $verb-suffix-map$ = {ു}:{} | {ി} : {ിയ}
 $adv-clause-rp-past-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <adv-clause-rp-past> )
 $adv-clause-rp-past$ = $fake-past$ || $past-tense$ || $adv-clause-rp-past-form$ || $remove-past$
 
+$verb-suffix-map$ = {ുക}:{ാഞ്ഞ} | {ിക}:{ാഞ്ഞ}
+$adv-clause-rp-past-neg$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <adv-clause-rp-past-neg> )
+
 % Relative participle - present
 % പറയുന്ന, വരുന്ന, ഓടുന്ന, ചാടുന്ന, പഠിക്കുന്ന
-$adv-clause-rp-present$ = ( {ുക}:{ുന്ന} | {ിക}:{ുന്ന} ) <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <adv-clause-rp-present>)
+$verb-suffix-map$ = {ുക}:{ുന്ന} | {ിക}:{ുന്ന}
+$adv-clause-rp-present$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <adv-clause-rp-present>)
 
-$adv-clauses$ = $adv-clause-rp-past$ || $adv-clause-rp-present$
+$verb-suffix-map$ = {ുക}:{ാത്ത} | {ിക}:{ാത്ത}
+$adv-clause-rp-present-neg$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <adv-clause-rp-present-neg>)
+
+$adv-clauses$ = $adv-clause-rp-past$ || $adv-clause-rp-past-neg$ || $adv-clause-rp-present$ || $adv-clause-rp-present-neg$
 
 $adv-clauses$
