@@ -36,7 +36,7 @@ def do_analyse():
     # real analysis
     for windex in range(len(words)):
         word = words[windex]
-        anals = morph.analyse(word)
+        anals = morph.analyse(word, False)
         anals_results = []
         if len(anals) == 0:
             anals_results = []

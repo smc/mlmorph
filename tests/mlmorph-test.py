@@ -85,7 +85,7 @@ class AnalyserGeneratorTests(unittest.TestCase):
                 for line in f:
                     for word in line.split():
                         tokens_count += 1
-                        analysis = self.mlmorph.analyse(word)
+                        analysis = self.mlmorph.analyse(word, False)
                         if len(analysis) > 0:
                             analysed_tokens_count += 1
                         else:

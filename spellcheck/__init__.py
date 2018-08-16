@@ -42,7 +42,7 @@ def getSuggestions(word, morph):
 
 
 def spellcheck(word, morph):
-    analysis = morph.analyse(word)
+    analysis = morph.analyse(word, False)
     if len(analysis) == 0:
         return False
     else:

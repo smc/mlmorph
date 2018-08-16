@@ -21,6 +21,8 @@ class Mlmorph:
         self.analyser = None
         self.generator = None
         self._cached_stamp = 0
+        self.analyser_regex = regex.compile( r"((?P<root>([^<])+)(?P<tags>(<[^>]+>)+))+" )
+        self.pos_regex = regex.compile(r"(<(?P<tag>([^>]+))>)+")
 
     def load_filename(self, fsa):
         istr = libhfst.HfstInputStream(fsa)
@@ -52,7 +54,7 @@ class Mlmorph:
         analyser.lookup_optimize()
         self.analyser = analyser
 
-    def analyse(self, token):
+    def analyse(self, token, weighted=True):
         """Perform a simple morphological analysis lookup. """
         stamp = os.stat(self.fsa).st_mtime
         if stamp != self._cached_stamp:
@@ -60,7 +62,15 @@ class Mlmorph:
             self.reload()
         if not self.analyser:
             self.getAnalyser()
-        return self.analyser.lookup(token)
+        analysis_results = self.analyser.lookup(token)
+        if not weighted:
+            return analysis_results
+
+        processed_result=[]
+        for aindex in range(len(analysis_results)):
+            parsed_result = self.parse_analysis(analysis_results[aindex])
+            processed_result.append((analysis_results[aindex][0], parsed_result['weight']))
+        return processed_result
 
     def generate(self, token):
         """Perform a simple morphological generator lookup."""
@@ -80,16 +90,14 @@ class Mlmorph:
         analysis = analysis_result[0]
         if analysis[0] == '<':
             analysis = ' ' + analysis
-        match = regex.match(
-            r"((?P<root>([^<])+)(?P<tags>(<[^>]+>)+))+", analysis)
+        match = self.analyser_regex.match(analysis)
         roots = match.captures("root")
         morphemes = []
         for rindex in range(len(roots)):
             morpheme = {}
             morpheme['root'] = roots[rindex]
             tags = match.captures("tags")[rindex]
-            morpheme['pos'] = regex.match(
-                r"(<(?P<tag>([^>]+))>)+", tags).captures("tag")
+            morpheme['pos'] = self.pos_regex.match(tags).captures("tag")
             morphemes.append(morpheme)
 
         result['morphemes'] = morphemes
