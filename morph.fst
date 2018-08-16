@@ -50,6 +50,6 @@ $WORD$ = $MISC$? ( $NOUNS$ \
 	| $POLARITY$ \
 	| $CONJUNCTION$ \
 	| $QUANTIFIER$ \
-) $MISC$*
+)? $MISC$*
 
 $WORD$
