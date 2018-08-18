@@ -12,7 +12,7 @@ ALPHABET = [#Letters##POS##BM##TMP##Lsym##Numbers#] <accusative> <del> <pl> <inf
 
 % Accusative inflection rules കടലിനെ, ആനയെ, പൂച്ചയെ, ആടിനെ, മരത്തെ, മരത്തിനെ
 $accusative-special-cases$ = {ഞാൻ}:{എന്നെ<infl_marker>} | {താൻ}:{തന്നെ<infl_marker>} | {നാം}:{നമ്മെ<infl_marker>} | \
-	{അവർ}:{അവരെ<infl_marker>} | {ഇവൻ}: {ഇവനെ<infl_marker>}
+	{അവർ}:{അവരെ<infl_marker>} | {ഇവൻ}: {ഇവനെ<infl_marker>} | {നീ}: {നിന്നെ<infl_marker>}
 $accusative-exceptions-step1$ = $accusative-special-cases$ ^-> (__ [#inflboundary#]+ <accusative> )
 $remove-accusative-ninfl$ = {<accusative>}:{} ^-> (<infl_marker> [#inflboundary#]+ __)
 $accusative-exceptions$ = $accusative-exceptions-step1$ || $remove-accusative-ninfl$
