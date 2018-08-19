@@ -1568,5 +1568,9 @@
     {
         "word": "ചിരിച്ചുകൊണ്ടിരുന്നത്",
         "analysis": "ചിരിക്കുക<v><iterative-past-aspect><adv-clause-rp-past><n><deriv>"
+    },
+    {
+        "word": "പറയുകയും",
+        "analysis": "പറയുക<v>ഉം<cnj>"
     }
 ]
