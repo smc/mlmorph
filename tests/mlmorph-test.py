@@ -73,14 +73,8 @@ class AnalyserGeneratorTests(unittest.TestCase):
         tokens_count = 0
         analysed_tokens_count = 0
         missed_words = []
-        files = ['coverage-test-1.txt',
-                 'coverage-test-2.txt',
-                 'coverage-test-3.txt',
-                 'coverage-test-4.txt',
-                 'coverage-test-5.txt',
-                 'coverage-test-6.txt',
-                 'coverage-test-7.txt']
-        for file in files:
+        for file_number in range(1,15):
+            file = 'coverage/{0:d}.txt'.format(file_number)
             with open(file, 'r') as f:
                 for line in f:
                     for word in line.split():
@@ -96,8 +90,8 @@ class AnalyserGeneratorTests(unittest.TestCase):
         print('Total words: %d \nAnalysed words: %d \nCoverage: %3.2f %% ' %
               (tokens_count, analysed_tokens_count, percentage))
         print('Time taken: %5.3f seconds' % (time_taken))
-        print('Top 30 missed words are:\n%s' %
-              (Counter(missed_words).most_common(30)))
+        print('Top 50 missed words are:\n%s' %
+              (Counter(missed_words).most_common(50)))
 
 
 if __name__ == '__main__':
