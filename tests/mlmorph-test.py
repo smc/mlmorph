@@ -73,7 +73,7 @@ class AnalyserGeneratorTests(unittest.TestCase):
         tokens_count = 0
         analysed_tokens_count = 0
         missed_words = []
-        for file_number in range(1,15):
+        for file_number in range(1,19):
             file = 'coverage/{0:d}.txt'.format(file_number)
             with open(file, 'r') as f:
                 for line in f:
