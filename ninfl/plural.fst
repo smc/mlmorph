@@ -17,7 +17,9 @@ $plural-maps$ = {[#Virama#]}:{ുകൾ} | \
 	{[ർ]}:{റുകൾ} | \
 	{[ർ]}:{രുകൾ} | \
 	{ഞാൻ}:{ഞങ്ങൾ} | \
-	{നീ}:{നിങ്ങൾ}
+	{നീ}:{നിങ്ങൾ} |\
+	{നിഘണ്ടു} : {നിഘണ്ടുക്കൾ} |\
+	{ക്താവ്} : {ക്താക്കൾ}
 
 $plural-general_step1$ = $plural-maps$ <>:<del> ^-> (__ [#POS##BM##TMP##Numbers#]+ <pl> )
 $plural-del-tmp$ = {<pl>}:{} ^-> ( <del> [#POS##BM##TMP##Numbers#]+ __ )
