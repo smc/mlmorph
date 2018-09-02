@@ -8,10 +8,16 @@ s/ല്‍/ൽ/g
 s/ര്‍/ർ/g
 s/ന്‍/ൻ/g
 s/ണ്‍/ൺ/g
-#Remove ZWNJ at end of words
+# Remove ZWNJ at end of words
 s/\xE2\x80\x8C$//g
-#Remove all other ZWJ
+# Remove all other ZWJ
 s/\xE2\x80\x8D$//g
+# Replace old au sign with new one
+s/‍ൌ/ൗ/g
 
 #Common mistakes
 s/പക്ഷെ/പക്ഷേ/g
+s/ു‌/ു/g
+s/ി‌/ു/g
+s/ോ‌/ോ/g
+s/ാ‌/ാ/g
