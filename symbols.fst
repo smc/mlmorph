@@ -5,9 +5,10 @@
 #Visarga# = ഃ
 #Consonants# = കഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ
 #Chillus# = ൻർൽൾൿൺ
+#ZWNJ# = ‌
 
 % all possible character in Malayalam
-#Letters# = #Consonants##Vowels##VowelSigns##Anuswara##Chillus##Virama##Visarga#
+#Letters# = #Consonants##Vowels##VowelSigns##Anuswara##Chillus##Virama##Visarga##ZWNJ#
 
 % POS tags
 #verbs# = <v><passive-voice><causative-voice>
