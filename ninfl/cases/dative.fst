@@ -38,9 +38,11 @@ $dative-anuswara-form-2$ = {<dative>}: {<del>ത്തിനു്<infl_marker>}
 $dative-anuswara$ = $dative-anuswara-form-1$ | $dative-anuswara-form-2$
 $dative-anuswara$ = $dative-anuswara$ || $dative-del$
 
-$dative-special-cases$ = {ഞാൻ}:{എനിക്ക്<infl_marker>} | {ഞാൻ}:{എനിയ്ക്ക്<infl_marker>} | \
-	{താൻ}:{തനിക്ക്<infl_marker>} | {താൻ}:{തനിയ്ക്ക്<infl_marker>} | {നാം}:{നമുക്ക്<infl_marker>} | \
-	{അവർ}:{അവർക്ക്<infl_marker>} | {നീ}: {നിനക്ക്<infl_marker>}
+$dative-special-cases$ = {ഞാൻ}:{എനിക്ക്<infl_marker>} | {ഞാൻ}:{എനിക്കു്<infl_marker>} | {ഞാൻ}:{എനിയ്ക്ക്<infl_marker>} | \
+	{താൻ}:{തനിക്ക്<infl_marker>} | {താൻ}:{തനിക്കു്<infl_marker>} | {താൻ}:{തനിയ്ക്ക്<infl_marker>} | \
+	{നാം}:{നമുക്ക്<infl_marker>} | {നാം}:{നമുക്കു്<infl_marker>} | \
+	{അവർ}:{അവർക്ക്<infl_marker>} | {അവർ}:{അവർക്കു്<infl_marker>} |\
+	{നീ}: {നിനക്ക്<infl_marker>} | {നീ}: {നിനക്കു്<infl_marker>}
 $remove-dative-ninfl$ = {<dative>}:{} ^-> (<infl_marker> [#inflboundary#]+ __ )
 $dative-exceptions$ = $dative-special-cases$ ^-> (__ [#inflboundary#]+ <dative> )
 $dative-exceptions$ = $dative-exceptions$ ||$remove-dative-ninfl$
