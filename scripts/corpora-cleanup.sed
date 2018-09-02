@@ -10,6 +10,8 @@ s/ന്‍/ൻ/g
 s/ണ്‍/ൺ/g
 #Remove ZWNJ at end of words
 s/\xE2\x80\x8C$//g
+#Remove all other ZWJ
+s/\xE2\x80\x8D$//g
 
 #Common mistakes
 s/പക്ഷെ/പക്ഷേ/g
