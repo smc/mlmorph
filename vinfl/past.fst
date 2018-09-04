@@ -11,8 +11,8 @@ $past-tense-ex$ = $past-tense-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##T
 $past-tense-1$ = {ക്കുക}:{ച്ചു} <>:<infl_marker> ^-> ([#Consonants#]+ [ി] __ [#POS##BM##TMP#]+ <past>)
 % അടുക്കുക - അടുത്തു, കൊടുക്കുക- കൊടുത്തു
 $past-tense-2$ = {ക്കുക}:{ത്തു} <>:<infl_marker> ^-> ([#Consonants#]+ [ു] __ [#POS##BM##TMP#]+ <past>)
-% നോക്കുക-നോക്കി, പൊക്കി, ഉടക്കി, കറക്കി,
-$past-tense-3$ = {ക്കുക}:{ക്കി} <>:<infl_marker> ^-> ([#Consonants#] [ാെൊോേ]? __ [#POS##BM##TMP#]+ <past>)
+% നോക്കുക-നോക്കി, പൊക്കി, ഉടക്കി, കറക്കി,തൂക്കി
+$past-tense-3$ = {ക്കുക}:{ക്കി} <>:<infl_marker> ^-> ([#Consonants#] [ാെൊോേൂ]? __ [#POS##BM##TMP#]+ <past>)
 
 % കരയുക - കരഞ്ഞു
 % തടവുക - തടവി
