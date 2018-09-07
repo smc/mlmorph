@@ -17,6 +17,10 @@ class VisualSimilarity(SuggestionStrategy):
         'ത്സ': 'ഝ',
         'ഞ്ജ': 'ജ്ഞ',
         'ജ്ഞ': 'ഞ്ജ',
+        'ഭ': 'ദ',
+        'ദ': 'ഭ',
+        'ബ':'മ്പ',
+        'മ്പ':'ബ',
         'ൃ': '്യ', # Swap ്യ with ൃ and reverse. ക്യ <-> കൃ
         '്യ': 'ൃ',
         '്രു': 'ൃ' # Replace ്ര with ൃ - ഹ്രുദയം - ഹൃദയം
