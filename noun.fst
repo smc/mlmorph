@@ -25,10 +25,6 @@ $DERIVEDNOUNS$ = (($VSTEM$ <n> <deriv> ) || $NOUNFROMVERB$) |\
 	( "<verb-adverbs.a>" <n> <deriv> || $NOUNFROMADVERB$ ) |\
 	( ($NSTEM$ [<masculine><feminine><neutral>] <n> <deriv>) || $NOUNFROMNOUN$)
 
-$ENDS_WITH_ANUSWARA_FILTER$ = [#Letters#]+ ം [<n><np><RB>]+
-$ADJ_CANDIDATES$ = ( $NSTEM$ | $PROPERNOUN$ ) || $ENDS_WITH_ANUSWARA_FILTER$
-$ADJ_PART$ = ( $ADJ_CANDIDATES$ <adj>) || "<ninfl/adjective.a>"
-
 $COMPOUND_NSTEM$ = ( ( ( $NSTEM$ | $PROPERNOUN$ ) <adj>)* ( $NSTEM$ | $PROPERNOUN$ ) ) |\ % വിശേഷണവിശേഷ്യങ്ങൾ
 	( $NSTEM$ <coordinative> $NSTEM$ ) % ദ്വന്ദസമാസം - ആനകുതിര, അച്ഛനമ്മ..
 $SINGULAR_NOUN$ = $COMPOUND_NSTEM$ | $PRONOUN$ | $ABBREV$ | $BORROWED$ | $DERIVEDNOUNS$
@@ -38,10 +34,14 @@ $SUFFIXES$ = $POSTPOSITIONS$ | $CONJUNCTION$ | $POLARITY$
 $SUFFIXES$ = $SUFFIXES$? $SUFFIXES$ % Atmost 2 times
 
 $NOUN$ = $DEM$ |\
-	$ADJ_PART$+ |\ % Words ending with adjevtives alone. തീരദേശ, മലയാള, സമുദ്ര etc
 	( $DEM$? $ADJECTIVE$? ( $SINGULAR_NOUN$ | ( $PLURAL_NOUN$ <EoW><RB> ) ) [#ninfl#]? $SUFFIXES$? )
 
 $NOUN$ = $NOUN$ || $NINFL$
+
+$ENDS_WITH_ANUSWARA_FILTER$ = [#AAsym#]+ [#Letters#]+ [ം്] [#POS##Numbers##infl##TMP##BM#]+
+$ADJ_CANDIDATES$ = $NOUN$ || $ENDS_WITH_ANUSWARA_FILTER$
+$ADJ_PART$ = ( $ADJ_CANDIDATES$ <adj>) || "<ninfl/standalone-adjective.a>"
+$NOUN$ = $NOUN$ | $ADJ_PART$
 
 % $test$ = വഴി<n><RB><locative>കൂടി<cnj><RB> |  വഴി<n><RB><locative>
 % $ $test$ || $NOUN$ >> "noun.test.a"
