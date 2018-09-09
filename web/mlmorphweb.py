@@ -32,6 +32,7 @@ def do_analyse():
         text = request.form['text']
     else:
         text = request.args.get('text')
+    text = text.strip()
     words = regex.split(r'(\s+)', text)
     # real analysis
     for windex in range(len(words)):
