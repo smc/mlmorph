@@ -1584,5 +1584,9 @@
     {
         "word": "അഞ്ചിനം",
         "analysis": "അഞ്ച്<ones><cardinal><adj>ഇനം<n>"
+    },
+    {
+        "word": "അഞ്ചിനപ്പരിപാടി",
+        "analysis": "അഞ്ച്<ones><cardinal><adj>ഇനം<n><adj>പരിപാടി<n>"
     }
 ]
