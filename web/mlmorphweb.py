@@ -24,6 +24,7 @@ def index():
 def spellchecker():
     return render_template('spellcheck.html',)
 
+
 @app.route("/api/analyse", methods=['GET', 'POST'])
 def do_analyse():
     text = None
@@ -70,14 +71,25 @@ def do_generate():
     return jsonify(word=word, type=wordtype, infl=infl, result=generate_results)
 
 
-@app.route("/api/spellcheck", methods=['GET'])
+@app.route("/api/spellcheck", methods=['POST', 'GET'])
 def do_spellcheck():
-    word = request.args.get('word')
-    isCorrect = spellcheck.spellcheck(word, morph)
-    suggestions = []
-    if not isCorrect:
-        suggestions = spellcheck.getSuggestions(word, morph)
-    return jsonify(word=word, correct=isCorrect, suggestions=suggestions)
+    result = {}
+    if request.method == 'POST':
+        text = request.json.get('text')
+    else:
+        text = request.args.get('text')
+    text = text.strip()
+    words = regex.split(r'(\s+)', text)
+    result = {}
+    # real analysis
+    for windex in range(len(words)):
+        word = words[windex]
+        isCorrect = spellcheck.spellcheck(word, morph)
+        suggestions = []
+        if not isCorrect:
+            suggestions = spellcheck.getSuggestions(word, morph)
+        result[word] = {'correct': isCorrect, 'suggestions': suggestions}
+    return jsonify(result)
 
 
 if __name__ == "__main__":

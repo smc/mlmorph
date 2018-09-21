@@ -48,28 +48,17 @@ function prepare(editor) {
 }
 
 /**
- * @param {String} word
+ * @param {String} text
  * @returns {Promise}
  */
-function checkWord(word) {
-	if (resultDictionary[word] && resultDictionary[word].result) {
-		return new Promise((resolve, reject) => { resolve("Value already checked"); });
-	}
-	return new Promise((resolve, reject) => {
-		let request = new XMLHttpRequest();
-
-		request.open('GET', '/api/spellcheck?word=' + word, true);
-		request.onload = function (data) {
-			if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-				resultDictionary[word].result = JSON.parse(data.target.response);
-				resolve();
-			} else {
-				reject();
-			}
-		};
-		request.onerror = reject;
-		request.send();
-	});
+function checkText(text) {
+	return fetch('/api/spellcheck', {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json; charset=utf-8",
+		},
+		body: JSON.stringify({text})
+	}).then(res => res.json());
 }
 
 function addMenuItem(label, word) {
@@ -81,28 +70,29 @@ function addMenuItem(label, word) {
 		let word = event.target.for;
 		resultDictionary[word].node.innerText = event.target.label;
 		resultDictionary[word].node.classList.remove("error");
-		if (resultDictionary[word].node.result) {
-			resultDictionary[word].node.result.suggestions = [];
-		}
 	});
 }
 
 function process() {
-	let words = document.querySelectorAll(".word");
-	let i = words.length;
-	while (i--) {
-		let word = words[i].innerText;
-		if (!resultDictionary[word]) {
-			resultDictionary[word] = {};
+	let editor = document.querySelector('.sp-editor');
+	checkText(editor.innerText).then((res) => {
+		resultDictionary=res;
+		let words = editor.querySelectorAll(".word");
+		let i = words.length;
+		while (i--) {
+			let word = words[i].innerText;
+			if (!resultDictionary[word]) {
+				resultDictionary[word] = {};
+			}
+			resultDictionary[word].node = words[i];
+			resultDictionary[word].node.classList.remove("error");
+			onResult(word);
 		}
-		resultDictionary[word].node = words[i];
-		resultDictionary[word].node.classList.remove("error");
-		checkWord(word).then(() => onResult(word), (e) => {	/* handle errors*/ });
-	}
+	});
 }
 
 function onResult(word) {
-	if (!resultDictionary[word].result.correct) {
+	if (!resultDictionary[word].correct) {
 		resultDictionary[word].node.classList.add("error");
 	}
 	resultDictionary[word].node.addEventListener(
@@ -121,7 +111,7 @@ function onContextClick() {
 	if (suggestionsNode) {
 		document.getElementById("suggestionsmenu").removeChild(suggestionsNode);
 	}
-	let suggestions = resultDictionary[word].result.suggestions;
+	let suggestions = resultDictionary[word].suggestions;
 	if (!suggestions || !suggestions.length) {
 		return;
 	}
