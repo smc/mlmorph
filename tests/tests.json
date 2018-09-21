@@ -1572,5 +1572,17 @@
     {
         "word": "പറയുകയും",
         "analysis": "പറയുക<v>ഉം<cnj>"
+    },
+    {
+        "word": "പത്തു",
+        "analysis": "ഒന്ന്<tens><cardinal><adj>"
+    },
+    {
+        "word": "പത്തുതത്ത",
+        "analysis": "ഒന്ന്<tens><cardinal><adj>തത്ത<n>"
+    },
+    {
+        "word": "അഞ്ചിനം",
+        "analysis": "അഞ്ച്<ones><cardinal><adj>ഇനം<n>"
     }
 ]

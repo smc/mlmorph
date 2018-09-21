@@ -15,8 +15,9 @@ $PLURAL$ = "<ninfl/plural.a>"
 $NINFL$ = "<ninfl/ninfl.a>"
 $ADJECTIVE$ = "<lexicon/adjectives.a>"
 $POLARITY$ = "<lexicon/polarity.a>"
+$NUMBER$ = "<num.a>"
 
-% Nouns
+% Derived Nouns
 $NOUNFROMVERB$ = "<deriv/noun-from-verb.a>"
 $NOUNFROMNOUN$ = "<deriv/noun-from-noun.a>"
 $NOUNFROMADVERB$ = "<deriv/noun-from-adverb.a>"
@@ -25,9 +26,13 @@ $DERIVEDNOUNS$ = (($VSTEM$ <n> <deriv> ) || $NOUNFROMVERB$) |\
 	( "<verb-adverbs.a>" <n> <deriv> || $NOUNFROMADVERB$ ) |\
 	( ($NSTEM$ [<masculine><feminine><neutral>] <n> <deriv>) || $NOUNFROMNOUN$)
 
-$COMPOUND_NSTEM$ = ( ( ( $NSTEM$ | $PROPERNOUN$ ) <adj>)* ( $NSTEM$ | $PROPERNOUN$ ) ) |\ % വിശേഷണവിശേഷ്യങ്ങൾ
+$ordinal_forms$= ({}:{ആം}|{}:{ആമത്തെ}|{}:{ആമത്}|{}:{ആമതു്}) <ordinal>
+$NUMBERIC$ = $NUMBER$ $ordinal_forms$?
+
+% Agglutination
+$COMPOUND_NSTEM$ = ( ( ( $NSTEM$ | $PROPERNOUN$ | $NUMBER$ ) <adj>)* ( $NSTEM$ | $PROPERNOUN$ ) ) |\ % വിശേഷണവിശേഷ്യങ്ങൾ
 	( $NSTEM$ <coordinative> $NSTEM$ ) % ദ്വന്ദസമാസം - ആനകുതിര, അച്ഛനമ്മ..
-$SINGULAR_NOUN$ = $COMPOUND_NSTEM$ | $PRONOUN$ | $ABBREV$ | $BORROWED$ | $DERIVEDNOUNS$
+$SINGULAR_NOUN$ = $COMPOUND_NSTEM$ | $PRONOUN$ | $ABBREV$ | $BORROWED$ | $DERIVEDNOUNS$ | $NUMBERIC$
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 
 $SUFFIXES$ = $POSTPOSITIONS$ | $CONJUNCTION$ | $POLARITY$
@@ -38,7 +43,9 @@ $NOUN$ = $DEM$ |\
 
 $NOUN$ = $NOUN$ || $NINFL$
 
-$ENDS_WITH_ANUSWARA_FILTER$ = [#AAsym#]+ [#Letters#]+ [ം്] [#POS##Numbers##infl##TMP##BM#]+
+% Derive standalone adjective form for the noun. But do it only if the noun ends with virama or anuswara.
+% To avoid conjunctions ഉം posing as standalone adjective ഉ, demand at least two letters before virama or vowel.
+$ENDS_WITH_ANUSWARA_FILTER$ = [#AAsym#]+ [#Letters#]+ [#Letters#] [ം്] [#POS##Numbers##infl##TMP##BM#]+
 $ADJ_CANDIDATES$ = $NOUN$ || $ENDS_WITH_ANUSWARA_FILTER$
 $ADJ_PART$ = ( $ADJ_CANDIDATES$ <adj>) || "<ninfl/standalone-adjective.a>"
 $NOUN$ = $NOUN$ | $ADJ_PART$

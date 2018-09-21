@@ -8,7 +8,7 @@
 
 ALPHABET = [#Letters##POS##BM##TMP##Lsym##Numbers##compounds#] <del> <pl> <infl_marker>
 
-#inflboundary# = #POS##BM##TMP#
+#inflboundary# = #POS##BM##TMP##Numbers#
 
 $adj-anuswara-delete$ = {[#Anuswara#]}:{} ^-> ([#Letters#]+ __ [#inflboundary#]+ <adj> )
 
