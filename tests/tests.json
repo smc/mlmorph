@@ -1588,5 +1588,13 @@
     {
         "word": "അഞ്ചിനപ്പരിപാടി",
         "analysis": "അഞ്ച്<ones><cardinal><adj>ഇനം<n><adj>പരിപാടി<n>"
+    },
+    {
+        "word": "പ്രോഗ്രാമിന്റെ",
+        "analysis": "പ്രോഗ്രാം<eng><genitive>"
+    },
+    {
+        "word": "പ്രോഗ്രാമിനെ",
+        "analysis": "പ്രോഗ്രാം<eng><accusative>"
     }
 ]

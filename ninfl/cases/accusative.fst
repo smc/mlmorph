@@ -23,9 +23,10 @@ $accusative-chillus$ = {<accusative>}:{ഇനെ<infl_marker>} ^-> ([ർൻൺ�
 $accusative$ = $accusative$ || $accusative-cons-vowels-LL$ || $accusative-chillus$
 
 $accusative-anuswara-forms$ = {<accusative>}:{<del>ത്തെ<infl_marker>} | {<accusative>}:{<del>ത്തിനെ<infl_marker>}
-$accusative-anuswara-step1$ = $accusative-anuswara-forms$ ^-> ([#Anuswara#] [#inflboundary#]+ __)
-$accusative-anuswara-step2$ = {[#Anuswara#]}:{} ^-> (__ [#inflboundary#]+ <del> )
-$accusative-anuswara$ =  $accusative-anuswara-step1$ || $accusative-anuswara-step2$
+$accusative-anuswara-1$ = $accusative-anuswara-forms$ ^-> ([#Consonants#] [#Anuswara#] [#inflboundary#]+ __)
+$accusative-anuswara-2$ = {<accusative>}:{ഇനെ<infl_marker>} ^-> ([#VowelSigns#] [#Anuswara#] [#inflboundary#]+ __)
+$accusative-anuswara-del$ = {[#Anuswara#]}:{} ^-> (__ [#inflboundary#]+ <del> )
+$accusative-anuswara$ =  $accusative-anuswara-1$ || $accusative-anuswara-2$ || $accusative-anuswara-del$
 $accusative$ = $accusative$ || $accusative-anuswara$
 
 %$tests$ = മഴ<n><RB><accusative> | മുറ്റം<n><RB><accusative> |  കിളി<n><RB><accusative> | താൻ<prn><RB><accusative> | ജനങ്ങൾ<del><RB><accusative>

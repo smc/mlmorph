@@ -38,8 +38,9 @@ $genitive$ = $genitive$ || $genitive-cons-vowels$
 $genitive-half-cons$ = {<genitive>}:{ഇന്റെ<infl_marker>} ^-> ([#Virama#] [#inflboundary#]+ __)
 $genitive$ = $genitive$ || $genitive-half-cons$
 
-$genitive-anuswara$ =  {<genitive>}:{<del>ത്തിന്റെ<infl_marker>} ^-> ([#Anuswara#] [#inflboundary#]+ __)
-$genitive-anuswara$ = $genitive-anuswara$ || $genitive-del$
+$genitive-anuswara-1$ =  {<genitive>}:{<del>ത്തിന്റെ<infl_marker>} ^-> ([#Consonants#] [#Anuswara#] [#inflboundary#]+ __)
+$genitive-anuswara-2$ =  {<genitive>}:{ഇന്റെ<infl_marker>} ^-> ([#VowelSigns#] [#Anuswara#] [#inflboundary#]+ __)
+$genitive-anuswara$ = $genitive-anuswara-1$ || $genitive-anuswara-2$ || $genitive-del$
 $genitive$ = $genitive$ || $genitive-anuswara$
 
 % ൻ - ന്റെ ആവുന്നു. നുടെ എന്നുമാകാം. ഭടൻ - ഭടന്റെ, ഭടനുടെ
