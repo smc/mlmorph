@@ -1596,5 +1596,13 @@
     {
         "word": "പ്രോഗ്രാമിനെ",
         "analysis": "പ്രോഗ്രാം<eng><accusative>"
+    },
+    {
+        "word": "ശിവാ",
+        "analysis": "ശിവൻ<np><vocative>"
+    },
+    {
+        "word": "ശിവനേ",
+        "analysis": "ശിവൻ<np><vocative>"
     }
 ]
