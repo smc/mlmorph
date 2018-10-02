@@ -30,8 +30,11 @@ $ordinal_forms$= ({}:{ആം}|{}:{ആമത്തെ}|{}:{ആമത്}|{}:{ആ�
 $NUMBERIC$ = $NUMBER$ $ordinal_forms$?
 
 % Agglutination
-$COMPOUND_NSTEM$ = ( ( ( $NSTEM$ | $PROPERNOUN$ | $NUMBER$ ) <adj>)* ( $NSTEM$ | $PROPERNOUN$ ) ) |\ % വിശേഷണവിശേഷ്യങ്ങൾ
-	( $NSTEM$ <coordinative> $NSTEM$ ) % ദ്വന്ദസമാസം - ആനകുതിര, അച്ഛനമ്മ..
+$ALL_NOUNS$ = $NSTEM$ | $PROPERNOUN$ | $NUMBER$
+$AGGLUTINATED_NOUN$ = ( $ALL_NOUNS$ <adj> )* ( $NSTEM$ | $PROPERNOUN$ )  % വിശേഷണവിശേഷ്യങ്ങൾ
+$COORDINATIVE_NOUN$ = $NSTEM$ <coordinative> $NSTEM$ % ദ്വന്ദസമാസം - ആനകുതിര, അച്ഛനമ്മ..
+$COMPOUND_NSTEM$ = $AGGLUTINATED_NOUN$ | $COORDINATIVE_NOUN$
+
 $SINGULAR_NOUN$ = $COMPOUND_NSTEM$ | $PRONOUN$ | $ABBREV$ | $BORROWED$ | $DERIVEDNOUNS$ | $NUMBERIC$
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 
@@ -46,7 +49,9 @@ $NOUN$ = $NOUN$ || $NINFL$
 % Derive standalone adjective form for the noun. But do it only if the noun ends with virama or anuswara.
 % To avoid conjunctions ഉം posing as standalone adjective ഉ, demand at least two letters before virama or vowel.
 $ENDS_WITH_ANUSWARA_FILTER$ = [#AAsym#]+ [#Letters#]+ [#Letters#] [ം്] [#POS##Numbers##infl##TMP##BM#]+
-$ADJ_CANDIDATES$ = $NOUN$ || $ENDS_WITH_ANUSWARA_FILTER$
+% Note that we are not considering all nouns and their inflected,agglutinated forms here to prevent
+% size of automata growing larger. We use the noun stems alone.
+$ADJ_CANDIDATES$ = $ALL_NOUNS$ || $ENDS_WITH_ANUSWARA_FILTER$
 $ADJ_PART$ = ( $ADJ_CANDIDATES$ <adj>) || "<ninfl/standalone-adjective.a>"
 $NOUN$ = $NOUN$ | $ADJ_PART$
 
