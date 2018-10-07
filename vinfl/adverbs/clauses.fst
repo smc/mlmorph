@@ -25,7 +25,10 @@ $remove-past$ = <past>:<RB> ^-> ([#verbs#]+ __ [<adv-clause-rp-past>])
 % Examples: വന്ന, പറഞ്ഞ, പോയ, പഠിച്ച
 $verb-suffix-map$ = {ു}:{} | {ി} : {ിയ}
 
-$adv-clause-rp-past-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <adv-clause-rp-past> )
+$adv-clause-rp-past-form-general$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <adv-clause-rp-past> )
+$past-form-exceptions$ = {പോയി}: {പോയ}
+$adv-clause-rp-past-form-exceptions$ = $past-form-exceptions$ ^-> ( __ [#BM##TMP##verbs#<past>]+ <adv-clause-rp-past> )
+$adv-clause-rp-past-form$ = $adv-clause-rp-past-form-exceptions$ || $adv-clause-rp-past-form-general$
 $adv-clause-rp-past$ = $fake-past$ || $past-tense$ || $adv-clause-rp-past-form$ || $remove-past$
 
 $verb-suffix-map$ = {ുക}:{ാഞ്ഞ} | {ിക}:{ാഞ്ഞ}

@@ -1550,6 +1550,10 @@
         "analysis": "വരുക<v><cont-perfect-aspect-neg>"
     },
     {
+        "word": "പോയ",
+        "analysis": "പോകുക<v><adv-clause-rp-past>"
+    },
+    {
         "word": "വരാതിരിക്കുന്ന",
         "analysis": "വരുക<v><cont-perfect-aspect-neg><adv-clause-rp-past>"
     },
