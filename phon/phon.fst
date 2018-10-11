@@ -7,6 +7,7 @@ ALPHABET = [#Ssym#] [#BM##POS##Numbers##TMP##Lsym##compounds#]:<>
 $delete-pos$ = .*
 
 $PHON$ = "<exceptions.a>" \
+	|| "<verb-negation.a>" \
 	|| "<chillu-normalization.a>" \
 	|| "<vowelsign-consonant.a>" \
 	|| "<consonant-consonant.a>" \
