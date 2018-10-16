@@ -47,9 +47,10 @@ $cont-perfect-aspect-neg$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants
 % an unspecified time in the past, far removed from the present.
 
 $remote-perfect-aspect$ = {<remote-perfect-aspect>}:{ഇട്ട്<infl_marker>} |\
-	{<remote-perfect-aspect>}:{ഇട്ടു്<infl_marker>}
+	{<remote-perfect-aspect>}:{ഇട്ടു്<infl_marker>} |\
+	{<remote-perfect-aspect>}:{ഇട്ടു<infl_marker>}
 
-$verb-suffix-map$ = {ുക}:{ാഞ്ഞിട്ട്} | {ുക}:{ാഞ്ഞിട്ടു്}
+$verb-suffix-map$ = {ുക}:{ാഞ്ഞിട്ട്} | {ുക}:{ാഞ്ഞിട്ടു്} | {ുക}:{ാഞ്ഞിട്ടു}
 $remote-perfect-aspect-neg$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <remote-perfect-aspect-neg> )
 
 % ----------
