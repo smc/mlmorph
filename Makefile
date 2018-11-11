@@ -7,7 +7,7 @@ include Makefile.inc
 all: malayalam.a
 
 malayalam.a: morph.a afilter.a
-noun.a: ninfl lexicon deriv phon num.a
+noun.a: ninfl lexicon deriv phon num.a verb.a
 verb.a: vinfl lexicon phon
 morph.a: verb.a noun.a num.a
 subdirs: $(SUBDIRS)

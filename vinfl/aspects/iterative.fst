@@ -11,7 +11,7 @@
 ALPHABET = [#Letters##POS##BM##TMP##infl#]
 
 $converb-past$ = "<../adverbs/converb-past.a>"
-#iterative-aspects# = <iterative-past-aspect><iterative-present-aspect><iterative-future-aspect> \
+#iterative-aspects# = <iterative-aspect><iterative-past-aspect><iterative-present-aspect><iterative-future-aspect> \
 	<emphatic-iterative-past-aspect><emphatic-iterative-present-aspect><emphatic-iterative-future-aspect>
 
 % We need to wrap the verb into past form first. For that, fake a past tag and pass
@@ -21,10 +21,11 @@ $converb-past$ = "<../adverbs/converb-past.a>"
 $fake-converb-past$ = {<RB>}:{<RB><cvb-adv-part-past>} ^-> ([#verbs#]+ __ [#iterative-aspects#])
 $remove-converb-past$ = <cvb-adv-part-past>:<RB> ^-> ([#verbs#]+ __ [#iterative-aspects#])
 
+$iterative-aspect$ = {<iterative-aspect>}:{കൊണ്ടിരിക്കുക<infl_marker>} ^-> ([#POS##BM##TMP#<cvb-adv-part-past>]+ __ )
 $iterative-past-aspect$ = {<iterative-past-aspect>}:{കൊണ്ടിരുന്നു<infl_marker>} ^-> ([#POS##BM##TMP#<cvb-adv-part-past>]+ __ )
 $iterative-present-aspect$ = {<iterative-present-aspect>}:{കൊണ്ടിരിക്കുന്നു<infl_marker>} ^-> ([#POS##BM##TMP#<cvb-adv-part-past>]+ __ )
 $iterative-future-aspect$ = {<iterative-future-aspect>}:{കൊണ്ടിരിക്കും<infl_marker>} ^-> ([#POS##BM##TMP#<cvb-adv-part-past>]+ __ )
-$iterative-aspect$ = $iterative-past-aspect$ || $iterative-present-aspect$ || $iterative-future-aspect$
+$iterative-aspect$ = $iterative-aspect$ || $iterative-past-aspect$ || $iterative-present-aspect$ || $iterative-future-aspect$
 
 % --------------------------------------------------------------------------------
 % == Emphatic iterative aspect ==

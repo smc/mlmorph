@@ -1624,5 +1624,9 @@
     {
         "word": "പോകത്തില്ല",
         "analysis": "പോകുക<v>ഇല്ല<neg>"
+    },
+    {
+        "word": "പാടിക്കൊണ്ടിരിക്കൽ",
+        "analysis": "പാടുക<v><iterative-aspect><n><deriv>"
     }
 ]

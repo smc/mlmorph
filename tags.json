@@ -170,6 +170,10 @@
 		"tag": "Habitual aspect"
 	},
 	{
+		"id": "iterative-aspect",
+		"tag": "Iterative aspect"
+	},
+	{
 		"id": "iterative-past-aspect",
 		"tag": "Past iterative aspect"
 	},

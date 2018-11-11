@@ -43,7 +43,7 @@
 
 #aspects# = <simple-perfect-aspect><cont-perfect-aspect><remote-perfect-aspect> \
 	<simple-perfect-aspect-neg><cont-perfect-aspect-neg><remote-perfect-aspect-neg> \
-	<habitual-aspect><iterative-past-aspect><iterative-present-aspect><iterative-future-aspect> \
+	<habitual-aspect><iterative-aspect><iterative-past-aspect><iterative-present-aspect><iterative-future-aspect> \
 	<emphatic-iterative-past-aspect><emphatic-iterative-present-aspect><emphatic-iterative-future-aspect>
 
 #moods# = <imperative-mood><compulsive-mood><compulsive-mood-neg><promissive-mood> \

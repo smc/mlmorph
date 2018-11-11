@@ -16,13 +16,14 @@ $NINFL$ = "<ninfl/ninfl.a>"
 $ADJECTIVE$ = "<lexicon/adjectives.a>"
 $POLARITY$ = "<lexicon/polarity.a>"
 $NUMBER$ = "<num.a>"
+$VERB$ = "<verb.a>"
 
 % Derived Nouns
 $NOUNFROMVERB$ = "<deriv/noun-from-verb.a>"
 $NOUNFROMNOUN$ = "<deriv/noun-from-noun.a>"
 $NOUNFROMADVERB$ = "<deriv/noun-from-adverb.a>"
 
-$DERIVEDNOUNS$ = (($VSTEM$ <n> <deriv> ) || $NOUNFROMVERB$) |\
+$DERIVEDNOUNS$ = (($VERB$ <n> <deriv> ) || $NOUNFROMVERB$) |\
 	( "<verb-adverbs.a>" <n> <deriv> || $NOUNFROMADVERB$ ) |\
 	( ($NSTEM$ [<masculine><feminine><neutral>] <n> <deriv>) || $NOUNFROMNOUN$)
 
@@ -57,5 +58,7 @@ $NOUN$ = $NOUN$ | $ADJ_PART$
 
 % $test$ = വഴി<n><RB><locative>കൂടി<cnj><RB> |  വഴി<n><RB><locative>
 % $ $test$ || $NOUN$ >> "noun.test.a"
+
+$VERB$ <n> <deriv> >> "verb-noun-deriv.a"
 
 $NOUN$ $INDECLINABLE$?
