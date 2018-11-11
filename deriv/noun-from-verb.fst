@@ -34,7 +34,7 @@ $noun-forms$ = {രുക}: {രൽ} |\
 	{തുക} : {ത്ത്} | {തുക} : {ത്തു്} |\
 	{ഴുക} : {ഴ്ച}
 
-$nouns$ = $noun-forms$ ^-> ([#Letters#]+ __ [#POS##BM##Numbers##TMP#]+ <n> <deriv> )
+$nouns$ = $noun-forms$ ^-> ([#Letters#]+ __ [#POS##BM##TMP##vinfl#]+ <n> <deriv> )
 
 % Incomplete.
 % Refer: കേരളപാണിനീയം - കൃതികൃത്തുക്കൾ. 20 പ്രത്യയങ്ങൾ
