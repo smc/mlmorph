@@ -128,9 +128,9 @@ class Mlmorph:
             'adv': 3,
             'adj': 4,
             'prn': 5,
-            # Prefer മുൻവിനയെച്ചം before past wherever possible
+            # Favor cvb-adv-part-past മുൻവിനയെച്ചം without using its length
             'past' : 4,
-            'cvb-adv-part-past': 3,
+            'cvb-adv-part-past': 5,
             # Proper noun has high cost
             'np': 5
         }
