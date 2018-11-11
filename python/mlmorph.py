@@ -105,21 +105,43 @@ class Mlmorph:
         return result
 
     def get_weight(self, analysis):
+        """Analysis with less weight is the best analysis."""
         morpheme_length = len(analysis)
         weight = morpheme_length*100
         for i in range(morpheme_length):
             pos = analysis[i]['pos']
             root = analysis[i]['root']
             for j in range(len(pos)):
-                weight += len(pos)*5 + len(root)*5 + len(pos[j])
+                # In general, favor simplicity
+                # Prefer analysis with less number of tags
+                # Prefer anaysis with small length roots
+                weight += len(pos)*5 + len(root)*2 + self.get_pos_weight(pos[j])*3
         return weight
 
+    def get_pos_weight(self, pos):
+        """Get the relative weight of a pos tag. Less weight is the preferred pos tag."""
+        WEIGHTS = {
+            # Prefer verbs than nouns
+            'v': 1,
+            'n': 2,
+            # Among three letter codes, prefer adv. Then adj, Then pronoun
+            'adv': 3,
+            'adj': 4,
+            'prn': 5,
+            # Prefer മുൻവിനയെച്ചം before past wherever possible
+            'past' : 4,
+            'cvb-adv-part-past': 3,
+            # Proper noun has high cost
+            'np': 5
+        }
+        # Use the WEIGHTS or fallback to length
+        return WEIGHTS.get(pos, len(pos))
 
 def main():
     """Invoke a simple CLI analyser or generator."""
     a = ArgumentParser()
     a.add_argument('-f', '--fsa', metavar='FSAPATH',
-                   help="Path to directory of libhfst format automata")
+                   help="Path to the automata")
     a.add_argument('-i', '--input', metavar="INFILE", type=open,
                    dest="infile", help="source of analysis data")
     a.add_argument('-a', '--analyse', action='store_true',
