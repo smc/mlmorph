@@ -2,8 +2,6 @@
 
 #include "../symbols.fst"
 
-ALPHABET = [#AAsym#]
-
 % ഉദാഹരണം: ഓടൽ, കരയൽ, മറിയൽ, പുകയൽ, ഉറങ്ങൽ, പിടച്ചിൽ
 
 % Verbal nouns that are unmarked for tense are formed through the addition of one
@@ -36,7 +34,7 @@ $noun-forms$ = {രുക}: {രൽ} |\
 	{തുക} : {ത്ത്} | {തുക} : {ത്തു്} |\
 	{ഴുക} : {ഴ്ച}
 
-$nouns$ = $noun-forms$ ^-> ([#Letters#]+ __ [#POS##BM##TMP##vinfl#]+ <n> <deriv> )
+$nouns$ = ( [#Letters##POS##BM##Numbers##TMP##vinfl#]+ $noun-forms$ [#POS##BM##TMP##infl#]+ <n> <deriv> )
 
 % Incomplete.
 % Refer: കേരളപാണിനീയം - കൃതികൃത്തുക്കൾ. 20 പ്രത്യയങ്ങൾ

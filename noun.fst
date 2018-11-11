@@ -23,7 +23,7 @@ $NOUNFROMVERB$ = "<deriv/noun-from-verb.a>"
 $NOUNFROMNOUN$ = "<deriv/noun-from-noun.a>"
 $NOUNFROMADVERB$ = "<deriv/noun-from-adverb.a>"
 
-$DERIVEDNOUNS$ = (($VERB$ <n> <deriv> ) || $NOUNFROMVERB$) |\
+$DERIVEDNOUNS$ = (($VERB$+ <n> <deriv> ) || $NOUNFROMVERB$) |\
 	( "<verb-adverbs.a>" <n> <deriv> || $NOUNFROMADVERB$ ) |\
 	( ($NSTEM$ [<masculine><feminine><neutral>] <n> <deriv>) || $NOUNFROMNOUN$)
 

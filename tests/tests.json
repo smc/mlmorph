@@ -1628,5 +1628,13 @@
     {
         "word": "പാടിക്കൊണ്ടിരിക്കൽ",
         "analysis": "പാടുക<v><iterative-aspect><n><deriv>"
+    },
+    {
+        "word": "ചാടിവീഴലിൽ",
+        "analysis": "ചാടുക<v><cvb-adv-part-past>വീഴുക<v><n><deriv><locative>"
+    },
+    {
+        "word": "കത്തിത്തീരലിനെയാണ്",
+        "analysis": "കത്തുക<v><cvb-adv-part-past>തീരുക<v><n><deriv><accusative>ആണ്<aff>"
     }
 ]
