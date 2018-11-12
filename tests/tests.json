@@ -1636,5 +1636,9 @@
     {
         "word": "കത്തിത്തീരലിനെയാണ്",
         "analysis": "കത്തുക<v><cvb-adv-part-past>തീരുക<v><n><deriv><accusative>ആണ്<aff>"
+    },
+    {
+        "word": "സന്തോഷെല്ലാം",
+        "analysis": "സന്തോഷ്<np>എല്ലാം<quantifier>"
     }
 ]

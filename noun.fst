@@ -5,6 +5,7 @@ $NSTEM$ = "<lexicon/nouns.a>"
 $PRONOUN$ = "<lexicon/pronouns.a>"
 $PROPERNOUN$ = "<lexicon/proper-nouns.a>"
 $CONJUNCTION$ = "<lexicon/conjunctions.a>"
+$QUANTIFIERS$ = "<lexicon/quantifiers.a>"
 $POSTPOSITIONS$ = "<lexicon/postpositions.a>"
 $INDECLINABLE$ = "<lexicon/indeclinables.a>"
 $ABBREV$ = "<lexicon/abbreviations.a>"
@@ -39,7 +40,7 @@ $COMPOUND_NSTEM$ = $AGGLUTINATED_NOUN$ | $COORDINATIVE_NOUN$
 $SINGULAR_NOUN$ = $COMPOUND_NSTEM$ | $PRONOUN$ | $ABBREV$ | $BORROWED$ | $DERIVEDNOUNS$ | $NUMBERIC$
 $PLURAL_NOUN$ = $SINGULAR_NOUN$ <pl> || $PLURAL$
 
-$SUFFIXES$ = $POSTPOSITIONS$ | $CONJUNCTION$ | $POLARITY$
+$SUFFIXES$ = $POSTPOSITIONS$ | $CONJUNCTION$ | $POLARITY$ | $QUANTIFIERS$
 $SUFFIXES$ = $SUFFIXES$? $SUFFIXES$ % Atmost 2 times
 
 $NOUN$ = $DEM$ |\
