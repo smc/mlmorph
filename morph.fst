@@ -30,7 +30,7 @@ $VERB$ = "<verb.a>"
 
 $NOUN_VERB_COMPOUNDS$ = $NOUNS$ <v-n-compound> $VERB$ %വീട്ടിലെത്തി, വണ്ടികയറി
 $WORD$ = $MISC$? ( $NOUNS$ \
-	| $VERB$+ $INDECLINABLE$? \
+	| $VERB$ $INDECLINABLE$? \
 	| $NOUN_VERB_COMPOUNDS$ \
 	| $POSTPOSITIONS$ \
 	| $INTERJECTION$ \

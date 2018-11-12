@@ -38,4 +38,4 @@ $VSTEM-CAUSATIVE$ >> "vstem-causative.test.a"
 $VERB-ADVERBS-FROM-INFLECTIONS$ >> "verb-adverbs.test.a"
 ചിരിക്കുക<v><RB>  [#vinfl#]? || $ASPECTS$ >> "vstem-aspects.a"
 
-$VERB$
+$VERB$+
