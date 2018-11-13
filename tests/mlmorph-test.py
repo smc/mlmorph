@@ -3,6 +3,8 @@ import unittest
 import sys
 import os
 import time
+import glob
+
 from collections import Counter
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 sys.path.insert(0, '../python')
@@ -69,14 +71,15 @@ class AnalyserGeneratorTests(unittest.TestCase):
                         match, True, 'Generate for ' + test.analysis)
 
     def test_total_coverage(self):
+        print('\t**** Coverage tests ****\t')
         start = time.clock()
         tokens_count = 0
         analysed_tokens_count = 0
         missed_words = []
-        for file_number in range(1,24):
-            file = 'coverage/{0:d}.txt'.format(file_number)
-            with open(file, 'r') as f:
-                for line in f:
+
+        for filename in glob.glob("coverage/*.txt"):
+            with open(filename, 'r') as file:
+                for line in file:
                     for word in line.split():
                         tokens_count += 1
                         analysis = self.mlmorph.analyse(word, False)
