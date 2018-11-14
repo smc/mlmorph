@@ -4,6 +4,7 @@ import sys
 import os
 import time
 import glob
+import re
 
 from collections import Counter
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
@@ -71,7 +72,7 @@ class AnalyserGeneratorTests(unittest.TestCase):
                         match, True, 'Generate for ' + test.analysis)
 
     def test_total_coverage(self):
-        print('\t**** Coverage tests ****\t')
+        print('\t**** Coverage tests ****\t\n')
         start = time.clock()
         tokens_count = 0
         analysed_tokens_count = 0
@@ -81,6 +82,8 @@ class AnalyserGeneratorTests(unittest.TestCase):
             with open(filename, 'r') as file:
                 for line in file:
                     for word in line.split():
+                        if re.compile(r'[a-zA-Z0-9]').match(word):
+                            continue
                         tokens_count += 1
                         analysis = self.mlmorph.analyse(word, False)
                         if len(analysis) > 0:
@@ -89,12 +92,14 @@ class AnalyserGeneratorTests(unittest.TestCase):
                             missed_words.append(word)
         percentage = (analysed_tokens_count/tokens_count)*100
         time_taken = time.clock() - start
-        print('\nCoverage test')
         print('Total words: %d \nAnalysed words: %d \nCoverage: %3.2f %% ' %
               (tokens_count, analysed_tokens_count, percentage))
         print('Time taken: %5.3f seconds' % (time_taken))
-        print('Top 50 missed words are:\n%s' %
-              (Counter(missed_words).most_common(50)))
+
+        most_common = Counter(missed_words).most_common(50)
+        print('Top 50 missed words are:' )
+        for word in most_common:
+            print( word )
 
 
 if __name__ == '__main__':
