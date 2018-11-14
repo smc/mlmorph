@@ -213,7 +213,7 @@
     },
     {
         "word": "നിങ്ങൾക്ക്",
-        "analysis": "നിങ്ങൾ<prn><dative>"
+        "analysis": "നീ<prn><pl><dative>"
     },
     {
         "word": "അറിയിച്ചു",
@@ -353,7 +353,7 @@
     },
     {
         "word": "ഞങ്ങളുടെ",
-        "analysis": "ഞങ്ങൾ<prn><genitive>"
+        "analysis": "ഞാൻ<prn><pl><genitive>"
     },
     {
         "word": "തന്നുടെ",
