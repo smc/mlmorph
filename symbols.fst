@@ -30,7 +30,7 @@
 #Perc# = \%
 #Nsep# = \.\,
 #Apos# = \'
-#Punct# = \.\?\!\:\,\;\@\#\^\&\*\(\)\'\"\`\~\>\<\-/–
+#Punct# = \.\?\!\:\,\;\@\#\^\&\*\(\)\'\"\`\~\>\<\-/–\[\]
 
 % analysis symbols for compounding(സമാസം)
 % determinative is Tatpuruṣa, coordinative is Dwanda Samasam, possessive is Bahuvrihi
