@@ -32,10 +32,10 @@ $remove-genitive-ninfl$ = {<genitive>}:{} ^-> (<infl_marker> [#inflboundary#]+ _
 $genitive-exceptions$ = $genitive-exceptions-step1$ || $remove-genitive-ninfl$
 $genitive$ = $genitive-exceptions$
 
-$genitive-cons-vowels$ = {<genitive>}:{യുടെ<infl_marker>} ^-> ([#Consonants##VowelSigns#] [#inflboundary#]+ __)
+$genitive-cons-vowels$ = {<genitive>}:{യുടെ<infl_marker>} ^-> ([#Consonants#ാ ി ീ െ ൈ ോ ൊ ] [#inflboundary#]+ __)
 $genitive$ = $genitive$ || $genitive-cons-vowels$
 
-$genitive-half-cons$ = {<genitive>}:{ഇന്റെ<infl_marker>} ^-> ([#Virama#] [#inflboundary#]+ __)
+$genitive-half-cons$ = {<genitive>}:{ഇന്റെ<infl_marker>} ^-> ([#Virama#ു ൗ ൌ ] [#inflboundary#]+ __)
 $genitive$ = $genitive$ || $genitive-half-cons$
 
 $genitive-anuswara-1$ =  {<genitive>}:{<del>ത്തിന്റെ<infl_marker>} ^-> ([#Consonants#] [#Anuswara#] [#inflboundary#]+ __)
