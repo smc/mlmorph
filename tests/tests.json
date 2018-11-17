@@ -1648,5 +1648,9 @@
     {
         "word": "ദയവുചെയ്തുപോകുക",
         "analysis": "ദയവ്<n><n-v-compound>ചെയ്യുക<v><cvb-adv-part-past>പോകുക<v>"
+    },
+    {
+        "word": "തീർച്ചപ്പെടുത്തി",
+        "analysis": "തീർച്ചപ്പെടുക<v><causative-voice><past>"
     }
 ]
