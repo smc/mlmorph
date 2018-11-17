@@ -34,7 +34,7 @@
 
 % analysis symbols for compounding(സമാസം)
 % determinative is Tatpuruṣa, coordinative is Dwanda Samasam, possessive is Bahuvrihi
-#compounds# = <coordinative><determinative><possessive><v-n-compound>
+#compounds# = <coordinative><determinative><possessive><n-v-compound>
 
 % analysis symbols for inflectional suffixes
 #ninfl# = <accusative><vocative><nominative><genitive><dative>\

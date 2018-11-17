@@ -10,6 +10,7 @@ $INTERJECTION$ = "<lexicon/interjections.a>"
 $POSTPOSITIONS$ = "<lexicon/postpositions.a>"
 $INDECLINABLE$ = "<lexicon/indeclinables.a>"
 $QUANTIFIERS$ = "<lexicon/quantifiers.a>"
+$ADJ$= "<lexicon/adjectives.a>"
 $QUESTION$ = "<lexicon/questions.a>"
 $POLARITY$ = "<lexicon/polarity.a>"
 $CONJUNCTION$ = "<lexicon/conjunctions.a>"
@@ -28,11 +29,12 @@ $NOUNS$ = "<noun.a>"
 % Verbs
 $VERB$ = "<verb.a>"
 
-$NOUN_VERB_COMPOUNDS$ = $NOUNS$ <v-n-compound> $VERB$ %വീട്ടിലെത്തി, വണ്ടികയറി
+$NOUN_VERB_COMPOUNDS$ = $NOUNS$ <n-v-compound> $VERB$ %വീട്ടിലെത്തി, വണ്ടികയറി
 $WORD$ = $MISC$? ( $NOUNS$ \
 	| $VERB$ $INDECLINABLE$? \
 	| $NOUN_VERB_COMPOUNDS$ \
 	| $POSTPOSITIONS$ \
+	| $ADJ$ \
 	| $INTERJECTION$ \
 	| $QUESTION$ $CONJUNCTION$? $POLARITY$? \
 	| $POLARITY$ $CONJUNCTION$? \

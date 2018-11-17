@@ -364,7 +364,7 @@
 		"tag": "Lakhs"
 	},
 	{
-		"id":"v-n-compound",
-		"tag": "Verb noun compound"
+		"id":"n-v-compound",
+		"tag": "Noun verb compound"
 	}
 ]

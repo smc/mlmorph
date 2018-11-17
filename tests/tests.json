@@ -1519,27 +1519,27 @@
     },
     {
         "word": "വീടുകണ്ടു",
-        "analysis": "വീട്<n><v-n-compound>കാണുക<v><past>"
+        "analysis": "വീട്<n><n-v-compound>കാണുക<v><past>"
     },
     {
         "word": "തെറിപറഞ്ഞു",
-        "analysis": "തെറി<n><v-n-compound>പറയുക<v><past>"
+        "analysis": "തെറി<n><n-v-compound>പറയുക<v><past>"
     },
     {
         "word": "വീട്ടിലെത്തി",
-        "analysis": "വീട്<n><locative><v-n-compound>എത്തുക<v><past>"
+        "analysis": "വീട്<n><locative><n-v-compound>എത്തുക<v><past>"
     },
     {
         "word": "അവരെത്തി",
-        "analysis": "അവർ<prn><v-n-compound>എത്തുക<v><past>"
+        "analysis": "അവർ<prn><n-v-compound>എത്തുക<v><past>"
     },
     {
         "word": "ചിരികണ്ടാൽ",
-        "analysis": "ചിരി<n><v-n-compound>കാണുക<v><conditional-mood>"
+        "analysis": "ചിരി<n><n-v-compound>കാണുക<v><conditional-mood>"
     },
     {
         "word": "വിലയിരുത്താൻ",
-        "analysis": "വില<n><v-n-compound>ഇരിക്കുക<v><causative-voice><purposive-mood>"
+        "analysis": "വില<n><n-v-compound>ഇരിക്കുക<v><causative-voice><purposive-mood>"
     },
     {
         "word": "പറയാഞ്ഞിട്ട്",
@@ -1644,5 +1644,9 @@
     {
         "word": "സന്തോഷെല്ലാം",
         "analysis": "സന്തോഷ്<np>എല്ലാം<quantifier>"
+    },
+    {
+        "word": "ദയവുചെയ്തുപോകുക",
+        "analysis": "ദയവ്<n><n-v-compound>ചെയ്യുക<v><cvb-adv-part-past>പോകുക<v>"
     }
 ]
