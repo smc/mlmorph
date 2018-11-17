@@ -42,4 +42,4 @@ $imperative-mood-3$ = $fake-past$ || $past-tense$ || $imperative-mood-3$ || $rem
 $special_cases$ = {വരുക} : {വാ} | {വരിക} :{വാ} | {തരുക}:{താ} | {തരിക}:{താ} | {പോകുക} : {പോ}
 $imperative-mood-ex$ = $special_cases$ <>:<infl_marker> ^-> ( __ [#POS##BM##TMP#]+ <imperative-mood>)
 
-$imperative-mood-ex$ || ( $imperative-mood-1$ | $imperative-mood-2$ | $imperative-mood-3$ )
+$imperative-mood-ex$ | ( $imperative-mood-1$ | $imperative-mood-2$ | $imperative-mood-3$ )
