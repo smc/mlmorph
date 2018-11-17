@@ -1656,5 +1656,9 @@
     {
         "word": "വരൂ",
         "analysis": "വരുക<v><imperative-mood>"
+    },
+    {
+        "word": "വളരെയേറെ",
+        "analysis": "വളരെ<quantifier>ഏറെ<quantifier>"
     }
 ]
