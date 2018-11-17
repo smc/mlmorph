@@ -127,6 +127,8 @@ class Mlmorph:
             # Among three letter codes, prefer adv. Then adj, Then pronoun
             'adv': 3,
             'adj': 4,
+            'coordinative': 4,
+            'v-n-compound': 4,
             'prn': 5,
             # Favor cvb-adv-part-past മുൻവിനയെച്ചം without using its length
             'past' : 4,
