@@ -82,7 +82,7 @@ class AnalyserGeneratorTests(unittest.TestCase):
             with open(filename, 'r') as file:
                 for line in file:
                     for word in line.split():
-                        if re.compile(r'[a-zA-Z0-9]').match(word):
+                        if re.compile(r'[a-zA-Z0-9\(\)=]').match(word):
                             continue
                         tokens_count += 1
                         analysis = self.mlmorph.analyse(word, False)
@@ -96,8 +96,8 @@ class AnalyserGeneratorTests(unittest.TestCase):
               (tokens_count, analysed_tokens_count, percentage))
         print('Time taken: %5.3f seconds' % (time_taken))
 
-        most_common = Counter(missed_words).most_common(50)
-        print('Top 50 missed words are:' )
+        most_common = Counter(missed_words).most_common(250)
+        print('Top 250 missed words are:' )
         for word in most_common:
             print( word )
 
