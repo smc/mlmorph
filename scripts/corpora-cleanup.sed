@@ -11,13 +11,18 @@ s/ണ്‍/ൺ/g
 # Remove ZWNJ at end of words
 s/\xE2\x80\x8C$//g
 # Remove all other ZWJ
-s/\xE2\x80\x8D$//g
+s/\xE2\x80\x8D//g
+# Remove all soft hyphens
+s/\xC2\xAD//g
 # Replace old au sign with new one
 s/‍ൌ/ൗ/g
 
 #Common mistakes
 s/പക്ഷെ/പക്ഷേ/g
+# ZWNJs
 s/ു‌/ു/g
 s/ി‌/ു/g
 s/ോ‌/ോ/g
 s/ാ‌/ാ/g
+# ൻറെ -> ന്റെ at the end of words
+s/ൻറെ$/ന്റെ/g
