@@ -15,4 +15,4 @@ $(SUBDIRS):
 	$(MAKE) -C $@
 
 test: malayalam.a
-	python3 tests/mlmorph-test.py
+	python setup.py test
