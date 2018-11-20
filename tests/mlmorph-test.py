@@ -4,7 +4,7 @@ import sys
 import os
 import re
 
-from mlmorph import Mlmorph
+from mlmorph import Generator, Analyser
 
 CURR_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
 
@@ -14,7 +14,8 @@ class Struct:
 
 
 class AnalyserGeneratorTests(unittest.TestCase):
-    mlmorph = Mlmorph()
+    generator = Generator()
+    analyser = Analyser()
 
     def setUp(self):
         self.testFile = open(os.path.join(CURR_DIR, 'tests.json'))
@@ -29,7 +30,7 @@ class AnalyserGeneratorTests(unittest.TestCase):
         for test in self.tests:
             line += 1
             with self.subTest(test.word):
-                anals = self.mlmorph.analyse(test.word)
+                anals = self.analyser.analyse(test.word)
                 match = False
                 if not (hasattr(test, 'skip') and test.skip):
                     self.assertTrue(len(anals) != 0,
@@ -52,7 +53,7 @@ class AnalyserGeneratorTests(unittest.TestCase):
             line += 1
             with self.subTest(test.word):
                 match = False
-                gens = self.mlmorph.generate(test.analysis)
+                gens = self.generator.generate(test.analysis)
                 if not (hasattr(test, 'skip') and test.skip):
                     self.assertTrue(
                         len(gens) != 0, 'Generate failed for ' + test.analysis)

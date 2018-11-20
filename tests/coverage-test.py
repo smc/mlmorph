@@ -4,13 +4,13 @@ import unittest
 import re
 import glob
 import time
-from mlmorph import Mlmorph
+from mlmorph import Analyser
 from collections import Counter
 
 CURR_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
 
 class CoverageTests(unittest.TestCase):
-    mlmorph = Mlmorph()
+    analyser = Analyser()
 
     def test_total_coverage(self):
         print('\t**** Coverage tests ****\t\n')
@@ -26,7 +26,7 @@ class CoverageTests(unittest.TestCase):
                         if re.compile(r'[a-zA-Z0-9\(\)=]').match(word):
                             continue
                         tokens_count += 1
-                        analysis = self.mlmorph.analyse(word, False)
+                        analysis = self.analyser.analyse(word, False)
                         if len(analysis) > 0:
                             analysed_tokens_count += 1
                         else:
@@ -41,3 +41,6 @@ class CoverageTests(unittest.TestCase):
         print('Top 250 missed words are:' )
         for word in most_common:
             print( word )
+
+if __name__ == '__main__':
+    unittest.main()
