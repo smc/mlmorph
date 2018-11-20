@@ -7,13 +7,13 @@ os.chdir(os.path.dirname(os.path.realpath(__file__)))
 sys.path.insert(0, '../python')
 sys.path.insert(0, '../')
 
-from mlmorph import Mlmorph
+from mlmorph import Generator, Analyser
 import spellcheck
 
 app = Flask(__name__)
 
-morph = Mlmorph('../malayalam.a')
-
+generator = Generator()
+analyser = Analyser()
 
 @app.route("/")
 def index():
@@ -38,13 +38,13 @@ def do_analyse():
     # real analysis
     for windex in range(len(words)):
         word = words[windex]
-        anals = morph.analyse(word, False)
+        anals = analyser.analyse(word, False)
         anals_results = []
         if len(anals) == 0:
             anals_results = []
         else:
             for aindex in range(len(anals)):
-                anals_results.append(morph.parse_analysis(anals[aindex]))
+                anals_results.append(analyser.parse_analysis(anals[aindex]))
 
         anals_results.sort(key=lambda analysis: analysis['weight'])
         analyse_results[word] = anals_results
@@ -63,7 +63,7 @@ def do_generate():
     infl = request.args.get('infl')
     if infl:
         genInput += '<' + infl + '>'
-    gens = morph.generate(genInput)
+    gens = generator.generate(genInput)
     if len(gens) == 0:
         generate_results.append(genInput)
     for gindex in range(len(gens)):
@@ -84,10 +84,10 @@ def do_spellcheck():
     # real analysis
     for windex in range(len(words)):
         word = words[windex]
-        isCorrect = spellcheck.spellcheck(word, morph)
+        isCorrect = spellcheck.spellcheck(word, analyser)
         suggestions = []
         if not isCorrect:
-            suggestions = spellcheck.getSuggestions(word, morph)
+            suggestions = spellcheck.getSuggestions(word, analyser)
         result[word] = {'correct': isCorrect, 'suggestions': suggestions}
     return jsonify(result)
 
