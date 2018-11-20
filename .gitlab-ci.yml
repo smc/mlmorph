@@ -4,7 +4,7 @@ build:
   stage: build
   before_script:
     - apt-get update -y
-    - apt-get install -y make sfst hfst
+    - apt-get install -y make sfst hfst python3
   script:
     - make
   artifacts:
@@ -16,7 +16,7 @@ test:
   stage: test
   before_script:
     - apt-get update -y
-    - apt-get install -y make sfst hfst locales
+    - apt-get install -y make sfst hfst locales python3
     - locale-gen ml_IN.UTF-8
   script:
     - LC_ALL=ml_IN.UTF-8 make test
