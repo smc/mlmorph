@@ -4,18 +4,21 @@ build:
   stage: build
   before_script:
     - apt-get update -y
-    - apt-get install -y make sfst
+    - apt-get install -y make sfst hfst
   script:
     - make
   artifacts:
     paths:
     - malayalam.a
+    - python/dist/
 
 test:
   stage: test
   before_script:
     - apt-get update -y
-    - apt-get install -y make sfst python3-libhfst python3-regex locales
+    - apt-get install -y make sfst hfst locales
     - locale-gen ml_IN.UTF-8
   script:
     - LC_ALL=ml_IN.UTF-8 make test
+  dependencies:
+    - build
