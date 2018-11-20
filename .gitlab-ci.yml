@@ -6,7 +6,6 @@ build:
     - apt-get update -y
     - apt-get install -y make sfst hfst python3-pip
   script:
-    - alias python=python3
     - make
   artifacts:
     paths:
@@ -20,7 +19,6 @@ test:
     - apt-get install -y make sfst hfst locales python3-pip
     - locale-gen ml_IN.UTF-8
   script:
-    - alias python=python3
     - LC_ALL=ml_IN.UTF-8 make test
   dependencies:
     - build
