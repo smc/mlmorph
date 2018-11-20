@@ -1,10 +1,10 @@
-SUBDIRS = lexicon phon ninfl vinfl deriv
+SUBDIRS = lexicon phon ninfl vinfl deriv python
 
 include Makefile.inc
 
 .PHONY: all subdirs $(SUBDIRS)
 
-all: malayalam.a
+all: malayalam.a python
 
 malayalam.a: morph.a afilter.a
 noun.a: ninfl lexicon deriv phon num.a verb.a
@@ -14,5 +14,7 @@ subdirs: $(SUBDIRS)
 $(SUBDIRS):
 	$(MAKE) -C $@
 
-test: malayalam.a
-	python setup.py test
+test: malayalam.a python
+	@python tests/mlmorph-test.py
+	@python tests/coverage-test.py
+

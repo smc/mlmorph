@@ -1,3 +1,6 @@
+
+
+SHELL := /bin/bash
 DISTNAME=mlmorph-`cat VERSION`
 .DEFAULT_GOAL := all
 FSTC ?= sfst
@@ -15,3 +18,4 @@ endif
 clean:
 	@rm -f *.a *.dot *~ Makefile.bak tests.all *.gen*.txt
 	@for dir in $(SUBDIRS); do  $(MAKE) -C $$dir clean; done
+	@rm -rf build dist
