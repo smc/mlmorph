@@ -1,3 +1,6 @@
 *.a
 *.pdf
 *.dot
+python/mlmorph/data/*.a
+*.egg-info/
+__pycache__/
