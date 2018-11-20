@@ -70,32 +70,8 @@ For more details and a demo, please refer https://thottingal.in/blog/2017/12/10/
 Python Interface
 ===============
 
-CLI interface
--------------
-```bash
-$ python3 mlmorph.py -h
-usage: mlmorph.py [-h] [-f FSAPATH] [-i INFILE] [-a] [-g] [-v]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -f FSAPATH, --fsa FSAPATH
-                        Path to directory of HFST format automata
-  -i INFILE, --input INFILE
-                        source of analysis data
-  -a, --analyse         Analyse the input file strings
-  -g, --generate        Generate the input file strings
-  -v, --verbose         print verbosely while processing
-```
-Example usages: Assumitng words.txt file exist and it has words to analyse as each lines.
-```
-python3 mlmorph.py -f ../malayalam.a -a -i words.txt
-നീലത്താമര	നീല<n>താമര<n>
-ആൽത്തറ	ആൽ<n>തറ<n>
-ആൽത്തറകൾ	ആൽ<n>തറ<n><pl>
-ആനകൾ	ആന<n><pl>
-ആനയെ	ആന<n><accusative>
-```
+See https://pypi.org/project/mlmorph
 
 License
 =======
-This work is licensed under GNU General Public License v3.0. See COPYING file in the source code.
+mlmorph is under MIT license.
