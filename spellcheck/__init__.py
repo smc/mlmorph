@@ -41,8 +41,8 @@ def getSuggestions(word, morph):
     return suggestions
 
 
-def spellcheck(word, morph):
-    analysis = morph.analyse(word, False)
+def spellcheck(word, analyser):
+    analysis = analyser.analyse(word, False)
     if len(analysis) == 0:
         return False
     else:
