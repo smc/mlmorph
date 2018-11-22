@@ -26,11 +26,11 @@ def main():
         if not line or line == '':
             continue
         if options.analyse:
-            anals = analyser.analyse(line)
+            anals = analyser.analyse(line, True)
             if not anals:
                 print(line, "\t?")
             for anal in anals:
-                print(line, "\t", anal[0])
+                print(line, "\t", anal[0], "\t", anal[1])
         if options.generate:
             gens = generator.generate(line)
             if not gens:
