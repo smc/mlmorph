@@ -10,6 +10,7 @@ import regex
 import libhfst
 from pkg_resources import resource_filename, resource_exists
 
+
 def getTransducer(fsa):
     istr = libhfst.HfstInputStream(fsa)
     transducers = []
@@ -17,6 +18,7 @@ def getTransducer(fsa):
         transducers.append(istr.read())
     istr.close()
     return transducers[0]
+
 
 class Analyser:
 
@@ -30,28 +32,23 @@ class Analyser:
             raise ValueError('Could not read the fsa.')
         self.transducer = None
         self.analyser = None
-        self._cached_stamp = 0
         self.analyser_regex = regex.compile(
             r"((?P<root>([^<])+)(?P<tags>(<[^>]+>)+))+")
         self.pos_regex = regex.compile(r"(<(?P<tag>([^>]+))>)+")
 
     def getAnalyser(self):
         if not self.transducer:
-            self.transducer= getTransducer(self.fsa)
+            self.transducer = getTransducer(self.fsa)
         analyser = libhfst.HfstTransducer(self.transducer)
         analyser.invert()
         analyser.remove_epsilons()
         analyser.lookup_optimize()
-        self.analyser = analyser
+        return analyser
 
     def analyse(self, token, weighted=True):
         """Perform a simple morphological analysis lookup. """
-        stamp = os.stat(self.fsa).st_mtime
-        if stamp != self._cached_stamp:
-            self._cached_stamp = stamp
-            self.transducer= getTransducer(self.fsa)
         if not self.analyser:
-            self.getAnalyser()
+            self.analyser = self.getAnalyser()
         analysis_results = self.analyser.lookup(token)
         if not weighted:
             return analysis_results
@@ -97,7 +94,7 @@ class Analyser:
                 # Prefer analysis with less number of tags
                 # Prefer anaysis with small length roots
                 weight += len(pos)*5 + len(root)*2 + \
-                              self.get_pos_weight(pos[j])*3
+                    self.get_pos_weight(pos[j])*3
         return weight
 
     def get_pos_weight(self, pos):
@@ -133,17 +130,12 @@ class Generator:
             raise ValueError('Could not read the fsa.')
         self.transducer = None
         self.generator = None
-        self._cached_stamp = 0
         self.pos_regex = regex.compile(r"(<(?P<tag>([^>]+))>)+")
 
     def generate(self, token):
         """Perform a simple morphological generator lookup."""
-        stamp = os.stat(self.fsa).st_mtime
-        if stamp != self._cached_stamp:
-            self._cached_stamp = stamp
-            self.transducer = getTransducer(self.fsa)
         if not self.generator:
-            self.getGenerator()
+            self.generator = self.getGenerator()
         return self.generator.lookup(token)
 
     def getGenerator(self):
@@ -152,5 +144,4 @@ class Generator:
         generator = libhfst.HfstTransducer(self.transducer)
         generator.remove_epsilons()
         generator.lookup_optimize()
-        self.generator = generator
-
+        return generator
