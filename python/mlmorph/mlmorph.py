@@ -61,7 +61,7 @@ class Analyser:
             parsed_result = self.parse_analysis(analysis_results[aindex])
             processed_result.append(
                 (analysis_results[aindex][0], parsed_result['weight']))
-        return processed_result
+        return sorted(processed_result, key=lambda tup: tup[1])
 
     def parse_analysis(self, analysis_result):
         result = {}
