@@ -4,3 +4,6 @@ all:
 	hfst-fst2fst -F ../malayalam.a > mlmorph/data/malayalam.a
 	python3 setup.py sdist
 	pip3 install -e .
+
+clean:
+	@rm mlmorph/data/*.a
