@@ -541,6 +541,10 @@
         "analysis": "കാണുക<v><past>ഇല്ല<neg>"
     },
     {
+        "word": "തൊഴുതു",
+        "analysis": "തൊഴുക<v><past>"
+    },
+    {
         "word": "കിട്ടാൻ",
         "analysis": "കിട്ടുക<v><cvb-adv-part-future>"
     },
