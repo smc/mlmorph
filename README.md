@@ -1,5 +1,6 @@
 Malayalam Morphological Analyzer using Finite State Transducer
 ==============================================================
+[![PyPI Version](https://img.shields.io/pypi/v/mlmorph.svg)](https://pypi.python.org/pypi/mlmorph)
 
 Introduction
 ------------
