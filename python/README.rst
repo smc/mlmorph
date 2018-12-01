@@ -1,5 +1,8 @@
 Python Interface for Malayalam morphology analyser
 ==================================================
+.. image:: https://img.shields.io/pypi/v/mlmorph.svg
+    :target: https://pypi.python.org/pypi/mlmorph
+    :alt: PyPI Version
 
 This is python interface for the `Malayalam morphology analyser - mlmorph`_.
 
