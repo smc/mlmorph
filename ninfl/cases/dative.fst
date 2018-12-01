@@ -13,7 +13,9 @@ ALPHABET = [#Letters##POS##BM##TMP##Lsym##Numbers#] <dative> <del> <pl> <infl_ma
 $dative-del$ = {[#Anuswara#ൻർ]}:{} ^-> (__ [#inflboundary# ]+ <del> )
 
 % Dative inflection rules മഴയ്ക്ക്, ഇലയ്ക്ക്, കാടിന്, വീടിന്
-$dative-cons-vowel-forms$ = {<dative>}:{യ്ക്ക്<infl_marker>} | {<dative>}:{യ്ക്കു്<infl_marker>} | {<dative>}:{യ്ക്കു<infl_marker>}
+$dative-cons-vowel-forms$ = {<dative>}:{യ്ക്ക്<infl_marker>} | {<dative>}:{യ്ക്കു്<infl_marker>} | {<dative>}:{യ്ക്കു<infl_marker>} | \
+	{<dative>}:{ക്ക്<infl_marker>} | {<dative>}:{യ്കു്<infl_marker>} | {<dative>}:{യ്കു<infl_marker>}
+
 $dative-cons-vowel$ = $dative-cons-vowel-forms$ ^-> ([#Consonants##VowelSigns#] [#inflboundary# ]+ __)
 
 $dative-virama-forms$ = {<dative>}: {ഇന്<infl_marker>} |\
