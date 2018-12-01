@@ -21,7 +21,7 @@ $verb-suffix-map$ = {ുക}:{ൂ} | {ിക}:{ൂ} | \ % Less formal. വരൂ
 
 $imperative-mood-1$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <imperative-mood>)
 
-$verb-suffix-del$ = {ക്കുക}: {} | \ % കേൾ
+$verb-suffix-del$ = {ക്കുക}: {<stop>} | \ % കേൾ
 	{ക്കുക}: {ക്ക} | \ % കേൾക്ക
 	{യുക}: {യ്} % പറയ് തുഴയ്
 $imperative-mood-2$ = $verb-suffix-del$  <>:<infl_marker> ^-> ([#Letters#]+ [#Consonants#]+ __ [#POS##BM##TMP#]+ <imperative-mood>)
@@ -39,7 +39,7 @@ $remove-past$ = <past>:<RB> ^-> ([#verbs#]+ __ [<imperative-mood>])
 $imperative-mood-3$ = $verb-suffix-map-2$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <imperative-mood>)
 $imperative-mood-3$ = $fake-past$ || $past-tense$ || $imperative-mood-3$ || $remove-past$
 
-$special_cases$ = {വരുക} : {വാ} | {വരിക} :{വാ} | {തരുക}:{താ} | {തരിക}:{താ} | {പോകുക} : {പോ}
+$special_cases$ = {വരുക} : {വാ<stop>} | {വരിക} :{വാ<stop>} | {തരുക}:{താ<stop>} | {തരിക}:{താ<stop>} | {പോകുക} : {പോ<stop>}
 $imperative-mood-ex$ = $special_cases$ <>:<infl_marker> ^-> ( __ [#POS##BM##TMP#]+ <imperative-mood>)
 
 $imperative-mood-ex$ | ( $imperative-mood-1$ | $imperative-mood-2$ | $imperative-mood-3$ )
