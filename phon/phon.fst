@@ -23,8 +23,10 @@ $PHON$ = "<exceptions.a>" \
 
 $test$ = <>:<BoW>മാല<n><RB><accusative>:യ<>:എ<del><LB>ഒ<indeclinable><RB><>:<EoW> |\
 	<>:<BoW>മോർ<n><RB><locative>:ഇ<>:ൽ<del><LB>എ<indeclinable><RB><>:<EoW> |\
-	<>:<BoW>മോർ<n><RB><locative>:ഇ<>:ൽ<del><LB>കൂടി<cnj><RB><>:<EoW>
+	<>:<BoW>മോർ<n><RB><locative>:ഇ<>:ൽ<del><LB>കൂടി<cnj><RB><>:<EoW> | \
+	<>:<BoW>ആതി<n><RB><LB>ഇരിക്കുക<v><RB><>:<EoW> | \
+	<>:<BoW>ആതി<n><n-v-compound><RB><LB>ഇരിക്കുക<v><RB><>:<EoW>
 
-% $test$ || $PHON$ >> "phon.test.a"
+$test$ || $PHON$ >> "phon.test.a"
 
 $PHON$

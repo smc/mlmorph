@@ -2,9 +2,9 @@
 
 ALPHABET = [#AAsym#]
 
-#=Y# = ാീെിഎ
+#=Y# = ാ  ീ  െ  ി എ
 $Y$ = {[#=Y#]}:{[#=Y#][യ]}
-$insert-ya$ = $Y$ ^-> (__ [#POS##BM##Numbers##TMP##Lsym#]+ [#Vowels#] )
+$insert-ya$ = $Y$ ^-> (__ [#POS##BM##Numbers##TMP##Lsym##compounds#]+ [#Vowels#] )
 
 % പോയി + ഇല്ല/ഇരുന്നു/ഇരിക്കുക.. -> പോയില്ല/പോയിരുന്നു.. along with പോയിയില്ല...
 $yi-yi-special-case$ = {പോയി}:{പോയ<del>} ^-> (__ [#POS##BM##Numbers##TMP##Lsym#]+ [ഇ] )
@@ -20,7 +20,8 @@ $u-cases$ = $u-change$ ^-> (__ [#POS##BM##Numbers##TMP##Lsym#]+ [#Vowels#] )
 $vowelsign-vowel$ = $yi-yi-special-case$ || $insert-ya$  || $u-cases$
 
 $tests$ = പിടി <hundreds> ആന <Noun> |\
-	നടു<n> ഇൽ<n>
+	നടു<n> ഇൽ<n> |\
+	ആതി<n> ഇരിക്കുക<v>
 % Uncomment below line for testing
-% $tests$ ||\
+$tests$ || $vowelsign-vowel$ || .* >> "vowelsign-vowel.test.a"
 $vowelsign-vowel$ || .*

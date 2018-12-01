@@ -1664,5 +1664,9 @@
     {
         "word": "വളരെയേറെ",
         "analysis": "വളരെ<quantifier>ഏറെ<quantifier>"
+    },
+    {
+        "word": "പിടിയമരുക",
+        "analysis": "പിടി<n><n-v-compound>അമരുക<v>"
     }
 ]
