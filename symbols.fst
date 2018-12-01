@@ -63,6 +63,9 @@
 %%%%% some character classes that are helpful
 #Lsym# = <del><dels><dup><plural><ninfl>
 
+% Stop tag to prevent further agglutination or inflection after the word.
+#Special# = <stop>
+
 % surface symbols
 #Ssym# =#Letters##Digit##Punct##Perc##Nsep##Apos#
 
@@ -76,4 +79,4 @@
 % All analysis symbols, including the intermediate ones.
 %
 
-#AAsym# = #Asym##BM##TMP##Lsym#
+#AAsym# = #Asym##BM##TMP##Lsym##Special#
