@@ -54,14 +54,16 @@ $NOUN$ = $NOUN$ || $NINFL$
 $ADJ_CANDIDATES_FILTER_1$ = [#AAsym#]+ [#Letters#]+ [#Letters#] [ം്] [#POS##Numbers##infl##TMP##BM#]+
 $ADJ_CANDIDATES_FILTER_2$ = [#AAsym#]+ [#Letters#]+ <sanskrit> [#POS##Numbers##infl##TMP##BM#]+
 $ADJ_CANDIDATES_FILTER$ = $ADJ_CANDIDATES_FILTER_1$ | $ADJ_CANDIDATES_FILTER_2$
-% Note that we are not considering all nouns and their inflected,agglutinated forms here to prevent
-% size of automata growing larger. We use the noun stems alone.
-$ADJ_CANDIDATES$ = $ALL_NOUNS$ || $ADJ_CANDIDATES_FILTER$
+$ADJ_CANDIDATES$ = $NOUN$ || $ADJ_CANDIDATES_FILTER$
 $ADJ_PART$ = ( $ADJ_CANDIDATES$ <adj>) || "<ninfl/standalone-adjective.a>"
 $NOUN$ = $NOUN$ | $ADJ_PART$
 
-$test$ = വഴി<n><RB><locative>കൂടി<cnj><RB> | വഴി<n><RB> | വഴി<n><RB><locative> | ആശ<sanskrit><RB> | ആശ<sanskrit><RB><adj>
+$test$ = വഴി<n><RB><locative>കൂടി<cnj><RB> | വഴി<n><RB> | വഴി<n><RB><locative> | \
+	ആശ<sanskrit><RB> | ആശ<sanskrit><RB><adj> | ആശ<sanskrit><RB><adj>ദീപം<n><RB> | \
+	ആശ<sanskrit><RB><adj>ദീപം<n><RB><adj>
+
 $test$ || $NOUN$ >> "noun.test.a"
+% $ADJ_PART$ >> "adj.parts.a"
 
 $VERB$ <n> <deriv> >> "verb-noun-deriv.a"
 

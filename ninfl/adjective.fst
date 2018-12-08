@@ -20,7 +20,7 @@ $adj-i-vowel-elongation$ =( {ി}:{ീ} ) ^-> ([#Consonants#] __ <sanskrit> [#in
 
 $adj$ = $adj-anuswara-delete$ || $adj-a-vowel-elongation$ || $adj-i-vowel-elongation$
 
-$tests$ = ആശ<n><sanskrit><RB><adj> | യുവതി<n><sanskrit><RB><adj>
+$tests$ = ആശ<sanskrit><RB><adj> | യുവതി<sanskrit><RB><adj> | യുവതി<sanskrit><RB><adj>പ്രവേശനം<n><adj><RB>
 $tests$ || $adj$ >> "adjective.test.a"
 
 $adj$

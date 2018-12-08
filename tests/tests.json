@@ -1676,5 +1676,17 @@
     {
         "word": "യുവതീപ്രവേശനം",
         "analysis": "യുവതി<sanskrit><adj>പ്രവേശനം<n>"
+    },
+    {
+        "word": "യുവതീപ്രവേശനവിഷയത്തിൽ",
+        "analysis": "യുവതി<sanskrit><adj>പ്രവേശനം<n><adj>വിഷയം<n><locative>"
+    },
+    {
+        "word": "സാങ്കേതികവിദ്യാ",
+        "analysis": "സാങ്കേതികം<n><adj>വിദ്യ<sanskrit><adj>"
+    },
+    {
+        "word": "ചിന്താശേഷി",
+        "analysis": "സാങ്കേതികം<n><adj>വിദ്യ<sanskrit><adj>"
     }
 ]
