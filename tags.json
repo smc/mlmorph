@@ -22,6 +22,10 @@
 		"url": "http://universaldependencies.org/u/pos/PRON.html"
 	},
 	{
+		"id": "sanskrit",
+		"tag": "Noun - Sanskrit origin"
+	},
+	{
 		"id": "adj",
 		"tag": "Adjective",
 		"url": "http://universaldependencies.org/u/pos/ADJ.html"

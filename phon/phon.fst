@@ -25,7 +25,9 @@ $test$ = <>:<BoW>മാല<n><RB><accusative>:യ<>:എ<del><LB>ഒ<indeclinable
 	<>:<BoW>മോർ<n><RB><locative>:ഇ<>:ൽ<del><LB>എ<indeclinable><RB><>:<EoW> |\
 	<>:<BoW>മോർ<n><RB><locative>:ഇ<>:ൽ<del><LB>കൂടി<cnj><RB><>:<EoW> | \
 	<>:<BoW>ആതി<n><RB><LB>ഇരിക്കുക<v><RB><>:<EoW> | \
-	<>:<BoW>ആതി<n><n-v-compound><RB><LB>ഇരിക്കുക<v><RB><>:<EoW>
+	<>:<BoW>ആതി<n><n-v-compound><RB><LB>ഇരിക്കുക<v><RB><>:<EoW> | \
+	<>:<BoW>ആശാ<n><RB><>:<EoW> |\
+	<>:<BoW>ആശാ<sanskrit><RB><>:<EoW>
 
 $test$ || $PHON$ >> "phon.test.a"
 

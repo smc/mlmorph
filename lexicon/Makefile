@@ -1,7 +1,8 @@
 LEXFILES = nouns.fst proper-nouns.fst pronouns.fst postpositions.fst \
 	adjectives.fst demonstratives.fst adverbs.fst interjections.fst \
 	conjunctions.fst verbs.fst misc.fst abbreviations.fst questions.fst \
-	indeclinables.fst borrowed-words.fst polarity.fst quantifiers.fst
+	indeclinables.fst borrowed-words.fst polarity.fst quantifiers.fst \
+	nouns-sanskrit.fst
 LEXFSAFILES=$(LEXFILES:.fst=.a)
 
 include ../Makefile.inc
@@ -10,6 +11,7 @@ include ../Makefile.inc
 
 all: $(LEXFSAFILES)
 nouns.fst: nouns.lex
+nouns-sanskrit.fst: nouns-sanskrit.lex
 proper-nouns.fst: proper-nouns.lex person-names.lex software-names.lex times.lex places.lex languages.lex
 conjunctions.fst: conjunctions.lex
 abbreviations.fst: abbreviations.lex

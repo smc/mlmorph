@@ -1181,7 +1181,7 @@
     },
     {
         "word": "മലയാളഭാഷ",
-        "analysis": "മലയാളം<np><adj>ഭാഷ<n>"
+        "analysis": "മലയാളം<np><adj>ഭാഷ<sanskrit>"
     },
     {
         "word": "പഞ്ചവർണ്ണത്തത്ത",
@@ -1189,7 +1189,7 @@
     },
     {
         "word": "മലയാളഭാഷയുടെ",
-        "analysis": "മലയാളം<np><adj>ഭാഷ<n><genitive>"
+        "analysis": "മലയാളം<np><adj>ഭാഷ<sanskrit><genitive>"
     },
     {
         "word": "പോയിരുന്നു",
@@ -1668,5 +1668,13 @@
     {
         "word": "പിടിയമരുക",
         "analysis": "പിടി<n><n-v-compound>അമരുക<v>"
+    },
+    {
+        "word": "വനിതാമതിൽ",
+        "analysis": "വനിത<sanskrit><adj>മതിൽ<n>"
+    },
+    {
+        "word": "യുവതീപ്രവേശനം",
+        "analysis": "യുവതി<sanskrit><adj>പ്രവേശനം<n>"
     }
 ]

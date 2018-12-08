@@ -15,4 +15,5 @@ $tests$ =<>:<BoW>പൂവ്<n><>:<RB><>:<EoW><>:<BoW>മണം<n><>:<RB><>:<Eo
 % Uncomment below line for testing
 % $tests$ ||\
 % NOTE: Below order of composition is very important.
-$ta-virama-consonant$ || $virama-consonant$ || $samvruthokaram-consonant$
+
+$ta-virama-consonant$ || $virama-consonant$ || $samvruthokaram-consonant$ || .*

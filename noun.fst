@@ -2,6 +2,7 @@
 #include "symbols.fst"
 
 $NSTEM$ = "<lexicon/nouns.a>"
+$SANSKRIT$ = "<lexicon/nouns-sanskrit.a>"
 $PRONOUN$ = "<lexicon/pronouns.a>"
 $PROPERNOUN$ = "<lexicon/proper-nouns.a>"
 $CONJUNCTION$ = "<lexicon/conjunctions.a>"
@@ -32,8 +33,8 @@ $ordinal_forms$= ({}:{ആം}|{}:{ആമത്തെ}|{}:{ആമത്}|{}:{ആ�
 $NUMBERIC$ = $NUMBER$ $ordinal_forms$?
 
 % Agglutination
-$ALL_NOUNS$ = $NSTEM$ | $PROPERNOUN$ | $NUMBER$
-$AGGLUTINATED_NOUN$ = ( $ALL_NOUNS$ <adj> )* ( $NSTEM$ | $PROPERNOUN$ )  % വിശേഷണവിശേഷ്യങ്ങൾ
+$ALL_NOUNS$ = $NSTEM$ | $PROPERNOUN$ | $NUMBER$ | $SANSKRIT$
+$AGGLUTINATED_NOUN$ = ( $ALL_NOUNS$ <adj> )* ( $NSTEM$ | $PROPERNOUN$ | $SANSKRIT$) % വിശേഷണവിശേഷ്യങ്ങൾ
 $COORDINATIVE_NOUN$ = $NSTEM$ <coordinative> $NSTEM$ % ദ്വന്ദസമാസം - ആനകുതിര, അച്ഛനമ്മ..
 $COMPOUND_NSTEM$ = $AGGLUTINATED_NOUN$ | $COORDINATIVE_NOUN$
 
@@ -50,15 +51,17 @@ $NOUN$ = $NOUN$ || $NINFL$
 
 % Derive standalone adjective form for the noun. But do it only if the noun ends with virama or anuswara.
 % To avoid conjunctions ഉം posing as standalone adjective ഉ, demand at least two letters before virama or vowel.
-$ENDS_WITH_ANUSWARA_FILTER$ = [#AAsym#]+ [#Letters#]+ [#Letters#] [ം്] [#POS##Numbers##infl##TMP##BM#]+
+$ADJ_CANDIDATES_FILTER_1$ = [#AAsym#]+ [#Letters#]+ [#Letters#] [ം്] [#POS##Numbers##infl##TMP##BM#]+
+$ADJ_CANDIDATES_FILTER_2$ = [#AAsym#]+ [#Letters#]+ <sanskrit> [#POS##Numbers##infl##TMP##BM#]+
+$ADJ_CANDIDATES_FILTER$ = $ADJ_CANDIDATES_FILTER_1$ | $ADJ_CANDIDATES_FILTER_2$
 % Note that we are not considering all nouns and their inflected,agglutinated forms here to prevent
 % size of automata growing larger. We use the noun stems alone.
-$ADJ_CANDIDATES$ = $ALL_NOUNS$ || $ENDS_WITH_ANUSWARA_FILTER$
+$ADJ_CANDIDATES$ = $ALL_NOUNS$ || $ADJ_CANDIDATES_FILTER$
 $ADJ_PART$ = ( $ADJ_CANDIDATES$ <adj>) || "<ninfl/standalone-adjective.a>"
 $NOUN$ = $NOUN$ | $ADJ_PART$
 
-% $test$ = വഴി<n><RB><locative>കൂടി<cnj><RB> |  വഴി<n><RB><locative>
-% $ $test$ || $NOUN$ >> "noun.test.a"
+$test$ = വഴി<n><RB><locative>കൂടി<cnj><RB> | വഴി<n><RB> | വഴി<n><RB><locative> | ആശ<sanskrit><RB> | ആശ<sanskrit><RB><adj>
+$test$ || $NOUN$ >> "noun.test.a"
 
 $VERB$ <n> <deriv> >> "verb-noun-deriv.a"
 

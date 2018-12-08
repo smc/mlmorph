@@ -18,4 +18,4 @@ $tests$ = തറ <hundreds> അടി <Noun>
 %$test$ = <>:<BoW>ഓല<n><RB><locative>ഏ<indeclinable><RB><>:<EoW>
 %$test$ || $cons-vowel$  >> "cv.test.a"
 
-$cons-vowel$
+$cons-vowel$ || .*
