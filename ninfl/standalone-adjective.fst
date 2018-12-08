@@ -9,6 +9,6 @@ ALPHABET = [#Letters##POS##BM##TMP##Lsym##Numbers##compounds#] <del> <pl> <infl_
 
 #inflboundary# = #POS##BM##TMP##Numbers#
 
-$pseudo-samvruthokaram-to-u$ = {[#Virama#]}:{ു} ^-> ([#Letters#]+ __ [#inflboundary#]+ <adj> )
+$pseudo-samvruthokaram-to-u$ = {[#Virama#]}:{ു} ^-> ([#Consonants#]+ __ [#inflboundary#]+ <adj> )
 
 "<adjective.a>" || $pseudo-samvruthokaram-to-u$
