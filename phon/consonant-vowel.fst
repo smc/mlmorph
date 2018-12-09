@@ -6,9 +6,12 @@ ALPHABET = [#AAsym#]
 
 #=C# = #Consonants#
 $C$ = {[#=C#]}:{[#=C#][യ]}
-$insert-ya$ =  $C$ ^-> (__ [#POS##BM##Numbers##infl##TMP##Lsym##compounds#]+ [#Vowels#] )
+$insert-ya$ = $C$ ^-> (__ [#MALAYALAMPOS##BM##Numbers##infl##TMP##Lsym##compounds#]+ [#Vowels#] )
 
-$cons-vowel$ = $insert-ya$
+% നത<sanskrit><RB><adj>അംഗി<sanskrit><RB><adj>:നതാംഗി
+$elongate-a-sanskrit$ = {അ}:{ആ} ^-> ([#Consonants#] <sanskrit> [#POS##BM##Numbers##infl##TMP##Lsym##compounds#]+ __ )
+
+$cons-vowel$ = $insert-ya$ || $elongate-a-sanskrit$
 
 $tests$ = തറ <hundreds> അടി <Noun>
 % Uncomment below line for testing

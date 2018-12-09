@@ -18,9 +18,13 @@ $adj-a-vowel-elongation$ = $EC$ ^-> (__ <sanskrit> [#inflboundary#]+ <adj> )
 
 $adj-i-vowel-elongation$ =( {ി}:{ീ} ) ^-> ([#Consonants#] __ <sanskrit> [#inflboundary#]+ <adj> )
 
-$adj$ = $adj-anuswara-delete$ || $adj-a-vowel-elongation$ || $adj-i-vowel-elongation$
+% The order is important since the word without anuswara may get changed in other rules. Hence it is
+% given at the end.
+$adj$ = $adj-a-vowel-elongation$ || $adj-i-vowel-elongation$ || $adj-anuswara-delete$
 
-$tests$ = ആശ<sanskrit><RB><adj> | യുവതി<sanskrit><RB><adj> | യുവതി<sanskrit><RB><adj>പ്രവേശനം<n><adj><RB>
+$tests$ = ആശ<sanskrit><RB><adj> | യുവതി<sanskrit><RB><adj> | യുവതി<sanskrit><RB><adj>പ്രവേശനം<n><adj><RB> | \
+    നതം<sanskrit><RB><adj>അംഗി<sanskrit><RB><adj>
+
 $tests$ || $adj$ >> "adjective.test.a"
 
 $adj$
