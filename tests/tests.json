@@ -1684,5 +1684,13 @@
     {
         "word": "സാങ്കേതികവിദ്യാ",
         "analysis": "സാങ്കേതികം<n><adj>വിദ്യ<sanskrit><adj>"
+    },
+    {
+        "word": "നദീതീരം",
+        "analysis": "നദി<sanskrit><adj>തീരം<n>"
+    },
+    {
+        "word": "ചിന്താശേഷി",
+        "analysis": "ചിന്ത<sanskrit><adj>ശേഷി<sanskrit>"
     }
 ]
