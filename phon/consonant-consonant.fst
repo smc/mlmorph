@@ -10,7 +10,7 @@ $D$ = {[#=D#]}:{[#=D#][#Virama#][#=D#]}
 % ഓല + പീപ്പി=ഓലപ്പീപ്പി
 % ചാണക+പച്ച = ചാണകപ്പച്ച
 
-$dup-cons-hard-cons$ = $D$ ^-> ( [#Consonants#] [#MALAYALAMPOS##BM##Numbers##TMP#]+ __ [#Consonants##Vowels##VowelSigns##Anuswara##Chillus#]+ )
+$dup-cons-hard-cons$ = $D$ ^-> ( [#Consonants#] [#MALAYALAMPOS#<n-v-compound>#BM##Numbers##TMP#]+ __ [#Consonants##Vowels##VowelSigns##Anuswara##Chillus#]+ )
 
 $consonant-consonant$ = $dup-cons-hard-cons$
 

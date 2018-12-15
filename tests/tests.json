@@ -1704,5 +1704,9 @@
     {
         "word": "ഭാഷയിൽ",
         "analysis": "ഭാഷ<sanskrit><locative>"
+    },
+    {
+        "word": "ക്രമപ്പെടുത്തുക",
+        "analysis": "ക്രമം<n><adj><n-v-compound>പെടുക<v><causative-voice>"
     }
 ]
