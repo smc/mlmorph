@@ -7,3 +7,8 @@ all:
 
 clean:
 	@rm mlmorph/data/*.a
+
+upload:
+	rm -rf dist
+	python setup.py sdist
+	twine upload --skip-existing --sign dist/*
