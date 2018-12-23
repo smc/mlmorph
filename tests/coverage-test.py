@@ -23,7 +23,11 @@ class CoverageTests(unittest.TestCase):
             with open(filename, 'r') as file:
                 for line in file:
                     for word in line.split():
-                        if re.compile(r'[a-zA-Z0-9\(\)=]').match(word):
+                        # Ignore all non-Malayalam words
+                        if re.compile(r'[a-zA-Z0-9\(\)=\':]').match(word):
+                            continue
+                        # Ignore all single ligatures.
+                        if re.compile(r'^[ക-ഹഅ-ഔ\.][ാിീുെേൊോൗ്]?[.?:]*$').match(word):
                             continue
                         tokens_count += 1
                         analysis = self.analyser.analyse(word, False)

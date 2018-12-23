@@ -1728,5 +1728,9 @@
     {
         "word": "പുതിയൊരു",
         "analysis": "പുതിയ<adj>ഒരു<adj>"
+    },
+    {
+        "word": "കുത്തകാവകാശമുള്ള",
+        "analysis": "കുത്തക<sanskrit><adj>അവകാശം<sanskrit>ഉള്ള<cnj>"
     }
 ]
