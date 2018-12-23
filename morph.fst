@@ -33,8 +33,8 @@ $NOUN_VERB_COMPOUNDS$ = $NOUNS$ <n-v-compound> $VERB$ %വീട്ടിലെ�
 $WORD$ = $MISC$? ( $NOUNS$ \
 	| $VERB$ $INDECLINABLE$? \
 	| $NOUN_VERB_COMPOUNDS$ \
-	| $POSTPOSITIONS$ \
-	| $ADJ$ \
+	| $POSTPOSITIONS$ $CONJUNCTION$? \
+	| $ADJ$+ \
 	| $INTERJECTION$ \
 	| $QUESTION$ $CONJUNCTION$? $POLARITY$? \
 	| $POLARITY$ $CONJUNCTION$? \
