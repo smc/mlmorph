@@ -337,7 +337,7 @@
     },
     {
         "word": "അണുവിന്റെ",
-        "analysis": "അണു<n><genitive>"
+        "analysis": "അണു<sanskrit><genitive>"
     },
     {
         "word": "അവനുടെ",
@@ -1706,7 +1706,27 @@
         "analysis": "ഭാഷ<sanskrit><locative>"
     },
     {
+        "word": "ഭാഷയല്ല",
+        "analysis": "ഭാഷ<sanskrit>അല്ല<neg>"
+    },
+    {
+        "word": "ഭാഷയാണ്",
+        "analysis": "ഭാഷ<sanskrit>ആണ്<aff>"
+    },
+    {
+        "word": "ഭാഷാധ്യാപനം",
+        "analysis": "ഭാഷ<sanskrit><adj>അധ്യാപനം<sanskrit>"
+    },
+    {
+        "word": "ഭാഷാന്തരം",
+        "analysis": "ഭാഷ<sanskrit><adj>അന്തരം<sanskrit>"
+    },
+    {
         "word": "ക്രമപ്പെടുത്തുക",
         "analysis": "ക്രമം<n><adj><n-v-compound>പെടുക<v><causative-voice>"
+    },
+    {
+        "word": "പുതിയൊരു",
+        "analysis": "പുതിയ<adj>ഒരു<adj>"
     }
 ]
