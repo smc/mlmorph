@@ -6,7 +6,7 @@ all:
 	pip3 install -e .
 
 clean:
-	@rm mlmorph/data/*.a
+	@rm -f mlmorph/data/*.a
 
 upload:
 	rm -rf dist
