@@ -4,3 +4,4 @@
 python/mlmorph/data/*.a
 *.egg-info/
 __pycache__/
+ENV_DIR
