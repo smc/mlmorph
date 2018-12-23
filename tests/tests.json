@@ -1112,12 +1112,12 @@
     },
     {
         "word": "നുണപ്രചരണം",
-        "analysis": "നുണ<n><adj>പ്രചരണം<n>",
+        "analysis": "നുണ<n><adj>പ്രചരണം<sanskrit>",
         "comment": "പ ഇരട്ടിക്കുന്നത് തൊട്ടടുത്ത് ചന്ദ്രക്കല ഉണ്ടോ എന്നു നോക്കിയാവണം"
     },
     {
         "word": "വിധിപ്രസ്താവന",
-        "analysis": "വിധി<n><adj>പ്രസ്താവന<n>"
+        "analysis": "വിധി<n><adj>പ്രസ്താവന<sanskrit>"
     },
     {
         "word": "കരഞ്ഞുപോയി",
@@ -1675,11 +1675,11 @@
     },
     {
         "word": "യുവതീപ്രവേശനം",
-        "analysis": "യുവതി<sanskrit><adj>പ്രവേശനം<n>"
+        "analysis": "യുവതി<sanskrit><adj>പ്രവേശനം<sanskrit>"
     },
     {
         "word": "യുവതീപ്രവേശനവിഷയത്തിൽ",
-        "analysis": "യുവതി<sanskrit><adj>പ്രവേശനം<n><adj>വിഷയം<n><locative>"
+        "analysis": "യുവതി<sanskrit><adj>പ്രവേശനം<sanskrit><adj>വിഷയം<n><locative>"
     },
     {
         "word": "സാങ്കേതികവിദ്യാ",
@@ -1687,7 +1687,11 @@
     },
     {
         "word": "നദീതീരം",
-        "analysis": "നദി<sanskrit><adj>തീരം<n>"
+        "analysis": "നദി<sanskrit><adj>തീരം<sanskrit>"
+    },
+    {
+        "word": "നദിക്കര",
+        "analysis": "നദി<sanskrit><adj>കര<n>"
     },
     {
         "word": "ചിന്താശേഷി",
@@ -1732,5 +1736,9 @@
     {
         "word": "കുത്തകാവകാശമുള്ള",
         "analysis": "കുത്തക<sanskrit><adj>അവകാശം<sanskrit>ഉള്ള<cnj>"
+    },
+    {
+        "word": "കുത്തകച്ചരക്ക്",
+        "analysis": "കുത്തക<n><adj>ചരക്ക്<n>"
     }
 ]
