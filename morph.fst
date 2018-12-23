@@ -10,7 +10,8 @@ $INTERJECTION$ = "<lexicon/interjections.a>"
 $POSTPOSITIONS$ = "<lexicon/postpositions.a>"
 $INDECLINABLE$ = "<lexicon/indeclinables.a>"
 $QUANTIFIERS$ = "<lexicon/quantifiers.a>"
-$ADJ$= "<lexicon/adjectives.a>"
+$ADJ$ = "<lexicon/adjectives.a>"
+$ADV$ = "<lexicon/adverbs.a>"
 $QUESTION$ = "<lexicon/questions.a>"
 $POLARITY$ = "<lexicon/polarity.a>"
 $CONJUNCTION$ = "<lexicon/conjunctions.a>"
@@ -35,6 +36,7 @@ $WORD$ = $MISC$? ( $NOUNS$ \
 	| $NOUN_VERB_COMPOUNDS$ \
 	| $POSTPOSITIONS$ $CONJUNCTION$? \
 	| $ADJ$+ \
+	| $ADV$+ \
 	| $INTERJECTION$ \
 	| $QUESTION$ $CONJUNCTION$? $POLARITY$? \
 	| $POLARITY$ $CONJUNCTION$? \
