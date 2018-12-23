@@ -5,13 +5,14 @@ ALPHABET = [#AAsym#]
 #=D# = കുചടതപശ
 $D$ = {[#=D#]}:{[#=D#][#Virama#][#=D#]}
 
-% Vowel sign followed by hard consonants get duplicated
+% Vowel sign followed by hard consonants get geminated
+% Only when the second word is a Malayalam word
 % അടി + പരപ്പ് => അടിപ്പരപ്പ്
 % നൂറ്റി + പത്ത് => നൂറ്റിപ്പത്ത്
 % അമ്മി + കല്ല് => അമ്മിക്കല്ല്
 % സൂചി + തുള => സൂചിത്തുള
 
-$dup-vowelsign-hard-cons$ = $D$ ^-> ( [#VowelSigns##Vowels#] [#MALAYALAMPOS##BM##Numbers##TMP#]+ __ [#Consonants##Vowels##VowelSigns##Anuswara##Chillus#]+ )
+$dup-vowelsign-hard-cons$ = $D$ ^-> ( [#VowelSigns##Vowels#] [#POS##BM##Numbers##TMP#]+ __ [#Letters#]+ [#MALAYALAMPOS##BM##Numbers##TMP#]+ )
 
 $vowelsign-consonant$ = $dup-vowelsign-hard-cons$
 
