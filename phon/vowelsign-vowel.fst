@@ -4,7 +4,7 @@ ALPHABET = [#AAsym#]
 
 #=Y# = ാ  ീ  െ  ി എ
 $Y$ = {[#=Y#]}:{[#=Y#][യ]}
-$insert-ya$ = $Y$ ^-> (__ [#MALAYALAMPOS##BM##Numbers##TMP##Lsym##compounds#]+ [#Vowels#] )
+$insert-ya$ = $Y$ ^-> (__ [#MALAYALAMPOS#<eng>#BM##Numbers##TMP##Lsym##compounds#]+ [#Vowels#] )
 
 % പോയി + ഇല്ല/ഇരുന്നു/ഇരിക്കുക.. -> പോയില്ല/പോയിരുന്നു.. along with പോയിയില്ല...
 $yi-yi-special-case$ = {പോയി}:{പോയ<del>} ^-> (__ [#POS##BM##Numbers##TMP##Lsym#]+ [ഇ] )

@@ -8,7 +8,7 @@ $C$ = {[#=C#]}:{[#=C#][യ]}
 $insert-ya$ = $C$ ^-> (__ [#POS##BM##Numbers##infl##TMP##Lsym##compounds#]+ [#Vowels#] [#Letters#]* [#MALAYALAMPOS##BM##Numbers##infl##TMP##Lsym##compounds#] )
 
 % Remove the ya inserted at $insert-ya$ if it is repeated as in പുതിയയൊരു -> പുതിയൊരു
-$remove-extra-ya-malayalam$ = {യ}:{} ^-> (യ __ [#POS##BM##Numbers##infl##TMP##Lsym##compounds#]+ [#Vowels#] )
+$remove-extra-ya-malayalam$ = {യ}:{} ^-> (യ __ [#MALAYALAMPOS##BM##Numbers##infl##TMP##Lsym##compounds#]+ [#Vowels#] )
 
 % നത<sanskrit><RB><adj>അംഗി<sanskrit><RB><adj>:നതാംഗി
 $elongate-a-sanskrit$ = {അ}:{ആ} ^-> ([#Consonants#] <sanskrit> [#POS##BM##Numbers##infl##TMP##Lsym##compounds#]+ __  [#Letters#]+ <sanskrit> )
