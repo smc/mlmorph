@@ -1740,5 +1740,17 @@
     {
         "word": "കുത്തകച്ചരക്ക്",
         "analysis": "കുത്തക<n><adj>ചരക്ക്<n>"
+    },
+    {
+        "word": "പ്രവിശ്യയിൽ",
+        "analysis": "പ്രവിശ്യ<sanskrit><locative>"
+    },
+    {
+        "word": "യൂണിവേഴ്സിറ്റിയിൽ",
+        "analysis": "യൂണിവേഴ്സിറ്റി<eng><locative>"
+    },
+    {
+        "word": "മീഡിയയിൽ",
+        "analysis": "മീഡിയ<eng><locative>"
     }
 ]
