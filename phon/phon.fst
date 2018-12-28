@@ -1,10 +1,6 @@
 #include "../symbols.fst"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Delete analysis only symbols from the surface string
-
-ALPHABET = [#Ssym#] [#BM##POS##Numbers##TMP##Lsym##compounds#]:<>
-$delete-pos$ = .*
 
 $PHON$ = "<exceptions.a>" \
 	|| "<verb-negation.a>" \
@@ -16,10 +12,7 @@ $PHON$ = "<exceptions.a>" \
 	|| "<vowelsign-vowel.a>" \
 	|| "<virama-vowel.a>" \
 	|| "<virama-consonant.a>" \
-	% Replace all vowels with its signs appearing anywhere in string except at beginning
-	|| "<vowel-to-vowelsign.a>" \
-	% Delete all analysis strings
-	|| $delete-pos$
+	|| "<vowel-to-vowelsign.a>" % Replace all vowels with its signs appearing anywhere in string except at beginning
 
 $test$ = <>:<BoW>മാല<n><RB><accusative>:യ<>:എ<del><LB>ഒ<indeclinable><RB><>:<EoW> |\
 	<>:<BoW>മോർ<n><RB><locative>:ഇ<>:ൽ<del><LB>എ<indeclinable><RB><>:<EoW> |\
