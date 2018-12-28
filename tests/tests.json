@@ -1177,11 +1177,11 @@
     },
     {
         "word": "കേരളക്കര",
-        "analysis": "കേരളം<np><adj>കര<n>"
+        "analysis": "കേരളം<n><adj>കര<n>"
     },
     {
         "word": "മലയാളഭാഷ",
-        "analysis": "മലയാളം<np><adj>ഭാഷ<sanskrit>"
+        "analysis": "മലയാളം<n><adj>ഭാഷ<sanskrit>"
     },
     {
         "word": "പഞ്ചവർണ്ണത്തത്ത",
@@ -1189,7 +1189,7 @@
     },
     {
         "word": "മലയാളഭാഷയുടെ",
-        "analysis": "മലയാളം<np><adj>ഭാഷ<sanskrit><genitive>"
+        "analysis": "മലയാളം<n><adj>ഭാഷ<sanskrit><genitive>"
     },
     {
         "word": "പോയിരുന്നു",
@@ -1471,7 +1471,7 @@
     },
     {
         "word": "മലയാള",
-        "analysis": "മലയാളം<np><adj>"
+        "analysis": "മലയാളം<n><adj>"
     },
     {
         "word": "ചിരിക്കേ",

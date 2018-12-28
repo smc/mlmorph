@@ -34,7 +34,7 @@ $NUMBERIC$ = $NUMBER$ $ordinal_forms$?
 
 % Agglutination
 $ALL_NOUNS$ = $NSTEM$ | $PROPERNOUN$ | $NUMBER$ | $SANSKRIT$
-$AGGLUTINATED_NOUN$ = ( $ALL_NOUNS$ <adj> )* ( $NSTEM$ | $PROPERNOUN$ | $SANSKRIT$) % വിശേഷണവിശേഷ്യങ്ങൾ
+$AGGLUTINATED_NOUN$ = ( ($NSTEM$ | $NUMBER$ | $SANSKRIT$) <adj> )* ( $NSTEM$ | $PROPERNOUN$ | $SANSKRIT$) % വിശേഷണവിശേഷ്യങ്ങൾ
 $COORDINATIVE_NOUN$ = $NSTEM$ <coordinative> $NSTEM$ % ദ്വന്ദസമാസം - ആനകുതിര, അച്ഛനമ്മ..
 $COMPOUND_NSTEM$ = $AGGLUTINATED_NOUN$ | $COORDINATIVE_NOUN$
 

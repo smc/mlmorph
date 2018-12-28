@@ -7,7 +7,7 @@
 
 ALPHABET = [#Letters##POS##BM##TMP##Lsym##Numbers##compounds#] <del> <pl> <infl_marker>
 
-#inflboundary# = #POS##BM##TMP##Numbers#
+#inflboundary# = <n><sanskrit><cardinal>#BM##TMP##Numbers#
 
 $pseudo-samvruthokaram-to-u$ = {[#Virama#]}:{ു} ^-> ([#Consonants#]+ __ [#inflboundary#]+ <adj> )
 
