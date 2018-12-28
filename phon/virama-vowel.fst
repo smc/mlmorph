@@ -16,4 +16,4 @@ $tests$ =<>:<BoW>പൂവ്<n><>:<RB><>:<EoW><>:<BoW>അമ്പലം<n><>:<
 % Uncomment below line for testing
 % $tests$ ||$virama-vowel$ >> "virama-vowel.test.a"
 
-$virama-vowel$ || .*
+$virama-vowel$

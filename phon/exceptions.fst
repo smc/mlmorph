@@ -7,4 +7,4 @@ $anuswaram-um$ = {ം}:{വ്} ^-> ( __ [#POS##BM##Numbers##TMP##Lsym#]+ [ഉ] 
 
 $exceptions$ = $anuswaram-um$
 
-$exceptions$ || .*
+$exceptions$

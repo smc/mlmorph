@@ -25,4 +25,4 @@ $tests$ = നൂറ്റി <hundreds> പതിനൊന്ന് <Noun> \
 	| ആന <Noun> വണ്ടി <Noun> % No duplication, വ is not hard consonant
 % Uncomment below line for testing
 % $tests$ ||\
-$vowelsign-consonant$ || .*
+$vowelsign-consonant$

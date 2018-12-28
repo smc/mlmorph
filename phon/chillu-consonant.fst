@@ -11,4 +11,4 @@ $dup-chillus-hard-cons$ = $D$ ^-> ([#Chillus#] [#POS##BM##Numbers##TMP##Lsym#]+ 
 
 $chillu-consonant$ = $dup-chillus-hard-cons$
 
-$chillu-consonant$ || .*
+$chillu-consonant$

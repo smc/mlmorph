@@ -26,4 +26,4 @@ $tests$ = പിടി <hundreds> ആന <Noun> |\
 	ആതി<n> ഇരിക്കുക<v>
 % Uncomment below line for testing
 $tests$ || $vowelsign-vowel$ || .* >> "vowelsign-vowel.test.a"
-$vowelsign-vowel$ || .*
+$vowelsign-vowel$

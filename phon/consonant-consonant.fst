@@ -15,4 +15,4 @@ $dup-cons-hard-cons$ = $D$ ^-> ( [#Consonants#] [#POS#<n-v-compound>#BM##Numbers
 
 $consonant-consonant$ = $dup-cons-hard-cons$
 
-$consonant-consonant$ || .*
+$consonant-consonant$

@@ -14,4 +14,4 @@ $ChilluNorm$ = $replace-chillus$
 %$tests$ = <>:<BoW>നിറം<np><>:<RB><>:<EoW><>:<BoW>അല്ല<cnj><>:<RB><>:<EoW>
 %$tests$ || $ChilluNorm$ >> "chillu-normalization-test.a"
 
-$ChilluNorm$ || .*
+$ChilluNorm$
