@@ -12,7 +12,9 @@ $D$ = {[#=D#]}:{[#=D#][#Virama#][#=D#]}
 % അമ്മി + കല്ല് => അമ്മിക്കല്ല്
 % സൂചി + തുള => സൂചിത്തുള
 
-$dup-vowelsign-hard-cons$ = $D$ ^-> ( [#VowelSigns##Vowels#] [#POS##BM##Numbers##TMP#]+ __ [#Letters#]+ [#MALAYALAMPOS##BM##Numbers##TMP#]+ )
+$MALAYALAMSUFFFIX$ = [#Letters#]* [#MALAYALAMPOS##BM##Numbers##infl##TMP##Lsym##compounds#]+
+
+$dup-vowelsign-hard-cons$ = $D$ ^-> ( [#VowelSigns##Vowels#] [#POS##BM##Numbers##TMP#]+ __ $MALAYALAMSUFFFIX$  )
 
 $vowelsign-consonant$ = $dup-vowelsign-hard-cons$
 
