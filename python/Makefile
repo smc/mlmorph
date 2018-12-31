@@ -10,5 +10,4 @@ clean:
 
 upload:
 	rm -rf dist
-	python setup.py sdist
-	twine upload --skip-existing --sign dist/*
+	python setup.py sdist upload
