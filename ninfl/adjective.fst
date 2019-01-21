@@ -13,7 +13,7 @@ ALPHABET = [#Letters##POS##BM##TMP##Lsym##Numbers##compounds#] <del> <pl> <infl_
 $adj-anuswara-delete$ = {[#Anuswara#]}:{} ^-> ([#Letters#]+ __ [#inflboundary#]+ <adj> )
 
 #=EC# = #Consonants#
-$EC$ = {[#=EC#]}:{[#=EC#][ാ]}
+$EC$ = {[#=EC#]}:{[#=EC#][<ninfl>][ആ]}
 $adj-a-vowel-elongation$ = $EC$ ^-> (__ <sanskrit> [#inflboundary#]+ <adj> )
 
 $adj-i-vowel-elongation$ =( {ി}:{ീ} ) ^-> ([#Consonants#] __ <sanskrit> [#inflboundary#]+ <adj> [#Letters#]+ <sanskrit> [#inflboundary#]+)
