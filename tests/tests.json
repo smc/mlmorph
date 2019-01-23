@@ -1756,5 +1756,21 @@
     {
         "word": "ഭാഷയിൽ",
         "analysis": "ഭാഷ<sanskrit><locative>"
+    },
+    {
+        "word": "ഒരുലക്ഷത്തിനാല്",
+        "analysis": "ഒന്ന്<ones><lakhs>നാല്<ones><cardinal>"
+    },
+    {
+        "word": "ഒരുലക്ഷം",
+        "analysis": "ഒന്ന്<ones><lakhs><cardinal>"
+    },
+    {
+        "word": "ഒരുകോടിനാല്",
+        "analysis": "ഒന്ന്<ones><crores>നാല്<ones><cardinal>"
+    },
+    {
+        "word": "ഒരുകോടി",
+        "analysis": "ഒന്ന്<ones><crores><cardinal>"
     }
 ]

@@ -5,13 +5,18 @@
 $half$ = അര <half>
 $n1$ = ഒന്ന് | ഒന്നു്
 
+% Using ഒര് here so that it becomes ഒരു after phonology treatment. Using ഒരു will cause gemination like
+% ഒരുക്കോടി
+$n1-compound$ = {ഒന്ന്}: {ഒര്}
+
 $n0$ = പൂജ്യം <zero>
 $n2-9$ = (രണ്ട്|രണ്ടു്|മൂന്ന്|മൂന്നു്|നാല്|നാലു്|അഞ്ച്|അഞ്ചു്|ആറ്|ആറു്|ഏഴ്|ഏഴു്|എട്ട്|എട്ടു്|ഒമ്പത്|ഒമ്പതു്)
 
 % ones
 $N1$ = ( $n1$ | $n2-9$ ) <ones>
+$N1-compound$ = ( $n1-compound$ | $n2-9$ ) <ones>
 
-$n10-90$ = {ഒന്ന് }: {പത്ത്} |  {ഒന്ന് }: {പത്തു്} | \
+$n10-90$ = {ഒന്ന് }: {പത്ത്} | {ഒന്ന് }: {പത്തു്} | \
 	{രണ്ട് } : {ഇരുപത്} |\
 	{മൂന്ന് } : {മുപ്പത്} |\
 	{നാല് } : {നാല്പത്} |\
@@ -96,11 +101,11 @@ $N1K$ = $N1K$ | $N1K-ones-tens-hundreds$
 
 $n1l$ = {} : {ലക്ഷം}
 $n1l-compound$ = {} : {ലക്ഷത്ത[ി്]}
-$N1L$ = (( $N1$|$N10$|$N100$|$N1K$ )? $n1l$ <lakhs>) |\
-	(( $N1$|$N10$|$N100$|$N1K$)? $n1l-compound$ <lakhs> ($N1K$|$N100$|$N10$|$N1$))
+$N1L$ = (( $N1-compound$|$N10$|$N100$|$N1K$ )? $n1l$ <lakhs>) |\
+	(( $N1-compound$|$N10$|$N100$|$N1K$)? $n1l-compound$ <lakhs> ($N1K$|$N100$|$N10$|$N1$))
 
 $n1c$ = {}:{കോടി}
-$N1C$ = ( $N1$|$N10$|$N100$|$N1K$|$N1L$ )? $n1c$ <crores> ($N1L$|$N1K$|$N100$|$N10$|$N1$)?
+$N1C$ = ( $N1-compound$|$N10$|$N100$|$N1K$|$N1L$ )? $n1c$ <crores> ($N1L$|$N1K$|$N100$|$N10$|$N1$)?
 
 $numbers$ = ( $n0$ | $N1$ | $N10$ | $N100$ | $N1K$ | $N1L$ | $N1C$ ) $half$?
 
