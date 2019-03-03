@@ -1772,5 +1772,9 @@
     {
         "word": "ഒരുകോടി",
         "analysis": "ഒന്ന്<ones><crores><cardinal>"
+    },
+    {
+        "word": "ഒരുക്കി",
+        "analysis": "ഒരുങ്ങുക<v><causative-voice><past>"
     }
 ]

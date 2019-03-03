@@ -21,8 +21,8 @@ $past-tense-3$ = {ക്കുക}:{ക്കി} <>:<infl_marker> ^-> ([#Conson
 % അലറുക - അലറി കുതറുക - കുതറി
 % എഴുതുക - എഴുതി
 % പിച്ചുക - പിച്ചി
-$past-tense-4$ = $past-tense-suffix-map$ <>:<infl_marker> ^-> ([#Letters#]+ __ [#POS##BM##TMP#]+ <past>)
+$suffix-forms$ = $past-tense-suffix-map$ <>:<infl_marker> ^-> ([#Letters#]+ __ [#POS##BM##TMP#]+ <past>)
 
-$past-tense$ = $past-tense-ex$ || $past-tense-1$ || $past-tense-2$ || $past-tense-3$ || $past-tense-4$
+$past-tense$ = $past-tense-ex$ || $suffix-forms$ || $past-tense-1$ || $past-tense-2$ || $past-tense-3$
 
 $past-tense$
