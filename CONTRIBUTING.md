@@ -1,4 +1,3 @@
-
 Introduction blog post: http://thottingal.in/blog/2017/11/26/towards-a-malayalam-morphology-analyser/
 
 SFST
@@ -14,3 +13,16 @@ Books to Refer
 4. Catechism of Malayalam Grammar by H Gundert, 1867 https://archive.org/details/1867_Catechism_Of_Malayalam_Grammar
 5. Malayalam by R E Asher and T C Kumari, 1997
 6. A Grammar of Malayalam by Ravi Sankar S Nair, 2012 http://www.languageinindia.com/nov2012/ravisankarmalayalamgrammar.pdf
+
+Some initial excercises to start contibuting
+============================================
+
+Add support for a person name
+-----------------------------
+
+1. Find out a person name that is not listed in lexicon/person-names.lex. You can see that `mlmorph -a` with that name returning nothing. 
+2. Now add that name to lexicon/person-names.lex files, save and run `make clean test`
+3. Run `mlmorph -a` and enter the new name there. You should see an analysis. Try various inflected forms of that name there. Verify the results.
+
+Repeat the same for adding support a new noun, verb, place name etc. Try adding automated test for the new entries.
+
