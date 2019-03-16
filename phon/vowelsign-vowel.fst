@@ -2,7 +2,7 @@
 
 ALPHABET = [#AAsym#]
 
-#=Y# = ാ  ീ  െ  ി എ  ോ
+#=Y# = ാ  ീ  െ  ി എ  ോ  ൈ
 $Y$ = {[#=Y#]}:{[#=Y#][യ]}
 $insert-ya$ = $Y$ ^-> (__ [#POS##BM##Numbers##TMP##Lsym##compounds#]+ [#Vowels#] )
 
