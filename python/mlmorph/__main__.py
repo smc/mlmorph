@@ -2,6 +2,7 @@ from argparse import ArgumentParser
 from sys import stdin
 from mlmorph import Generator, Analyser
 
+
 def main():
     """Invoke a simple CLI analyser or generator."""
     a = ArgumentParser()
@@ -32,11 +33,11 @@ def main():
             for anal in anals:
                 print(line, "\t", anal[0], "\t", anal[1])
         if options.generate:
-            gens = generator.generate(line)
+            gens = generator.generate(line, True)
             if not gens:
                 print(line, "\t?")
             for gen in gens:
-                print(line, "\t",  gen[0])
+                print(line, "\t",  gen[0], "\t", gen[1])
 
     print()
     exit(0)

@@ -53,7 +53,7 @@ class AnalyserGeneratorTests(unittest.TestCase):
             line += 1
             with self.subTest(test.word):
                 match = False
-                gens = self.generator.generate(test.analysis)
+                gens = self.generator.generate(test.analysis, True)
                 if not (hasattr(test, 'skip') and test.skip):
                     self.assertTrue(
                         len(gens) != 0, 'Generate failed for ' + test.analysis)
