@@ -3,7 +3,7 @@ import os
 import unittest
 import re
 import glob
-import time
+from time import perf_counter as clock
 from mlmorph import Analyser
 from collections import Counter
 
@@ -14,7 +14,7 @@ class CoverageTests(unittest.TestCase):
 
     def test_total_coverage(self):
         print('\t**** Coverage tests ****\t\n')
-        start = time.clock()
+        start = clock()
         tokens_count = 0
         analysed_tokens_count = 0
         missed_words = []
@@ -36,7 +36,7 @@ class CoverageTests(unittest.TestCase):
                         else:
                             missed_words.append(word)
         percentage = (analysed_tokens_count/tokens_count)*100
-        time_taken = time.clock() - start
+        time_taken = clock() - start
         print('Total words: %d \nAnalysed words: %d \nCoverage: %3.2f %% ' %
               (tokens_count, analysed_tokens_count, percentage))
         print('Time taken: %5.3f seconds' % (time_taken))
