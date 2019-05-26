@@ -16,15 +16,20 @@ $MALAYALAMSUFFFIX$ = [#Letters#]* [#MALAYALAMPOS##BM##Numbers##infl##TMP##Lsym##
 
 $dup-vowelsign-hard-cons$ = $D$ ^-> ( [#VowelSigns##Vowels#] [#POS##BM##Numbers##TMP#]+ __ $MALAYALAMSUFFFIX$  )
 
-$vowelsign-consonant$ = $dup-vowelsign-hard-cons$
+% When noun is inflected and compound with a verb, duplication can happen.
+% Example: കവിതയെക്കുറിക്കുക, but not when ചിരികണ്ടാൽ or തെറിപറഞ്ഞു
+$dup-vowelsign-hard-cons-nv-compound$ = $D$ ^-> ( [#VowelSigns##Vowels#] [#POS#]+ [#ninfl#]+ <n-v-compound> [#BM##Numbers##TMP#]+ __ $MALAYALAMSUFFFIX$  )
 
-$tests$ = നൂറ്റി <hundreds> പതിനൊന്ന് <Noun> \
-	| അടി <Noun> പരപ്പ് <Noun> \
-	| സൂചി <Noun> തുള <Noun> \
-	| ആൽ <Noun> മരം <Noun> \ % No duplication, മ is not hard consonant
-	| ആൽ <Noun> തറ <Noun> \
-	| ആന <Noun> പുറം <Noun> \
-	| ആന <Noun> വണ്ടി <Noun> % No duplication, വ is not hard consonant
+$vowelsign-consonant$ = $dup-vowelsign-hard-cons$ || $dup-vowelsign-hard-cons-nv-compound$
+
+$tests$ = നൂറ്റി <hundreds> പതിനൊന്ന് <n> \
+	| അടി <n> പരപ്പ് <n> \
+	| സൂചി <n> തുള <n> \
+	| ആൽ <n> മരം <n> \ % No duplication, മ is not hard consonant
+	| ആൽ <n> തറ <n> \
+	| ആന <n> പുറം <n> \
+	| ആന <n> വണ്ടി <n> \ % No duplication, വ is not hard consonant
+	| കവിത<n><accusative><n-v-compound>കുറിക്കുക<v> % കവിതയെക്കുറിക്കുക
 % Uncomment below line for testing
 % $tests$ ||\
 $vowelsign-consonant$

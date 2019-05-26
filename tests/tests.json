@@ -1780,5 +1780,9 @@
     {
         "word": "മുംബൈയിൽ",
         "analysis": "മുംബൈ<np><locative>"
+    },
+    {
+        "word": "കവിതയെക്കുറിക്കുക",
+        "analysis": "കവിത<n><accusative><n-v-compound>കുറിക്കുക<v>"
     }
 ]

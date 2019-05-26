@@ -9,6 +9,8 @@ ALPHABET = [#Letters##POS##TMP##infl#] [#BM#<infl_marker>]:<>
 $special-cases$ = {കേൾക്കുക}:{കേൾപ്പിക്കു<infl_marker>ക} |\
 	{നില്ക്കുക}:{നിറുത്തു<infl_marker>ക} |\
 	{നിൽക്കുക}:{നിറുത്തു<infl_marker>ക} |\
+	{അകലുക}:{അകറ്റു<infl_marker>ക} |\
+	{അകലുക}:{അകത്തു<infl_marker>ക} |\
 	{ആകുക}:{ആക്കു<infl_marker>ക} |\
 	{വരുക}:{വരുത്തു<infl_marker>ക} |\
 	{പരക്കുക}:{പരത്തു<infl_marker>ക} |\
