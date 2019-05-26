@@ -18,7 +18,7 @@ $dup-vowelsign-hard-cons$ = $D$ ^-> ( [#VowelSigns##Vowels#] [#POS##BM##Numbers#
 
 % When noun is inflected and compound with a verb, duplication can happen.
 % Example: കവിതയെക്കുറിക്കുക, but not when ചിരികണ്ടാൽ or തെറിപറഞ്ഞു
-$dup-vowelsign-hard-cons-nv-compound$ = $D$ ^-> ( [#VowelSigns##Vowels#] [#POS#]+ [#ninfl#]+ <n-v-compound> [#BM##Numbers##TMP#]+ __ $MALAYALAMSUFFFIX$  )
+$dup-vowelsign-hard-cons-nv-compound$ = $D$ ^-> ( [#VowelSigns##Vowels#] [#ninfl##BM##Lsym##TMP#]+ [<n-v-compound>] __ $MALAYALAMSUFFFIX$  )
 
 $vowelsign-consonant$ = $dup-vowelsign-hard-cons$ || $dup-vowelsign-hard-cons-nv-compound$
 
