@@ -1,3 +1,5 @@
+#include "../symbols.fst"
+
 $ABV$ = "abbreviations.lex" <n><RB>
 
-$ABV$
+$ABV$ [#Punct#]?
