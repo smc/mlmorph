@@ -1734,6 +1734,10 @@
         "analysis": "പുതിയ<adj>ഒരു<adj>"
     },
     {
+        "word": "ആസ്ത്രേലിയയിൽ",
+        "analysis": "ആസ്ത്രേലിയ<np><locative>"
+    },
+    {
         "word": "കുത്തകാവകാശമുള്ള",
         "analysis": "കുത്തക<sanskrit><adj>അവകാശം<sanskrit>ഉള്ള<cnj>"
     },
