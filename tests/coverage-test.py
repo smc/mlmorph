@@ -58,8 +58,8 @@ class CoverageTests(unittest.TestCase):
 
         most_common = Counter(missed_words).most_common(500)
         print('Top 500 missed words are:', end='\n', file=freq_analysis_file)
-        for word in most_common:
-            print(word, end='\n', file=freq_analysis_file)
+        for word, freq in most_common:
+            print("%4d %s" % (freq, word), end='\n', file=freq_analysis_file)
         freq_analysis_file.close()
 
 
