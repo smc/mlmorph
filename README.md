@@ -102,6 +102,25 @@ Python Interface
 
 See https://pypi.org/project/mlmorph
 
+
+Citation
+========
+Please cite the following publication in order to refer to the mlmorph:
+
+```
+@inproceedings{thottingal-2019-finite,
+    title = "Finite State Transducer based Morphology analysis for {M}alayalam Language",
+    author = "Thottingal, Santhosh",
+    booktitle = "Proceedings of the 2nd Workshop on Technologies for MT of Low Resource Languages",
+    month = "20 " # aug,
+    year = "2019",
+    address = "Dublin, Ireland",
+    publisher = "European Association for Machine Translation",
+    url = "https://www.aclweb.org/anthology/W19-6801",
+    pages = "1--5",
+}
+```
+
 License
 =======
 
