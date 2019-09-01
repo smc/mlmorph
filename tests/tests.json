@@ -774,6 +774,14 @@
         "analysis": "ഒന്ന്<tens><thousands>ഒമ്പത്<ones><cardinal>"
     },
     {
+        "word": "പതിനഞ്ച്ലക്ഷത്തിതൊണ്ണൂറായിരം",
+        "analysis" : "പത്ത്<tens>ഒന്ന്<lakhs>ഒമ്പത്<tens><thousands><cardinal>"
+    },
+     {
+        "word": "രണ്ട്കോടിപത്ത്ലക്ഷം",
+        "analysis" : "രണ്ട്<ones><crores>പത്ത്<tens><lakhs><cardinal>"
+    },
+    {
         "word": "ഒമ്പതിന്",
         "analysis": "ഒമ്പത്<ones><cardinal><dative>"
     },
