@@ -157,15 +157,15 @@
     },
     {
         "word": "ആടിക്കൊണ്ടിരിക്കും",
-        "analysis": "ആടുക<v><past>കൊണ്ടിരിക്കുക<v><future>"
+        "analysis": "ആടുക<v><iterative-future-aspect>"
     },
     {
         "word": "ആടിക്കൊണ്ടിരിക്കുക",
-        "analysis": "ആടുക<v><past>കൊണ്ടിരിക്കുക<v>"
+        "analysis": "ആടുക<v><iterative-aspect>"
     },
     {
         "word": "ആടിക്കൊണ്ടിരിക്കുന്നു",
-        "analysis": "ആടുക<v><past>കൊണ്ടിരിക്കുക<v><present>"
+        "analysis": "ആടുക<v><iterative-present-aspect>"
     },
     {
         "word": "മുറ്റത്തെ",
@@ -237,11 +237,11 @@
     },
     {
         "word": "കൂടിച്ചേരും",
-        "analysis": "കൂടുക<v><past>ചേരുക<v><future>"
+        "analysis": "കൂടുക<v><cvb-adv-part-past>ചേരുക<v><future>"
     },
     {
         "word": "പാടിത്തകർക്കും",
-        "analysis": "പാടുക<v><past>തകർക്കുക<v><future>"
+        "analysis": "പാടുക<v><cvb-adv-part-past>തകർക്കുക<v><future>"
     },
     {
         "word": "തെറ്റി",
@@ -253,7 +253,7 @@
     },
     {
         "word": "പോയിവരും",
-        "analysis": "പോകുക<v><past>വരുക<v><future>"
+        "analysis": "പോകുക<v><cvb-adv-part-past>വരുക<v><future>"
     },
     {
         "word": "ചത്തു",
@@ -269,7 +269,7 @@
     },
     {
         "word": "ഓടിത്തളർന്നു",
-        "analysis": "ഓടുക<v><past>തളരുക<v><past>"
+        "analysis": "ഓടുക<v><cvb-adv-part-past>തളരുക<v><past>"
     },
     {
         "word": "കടലിങ്കൽ",
@@ -369,7 +369,11 @@
     },
     {
         "word": "ഓടിക്കയറി",
-        "analysis": "ഓടുക<v><past>കയറുക<v><past>"
+        "analysis": "ഓടുക<v><cvb-adv-part-past>കയറുക<v><past>"
+    },
+    {
+        "word": "പൊട്ടിച്ചിരിക്കും",
+        "analysis": "പൊട്ടുക<v><cvb-adv-part-past>ചിരിക്കുക<v><future>"
     },
     {
         "word": "സഹിക്കാൻ",

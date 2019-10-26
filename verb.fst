@@ -27,7 +27,10 @@ $ENDS_WITH_U_FILTER$ = [#Letters##POS##BM##Numbers##TMP##vinfl#]+ ു [#POS##BM#
 $VERB-ADVERBS-FROM-INFLECTIONS$ = ( $VERB-ASPECTS$ || $ENDS_WITH_U_FILTER$ ) <RB> <adv-clause-rp-past> || $ADVERBSTEMS$
 $VERB-ADVERBS$ = $VERB-ADVERBS$ | $VERB-ADVERBS-FROM-INFLECTIONS$
 
-$VERB$ = $VERB-TENSES$ | $VERB-MOODS$ | $VERB-ASPECTS$ | $VERB-ADVERBS$
+$VERB$ = $VERB-TENSES$ | $VERB-MOODS$ | $VERB-ASPECTS$
+% The only aggulutination scenario for verbs is when adverbs appears such as മുൻവിനയെച്ചം.
+$VERB$ = $VERB$ | ( $VERB-ADVERBS$ $VERB$?)
+
 $VERB-ADVERBS$ >> "verb-adverbs.a"
 
 % Tests
@@ -38,4 +41,4 @@ $VSTEM-CAUSATIVE$ >> "vstem-causative.test.a"
 $VERB-ADVERBS-FROM-INFLECTIONS$ >> "verb-adverbs.test.a"
 ചിരിക്കുക<v><RB>  [#vinfl#]? || $ASPECTS$ >> "vstem-aspects.a"
 
-$VERB$+
+$VERB$
