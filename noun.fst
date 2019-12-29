@@ -19,6 +19,7 @@ $ADJECTIVE$ = "<lexicon/adjectives.a>"
 $POLARITY$ = "<lexicon/polarity.a>"
 $NUMBER$ = "<num.a>"
 $VERB$ = "<verb.a>"
+$VERB_ADVERBS$ = "<verb-adverbs.a>"
 
 % Derived Nouns
 $NOUNFROMVERB$ = "<deriv/noun-from-verb.a>"
@@ -26,7 +27,7 @@ $NOUNFROMNOUN$ = "<deriv/noun-from-noun.a>"
 $NOUNFROMADVERB$ = "<deriv/noun-from-adverb.a>"
 
 $DERIVEDNOUNS$ = (($VERB$ <n> <deriv> ) || $NOUNFROMVERB$) |\
-	( "<verb-adverbs.a>" <n> <deriv> || $NOUNFROMADVERB$ ) |\
+	( $VERB_ADVERBS$+ <n> <deriv> || $NOUNFROMADVERB$ ) |\
 	( ($NSTEM$ [<masculine><feminine><neutral>] <n> <deriv>) || $NOUNFROMNOUN$)
 
 $ordinal_forms$= ({}:{ആം}|{}:{ആമത്തെ}|{}:{ആമത്}|{}:{ആമതു്}) <ordinal>

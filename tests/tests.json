@@ -1796,5 +1796,13 @@
     {
         "word": "ജീവിച്ചിരുന്ന",
         "analysis": "ജീവിക്കുക<v><cvb-adv-part-past>ഇരിക്കുക<v><adv-clause-rp-past>"
+    },
+    {
+        "word": "കൊടുത്തിരുന്നത്",
+        "analysis": "കൊടുക്കുക<v><cvb-adv-part-past>ഇരിക്കുക<v><adv-clause-rp-past><n><deriv>"
+    },
+    {
+        "word": "കൊടുത്തിരിക്കുന്നത്",
+        "analysis": "കൊടുക്കുക<v><cvb-adv-part-past>ഇരിക്കുക<v><adv-clause-rp-present><n><deriv>"
     }
 ]
