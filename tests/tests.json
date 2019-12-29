@@ -1804,5 +1804,9 @@
     {
         "word": "കൊടുത്തിരിക്കുന്നത്",
         "analysis": "കൊടുക്കുക<v><cvb-adv-part-past>ഇരിക്കുക<v><adv-clause-rp-present><n><deriv>"
+    },
+    {
+        "word": "കണ്ണനെയും",
+        "analysis": "കണ്ണൻ<np><accusative>ഉം<cnj>"
     }
 ]

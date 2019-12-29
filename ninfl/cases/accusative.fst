@@ -19,7 +19,7 @@ $remove-accusative-ninfl$ = {<accusative>}:{} ^-> (<infl_marker> [#inflboundary#
 $accusative-exceptions$ = $accusative-exceptions-step1$ || $remove-accusative-ninfl$
 $accusative$ = $accusative-exceptions$
 
-$accusative-cons-vowels-LL$ = {<accusative>}:{എ<infl_marker>} ^-> ([#Consonants##VowelSigns#ൾ] [#inflboundary#]+ __)
+$accusative-cons-vowels-LL$ = {<accusative>}:{എ<infl_marker>} ^-> ([#Consonants##VowelSigns#ൾൻ] [#inflboundary#]+ __)
 $accusative-chillus$ = {<accusative>}:{ഇനെ<infl_marker>} ^-> ([ർൻൺൿൽ#Virama#] [#inflboundary#]+ __)
 $accusative$ = $accusative$ || $accusative-cons-vowels-LL$ || $accusative-chillus$
 
