@@ -1792,5 +1792,9 @@
     {
         "word": "കവിതയെക്കുറിക്കുക",
         "analysis": "കവിത<n><accusative><n-v-compound>കുറിക്കുക<v>"
+    },
+    {
+        "word": "ജീവിച്ചിരുന്ന",
+        "analysis": "ജീവിക്കുക<v><cvb-adv-part-past>ഇരിക്കുക<v><adv-clause-rp-past>"
     }
 ]

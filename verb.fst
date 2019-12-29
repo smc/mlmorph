@@ -29,7 +29,7 @@ $VERB-ADVERBS$ = $VERB-ADVERBS$ | $VERB-ADVERBS-FROM-INFLECTIONS$
 
 $VERB$ = $VERB-TENSES$ | $VERB-MOODS$ | $VERB-ASPECTS$
 % The only aggulutination scenario for verbs is when adverbs appears such as മുൻവിനയെച്ചം.
-$VERB$ = $VERB$ | ( $VERB-ADVERBS$ $VERB$?)
+$VERB$ = $VERB$ | ( $VERB-ADVERBS$+ $VERB$?)
 
 $VERB-ADVERBS$ >> "verb-adverbs.a"
 
