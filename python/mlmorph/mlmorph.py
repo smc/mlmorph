@@ -4,11 +4,10 @@
 Simple python interface for mlmorph using liblibhfst-python.
 """
 
-from sys import stdin
-import os
 import regex
 import libhfst
 from pkg_resources import resource_filename, resource_exists
+from .normalizer import normalize
 
 
 def get_transducer(fsa):
@@ -49,6 +48,7 @@ class Analyser:
         """Perform a simple morphological analysis lookup. """
         if not self.analyser:
             self.analyser = self.get_analyser()
+        token = normalize(token)
         analysis_results = self.analyser.lookup(token)
         if not weighted:
             return analysis_results
@@ -103,7 +103,10 @@ class Analyser:
 
     @staticmethod
     def get_pos_weight(pos: str) -> int:
-        """Get the relative weight of a pos tag. Less weight is the preferred pos tag."""
+        """
+        Get the relative weight of a pos tag.
+        Less weight is the preferred pos tag.
+        """
         WEIGHTS = {
             # Prefer verbs than nouns
             'v': 1,
@@ -146,7 +149,7 @@ class Generator:
         Give priority for smaller words, collation order.
         """
 
-        suffixes = ['ിൽ','ിലും', 'ന്റെ','ന്','നെ']
+        suffixes = ['ിൽ', 'ിലും', 'ന്റെ', 'ന്', 'നെ']
         token_weight = Analyser.parse_analysis(token)['weight']
         length = len(suffixes)
         weight = token_weight
@@ -159,6 +162,8 @@ class Generator:
         """Perform a simple morphological generator lookup."""
         if not self.generator:
             self.generator = self.get_generator()
+
+        token = normalize(token)
         generated_results = self.generator.lookup(token)
         if not weighted:
             return generated_results
