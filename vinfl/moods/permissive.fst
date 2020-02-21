@@ -31,14 +31,20 @@ $verb-suffix-map-past-1$ = {ു}:{ോ} | {ി<infl_marker>} : {ിക്കോ<i
 
 $verb-suffix-map-past-2$ = {ു<infl_marker>}:{ോളൂ<infl_marker>} | {ി<infl_marker>} : {ിക്കോളൂ<infl_marker>}
 
+% This is the abbreviated form for the past tense + cheythekkoo
+% Examples: വളഞ്ഞേക്കൂ, ചിരിച്ചേക്കൂ, പറഞ്ഞേക്കൂ
+
+$verb-suffix-map-past-3$ = {ു<infl_marker>}:{േയ്ക്കൂ<infl_marker>} | {ു<infl_marker>}:{േക്കൂ<infl_marker>} | \
+	{ി<infl_marker>} : {ിയേക്കൂ<infl_marker>}
+
 % Another suffix which denotes permissive meaning is –ootte added to the past stem.
 % The implied meaning of these sentences is that the speaker wishes that the state of affairs
 % may continue undisturbed. avan avite irunnootte implies ‘Let him sit there , don’t do
 % anything to disturb him or make him go away’.
 % പോയിക്കോട്ടെ, വന്നോട്ടെ
 
-$verb-suffix-map-past-3$ = {ു<infl_marker>}:{ോട്ടെ<infl_marker>} | {ി<infl_marker>} : {ിക്കോട്ടെ<infl_marker>}
-$verb-suffix-map-past$ = $verb-suffix-map-past-1$ | $verb-suffix-map-past-2$ | $verb-suffix-map-past-3$
+$verb-suffix-map-past-4$ = {ു<infl_marker>}:{ോട്ടെ<infl_marker>} | {ി<infl_marker>} : {ിക്കോട്ടെ<infl_marker>}
+$verb-suffix-map-past$ = $verb-suffix-map-past-1$ | $verb-suffix-map-past-2$ | $verb-suffix-map-past-3$ | $verb-suffix-map-past-4$
 $permissive-mood-2$ = $verb-suffix-map-past$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <permissive-mood>)
 
 % -atte added to the verb root also denotes a meaning similar to the above.

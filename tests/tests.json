@@ -1808,5 +1808,17 @@
     {
         "word": "കണ്ണനെയും",
         "analysis": "കണ്ണൻ<np><accusative>ഉം<cnj>"
+    },
+    {
+        "word": "പറഞ്ഞേക്കൂ",
+        "analysis": "പറയുക<v><permissive-mood>"
+    },
+    {
+        "word": "പറഞ്ഞേയ്ക്കൂ",
+        "analysis": "പറയുക<v><permissive-mood>"
+    },
+    {
+        "word": "ഓടിയേക്കൂ",
+        "analysis": "ഓടുക<v><permissive-mood>"
     }
 ]
