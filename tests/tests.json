@@ -1189,7 +1189,7 @@
     },
     {
         "word": "പഞ്ചവർണ്ണത്തത്ത",
-        "analysis": "പഞ്ചം<n><adj>വർണ്ണം<n><adj>തത്ത<n>"
+        "analysis": "പഞ്ചം<sanskrit><adj>വർണ്ണം<sanskrit><adj>തത്ത<n>"
     },
     {
         "word": "മലയാളഭാഷയുടെ",
@@ -1820,5 +1820,13 @@
     {
         "word": "ഓടിയേക്കൂ",
         "analysis": "ഓടുക<v><permissive-mood>"
+    },
+    {
+        "word": "വർണ്ണാനന്ദം",
+        "analysis": "വർണ്ണം<sanskrit><adj>ആനന്ദം<sanskrit>"
+    },
+    {
+        "word": "ആനന്ദപ്പുടവ",
+        "analysis": "ആനന്ദം<sanskrit><adj>പുടവ<n>"
     }
 ]
