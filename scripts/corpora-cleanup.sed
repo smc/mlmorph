@@ -1,6 +1,5 @@
 # Misc clean up on coverage corpora, lexicon
 # Example: sed -i -f corpora-cleanup.sed ../tests/coverage/*.txt
-# sed -i -f corpora-cleanup.sed ../tests/coverage/*.txt
 # Chillu normalization
 s/ന്‍/ൻ/g
 s/ള്‍/ൾ/g
@@ -25,8 +24,7 @@ s/ി‌/ു/g
 s/ോ‌/ോ/g
 s/ാ‌/ാ/g
 s/ഒാ/ഓ/g
-# ൻറെ -> ന്റെ at the end of words
-s/ൻറെ$/ന്റെ/g
+s/ൻറെ/ന്റെ/g
 s/ൻറ്$/ന്റ്/g
 s/ൻറും$/ന്റും/g
 s/ൻറിൽ$/ന്റിൽ/g
