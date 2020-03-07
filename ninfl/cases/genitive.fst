@@ -24,7 +24,7 @@ $genitive-del$ = {[#Anuswara#ൻർ]}:{} ^-> (__ [#inflboundary# ]+ <del> )
 
 % Genitive inflection rules -ആനയുടെ, കടലിന്റെ, പേരിന്റെ, പൂച്ചയുടെ, മുറ്റത്തിന്റെ
 % പൊതുവിൽ ചില്ലിൽ അവസാനിക്കുന്ന വാക്കുകൾക്ക് ഉടെ, ഇന്റെ എന്നീ രണ്ടും വിഭക്തികളും ചേരും. ഉദാഹരണം
-% അവൻ = അവനുടെ, അവന്റെ, ആൾ = ആളുടെ, ആളിന്റെ,  വാൾ - വാളിന്റെ, വാളുടെ(?) ,
+% അവൻ = അവനുടെ, അവന്റെ, ആൾ = ആളുടെ, ആളിന്റെ, വാൾ - വാളിന്റെ, വാളുടെ(?) ,
 % കാൽ - കാലിന്റെ, കാലുടെ(?) , അവൾ = അവളുടെ, അവളിന്റെ(?)
 % ഇതിൽ എല്ലാ രൂപങ്ങൾക്കും പ്രചാരമില്ല. അതുകൊണ്ട് ഏതെപ്പോൾ ചേർക്കണമെന്ന് കണ്ടുപിടിക്കേണ്ടിയിരിക്കുന്നു.
 
@@ -39,8 +39,8 @@ $genitive$ = $genitive$ || $genitive-cons-vowels$
 $genitive-half-cons$ = {<genitive>}:{ഇന്റെ<infl_marker>} ^-> ([#Virama#ു ൗ ൌ ] [#inflboundary#]+ __)
 $genitive$ = $genitive$ || $genitive-half-cons$
 
-$genitive-anuswara-1$ =  {<genitive>}:{<del>ത്തിന്റെ<infl_marker>} ^-> ([#Consonants#] [#Anuswara#] [#inflboundary#]+ __)
-$genitive-anuswara-2$ =  {<genitive>}:{ഇന്റെ<infl_marker>} ^-> ([#VowelSigns#] [#Anuswara#] [#inflboundary#]+ __)
+$genitive-anuswara-1$ = {<genitive>}:{<del>ത്തിന്റെ<infl_marker>} ^-> ([#Consonants#] [#Anuswara#] [#inflboundary#]+ __)
+$genitive-anuswara-2$ = {<genitive>}:{ഇന്റെ<infl_marker>} ^-> ([#VowelSigns#] [#Anuswara#] [#inflboundary#]+ __)
 $genitive-anuswara$ = $genitive-anuswara-1$ || $genitive-anuswara-2$ || $genitive-del$
 $genitive$ = $genitive$ || $genitive-anuswara$
 
@@ -59,7 +59,7 @@ $chillu-forms$ = {<genitive>}:{ഇന്റെ<infl_marker>} | {<genitive>}:{ഉ
 $genitive-chillu-others$ = $chillu-forms$ ^-> ([ർൾൺൿൽ] [#inflboundary#<pl>]+ __)
 $genitive$ = $genitive$ | $genitive-chillu-n$ | $genitive-chillu-r$ | $genitive-chillu-others$
 
-%$tests$ = മഴ<n><RB><genitive> | മുറ്റം<n><RB><genitive> |  കിളി<n><RB><genitive> | താൻ<n><RB><genitive> | പയർ<n><genitive>
+%$tests$ = മഴ<n><RB><genitive> | മുറ്റം<n><RB><genitive> | കിളി<n><RB><genitive> | താൻ<n><RB><genitive> | പയർ<n><genitive>
 %$tests$ || $genitive$ >> "genitive-test.a"
 
 $genitive$
