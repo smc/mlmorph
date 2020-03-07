@@ -13,6 +13,7 @@ ALPHABET = [#Letters##POS##BM##TMP##Lsym#] <genitive> <infl_marker> <pl> <del>
 $genitive-special-cases$ = {ഞാൻ}:{എന്റെ<infl_marker>} | \
     {ഞാൻ}:{എന്നുടെ<infl_marker>} | \
     {അവർ}:{അവരുടെ<infl_marker>} | \
+    {അവർ}:{അവർതൻ<infl_marker>} | \
     {നീ}:{നിന്റെ<infl_marker>} | \
     {നീ}:{നിന്നുടെ<infl_marker>} | \
     {താൻ}:{തന്റെ<infl_marker>} | \
@@ -39,8 +40,13 @@ $genitive$ = $genitive$ || $genitive-cons-vowels$
 $genitive-half-cons$ = {<genitive>}:{ഇന്റെ<infl_marker>} ^-> ([#Virama#ു ൗ ൌ ] [#inflboundary#]+ __)
 $genitive$ = $genitive$ || $genitive-half-cons$
 
-$genitive-anuswara-1$ = {<genitive>}:{<del>ത്തിന്റെ<infl_marker>} ^-> ([#Consonants#] [#Anuswara#] [#inflboundary#]+ __)
-$genitive-anuswara-2$ = {<genitive>}:{ഇന്റെ<infl_marker>} ^-> ([#VowelSigns#] [#Anuswara#] [#inflboundary#]+ __)
+$genitive-anuswara-1a$ = {<genitive>}:{<del>ത്തിന്റെ<infl_marker>} ^-> ([#Consonants#] [#Anuswara#] [#inflboundary#]+ __)
+$genitive-anuswara-1b$ = {<genitive>}:{<del>ത്തിൻ<infl_marker>} ^-> ([#Consonants#] [#Anuswara#] [#inflboundary#]+ __)
+$genitive-anuswara-1$ = $genitive-anuswara-1a$ | $genitive-anuswara-1b$
+$genitive-anuswara-2a$ = {<genitive>}:{ഇന്റെ<infl_marker>} ^-> ([#VowelSigns#] [#Anuswara#] [#inflboundary#]+ __)
+$genitive-anuswara-2b$ = {<genitive>}:{ഇൻ<infl_marker>} ^-> ([#VowelSigns#] [#Anuswara#] [#inflboundary#]+ __)
+$genitive-anuswara-2$ = $genitive-anuswara-2a$ | $genitive-anuswara-2b$
+
 $genitive-anuswara$ = $genitive-anuswara-1$ || $genitive-anuswara-2$ || $genitive-del$
 $genitive$ = $genitive$ || $genitive-anuswara$
 
@@ -58,6 +64,11 @@ $genitive-chillu-r$ = $genitive-chillu-r$ || $genitive-del$
 $chillu-forms$ = {<genitive>}:{ഇന്റെ<infl_marker>} | {<genitive>}:{ഉടെ<infl_marker>}
 $genitive-chillu-others$ = $chillu-forms$ ^-> ([ർൾൺൿൽ] [#inflboundary#<pl>]+ __)
 $genitive$ = $genitive$ | $genitive-chillu-n$ | $genitive-chillu-r$ | $genitive-chillu-others$
+
+% രാധ - രാധതൻ, കുമാരിതൻ, പൂച്ചതൻ, മീശതൻ, കുട്ടിതൻ, മഴതൻ, വിധിതൻ...
+% <ninfl> inserted to prevent phonological rules in the boundary.
+$genitive-poetic$ = {<genitive>}:{<ninfl>തൻ<infl_marker>} ^-> ([#Consonants##VowelSigns##Chillus##Virama#] [#inflboundary#]+ __)
+$genitive$ = $genitive$ | $genitive-poetic$
 
 %$tests$ = മഴ<n><RB><genitive> | മുറ്റം<n><RB><genitive> | കിളി<n><RB><genitive> | താൻ<n><RB><genitive> | പയർ<n><genitive>
 %$tests$ || $genitive$ >> "genitive-test.a"
