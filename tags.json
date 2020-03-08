@@ -233,6 +233,10 @@
 		"tag":"Quotative mood"
 	},
 	{
+		"id": "desiderative-mood",
+		"tag":"desiderative mood"
+	},
+	{
 		"id": "precative-mood",
 		"tag":"Precative mood"
 	},
