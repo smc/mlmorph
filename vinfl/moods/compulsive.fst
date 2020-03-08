@@ -15,7 +15,7 @@ $remove-past$ = <past>:<RB> ^-> ([#verbs#]+ __ [<compulsive-mood>])
 
 $verb-suffix-map$ = {ു}:{േ} | \
 	{ി<infl_marker>} : {ിയേ<infl_marker>}
-% The <infl_marker> in above line has no functional effecet. But without that 3 duplicate results
+% The <infl_marker> in above line has no functional effect. But without that 3 duplicate results
 % are generated. 3 is the length of ിയേ. I have not figured out the reason.
 
 $compulsive-mood-positive-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <compulsive-mood> )

@@ -16,6 +16,7 @@ $permissive-mood$ = "<permissive.a>"
 $precative-mood$ = "<precative.a>"
 $irrealis-mood$ = "<irrealis.a>"
 $monitory-mood$ = "<monitory.a>"
+$quotative-mood$ = "<quotative.a>"
 $conditional-mood$ = "<conditional.a>"
 $satisfactive-mood$ = "<satisfactive.a>"
 
@@ -23,6 +24,7 @@ $moods$ = $imperative-mood$ || $compulsive-mood$ || $promissive-mood$ || \
 	$optative-mood$ || $abilitative-mood$ || $purposive-mood$ || \
 	$permissive-mood$ || $precative-mood$ || $irrealis-mood$ || \
 	$monitory-mood$ || $conditional-mood$ || $satisfactive-mood$ || \
+	$quotative-mood$ || \
 	$remove-vinfl$
 
 $tests$ = അറിയിക്കുക<v><RB> <imperative-mood> | അറിയിക്കുക<v><RB> <compulsive-mood> | അറിയിക്കുക<v><RB> <compulsive-mood-neg> | പതറുക<v><RB><compulsive-mood>

@@ -229,6 +229,10 @@
 		"tag":"Satisfactive mood"
 	},
 	{
+		"id": "quotative-mood",
+		"tag":"Quotative mood"
+	},
+	{
 		"id": "precative-mood",
 		"tag":"Precative mood"
 	},
