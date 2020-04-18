@@ -541,6 +541,22 @@
         "analysis": "കേരളം<np><locative>ഓ<interrogative><indeclinable>"
     },
     {
+        "word": "ഓടില്ല",
+        "analysis": "ഓടുക<v>ഇല്ല<neg>"
+    },
+    {
+        "word": "ഓടുകയില്ല",
+        "analysis": "ഓടുക<v>ഇല്ല<neg>"
+    },
+    {
+        "word": "ഓടത്തില്ല",
+        "analysis": "ഓടുക<v>ഇല്ല<neg>"
+    },
+    {
+        "word": "ഓടുകേല",
+        "analysis": "ഓടുക<v>ഇല്ല<neg>"
+    },
+    {
         "word": "ഓടിയില്ല",
         "analysis": "ഓടുക<v><past>ഇല്ല<neg>"
     },
