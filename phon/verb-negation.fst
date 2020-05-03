@@ -8,6 +8,11 @@ $forms$ = {ുക} : {ുക} |  {ുക} : {<del>}  | {ുക} : {[#Virama#]} |
 $verb-negation$ = $forms$ ^-> ( __ [#POS##BM##Numbers##TMP##compounds##Lsym#]+ ഇ ല്ല <neg> )
 
 % ഓടുകേല, പറയുകേല
-$verb-negation-variant$ = {ഇല്ല}:{േല} ^-> (  [#POS##BM##Numbers##TMP##compounds##Lsym#]+ __ <neg> )
+$verb-negation-variant-1$ = {ഇല്ല}:{േല} ^-> ( [#POS##BM##Numbers##TMP##compounds##Lsym#]+ __ <neg> )
 
-$verb-negation$ | $verb-negation-variant$
+% ഓടൂല, പോകൂല, ചാടൂല
+$verb-negation-variant-2-1$ = {ുക} : {<del>} ^-> ( __ [#POS##BM##Numbers##TMP##compounds##Lsym#]+ ഇ ല്ല <neg> )
+$verb-negation-variant-2-2$ = {ഇല്ല}:{ൂല} ^-> ( [#POS##BM##Numbers##TMP##compounds##Lsym#]+ __ <neg> )
+$verb-negation-variant-2$ = $verb-negation-variant-2-1$ || $verb-negation-variant-2-2$
+
+$verb-negation$ | $verb-negation-variant-1$ | $verb-negation-variant-2$
