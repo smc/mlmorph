@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:eoan
 MAINTAINER Santhosh Thottingal "santhosh.thottingal@gmail.coom"
 WORKDIR /app
 COPY . /app
