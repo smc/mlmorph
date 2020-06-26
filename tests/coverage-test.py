@@ -7,7 +7,7 @@ from mlmorph import Analyser
 from collections import Counter
 
 CURR_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
-
+MIN_COVERAGE=44.26
 
 def is_valid_malayalam_word(word):
     word = word.strip()
@@ -61,7 +61,7 @@ class CoverageTests(unittest.TestCase):
         for word, freq in most_common:
             print("%4d %s" % (freq, word), end='\n', file=freq_analysis_file)
         freq_analysis_file.close()
-
-
+        self.assertTrue(percentage>=MIN_COVERAGE,
+                                    'Coverage decreased from %3.2f' % MIN_COVERAGE )
 if __name__ == '__main__':
     unittest.main()
