@@ -1880,5 +1880,9 @@
     {
         "word": "ഇല്ലെങ്കിൽ",
         "analysis": "ഇല്ല<neg>എങ്കിൽ<cnj>"
+    },
+    {
+        "word": "അകന്നുകൊണ്ടിരിക്കയാണ്",
+        "analysis": "അകലുക<v><cvb-adv-part-past>കൊണ്ടിരിക്കുക<v><cvb-adv-part-absolute>ആണ്<aff>"
     }
 ]

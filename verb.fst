@@ -19,7 +19,7 @@ $VERB-PREFIX$ = $ADVERB$? $VSTEM$ [#vinfl#]? $CONJUNCTION$* $POLARITY$?
 $VERB-TENSES$ = $VERB-PREFIX$ || $TENSES$
 $VERB-MOODS$ = $VERB-PREFIX$ || $MOODS$
 $VERB-ASPECTS$ = $VERB-PREFIX$ || $ASPECTS$
-$VERB-ADVERBS$ = $VSTEM$ [#adv#] || $ADVERBSTEMS$
+$VERB-ADVERBS$ = ( $VSTEM$ [#adv#] $POLARITY$? ) || $ADVERBSTEMS$
 
 % For the output of aspects, apply adv-clause-rp-past, but limit it only for the outputs ending with ു
 % Example: പാടിയിരുന്നു->പാടിയിരുന്ന, വന്നുകൊണ്ടിരുന്നു->വന്നുകൊണ്ടിരുന്ന
@@ -28,7 +28,7 @@ $VERB-ADVERBS-FROM-INFLECTIONS$ = ( $VERB-ASPECTS$ || $ENDS_WITH_U_FILTER$ ) <RB
 $VERB-ADVERBS$ = $VERB-ADVERBS$ | $VERB-ADVERBS-FROM-INFLECTIONS$
 
 $VERB$ = $VERB-TENSES$ | $VERB-MOODS$ | $VERB-ASPECTS$
-% The only aggulutination scenario for verbs is when adverbs appears such as മുൻവിനയെച്ചം.
+% The only agglutination scenario for verbs is when adverbs appears such as മുൻവിനയെച്ചം.
 $VERB$ = $VERB$ | ( $VERB-ADVERBS$+ $VERB$?)
 
 $VERB-ADVERBS$ >> "verb-adverbs.a"
