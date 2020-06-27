@@ -18,11 +18,8 @@ s/‍ൌ/ൗ/g
 
 #Common mistakes
 s/പക്ഷെ/പക്ഷേ/g
-# ZWNJs
-s/ു‌/ു/g
-s/ി‌/ു/g
-s/ോ‌/ോ/g
-s/ാ‌/ാ/g
+# ZWNJs -Remove all ZWNJs that are not after a VIRAMA sign.
+s/([അ-ൌ])\xE2\x80\x8C/\1/g
 s/ഒാ/ഓ/g
 s/ൻറെ/ന്റെ/g
 s/ൻറ്$/ന്റ്/g
