@@ -14,7 +14,7 @@ s/\xE2\x80\x8D//g
 # Remove all soft hyphens
 s/\xC2\xAD//g
 # Replace old au sign with new one
-s/‍ൌ/ൗ/g
+s/ൌ/ൗ/g
 
 #Common mistakes
 s/പക്ഷെ/പക്ഷേ/g
