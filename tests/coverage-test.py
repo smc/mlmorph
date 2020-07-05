@@ -7,7 +7,7 @@ from mlmorph import Analyser
 from collections import Counter
 
 CURR_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
-MIN_COVERAGE=45.76
+MIN_COVERAGE=45.80
 
 def is_valid_malayalam_word(word):
     word = word.strip()
@@ -23,19 +23,14 @@ class CoverageTests(unittest.TestCase):
     analyser = Analyser()
 
     def test_total_coverage(self):
-
-        tokens_count = 0
-        analysed_tokens_count = 0
-        missed_words = []
-        missed_words_file = open('missed_words.txt', 'w')
-        freq_analysis_file = open('freq_analysis.txt', 'w')
-
-        print('\t**** Coverage tests ****\t\n',
-              end='\n', file=freq_analysis_file)
-
+        total_tokens_count = 0
+        total_analysed_tokens_count = 0
         start = clock()
+        print("%40s\t%8s\t%8s\t%s" % ('File name', 'Words', 'Analysed', 'Percentage'))
         for filename in glob.glob(os.path.join(CURR_DIR, "coverage", "*.txt")):
             with open(filename, 'r') as file:
+                tokens_count = 0
+                analysed_tokens_count = 0
                 for line in file:
                     for word in regex.split(r'([\.\s]+)', line):
                         if not is_valid_malayalam_word(word):
@@ -44,23 +39,16 @@ class CoverageTests(unittest.TestCase):
                         analysis = self.analyser.analyse(word, False)
                         if len(analysis) > 0:
                             analysed_tokens_count += 1
-                        else:
-                            missed_words.append(word)
-                            missed_words_file.write(word+'\n')
-        missed_words_file.close()
-        percentage = (analysed_tokens_count/tokens_count)*100
+                percentage = (analysed_tokens_count/tokens_count)*100
+                total_tokens_count += tokens_count
+                total_analysed_tokens_count += analysed_tokens_count
+                print("%40s\t%8d\t%8d\t%3.2f%%" % (os.path.basename(filename), tokens_count, analysed_tokens_count, percentage))
+                file.close()
+        percentage = (total_analysed_tokens_count/total_tokens_count)*100
         time_taken = clock() - start
-        print('Total words: %d \nAnalysed words: %d \nCoverage: %3.2f %% ' %
-              (tokens_count, analysed_tokens_count, percentage),
-              end='\n', file=freq_analysis_file)
-        print('Time taken: %5.3f seconds' %
-              (time_taken), end='\n', file=freq_analysis_file)
-
-        most_common = Counter(missed_words).most_common(500)
-        print('Top 500 missed words are:', end='\n', file=freq_analysis_file)
-        for word, freq in most_common:
-            print("%4d %s" % (freq, word), end='\n', file=freq_analysis_file)
-        freq_analysis_file.close()
+        print('%40s\t%8d\t%8d\t%3.2f%%' %
+              ('Total', total_tokens_count, total_analysed_tokens_count, percentage))
+        print('Time taken: %5.3f seconds' % (time_taken))
         self.assertTrue(percentage>=MIN_COVERAGE,
                                     'Coverage decreased from %3.2f to %3.2f' % (MIN_COVERAGE, percentage) )
 if __name__ == '__main__':
