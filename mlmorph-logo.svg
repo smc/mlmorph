@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="30.027mm" height="28.161mm" version="1.1" viewBox="0 0 30.027 28.161" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
- <g transform="translate(-85.141 -96.628)">
-  <ellipse transform="rotate(-44.821)" cx="-7.6182" cy="147.8" rx="16.897" ry="5.6837" fill="none" stroke="#ef5350" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="paint-order:stroke fill markers"/>
-  <path d="m87.811 122.69c6.8396 1.0274 13.919 1.7374 20.767 0.24444 2.6806-0.58443 4.9265-2.6709 5.3408-5.4787 0.90985-6.1664-0.85825-12.433-2.646-18.287" fill="none" stroke="#ef5350" stroke-linecap="round" stroke-width="2" style="paint-order:fill markers stroke"/>
- </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.05 28.05" height="106.015" width="106.015"><circle r="14.025" cy="14.025" cx="14.025" fill="#1976d2" paint-order="fill markers stroke"/><g transform="translate(-49.282 -55.693) scale(.62285)" stroke-linecap="round" stroke="#fff"><ellipse stroke-width="1.869" stroke-linejoin="round" fill="none" ry="5.684" rx="16.897" cy="147.8" cx="-7.618" transform="rotate(-44.821)" paint-order="stroke fill markers"/><path stroke-width="1.869" fill="none" d="M87.811 122.69c6.84 1.027 13.919 1.737 20.767.244 2.68-.584 4.926-2.67 5.34-5.478.91-6.167-.857-12.433-2.645-18.287" paint-order="fill markers stroke"/><ellipse transform="rotate(42.09)" ry="3.078" rx=".964" cy="15.202" cx="147.057" fill="#fff" stroke-width=".837" stroke-linejoin="round" paint-order="stroke fill markers"/></g></svg>
