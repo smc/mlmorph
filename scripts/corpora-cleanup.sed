@@ -7,8 +7,10 @@ s/ല്‍/ൽ/g
 s/ര്‍/ർ/g
 s/ന്‍/ൻ/g
 s/ണ്‍/ൺ/g
-# Remove ZWNJ at end of words
+# Remove ZWNJ at end of lines
 s/\xE2\x80\x8C$//g
+# Remove ZWNJ at end of words
+s/\xE2\x80\x8C\s$//g
 # Remove all other ZWJ
 s/\xE2\x80\x8D//g
 # Remove all soft hyphens
