@@ -1,6 +1,6 @@
 from argparse import ArgumentParser
 from sys import stdin
-from mlmorph import Generator, Analyser
+from mlmorph import Generator, Analyser, check_foreign_word
 
 
 def main():
@@ -12,6 +12,8 @@ def main():
                    help="Analyse the input file strings")
     a.add_argument('-g', '--generate', action='store_true',
                    help="Generate the input file strings")
+    a.add_argument('-f', '--foreign', action='store_true',
+                   help="Check if the word is foreign word or not")
     a.add_argument('-v', '--verbose', action='store_true',
                    help="print verbosely while processing")
     options = a.parse_args()
@@ -38,7 +40,9 @@ def main():
                 print(line, "\t?")
             for gen in gens:
                 print(line, "\t",  gen[0], "\t", gen[1])
-
+        if options.foreign:
+            is_foreign = check_foreign_word(line)
+            print(line, "\t", is_foreign)
     print()
     exit(0)
 

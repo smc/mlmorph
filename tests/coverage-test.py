@@ -4,20 +4,20 @@ import unittest
 import glob
 from time import perf_counter as clock
 from mlmorph import Analyser
-from collections import Counter
+
 
 CURR_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
-MIN_COVERAGE=46.77
+MIN_COVERAGE = 54.95
+
 
 def is_valid_malayalam_word(word):
     word = word.strip()
     if(len(word) <= 1):
         return False
     # Ignore all non-Malayalam words
-    if regex.search(r"[\u0D00-\u0D7F]+", word) is None:
+    if regex.search(r"[\u0D00-\u0D7F\u200C-\u200D]+", word) is None:
         return False
     return True
-
 
 class CoverageTests(unittest.TestCase):
     analyser = Analyser()
@@ -49,7 +49,9 @@ class CoverageTests(unittest.TestCase):
         print('%40s\t%8d\t%8d\t%3.2f%%' %
               ('Total', total_tokens_count, total_analysed_tokens_count, percentage))
         print('Time taken: %5.3f seconds' % (time_taken))
-        self.assertTrue(percentage>=MIN_COVERAGE,
+        self.assertTrue(percentage >= MIN_COVERAGE,
                                     'Coverage decreased from %3.2f to %3.2f' % (MIN_COVERAGE, percentage) )
+
+
 if __name__ == '__main__':
     unittest.main()
