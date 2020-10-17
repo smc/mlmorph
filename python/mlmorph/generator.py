@@ -8,6 +8,7 @@ import libhfst
 from pkg_resources import resource_filename, resource_exists
 from .normalizer import normalize
 from .utils import get_transducer
+from .analyser import Analyser
 
 
 class Generator:
