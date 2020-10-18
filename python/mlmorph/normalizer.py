@@ -5,11 +5,12 @@ normalization_map = {
     'ല്‍': 'ൽ',
     'ള്‍': 'ൾ',
     'ക്‍': 'ൿ',
-    'ൻ്റ': 'ന്റ'
+    'ൻ്റ': 'ന്റ',
+    'ൌ': 'ൗ'
 }
 
 
-def normalize(text):
+def normalize(text: str) -> str:
     for key in normalization_map:
         text = text.replace(key, normalization_map[key])
     return text

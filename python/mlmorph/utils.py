@@ -1,9 +1,9 @@
 
-import libhfst
+from libhfst import HfstInputStream, HfstTransducer
 
 
-def get_transducer(fsa):
-    istr = libhfst.HfstInputStream(fsa)
+def get_transducer(fsa: str) -> HfstTransducer:
+    istr = HfstInputStream(fsa)
     transducers = []
     while not (istr.is_eof()):
         transducers.append(istr.read())
