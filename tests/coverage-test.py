@@ -7,7 +7,7 @@ from mlmorph import Analyser
 
 
 CURR_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
-MIN_COVERAGE = 54.95
+MIN_COVERAGE = 56.60
 
 
 def is_valid_malayalam_word(word):
@@ -18,6 +18,7 @@ def is_valid_malayalam_word(word):
     if regex.search(r"[\u0D00-\u0D7F\u200C-\u200D]+", word) is None:
         return False
     return True
+
 
 class CoverageTests(unittest.TestCase):
     analyser = Analyser()
@@ -50,7 +51,7 @@ class CoverageTests(unittest.TestCase):
               ('Total', total_tokens_count, total_analysed_tokens_count, percentage))
         print('Time taken: %5.3f seconds' % (time_taken))
         self.assertTrue(percentage >= MIN_COVERAGE,
-                                    'Coverage decreased from %3.2f to %3.2f' % (MIN_COVERAGE, percentage) )
+                        'Coverage decreased from %3.2f to %3.2f' % (MIN_COVERAGE, percentage))
 
 
 if __name__ == '__main__':

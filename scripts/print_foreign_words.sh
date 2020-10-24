@@ -1,0 +1,1 @@
+mlmorph -f | awk '{ if($2 == 1) { print $1 }}'
