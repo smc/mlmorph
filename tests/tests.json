@@ -1888,5 +1888,9 @@
     {
         "word": "അകമ്പടിയോടെയാണ്",
         "analysis": "അകമ്പടി<n><sociative>എ<indeclinable>ആണ്<aff>"
+    },
+    {
+        "word":"ധനകാര്യം",
+        "analysis": "ധനം<sanskrit><adj>കാര്യം<sanskrit>"
     }
 ]
