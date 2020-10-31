@@ -157,7 +157,8 @@ ENGLISH_PATTERNS = [
     "ോഷൻ",
     "ൗണ്ട",
     "്രീം",
-    "ക്വേ"
+    "ക്വേ",
+    "[0-9]+"
 ]
 
 compiled_english_pattern_regex = re.compile("|".join(ENGLISH_PATTERNS))
