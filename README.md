@@ -10,7 +10,7 @@
 
 ## Introduction
 
-mlmorph is Malayalam Morphology Analyzer and Generator. It aims to build a morphological model for Malayalam language using  [Finite State Transducer technology](https://en.wikipedia.org/wiki/Finite-state_transducer). Specifically, the system is developed using [Stuttgart Finite State Toolkit(SFST)]( http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html) formalism and uses [Helsinki Finite-State Technology(HFST)](Helsinki Finite-State Technology) as Toolkit.
+mlmorph is Malayalam Morphology Analyzer and Generator. It aims to build a morphological model for Malayalam language using  [Finite State Transducer technology](https://en.wikipedia.org/wiki/Finite-state_transducer). Specifically, the system is developed using [Stuttgart Finite State Toolkit(SFST)]( http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html) formalism.
 
 Malayalam is a heavily inflected and agglutinated language and this project attempt to iteratively develop a morphological model for it.
 
@@ -20,9 +20,9 @@ For a detailed introduction and explanation of approach, please refer the blog p
 
 Currently the analyser can parse(or recognize) 80%+ of words in our test corpora of 50000 Malayalam words. The lexicon prepared is being updated and expanded to include more commonly used words. Morpho-Phonological rules are still being added, even though the common constructs are already added.
 
- * A web interface is available at https://morph.smc.org.in to quickly try out the analyser and generator.
- * A spellchecker based on this analyser is being developed. See https://gitlab.com/smc/mlmorph-spellchecker
- * A libreoffice extension to use the spellchecker is also being developed. See https://gitlab.com/smc/mlmorph-libreoffice-spellchecker
+* A web interface is available at https://morph.smc.org.in to quickly try out the analyser and generator.
+* A spellchecker based on this analyser is being developed. See https://gitlab.com/smc/mlmorph-spellchecker
+* A libreoffice extension to use the spellchecker is also being developed. See https://gitlab.com/smc/mlmorph-libreoffice-spellchecker
 
 ## Installation and usage
 
@@ -33,8 +33,6 @@ pip install mlmorph
 ```
 
 For API documentation and command line usage, See https://pypi.org/project/mlmorph
-
-> Due to a bug in [hfst python package](https://github.com/hfst/hfst/issues/448), python3.8 support is broken
 
 ### Morphological analysis example
 
@@ -104,13 +102,13 @@ Detailed documentation: https://thottingal.in/blog/2019/03/10/malayalam-named-en
 
 ## For Developers
 
-You need  [Helsinki Finite-State Transducer Technology (HFST) ](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/) to compile and use this analyzer.
+You need [Stuttgart Finite State Toolkit(SFST)](http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html) to compile and use this analyzer.
 
 The Makefile provided compiles compiles all the sources and produces the binary FSA 'malayalam.a'. Running 'make' should be enough to get started.
 
-In a debian/ubuntu based GNU/Linux, SFST and HFST can be installed as follows
+In a debian/ubuntu based GNU/Linux, SFST can be installed as follows
 
-```$ sudo apt install sfst hfst python3-libhfst```
+```$ sudo apt install sfst```
 
 Clone or download this git repository to your machine.
 
@@ -119,32 +117,6 @@ Build the FST by
 ```$ make```
 
 This will create a file named `malayalam.a` which is the compiled generator. Individual modules will get also created like `num.a` which is number generator.
-
-To generatate Malayalam words, use ```hfst-lookup```
-
-```
-$ echo "പേന<n><pl>" | hfst-lookup malayalam.a
-> പേന<n><pl>    പേനകൾ   0.000000
-$ echo "കീശ<n><locative>" | hfst-lookup malayalam.a
-> കീശ<n><locative>   കീശയിൽ	0.000000
-```
-
-The same analyser can be used inverted to reverse the above operation.
-
-```$ hfst-invert malayalam.a > malayalam.g```
-
-Two swtich to generate mode, just press enter at prompt without entering any text.
-
-```bash
-$ echo "ആശയാൽ" | hfst-lookup malayalam.g
-> ആശയാൽ ആശ<n><instrumental>	0.000000
-```
-
-For more convenient usage, a python wrapper around this is provided. See section below. Any words that is not known to the model will be rejected.
-
-To generate 10 random strings the FST can produce:
-
-`hfst-fst2strings malayalam.a -r 10`
 
 ## Tests
 

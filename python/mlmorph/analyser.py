@@ -5,14 +5,11 @@ Simple python interface for mlmorph using libhfst-python.
 """
 
 import regex
-from libhfst import HfstTransducer
+import sfst
 from typing import List, Tuple
 from pkg_resources import resource_filename, resource_exists
 from .normalizer import normalize
 from .foreign_word_detector import check_foreign_word
-from .utils import get_transducer
-
-
 class Analyser:
 
     ANALYSER_REGEX = regex.compile(r"((?P<root>([^<])+)(?P<tags>(<[^>]+>)+))+")
@@ -26,17 +23,8 @@ class Analyser:
             self.fsa: str = resource_filename(__name__, Analyser.RESOURCE_PATH)
         if not self.fsa:
             raise ValueError("Could not read the fsa.")
-        self.transducer: HfstTransducer = None
-        self.analyser: HfstTransducer = None
+        sfst.init(self.fsa)
 
-    def get_analyser(self) -> HfstTransducer:
-        if not self.transducer:
-            self.transducer = get_transducer(self.fsa)
-        analyser = HfstTransducer(self.transducer)
-        analyser.invert()
-        analyser.remove_epsilons()
-        analyser.lookup_optimize()
-        return analyser
 
     def analyse(
         self, word: str, weighted: bool = True, foreign_word_check: bool = True
@@ -55,11 +43,8 @@ class Analyser:
         -------
         Array of tuples with analysis string and weight
         """
-
-        if not self.analyser:
-            self.analyser = self.get_analyser()
         word = normalize(word)
-        analysis_results = self.analyser.lookup(word)
+        analysis_results = sfst.analyse(word)
         if not len(analysis_results):
             if foreign_word_check and check_foreign_word(word):
                 if weighted:
@@ -73,7 +58,7 @@ class Analyser:
         processed_result = []
         for aindex in range(len(analysis_results)):
             weight = 0
-            analysis = analysis_results[aindex][0]
+            analysis = analysis_results[aindex]
             if weighted:
                 parsed_result = Analyser.parse_analysis(analysis)
                 weight = parsed_result["weight"]

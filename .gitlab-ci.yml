@@ -1,10 +1,10 @@
-image: "ubuntu:eoan"
+image: "ubuntu:latest"
 
 build:
   stage: build
   before_script:
     - apt-get update -y
-    - apt-get install -y make sfst hfst python3-pip
+    - apt-get install -y make sfst python3-pip
   script:
     - make
   artifacts:
@@ -16,7 +16,7 @@ test:
   stage: test
   before_script:
     - apt-get update -y
-    - apt-get install -y make sfst hfst locales python3-pip
+    - apt-get install -y make sfst locales python3-pip
     - locale-gen ml_IN.UTF-8
   script:
     - LC_ALL=ml_IN.UTF-8 make test
