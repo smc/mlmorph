@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Simple python interface for mlmorph using libhfst-python.
+Simple python interface for mlmorph using sfst
 """
 
 import sfst
