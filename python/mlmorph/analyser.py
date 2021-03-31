@@ -48,9 +48,9 @@ class Analyser:
         if not len(analysis_results):
             if foreign_word_check and check_foreign_word(word):
                 if weighted:
-                    analysis_results = [(word + "<fw>", 100)]
+                    analysis_results = [word + "<fw>"]
                 else:
-                    analysis_results = [(word + "<fw>", 0)]
+                    analysis_results = [word + "<fw>"]
 
         if not weighted:
             return analysis_results
@@ -58,6 +58,7 @@ class Analyser:
         processed_result = []
         for aindex in range(len(analysis_results)):
             weight = 0
+            print(analysis_results)
             analysis = analysis_results[aindex]
             if weighted:
                 parsed_result = Analyser.parse_analysis(analysis)
@@ -149,6 +150,7 @@ class Analyser:
             "cvb-adv-part-past": 5,
             # Proper noun has high cost
             "np": 5,
+            "fw": 1,
         }
         # Use the WEIGHTS or fallback to length
         return WEIGHTS.get(pos, len(pos))
