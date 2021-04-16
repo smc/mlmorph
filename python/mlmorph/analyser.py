@@ -58,7 +58,6 @@ class Analyser:
         processed_result = []
         for aindex in range(len(analysis_results)):
             weight = 0
-            print(analysis_results)
             analysis = analysis_results[aindex]
             if weighted:
                 parsed_result = Analyser.parse_analysis(analysis)
