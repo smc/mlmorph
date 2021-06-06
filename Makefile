@@ -15,8 +15,8 @@ $(SUBDIRS):
 	$(MAKE) -C $@
 
 test: malayalam.a python
-	@python3 tests/mlmorph-test.py
+	@python tests/mlmorph-test.py
 
 coverage-analysis: malayalam.a python
-	@python3 tests/coverage-test.py
+	@python tests/coverage-test.py
 
