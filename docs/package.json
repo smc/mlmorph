@@ -1,0 +1,27 @@
+{
+  "name": "mlmorph-docs",
+  "version": "1.0.0",
+  "description": "Documentation for Malayalam morphology analyser",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev .",
+    "docs:build": "vitepress build .",
+    "docs:serve": "vitepress serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/smc/mlmorph.git"
+  },
+  "keywords": [
+    "morphology",
+    "malayalam"
+  ],
+  "author": "Santhosh Thottingal",
+  "bugs": {
+    "url": "https://gitlab.com/smc/mlmorph/issues"
+  },
+  "homepage": "https://gitlab.com/smc/mlmorph#readme",
+  "devDependencies": {
+    "vitepress": "^0.15.6"
+  }
+}

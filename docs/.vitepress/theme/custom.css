@@ -1,0 +1,29 @@
+:root {
+    --c-brand: #00A7D0;
+    --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    "Manjari", sans-serif;
+    --font-family-mono: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    "Manjari", monospace;
+}
+
+.custom-block.example {
+    background-color: var(--c-white);
+    border-color: var(--c-brand);
+    overflow-x: auto;
+}
+
+.custom-block.rule {
+    margin-top: 2rem;
+}
+.custom-block.rule strong {
+    color: var(--c-brand);
+}
+
+.custom-block.rule::before {
+    content: "🖝";
+    position: absolute;
+    left: -1.5em;
+    color: var(--c-brand);
+    font-size: 2em;
+}
