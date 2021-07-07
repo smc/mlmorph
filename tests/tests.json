@@ -858,6 +858,18 @@
         "analysis": "വീട്<n><sociative>"
     },
     {
+        "word": "നിറത്തോടു",
+        "analysis": "നിറം<n><sociative>"
+    },
+    {
+        "word": "പാലത്തിനോട്",
+        "analysis": "പാലം<n><sociative>"
+    },
+    {
+        "word": "സലിമിനോട്",
+        "analysis": "സലിം<np><sociative>"
+    },
+    {
         "word": "ആയിരങ്ങൾ",
         "analysis": "<thousands><cardinal><pl>"
     },
