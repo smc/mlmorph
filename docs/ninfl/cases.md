@@ -120,6 +120,83 @@ Inanimate nouns are left without any markers for accusative inflection. For exam
 
 ## Dative
 
+The dative(ഉദ്ദേശിക) is used for indirect objects. The function is categorized as സ്വാമി/master to denote 'independent'
+
+The morpheme used for Dative inflection is -ക്ക്, ഉ്.
+
+POS tagL `<dative>`
+
+::: rule
+**Words ending with Consonant, Vowel signs** : Append ക്ക്, ക്കു, യ്ക്ക്, യ്ക്കു
+:::
+
+::: example
+
+* `അമ്മ<n><dative>` ⇒ അമ്മയ്ക്ക്, അമ്മക്ക്, അമ്മയ്ക്കു
+* `പുഴ<n><sociative>` ⇒ പുഴക്കു, പുഴയ്ക്ക്, പുഴയ്ക്കു
+* `കുട്ടി<n><sociative>` ⇒ കുട്ടിയ്ക്ക്, കുട്ടിക്കു
+:::
+
+::: rule
+**Words ending with Chandrakkala, ൽ, ൺ** : Append ഇന്, ഇനു്, ഇനു
+:::
+
+::: example
+
+* `കാട്<n><dative>` ⇒ കാടിനു, കാടിന്, കാടിനു്
+* `കാൽ<n><sociative>` ⇒ കാലിന്, കാലിനു
+* `ഫോൺ<eng><sociative>` ⇒ ഫോണിനു, ഫോണിന്
+:::
+
+
+::: rule
+**Words ending with ൻ** : Replace ൻ with ന്, നു, നു്
+:::
+
+::: example
+
+* `അവൻ<n><dative>` ⇒ അവനു, അവന്, അവനു്
+* `വേലക്കാരൻ<n><sociative>` ⇒ വേലക്കാരന്
+* `വേടൻ<eng><sociative>` ⇒ വേടന്
+:::
+
+::: rule
+**Words ending with ർ** : Replace ർ with രിന്, റിന്
+:::
+
+::: example
+
+* `കാർ<n><dative>` ⇒ കാറിന്, <s>കാരിന്</s>
+* `മലർ<n><dative>` ⇒ മലരിന്, <s>മലറിന്</s>
+:::
+
+::: rule
+**Words ending with ൾ, ർ** : Append ക്ക്
+:::
+
+::: rule
+**Words ending with Anuswara** : Replace Anuswara by ത്തിന്, ത്തിനു, ത്തിനു്
+:::
+
+::: example
+
+* `പാലം<n><dative>` ⇒ പാലത്തിന്
+* `നിയമം<n><dative>` ⇒ നിയമത്തിനു, നിയമത്തിനു്, നിയമത്തിന്
+:::
+
+::: rule
+**Special forms for pronouns** : Replace Anuswara by ത്തിന്, ത്തിനു, ത്തിനു്
+:::
+
+| Pronoun | Dative form |
+| ------- | ------------- |
+| ഞാൻ      | എനിക്ക്, എനിയ്ക്ക്, എനിക്കു, എനിക്കു്  |
+| അവർ     | അവർക്ക്, അവർക്കു്, അവർക്കു   |
+| നീ       | നിനക്ക്, നിനക്കു്, നിനക്കു  |
+| താൻ      | തനിയ്ക്ക്, തനിയ്ക്കു,    തനിക്കു   |
+| നാം       | നമുക്ക്, നമുക്കു്, നമുക്കു  |
+
+
 ## Sociative
 
 The sociative(സംയോജിക) -ഓട് marks the indirect object of verbs that require company/witness(സാക്ഷി)
@@ -130,6 +207,7 @@ Typically, the sociative marker marks :
 * the object of association and connection
 * of emotions like anger
 
+POS tagL `<sociative>`
 
 ::: rule
 **Words ending with Consonant, Chillu, Virama, Vowel signs, Chandrakkala** : Append ഓട്, ഓടു, ഓടു്
