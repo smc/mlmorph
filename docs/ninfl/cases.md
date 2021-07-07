@@ -13,6 +13,19 @@ Following are Malayalam cases(വിഭക്തി) for nominal inflection
 7. Locative (ആധാരിക) indicates a word's use to refer to a location.
 8. Vocative indicates a noun being used to address someone or something, usually when spoken to.
 
+This is defined by the following verse in [വിഭക്തിപ്രകരണം](https://ml.wikisource.org/wiki/%E0%B4%95%E0%B5%87%E0%B4%B0%E0%B4%B3%E0%B4%AA%E0%B4%BE%E0%B4%A3%E0%B4%BF%E0%B4%A8%E0%B5%80%E0%B4%AF%E0%B4%82/%E0%B4%A8%E0%B4%BE%E0%B4%AE%E0%B4%BE%E0%B4%A7%E0%B4%BF%E0%B4%95%E0%B4%BE%E0%B4%B0%E0%B4%82/%E0%B4%B5%E0%B4%BF%E0%B4%AD%E0%B4%95%E0%B5%8D%E0%B4%A4%E0%B4%BF%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%95%E0%B4%B0%E0%B4%A3%E0%B4%82) chapter of കേരളപാണിനിയം
+
+```
+തന്മ നിർദ്ദേശികാ കർത്താ;
+പ്രതിഗ്രാഹിക കർമ്മമെ;
+ഓടു് സംയോജികാ സാക്ഷി;
+സ്വാമിയുദ്ദേശികാ ,ക്ക്, ഉ്
+ആൽ പ്രയോജികയാം ഹേതു;
+ഉടെ സംബന്ധികാ സ്വതാ;
+ആധാരികാധികരണം
+ഇൽ, കൽ പ്രത്യയമായവ.
+```
+
 ## Nominative
 
 ## Accusative
@@ -26,6 +39,7 @@ POS tag: `<accusative>`
 :::
 
 ::: example
+
 * `മരം<n><accusative>` ⇒ മരത്തെ or മരത്തിനെ
 * `മുറ്റം<n><accusative>` ⇒ മുറ്റത്തെ or മുറ്റത്തിനെ
 * `കുറ്റം<n><accusative>` ⇒ കുറ്റത്തെ or കുറ്റത്തിനെ
@@ -41,6 +55,7 @@ The abbreviated form ത്തെ is more preferred in this case though.
 Phonological rules will change this further to ിനെ by changing vowel to vowel sign.
 
 ::: example
+
 * `കലാം<n><accusative>` ⇒ കലാമിനെ
 * `ബദാം<n><accusative>` ⇒ ബദാമിനെ
 * `ടീം<eng><accusative>` ⇒ ടീമിനെ
@@ -53,11 +68,13 @@ Phonological rules will change this further to ിനെ by changing vowel to vo
 Phonological rules will change this further. Note that here we are excluding ൾ from the set of chillus because that has different rule.
 
 ::: example
+
 * `മീൻ<n><accusative>` ⇒ മീനിനെ
 * `കാൽ<n><accusative>` ⇒ കാലിനെ
 * `ഡോക്ടർ<eng><accusative>` ⇒ ഡോക്ടറിനെ
 * `അണ്ണൻ<n><accusative>` ⇒ അണ്ണനെ
 * `തൂൺ<n><accusative>` ⇒ തൂണിനെ
+
 :::
 
 ::: rule
@@ -65,6 +82,7 @@ Phonological rules will change this further. Note that here we are excluding ൾ
 :::
 
 ::: example
+
 * `അവൻ<n><accusative>` ⇒ അവനെ
 * `മകൾ<n><accusative>` ⇒ മകളെ
 * `പൂ<n><plural><accusative>` ⇒ പൂക്കളെ
@@ -74,6 +92,7 @@ Phonological rules will change this further. Note that here we are excluding ൾ
 * `പൂച്ച<n><n><accusative>` ⇒ പൂച്ചയെ
 * `പീലി<n><n><accusative>` ⇒ പീലിയെ
 * `തോണി<n><n><accusative>` ⇒ തോണിയെ
+
 :::
 
 Here, മീനെ is not really popular usuage, but not invalid. മീനിനെ is better.
@@ -87,13 +106,13 @@ Finally, When the word is a pronoun there are several exceptions.
 These rules need to be specified per words there is no common pattern
 
 | Pronoun | Accusative form |
-| --- | --- |
-| ഞാൻ | എന്നെ |
-| താൻ | തന്നെ |
-| നാം |  നമ്മെ |
-| അവർ | അവരെ |
-| ഇവൻ |  ഇവനെ|
-| നീ | നിന്നെ|
+| ------- | --------------- |
+| ഞാൻ      | എന്നെ             |
+| താൻ      | തന്നെ             |
+| നാം       | നമ്മെ             |
+| അവർ     | അവരെ             |
+| ഇവൻ     | ഇവനെ             |
+| നീ       | നിന്നെ             |
 
 The order of the rules executed is in the reverse order of listing above. First the pronouns, and last is anuswara forms.
 
@@ -103,9 +122,159 @@ Inanimate nouns are left without any markers for accusative inflection. For exam
 
 ## Sociative
 
+The sociative(സംയോജിക) -ഓട് marks the indirect object of verbs that require company/witness(സാക്ഷി)
+
+Typically, the sociative marker marks :
+
+* the addressee of speech
+* the object of association and connection
+* of emotions like anger
+
+
+::: rule
+**Words ending with Consonant, Chillu, Virama, Vowel signs, Chandrakkala** : Append ഓട്, ഓടു, ഓടു്
+:::
+
+::: example
+
+* `അമ്മ<n><sociative>` ⇒ അമ്മയോട്
+* `പുഴ<n><sociative>` ⇒ പുഴയോട്
+* `കാറ്റ്<n><sociative>` ⇒ കാറ്റോട്
+* `അവൻ<prn><sociative>` ⇒ അവനോട്
+:::
+
+Then there is an additional form for words ending with Chandrakkala
+
+::: rule
+**Words ending with Chandrakkala** : Append ഇനോട്.
+:::
+
+::: example
+
+* `പൂവ്<n><sociative>` ⇒ പൂവിനോട്
+* `കാട്<n><sociative>` ⇒ കാടിനോട്
+* `നാട്<n><sociative>` ⇒ നാടിനോട്
+:::
+
+::: rule
+**Words ending with Anuswaram** : Replace anuswaram by ത്തിനോട് or ത്തോട്.
+:::
+
+::: example
+
+* `നിറം<n><sociative>` ⇒ നിറത്തോട്, നിറത്തിനോട്, നിറത്തോടു
+* `പാലം<n><sociative>` ⇒ പാലത്തിനോട്, പാലത്തോട്, പാലത്തോടു
+:::
+
 ## Instrumental
 
 ## Genitive
+
+The genitive(സംബന്ധിക) marks the owner in possessive phrases. The genitive morphemes are -ഉടെ and -ന്റെ
+
+::: rule
+**Words ending with Consonant or Vowel signs of ആ, ഇ, ഈ, എ, ഏ, ഒ, ഓ** : Append ഉടെ.
+:::
+
+::: example
+
+* `അമ്മ<n><genitive>` ⇒ അമ്മയുടെ
+* `പുലി<n><genitive>` ⇒ പുലിയുടെ
+* `അമ്മു<n><genitive>` ⇒ അമ്മുവിന്റെ
+* `മാവോ<n><genitive>` ⇒ മാവോയുടെ
+:::
+
+::: rule
+**Words ending with Chandrakkala or Vowel signs of ഉ, ഔ** : Append ഇന്റെ.
+:::
+
+::: example
+
+* `അമ്മു<n><genitive>` ⇒ അമ്മുവിന്റെ
+* `പശു<n><genitive>` ⇒ പശുവിന്റെ
+* `കാട്<n><genitive>` ⇒ കാടിന്റെ
+:::
+
+::: rule
+**Words ending with Anuswara after a consonant** : Append ത്തിന്റെ or ത്തിൻ.
+:::
+
+::: example
+
+* `പൂരം<n><genitive>` ⇒ പൂരത്തിന്റെ, പൂരത്തിൻ
+* `കാലം<n><genitive>` ⇒ കാലത്തിന്റെ, കാലത്തിൻ
+* `കേരളം<n><genitive>` ⇒ കേരളത്തിന്റെ
+
+:::
+
+::: rule
+**Words ending with Anuswara after a vowel sign** : Append ഇന്റെ or ഇൻ.
+:::
+
+::: example
+
+* `ഐസ്ക്രീം<eng><genitive>` ⇒ ഐസ്ക്രീമിന്റെ, ഐസ്ക്രീമിൻ
+* `സലിം<n><genitive>` ⇒ സലിമിന്റെ, സലിമിൻ
+* `റൂം<eng><genitive>` ⇒ റൂമിന്റെ, റൂമിൻ
+
+:::
+
+::: rule
+**Words ending with ൻ**: Replace ൻ with ന്റെ or ഉടെ.
+:::
+
+::: example
+
+* `നടൻ<n><genitive>` ⇒ നടന്റെ, നടനുടെ
+* `ഭടൻ<n><genitive>` ⇒ ഭടന്റെ, ഭടനുടെ
+
+:::
+
+::: warning TODO
+Some English originated words like ഫാൻ, പെൻ does not become ഫാന്റെ, പെന്റെ. They are ഫാനിന്റെ, പെന്നിന്റെ. This is not handled yet.
+:::
+
+::: rule
+**Words ending with ർ**: Replace ർ with രിന്റെ or റിന്റെ
+:::
+
+::: example
+
+* `കാർ<n><genitive>` ⇒ കാറിന്റെ
+* `പയർ<n><genitive>` ⇒ പയറിന്റെ
+
+:::
+
+::: rule
+**Words ending with Chillus**: Replace Chillu with ഇന്റെ or ഉടെ
+:::
+
+::: example
+
+* `ഫോൺ<eng><genitive>` ⇒ ഫോണിന്റെ, <s>ഫോണുടെ</s>
+* `തൃശ്ശൂർ<n><genitive>` ⇒ തൃശ്ശൂരിന്റെ
+* `പൂ<n><plural><genitive>` ⇒ പൂക്കളുടെ, <s>പൂക്കളിന്റെ</s>
+* `മീൻ<n><genitive>` ⇒ മീനിന്റെ, <s>മീനുടെ</s>
+
+:::
+
+::: rule
+**Words ending with Chillus or Consonants - Poetic form**: Append തൻ
+:::
+
+Examples: രാധതൻ, കുമാരിതൻ, പൂച്ചതൻ, മീശതൻ, കുട്ടിതൻ, മഴതൻ, വിധിതൻ
+
+::: rule
+**Pronouns**: Pronouns has special cases for genitve inflection and in mlmorph they are handled by an exception dictionary
+:::
+
+| Pronoun | Genitive form |
+| ------- | ------------- |
+| ഞാൻ      | എന്റെ, എന്നുടെ     |
+| അവർ     | അവരുടെ, അവർതൻ   |
+| നീ       | നിന്റെ, നിന്നുടെ     |
+| താൻ      | തന്റെ, തന്റെ      |
+| നാം       | നമ്മുടെ, നമ്മളുടെ   |
 
 ## Locative
 
@@ -114,7 +283,7 @@ Locative (ആധാരിക) indicates a word's use to refer to a location. The
 POS tag: `<locative>`
 
 ::: rule
-**Words ending with Anuswara** Replace anuswara by any of "ത്തിൽ", "ത്തിങ്കൽ",  "ത്ത്", "ത്തു്", "ത്തു"
+**Words ending with Anuswara** Replace anuswara by any of "ത്തിൽ", "ത്തിങ്കൽ", "ത്ത്", "ത്തു്", "ത്തു"
 :::
 
 Among this, ത്തേൽ is a dialect specific form. മരത്തേൽ instead of മരത്തിൽ is a usage common in places near Kottayam.
@@ -168,3 +337,18 @@ Even though the "location" aspect of locative is part of the definition, that is
 
 Similarly, the objective of comparison in comparative clauses is marked by locative using ഉം particle. Example: കാപ്പിയിലും നല്ലത് ചായയാണ്. അതിലും വലുത് ഇതാണ്.
 
+## Vocative
+
+POS tag: `<vocative>`
+
+The vocative marks the addresseee(സംബോധിക) of a statement or invocation. Vocative marker changes according to the phoneme at the end of the word.
+
+| End of word | Vocative inflection | Example |
+| ----------------------- | ------------ | ---- |
+| Consonants | Append ഏ | അമ്മ ⇒ അമ്മേ |
+| Virama | Append ഏ | സാറ് ⇒ സാറേ, കാറ് ⇒  കാറേ , തൂണ് ⇒  തൂണേ  |
+| Chillu | Append ഏ | മകൾ ⇒ മകളേ, മകൻ  ⇒ മകനേ |
+| ു, ൂ  | Append വേ | മുത്തു  ⇒  മുത്തുവേ |
+|  ി , ീ  | Append യേ | കിളി ⇒ കിളിയേ |
+| Anuswaram ം | Append ഏ | തങ്കം  ⇒ തങ്കമേ |
+|  ൻ | Replace by ാ | ശിവൻ  ⇒ ശിവാ, വേടൻ ⇒ വേടാ, ഈശ്വരൻ  ⇒ ഈശ്വരാ |

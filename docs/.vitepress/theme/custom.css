@@ -13,11 +13,15 @@
     overflow-x: auto;
 }
 
+
+.custom-block.example ul {
+    list-style-type: circle;
+}
+
 .custom-block.rule {
     margin-top: 2rem;
-}
-.custom-block.rule strong {
-    color: var(--c-brand);
+    border-top: 1px solid var(--c-brand);
+    background-color: #f0f8ff;
 }
 
 .custom-block.rule::before {
