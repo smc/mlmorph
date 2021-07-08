@@ -28,6 +28,12 @@ This is defined by the following verse in [വിഭക്തിപ്രകര�
 
 ## Nominative
 
+Nominative(നിർദ്ദേശിക) is associated with the subject of a verb. Since the noun appears without any inflection, there is no morpheme for this.
+
+::: warning TODO
+Since there is no inflection, mlmorph does not implement or provide a tag for this case. Ideally, all nouns should come with a `<nominative>` tag.
+:::
+
 ## Accusative
 
 The accusative marks the direct object(കർമ്മം) of transitive verbs. Accusative morpheme is -എ.
@@ -171,7 +177,7 @@ POS tagL `<dative>`
 :::
 
 ::: rule
-**Words ending with ൾ, ർ** : Append ക്ക്
+**Words ending with ൾ, ർ** : Append ക്ക്, ക്കു, ക്കു്
 :::
 
 ::: rule
@@ -207,7 +213,7 @@ Typically, the sociative marker marks :
 * the object of association and connection
 * of emotions like anger
 
-POS tagL `<sociative>`
+POS tag: `<sociative>`
 
 ::: rule
 **Words ending with Consonant, Chillu, Virama, Vowel signs, Chandrakkala** : Append ഓട്, ഓടു, ഓടു്
@@ -246,9 +252,27 @@ Then there is an additional form for words ending with Chandrakkala
 
 ## Instrumental
 
+Instrumental(പ്രയോജിക) indicates whether a noun is the instrument by which an action is completed.
+
+::: rule
+Append -ആൽ, -കൊണ്ട് are two morphemes used to mark instrumental inflection.
+:::
+
+The adverbial phrase compunded of the marker -എ is also used with കൊണ്ട്.
+
+POS tag: `<instrumental>`
+
+::: example
+
+* `വടി<n><sociative>` ⇒ വടിയാൽ, വടികൊണ്ട്, വടികൊണ്ടു, വടികൊണ്ടു്, വടിയെക്കൊണ്ട്, വടിയെക്കൊണ്ടു, വടിയെക്കൊണ്ടു്
+* `മഴ<n><instrumental>` ⇒ പാലത്തിനോട്, പാലത്തോട്, പാലത്തോടു
+:::
+
 ## Genitive
 
 The genitive(സംബന്ധിക) marks the owner in possessive phrases. The genitive morphemes are -ഉടെ and -ന്റെ
+
+POS tag: `<genitive>`
 
 ::: rule
 **Words ending with Consonant or Vowel signs of ആ, ഇ, ഈ, എ, ഏ, ഒ, ഓ** : Append ഉടെ.
