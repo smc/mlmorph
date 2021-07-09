@@ -237,6 +237,10 @@
 		"tag":"desiderative mood"
 	},
 	{
+		"id": "desiderative-neg-mood",
+		"tag":"Negative desiderative mood"
+	},
+	{
 		"id": "precative-mood",
 		"tag":"Precative mood"
 	},
