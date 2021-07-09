@@ -39,7 +39,15 @@ $remove-past$ = <past>:<RB> ^-> ([#verbs#]+ __ [<imperative-mood>])
 $imperative-mood-3$ = $verb-suffix-map-2$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <imperative-mood>)
 $imperative-mood-3$ = $fake-past$ || $past-tense$ || $imperative-mood-3$ || $remove-past$
 
-$special_cases$ = {വരുക} : {വാ<stop>} | {വരിക} :{വാ<stop>} | {തരുക}:{താ<stop>} | {തരിക}:{താ<stop>} | {പോകുക} : {പോ<stop>}
-$imperative-mood-ex$ = $special_cases$ <>:<infl_marker> ^-> ( __ [#POS##BM##TMP#]+ <imperative-mood>)
+$special_cases$ = {വരുക} : {വാ<infl_marker>} | \
+	{വരിക} :{വാ<infl_marker>} | \
+	{തരുക}:{താ<infl_marker>} |\
+	{തരിക}:{താ<infl_marker>} |\
+	{പോകുക} : {പോ<infl_marker>}
+$imperative-mood-ex$ = $special_cases$ ^-> ( __ [#POS##BM##TMP#]+ <imperative-mood>)
+$imperative-mood$ = $imperative-mood-ex$ | ( $imperative-mood-1$ || $imperative-mood-2$ || $imperative-mood-3$ )
 
-$imperative-mood-ex$ | ( $imperative-mood-1$ | $imperative-mood-2$ | $imperative-mood-3$ )
+$tests$ = അറിയിക്കുക<v><RB><imperative-mood> | വരുക<v><RB><imperative-mood>
+$tests$ || $imperative-mood$ >> "imperative.test.a"
+
+$imperative-mood$

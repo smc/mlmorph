@@ -28,7 +28,11 @@ $moods$ = $imperative-mood$ || $compulsive-mood$ || $promissive-mood$ || \
 	$quotative-mood$ || $desiderative-mood$ || \
 	$remove-vinfl$
 
-$tests$ = അറിയിക്കുക<v><RB> <imperative-mood> | അറിയിക്കുക<v><RB> <compulsive-mood> | അറിയിക്കുക<v><RB> <compulsive-mood-neg> | പതറുക<v><RB><compulsive-mood>
+$tests$ = അറിയിക്കുക<v><RB><imperative-mood> | \
+	വരുക<v><RB><imperative-mood> | \
+	അറിയിക്കുക<v><RB><compulsive-mood> | \
+	അറിയിക്കുക<v><RB><compulsive-mood-neg> | \
+	പതറുക<v><RB><compulsive-mood>
 $tests$ || $moods$ >> "moods.test.a"
 
 $moods$
