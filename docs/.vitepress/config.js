@@ -30,6 +30,14 @@ module.exports = {
     editLinks: true,
     nav: [
       {
+        text: 'Analyser',
+        link: '/analyser'
+      },
+      {
+        text: 'Generator',
+        link: '/generator'
+      },
+      {
         text: 'SMC',
         link: 'https://smc.org.in'
       }
