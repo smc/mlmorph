@@ -1,7 +1,8 @@
 # Tense
 
-[Tense](https | //en.wikipedia.org/wiki/Grammatical_tense) is the verb's reference to a position in time.
+[Tense](https://en.wikipedia.org/wiki/Grammatical_tense) is the verb's reference to a position in time.
 
+[[toc]]
 ## Past tense
 
 The past tense of a verb has some patterns of inflection, but we will need to maintain a suffix mapping dictionary and an exception dictionary.
