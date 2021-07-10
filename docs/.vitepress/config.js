@@ -30,12 +30,20 @@ module.exports = {
     editLinks: true,
     nav: [
       {
+        text: 'Documentation',
+        link: '/'
+      },
+      {
         text: 'Analyser',
         link: '/analyser'
       },
       {
         text: 'Generator',
         link: '/generator'
+      },
+      {
+        text: 'Spellchecker',
+        link: '/spellcheck'
       },
       {
         text: 'SMC',
@@ -96,6 +104,31 @@ module.exports = {
             link: "/dev/python",
           },
           { text: "Web API", link: "/dev/web" },
+        ],
+      },
+      {
+        text: "Applications",
+        children: [
+          {
+            text: "Morphology analyser",
+            link: "/analyser",
+          },
+          {
+            text: "Morphology generator",
+            link: "/generator",
+          },
+          {
+            text: "Spelling checker",
+            link: "/spellcheck",
+          },
+          {
+            text: "Number analysis",
+            link: "/number",
+          },
+          {
+            text: "Named entity recognition",
+            link: "/ner",
+          },
         ],
       },
     ],

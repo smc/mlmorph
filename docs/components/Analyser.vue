@@ -57,7 +57,7 @@ export default {
     };
 
     const analyse = () => {
-      const api = `https://morph.smc.org.in/api/analyse`;
+      const api = `/api/analyse`;
       const words = input.value.split(new RegExp(/\s/));
       analysis.value = {};
       loading.value = true;
@@ -119,7 +119,7 @@ export default {
 }
 
 .root {
-    background-color: #f0f8ff;
+    background-color:var(--c-brand-light);;
     padding: 0 0.5rem;
     font-weight: bold;
 }
@@ -140,7 +140,7 @@ button.analyser-analyse-button {
 }
 
 .analysis h4 {
-     color:  var(--c-brand);
+     color: var(--c-brand);
 }
 
 form {
