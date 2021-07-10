@@ -1,0 +1,179 @@
+swagger: "2.0"
+info:
+  description: "Malayalam Morphology analyser API"
+  version: "1.0.0"
+  title: Malayalam Morphology analyser
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "santhosh.thottingal@gmail.com"
+  license:
+    name: "MIT"
+    url: "https://mit-license.org/"
+host: "morph.smc.org.in"
+basePath: "/api"
+tags:
+- name: "morphology"
+  description: "Morphology analyser and generator using mlmorph"
+  externalDocs:
+    description: "Find out more"
+    url: "https://gitlab.com/smc/mlmorph/"
+- name: "spellchecker"
+  description: "Malayalam spellchecker using mlmorph"
+  externalDocs:
+    description: "Find out more"
+    url: "https://gitlab.com/smc/mlmorph-spellchecker/"
+schemes:
+- "https"
+paths:
+  /analyse:
+    get:
+      tags:
+      - "morphology"
+      summary: "Analyse the given malayalam text"
+      description: ""
+      operationId: "analyse-post"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "query"
+        name: "text"
+        description: "Text to be analysed"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "object"
+            items:
+              $ref: "#/definitions/AnalysisResult"
+        405:
+          description: "Invalid input"
+    post:
+      tags:
+      - "morphology"
+      summary: "Analyse the given malayalam text"
+      description: ""
+      operationId: "analyse-get"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Text to be analysed"
+        required: true
+        schema:
+          $ref: "#/definitions/Text"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "object"
+            items:
+              $ref: "#/definitions/AnalysisResult"
+        405:
+          description: "Invalid input"
+
+  /generate:
+    get:
+      tags:
+      - "morphology"
+      summary: "Generate the malayalam word from the given analysis"
+      description: ""
+      operationId: "generate"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "word"
+        in: "query"
+        description: "Word to analyser"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "object"
+            items:
+              $ref: "#/definitions/GenerateResult"
+        400:
+          description: "Invalid status value"
+
+  /spellcheck:
+    get:
+      tags:
+      - "spellchecker"
+      summary: "Spellcheck the given text"
+      description: "Multiple words seperated by space is accepted."
+      operationId: "spellcheck-post"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "tags"
+        in: "query"
+        description: "Tags to filter by"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "object"
+            items:
+              $ref: "#/definitions/SpellcheckResult"
+        400:
+          description: "Invalid tag value"
+    post:
+      tags:
+      - "spellchecker"
+      summary: "Spellcheck the given text"
+      description: "Multiple words seperated by space is accepted."
+      operationId: "spellcheck-get"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Text to be spellchecked"
+        required: true
+        schema:
+          $ref: "#/definitions/Text"
+      responses:
+        200:
+          description: "successful operation"
+        405:
+          description: "Invalid input"
+
+definitions:
+  Text:
+    type: "object"
+    properties:
+      text:
+        type: "string"
+        example: "കേരളത്തിൽ"
+  AnalysisResult:
+    type: "object"
+    properties:
+      text:
+        type: "string"
+  
+  GenerateResult:
+    type: "object"
+    properties:
+      text:
+        type: "string"
+        example: "കേരളത്തിൽ"
+  SpellcheckResult:
+    type: "object"
+    properties:
+      text:
+        type: "string"
+        example: "കേരളത്തിൽ"
+
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

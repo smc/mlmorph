@@ -1,0 +1,6 @@
+flask>=2.0.0
+regex
+gunicorn
+mlmorph
+mlmorph-spellchecker>=1.0.6
+flask-swagger
