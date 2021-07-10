@@ -78,10 +78,10 @@ def do_spellcheck():
     # real analysis
     for windex in range(len(words)):
         word = words[windex]
-        isCorrect = spellchecker.spellcheck(word, analyser)
+        isCorrect = spellchecker.spellcheck(word)
         suggestions = []
         if not isCorrect:
-            suggestions = spellchecker.candidates(word, analyser)
+            suggestions = spellchecker.candidates(word)
         result[word] = {'correct': isCorrect, 'suggestions': suggestions}
     return jsonify(result)
 
