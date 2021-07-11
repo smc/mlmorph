@@ -55,7 +55,7 @@ module.exports = {
         text: "Getting Started",
         children: [
           { text: "Malayalam morphology analyser", link: "/" },
-          { text: "POS", link: "/pos" },
+          { text: "Part of speech tags", link: "/pos" },
           { text: "Finite State Transducer", link: "/fst" },
           { text: "Frequently asked questions", link: "/faq" },
           { text: "Reference", link: "/reference" },

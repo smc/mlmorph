@@ -4,7 +4,7 @@ Mlmorph is based on Finite State Transducer technology. A finite state transduce
 
 ## Implementation
 
-The Mlmorph is written in the SFST transducer specification language which is based on extended regular expressions with variables and operators for concatenation, conjunction, disjunction, repetition, composition, negation, context-dependent replacement, and more\cite{schmid2005programming}. A compiler translates the transducer specifications to an optimal automata. The generator automata can be reversed to create the analyser automata using the same compiler. For Mlmorph, the SFST based morphology model is compiled using Helsinki Finite-State Technology(HFST) toolkit \cite{linden2011hfst}. HFST provides programming language interfaces such as python binding, and several tools to work with the compiled automata. SFST is one of the backends HFST supports.
+The Mlmorph is written in the SFST transducer specification language which is based on extended regular expressions with variables and operators for concatenation, conjunction, disjunction, repetition, composition, negation, context-dependent replacement, and more\cite{schmid2005programming}. A compiler translates the transducer specifications to an optimal automata. The generator automata can be reversed to create the analyser automata using the same compiler.
 
 Mlmorph has the following top level composition.
 
@@ -50,3 +50,5 @@ $verb$ = $vstem$
 ```
 
 The phonological transducer `$phon$` applies the composition of phonological rules on the results of previous steps. The changes are mainly based on the last letter of first joining morpheme and first letter of second morpheme.
+
+

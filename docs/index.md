@@ -1,6 +1,6 @@
 # Malayalam morphology analyser
 
-Morphology is the study of the internal structure of words.. Morphology focuses on how the components within a word (stems, root words, prefixes, suffixes, etc.) are arranged or modified to create different meanings.
+Morphology is the study of the internal structure of words. Morphology focuses on how the components within a word (stems, root words, prefixes, suffixes, etc.) are arranged or modified to create different meanings.
 
 Malayalam is a highly [inflectional][1] and [agglutinative][2] language. This has posed a challenge for all kind of language processing. Algorithmic interpretation of Malayalam words and their formation rules is very complex. My own attempts to study and try out some of these characteristics was big failure in the past. Back in 2007, when I tried to develop a [spellchecker for Malayalam][3], the infinite number of words this language can have by combining multiple words together and those words inflected was a big challenge. The dictionary based spellechecker was a failed attempt. I had [documented these issues][4].
 
@@ -12,16 +12,18 @@ Malayalam is a highly [inflectional][1] and [agglutinative][2] language. This ha
 
 ## History
 
-I was busy with my type design projects between 2014 and 2016, but continued to search for the solution of this problem. In 2016, during [Google summer of code mentor summit][5] at Google campus, California, mentors working on language technology had a meeting and I explained this challenge. It was suggested that I need to look at Finnish, Turkish, German and such similarly inflected and agglutinated languages and their attempts to solve this. So, after the meeting, I started studying some of the projects &#8211; [Omorfi][6] for Finnish, [SMOR][7] for German, [TRMorph][8] for Turkish. All of them use [Finite state transducer][9] technology.
+In 2016, during [Google summer of code mentor summit][5] at Google campus, California, mentors working on language technology had a meeting and I explained this challenge. It was suggested that I need to look at Finnish, Turkish, German and such similarly inflected and agglutinated languages and their attempts to solve this. So, after the meeting, I started studying some of the projects &#8211; [Omorfi][6] for Finnish, [SMOR][7] for German, [TRMorph][8] for Turkish. All of them use [Finite state transducer][9] technology.
 
 ## License
 
 This project is licensed under [the MIT License](http://choosealicense.com/licenses/mit/)
 
+## Author
+
+[Santhosh Thottingal](https://thottingal.in)
 ## Published papers
 
 * **Finite State Transducer based Morphology analysis for Malayalam Language** - Santhosh Thottingal, Proceedings of the 2nd Workshop on Technologies for MT of Low Resource Languages, European Association for Machine Translation, August 20, Dublin, Ireland. [Paper](https://www.aclweb.org/anthology/W19-6801/)
-
 
  [1]: https://en.wikipedia.org/wiki/Inflectional_language
  [2]: https://en.wikipedia.org/wiki/Agglutinative_language
