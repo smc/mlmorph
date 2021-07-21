@@ -443,7 +443,7 @@ Similarly, the objective of comparison in comparative clauses is marked by locat
 
 POS tag: `<vocative>`
 
-The vocative marks the addresseee(സംബോധിക) of a statement or invocation. Vocative marker changes according to the phoneme at the end of the word.
+The vocative marks the addressee(സംബോധിക) of a statement or invocation. Vocative marker changes according to the phoneme at the end of the word.
 
 | End of word | Vocative inflection | Example |
 | ----------------------- | ------------ | ---- |
@@ -454,3 +454,87 @@ The vocative marks the addresseee(സംബോധിക) of a statement or invoc
 |  ി , ീ  | Append യേ | കിളി ⇒ കിളിയേ |
 | Anuswaram ം | Append ഏ | തങ്കം  ⇒ തങ്കമേ |
 |  ൻ | Replace by ാ | ശിവൻ  ⇒ ശിവാ, വേടൻ ⇒ വേടാ, ഈശ്വരൻ  ⇒ ഈശ്വരാ |
+
+## Allative
+
+Allative case adds a meaning of destination. Example: ഞങ്ങൾ **മുറിയിലേയ്ക്ക്** പോകുന്നു.
+
+POS tag: `<allative>`
+
+::: rule
+**Words ending with Anuswara** Replace anuswara by any of "ത്തിലേയ്ക്ക്", "ത്തിലേയ്ക്കു", "ത്തേലേയ്ക്ക്", "ത്തേലേക്ക്", "ത്തിങ്കലേയ്ക്ക്", ത്തേയ്ക്ക്, ത്തേക്ക്, ത്തേയ്ക്കു, ത്തിലോട്ട്, ത്തിലോട്ടു, ത്തേലോട്ട്, ത്തിങ്കലോട്ട്, ത്തോട്ടു,  ത്തോട്ട്, ത്തോട്ടു്
+:::
+
+
+::: example
+
+* `പാടം<n><allative>` ⇒ പാടത്തിലേയ്ക്ക്, പാടത്തോട്ട്, പടത്തോട്ടു, പാടത്തേലേയ്ക്ക് etc
+* `മരം<n><allative>` ⇒ മരത്തേലേക്ക്, മരത്തിലോട്ട് etc
+:::
+
+::: rule
+**Words ending with Consonant or Vowel sign** Append ഇലേയ്ക്ക്, ഇലേക്ക്, ഇലോട്ട്
+:::
+
+::: example
+
+* `തറ<n><allative>` ⇒ തറയിലേക്ക്, തറയിലോട്ട്
+* `ഇല<n><allative>` ⇒ ഇലയിലേയ്ക്ക്, ഇലയിലേക്കു, ഇലയിലോട്ട്
+* `വഴി<n><allative>` ⇒ വഴിയിലേക്ക്, വഴിയിലോട്ട്
+* `വരി<n><allative>` ⇒ വരിയിലേയ്ക്ക്, വരിയിലോട്ടു
+* `ഇന്ത്യ<n><allative>` ⇒ ഇന്ത്യയിലോട്ട്, ഇന്ത്യയിലേയ്ക്കു
+
+:::
+
+::: rule
+**Words ending with Chandrakkala or Chillus** Append ഇലേയ്ക്ക്, ഇങ്കലേയ്ക്ക്, ഏലേക്ക്, ഇലോട്ട്, ഇലോട്ടു, ഏലോട്ട്, ഇങ്കലോട്ട്, അത്തോട്ട്
+:::
+
+::: example
+
+* `കാറ്റ്<n><allative>` ⇒ കാറ്റിലേക്ക്, കാറ്റത്തോട്ട്, കാറ്റേലേക്ക്
+* `കാർ<n><allative>` ⇒ കാറിലേക്ക്, കാറിലോട്ടു, കാറേലേക്ക്
+* `മാവ്<n><allative>` ⇒ മാവേലേക്ക്, മാവിലേക്ക്, മാവിലോട്ട്
+
+:::
+
+::: rule
+**Words ending with ട്** Geminate ട(ട്ട) Append ഇലേയ്ക്ക്, ഇങ്കലേയ്ക്ക്,  ഇലോട്ട്, ഇലോട്ടു, ഇങ്കലോട്ട്, അത്തോട്ട്
+:::
+
+::: example
+
+* `വീട്<n><allative>` ⇒ വീട്ടിലേയ്ക്ക്, വീട്ടിലോട്ട്, വീട്ടിലേക്കു, വീട്ടിലോട്ടു
+* `കാട്<n><allative>` ⇒ കാട്ടിലേക്ക്, കാട്ടിലോട്ട്, കാട്ടിലേക്കു, കാട്ടിലോട്ടു
+:::
+
+In most instances -ഏക്ക് and -ഓട്ട് are in free variation. However, when a variety of instances are analyzed there seems to be a subtle variation in the meaning between these two forms. ഏക്ക് denotes a specific direction and ഓട്ടി  a general direction as can be seen in the following example.
+
+::: example
+
+* കുഴിയിലേക്ക് - In to the hole
+* കുഴിയിലോട്ട് - Towards the hole
+:::
+
+::: warning TODO
+The locative particles അങ്ങ്, ഇങ്ങ്, മുൻ, പിൻ takes ഓട്ടു form without locative suffix ഇൽ to denote allative meaning. Examples: അങ്ങോട്ട്, ഇങ്ങോട്ട്,പിന്നോട്ട്, മുന്നോട്ട്, പിന്നിലേക്ക്, മുന്നിലേക്ക്
+:::
+
+## Perlative
+
+Allative case adds a meaning of path of movement.
+
+വീട്ടിലൂടെ, കാട്ടിലൂടെ
+
+::: warning TODO
+Not implemented
+:::
+
+
+## Ablative
+
+Allative case adds a meaning of source. Example: ഞങ്ങൾ **വീട്ടിൽനിന്നു** പോന്നു.
+
+::: warning TODO
+Not implemented
+:::

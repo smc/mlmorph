@@ -21,6 +21,7 @@ This project is licensed under [the MIT License](http://choosealicense.com/licen
 ## Author
 
 [Santhosh Thottingal](https://thottingal.in)
+
 ## Published papers
 
 * **Finite State Transducer based Morphology analysis for Malayalam Language** - Santhosh Thottingal, Proceedings of the 2nd Workshop on Technologies for MT of Low Resource Languages, European Association for Machine Translation, August 20, Dublin, Ireland. [Paper](https://www.aclweb.org/anthology/W19-6801/)

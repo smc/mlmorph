@@ -23,8 +23,16 @@ $allative-anuswara-step1$ = $anuswara-forms$ ^-> ([#Anuswara#] [#inflboundary#]+
 $allative-anuswara-step2$ = {[#Anuswara#]}:{} ^-> (__ [#inflboundary#]+ <del> )
 $allative-anuswara$ = $allative-anuswara-step1$ || $allative-anuswara-step2$
 
-$allative-cons-vowel$ = ( {<allative>}:{ഇലേയ്ക്ക്<infl_marker>} | {<allative>}:{ഇലോട്ട്<infl_marker>} ) \
-	^-> ([#Consonants##VowelSigns#] [#inflboundary#]+ __)
+$allative-cons-vowel-forms$ = {<allative>}:{ഇലേയ്ക്ക്<infl_marker>} | \
+	{<allative>}:{ഇലേയ്ക്കു<infl_marker>} | \
+	{<allative>}:{ഇലേക്ക്<infl_marker>} | \
+	{<allative>}:{ഇലേക്കു<infl_marker>} | \
+	{<allative>}:{ഇലേക്കു്<infl_marker>} | \
+	{<allative>}:{ഇലോട്ട്<infl_marker>} | \
+	{<allative>}:{ഇലോട്ടു<infl_marker>} | \
+	{<allative>}:{ഇലോട്ടു്<infl_marker>}
+
+$allative-cons-vowel$ = $allative-cons-vowel-forms$ ^-> ([#Consonants##VowelSigns#] [#inflboundary#]+ __)
 
 $virama-forms$ = {<allative>}:{ഇലേയ്ക്ക്<infl_marker>} | {<allative>}:{ഏലേയ്ക്ക്<infl_marker>} | \
 	{<allative>}:{ഇലേക്ക്<infl_marker>} | {<allative>}:{ഏലേക്ക്<infl_marker>} | \
