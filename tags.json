@@ -89,6 +89,11 @@
 		"url": "http://universaldependencies.org/u/feat/Case.html#all-allative"
 	},
 	{
+		"id": "perlative",
+		"tag": "Perlative",
+		"url": "https://universaldependencies.org/u/feat/Case.html#per-perlative"
+	},
+	{
 		"id": "postp",
 		"tag": "Postposition",
 		"url": "http://universaldependencies.org/u/pos/ADP.html"
