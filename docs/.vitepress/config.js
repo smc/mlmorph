@@ -87,6 +87,7 @@ module.exports = {
               { text: "Aspect", link: "/vinfl/aspect" },
               { text: "Mood", link: "/vinfl/mood" },
               { text: "Voice", link: "/vinfl/voice" },
+              { text: "Clauses", link: "/vinfl/clauses" },
             ]
           },
           { text: "Cardinals", link: "/cardinals" },
@@ -95,6 +96,10 @@ module.exports = {
       {
         text: "Phonology",
         link: "/phon/",
+      },
+      {
+        text: "Derivational morphology",
+        link: "/deriv/",
       },
       {
         text: "Using mlmorph",
