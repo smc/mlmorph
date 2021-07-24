@@ -332,6 +332,18 @@
         "analysis": "കൂട്ട്<n><allative>"
     },
     {
+        "word": "തോട്ടിൽനിന്ന്",
+        "analysis": "തോട്<n><ablative>"
+    },
+    {
+        "word": "തോട്ടിൽക്കൂടെ",
+        "analysis": "തോട്<n><perlative>"
+    },
+    {
+        "word": "തോട്ടിലൂടെ",
+        "analysis": "തോട്<n><perlative>"
+    },
+    {
         "word": "എന്നെ",
         "analysis": "ഞാൻ<prn><accusative>"
     },
