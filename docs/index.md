@@ -10,9 +10,6 @@ Malayalam is a highly [inflectional][1] and [agglutinative][2] language. This ha
 * [Automata definition](fst) for the above: This is where you say nouns can be concatenated any number of times, following optional inflection etc in regular expression like language.
 * [API](api)s: Programmable interface, web api, command line tools, web interface for demos.
 
-## History
-
-In 2016, during [Google summer of code mentor summit][5] at Google campus, California, mentors working on language technology had a meeting and I explained this challenge. It was suggested that I need to look at Finnish, Turkish, German and such similarly inflected and agglutinated languages and their attempts to solve this. So, after the meeting, I started studying some of the projects &#8211; [Omorfi][6] for Finnish, [SMOR][7] for German, [TRMorph][8] for Turkish. All of them use [Finite state transducer][9] technology.
 
 ## License
 

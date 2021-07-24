@@ -57,6 +57,7 @@ module.exports = {
           { text: "Malayalam morphology analyser", link: "/" },
           { text: "Part of speech tags", link: "/pos" },
           { text: "Finite State Transducer", link: "/fst" },
+          { text: "History", link: "/history" },
           { text: "Frequently asked questions", link: "/faq" },
           { text: "Reference", link: "/reference" },
         ],

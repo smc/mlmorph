@@ -7,7 +7,7 @@ from mlmorph import Analyser
 
 
 CURR_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
-MIN_COVERAGE = 56.84
+MIN_COVERAGE = 56.94
 
 
 def is_valid_malayalam_word(word):
