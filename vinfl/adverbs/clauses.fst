@@ -1,10 +1,15 @@
 #include "../../symbols.fst"
 
 ALPHABET = [#Letters##POS##BM##TMP##infl#]
-%%%% Adverb clauses %%%%%%%%%%
+%%%% Adverbial clauses %%%%%%%%%%
 % Adverb clauses will be taken as those subordinate clauses whose function in
 % relation to a main clause is roughly analogous to that of an adverb in a simple
 % sentence.
+
+% Examples
+% അവൻ *വന്ന* ഉടനേ പോയി
+% അവൻ *പറഞ്ഞ* ശേഷം കരഞ്ഞു
+% അവൻ *പോയ* ശേഷം പിന്നെ ...
 
 
 $past-tense$ = "<../past.a>"
@@ -27,9 +32,9 @@ $verb-suffix-map$ = {ു}:{} | {ി} : {ിയ}
 
 $adv-clause-rp-past-form-general$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <adv-clause-rp-past> )
 $past-form-exceptions$ = {പോയി}: {പോയ}
-$adv-clause-rp-past-form-exceptions$ = $past-form-exceptions$ ^-> ( __ [#BM##TMP##verbs#<past>]+ <adv-clause-rp-past> )
+$adv-clause-rp-past-form-exceptions$ = $past-form-exceptions$ ^-> ( __ [#BM##TMP##verbs#]+ <adv-clause-rp-past> )
 $adv-clause-rp-past-form$ = $adv-clause-rp-past-form-exceptions$ || $adv-clause-rp-past-form-general$
-$adv-clause-rp-past$ = $fake-past$ || $past-tense$ || $adv-clause-rp-past-form$ || $remove-past$
+$adv-clause-rp-past$ = $fake-past$ || $past-tense$ || $remove-past$ || $adv-clause-rp-past-form$
 
 $verb-suffix-map$ = {ുക}:{ാഞ്ഞ} | {ിക}:{ാഞ്ഞ}
 $adv-clause-rp-past-neg$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <adv-clause-rp-past-neg> )

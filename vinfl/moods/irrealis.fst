@@ -23,11 +23,11 @@ $remove-past$ = <past>:<RB> ^-> ([#verbs#]+ __ [<irrealis-mood>])
 
 $verb-suffix-map$ = {ു<infl_marker>}:{േനെ<infl_marker>} | \
     {ി<infl_marker>} : {ിയേനെ<infl_marker>}
-$irrealis-mood$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <irrealis-mood>)
+$irrealis-mood$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#]+ <irrealis-mood>)
 
 $irrealis-mood-exceptions$ = {പോകുക}:{പോയേനെ}
 $irrealis-mood-ex$ = $irrealis-mood-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##TMP#]+ <irrealis-mood>)
 
-$irrealis-mood$ = $fake-past$ || $past-tense$ || $irrealis-mood$ || $remove-past$
+$irrealis-mood$ = $fake-past$ || $past-tense$ || $remove-past$ || $irrealis-mood$
 
 $irrealis-mood-ex$ || $irrealis-mood$

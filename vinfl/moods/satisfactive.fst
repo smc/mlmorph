@@ -20,8 +20,8 @@ $verb-suffix-map$ = {ു<infl_marker>}:{ല്ലോ<infl_marker>} | \
 	{ി<infl_marker>} : {ിയല്ലോ<infl_marker>}  | \
 	{ി<infl_marker>} : {ീലോ<infl_marker>}
 
-$satisfactive-mood-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <satisfactive-mood> )
-$satisfactive-mood$ = $fake-past$ || $past-tense$ || $satisfactive-mood-form$ || $remove-past$
+$satisfactive-mood-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#]+ <satisfactive-mood> )
+$satisfactive-mood$ = $fake-past$ || $past-tense$ || $remove-past$ || $satisfactive-mood-form$
 $satisfactive-mood-ex$ = $satisfactive-mood-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##TMP#]+ <satisfactive-mood>)
 
 $satisfactive-mood-ex$ || $satisfactive-mood$

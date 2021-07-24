@@ -36,8 +36,8 @@ $verb-suffix-map-2$ = {ി<infl_marker>} : {ക്കോണം<infl_marker>}  | 
 % it through the past.a. Only when the input has <imperative-mood> at end.
 $fake-past$ = {<RB>}:{<past>} ^-> ([#verbs#]+ __ [<imperative-mood>])
 $remove-past$ = <past>:<RB> ^-> ([#verbs#]+ __ [<imperative-mood>])
-$imperative-mood-3$ = $verb-suffix-map-2$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <imperative-mood>)
-$imperative-mood-3$ = $fake-past$ || $past-tense$ || $imperative-mood-3$ || $remove-past$
+$imperative-mood-3$ = $verb-suffix-map-2$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#]+ <imperative-mood>)
+$imperative-mood-3$ = $fake-past$ || $past-tense$ || $remove-past$ || $imperative-mood-3$
 
 $special_cases$ = {വരുക} : {വാ<infl_marker>} | \
 	{വരിക} :{വാ<infl_marker>} | \

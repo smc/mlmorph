@@ -20,9 +20,9 @@ $cvb-adv-part-past-form$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#
 $verb-suffix-map$ = {ു<infl_marker>}:{പ്പോൾ<infl_marker>} | {ി<infl_marker>}:{ിയപ്പോൾ<infl_marker>}
 % NOTE: The <infl_marker> in above line is important to avoid multiple repeated results in generation output.
 
-$cvb-adv-part-past-simul-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#POS##BM##TMP#<past>]+ <cvb-adv-part-past-simul> )
+$cvb-adv-part-past-simul-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <cvb-adv-part-past-simul> )
 
-$cvb-adv-part-past$ = $fake-past$ || $past-tense$ || ($cvb-adv-part-past-form$ || $cvb-adv-part-past-simul-form$) || $remove-past$
+$cvb-adv-part-past$ = $fake-past$ || $past-tense$ || $remove-past$ ||  ($cvb-adv-part-past-form$ || $cvb-adv-part-past-simul-form$)
 
 $cvb-adv-part-past$
 

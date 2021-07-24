@@ -17,8 +17,8 @@ $fake-past$ = {<RB>}:{<past>} ^-> ([#verbs#]+ __ [<conditional-mood>])
 $remove-past$ = <past>:<RB> ^-> ([#verbs#]+ __ [<conditional-mood>])
 
 $verb-suffix-map$ = {ു<infl_marker>}:{ാൽ<infl_marker>} | {ി<infl_marker>} : {ിയാൽ<infl_marker>}
-$conditional-mood$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <conditional-mood>)
+$conditional-mood$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#]+ <conditional-mood>)
 
 $conditional-mood-ex$ = $conditional-mood-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##TMP#]+ <conditional-mood>)
 
-$conditional-mood-ex$ || ( $fake-past$ || $past-tense$ || $conditional-mood$ || $remove-past$ )
+$conditional-mood-ex$ || ( $fake-past$ || $past-tense$ || $remove-past$ || $conditional-mood$ )

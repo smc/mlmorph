@@ -33,8 +33,8 @@ $verb-suffix-map-2$ = {ു<infl_marker>}:{ോളാം<infl_marker>} | {ി<infl
 
 $verb-suffix-map-3$ = {ു<infl_marker>}:{ിരിയ്ക്കും<infl_marker>} | {ി<infl_marker>} : {ിയിരിയ്ക്കും<infl_marker>} |  {ി<infl_marker>} : {ിയിരിക്കും<infl_marker>}
 $verb-suffix-map$ = $verb-suffix-map-1$ | $verb-suffix-map-2$ | $verb-suffix-map-3$
-$promissive-mood-2$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <promissive-mood>)
+$promissive-mood-2$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#]+ <promissive-mood>)
 
 $promissive-mood$ = $promissive-mood-1$ | \
-	( $fake-past$ || $past-tense$ || $promissive-mood-2$ || $remove-past$ )
+	( $fake-past$ || $past-tense$ || $remove-past$ || $promissive-mood-2$ )
 $promissive-mood$

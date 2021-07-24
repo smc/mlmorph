@@ -45,7 +45,7 @@ $verb-suffix-map-past-3$ = {ു<infl_marker>}:{േയ്ക്കൂ<infl_marker
 
 $verb-suffix-map-past-4$ = {ു<infl_marker>}:{ോട്ടെ<infl_marker>} | {ി<infl_marker>} : {ിക്കോട്ടെ<infl_marker>}
 $verb-suffix-map-past$ = $verb-suffix-map-past-1$ | $verb-suffix-map-past-2$ | $verb-suffix-map-past-3$ | $verb-suffix-map-past-4$
-$permissive-mood-2$ = $verb-suffix-map-past$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <permissive-mood>)
+$permissive-mood-2$ = $verb-suffix-map-past$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#]+ <permissive-mood>)
 
 % -atte added to the verb root also denotes a meaning similar to the above.
 % വരട്ടെ, പറയട്ടെ, ഓടട്ടെ
@@ -59,6 +59,6 @@ $verb-suffix-map$ = $verb-suffix-map-1$ | $verb-suffix-map-2$ | $verb-suffix-map
 $permissive-mood-1$ = $verb-suffix-map$ <>:<infl_marker> ^-> ([#Consonants#]+ __ [#POS##BM##TMP#]+ <permissive-mood>)
 
 $permissive-mood$ = $permissive-mood-1$ | \
-	( $fake-past$ || $past-tense$ || $permissive-mood-2$ || $remove-past$ )
+	( $fake-past$ || $past-tense$ || $remove-past$ || $permissive-mood-2$ )
 
 $permissive-mood$

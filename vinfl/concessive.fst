@@ -21,8 +21,8 @@ $verb-suffix-map$ = {ു<infl_marker>}:{ാലും<infl_marker>} | \
 % The <infl_marker> in above line has no functional effecet. But without that 3 duplicate results
 % are generated. 3 is the length of ിയേ. I have not figured out the reason.
 
-$concessive-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#<past>]+ <concessive> )
-$concessive$ = $fake-past$ || $past-tense$ || $concessive-form$ || $remove-past$
+$concessive-form$ = $verb-suffix-map$ ^-> ([#Consonants#]+ __ [#BM##TMP##verbs#]+ <concessive> )
+$concessive$ = $fake-past$ || $past-tense$ || $remove-past$ || $concessive-form$
 
 $concessive-ex$ = $concessive-exceptions$ <>:<infl_marker> ^-> ( __ [#POS##BM##TMP#]+ <concessive>)
 
