@@ -524,17 +524,103 @@ The locative particles അങ്ങ്, ഇങ്ങ്, മുൻ, പിൻ ta
 
 Allative case adds a meaning of path of movement.
 
-വീട്ടിലൂടെ, കാട്ടിലൂടെ
+POS tag: `<perlative>`
 
-::: warning TODO
-Not implemented
+::: rule
+**Words ending with Anuswara** Replace anuswara by any of ത്തിലൂടെ, ത്തിൽക്കൂടെ
 :::
 
 
+::: example
+
+* `പാടം<n><perlative>` ⇒ പാടത്തിലൂടെ, പാടത്തിൽക്കൂടെ
+* `മരം<n><perlative>` ⇒ മരത്തിലൂടെ, മരത്തിൽക്കൂടെ
+:::
+
+::: rule
+**Words ending with Consonant or Vowel sign** Append ഇലൂടെ, ഇൽക്കൂടെ
+:::
+
+::: example
+
+* `തറ<n><perlative>` ⇒ തറയിലേക്ക്, തറയിലോട്ട്
+* `ഇല<n><perlative>` ⇒ ഇലയിലേയ്ക്ക്, ഇലയിലേക്കു, ഇലയിലോട്ട്
+* `വഴി<n><perlative>` ⇒ വഴിയിലേക്ക്, വഴിയിലോട്ട്
+* `വരി<n><perlative>` ⇒ വരിയിലേയ്ക്ക്, വരിയിലോട്ടു
+* `ഇന്ത്യ<n><perlative>` ⇒ ഇന്ത്യയിലോട്ട്, ഇന്ത്യയിലേയ്ക്കു
+
+:::
+
+::: rule
+**Words ending with Chandrakkala or Chillus** Append ഇലൂടെ, ഇൽക്കൂടെ
+:::
+
+::: example
+
+* `കാറ്റ്<n><perlative>` ⇒ കാറ്റിലൂടെ, കാറ്റിൽക്കൂടെ
+
+:::
+
+::: rule
+**Words ending with ട്** Geminate ട(ട്ട) Append ഇലൂടെ, ഇൽക്കൂടെ
+:::
+
+::: example
+
+
+* `വീട്<n><perlative>` ⇒ വീട്ടിലൂടെ
+* `കാട്<n><perlative>` ⇒ കാട്ടിലൂടെ
+:::
+
 ## Ablative
 
-Allative case adds a meaning of source. Example: ഞങ്ങൾ **വീട്ടിൽനിന്നു** പോന്നു.
+Ablative case adds a meaning of source. Example: ഞങ്ങൾ **വീട്ടിൽനിന്നു** പോന്നു.
 
-::: warning TODO
-Not implemented
+POS tag: `<ablative>`
+
+::: rule
+**Words ending with Anuswara** Replace anuswara by any of ത്തിൽനിന്ന്, ത്തിൽനിന്നു
+:::
+
+
+::: example
+
+* `പാടം<n><ablative>` ⇒ പാടത്തിൽനിന്ന്, പാടത്തിൽനിന്നു
+* `മരം<n><ablative>` ⇒ മരത്തിൽനിന്ന്, മരത്തിൽനിന്നു
+:::
+
+::: rule
+**Words ending with Consonant or Vowel sign** Append ഇൽനിന്ന്, ഇൽനിന്നു
+:::
+
+::: example
+
+* `തറ<n><ablative>` ⇒ തറയിൽനിന്ന്, തറയിൽനിന്നു
+* `ഇല<n><ablative>` ⇒ ഇലയിൽനിന്ന്
+* `വഴി<n><ablative>` ⇒ വഴിയിൽനിന്ന്
+* `വരി<n><ablative>` ⇒ വരിയിൽനിന്ന്
+* `ഇന്ത്യ<n><ablative>` ⇒ ഇന്ത്യയിൽനിന്ന്
+
+:::
+
+::: rule
+**Words ending with Chandrakkala or Chillus** Append ഇലൂടെ, ഇൽക്കൂടെ
+:::
+
+::: example
+
+* `കാറ്റ്<n><ablative>` ⇒ കാറ്റിൽനിന്ന്
+
+:::
+
+::: rule
+**Words ending with ട്** Geminate ട(ട്ട) Append ഇലൂടെ, ഇൽക്കൂടെ
+:::
+
+::: example
+
+
+* `വീട്<n><ablative>` ⇒ വീട്ടിൽനിന്ന്
+* `കാട്<n><ablative>` ⇒ കാട്ടിൽനിന്ന്
+
 :::
