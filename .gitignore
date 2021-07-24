@@ -6,4 +6,4 @@ scripts/lexicon/*.json
 *.egg-info/
 __pycache__/
 ENV_DIR
-node_modules/
+**/node_modules/
