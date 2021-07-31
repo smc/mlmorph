@@ -12,3 +12,4 @@ The following books are helpful for understanding the Malayalam morphology
 6. A Grammar of Malayalam by Ravi Sankar S Nair, 2012 [pdf](http://www.languageinindia.com/nov2012/ravisankarmalayalamgrammar.pdf)
 7. മലയാള ഭാഷയും ഭാഷാശാസ്ത്രവും - Ravi Sankar S Nair, 2020, Kerala Bhasha Institute
 8. A Linguistic Survey of The Malayalam language in Its own terms - Ophira Gamliel. Harrassowitz.
+9. Malayalam: a Grammatical Sketch and a Text. Jiang, Haowen.Department of Linguistics, Rice University. April 2010
