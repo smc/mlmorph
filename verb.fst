@@ -11,6 +11,7 @@ $POLARITY$ = "<lexicon/polarity.a>"
 $PASSIVEVOICE$ = "<vinfl/voices/passive.a>"
 $CAUSATIVEVOICE$ = "<vinfl/voices/causative.a>"
 $ADVERBSTEMS$ = "<vinfl/adverbs/adverbs.a>"
+$VERBQUESTIONS$ = "<vinfl/verb-polar-question.a>"
 
 $VSTEM-PASSIVE$ = $VSTEM$ <passive-voice> || $PASSIVEVOICE$
 $VSTEM-CAUSATIVE$ = $VSTEM$ <causative-voice> || $CAUSATIVEVOICE$
@@ -28,6 +29,9 @@ $VERB-ADVERBS-FROM-INFLECTIONS$ = ( $VERB-ASPECTS$ || $ENDS_WITH_U_FILTER$ ) <RB
 $VERB-ADVERBS$ = $VERB-ADVERBS$ | $VERB-ADVERBS-FROM-INFLECTIONS$
 
 $VERB$ = $VERB-TENSES$ | $VERB-MOODS$ | $VERB-ASPECTS$
+$VERB_QUESTIONS$ = $VERB$ [<qn>] || $VERBQUESTIONS$
+$VERB$ = $VERB$ | $VERB_QUESTIONS$
+
 % The only agglutination scenario for verbs is when adverbs appears such as മുൻവിനയെച്ചം.
 $VERB$ = $VERB$ | ( $VERB-ADVERBS$+ $VERB$?)
 

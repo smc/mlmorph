@@ -4,7 +4,7 @@ SUBDIRS = adverbs aspects moods voices
 
 .PHONY: all subdirs $(SUBDIRS)
 
-all: tense.a subdirs
+all: tense.a verb-polar-question.a subdirs
 tense.a: past.a future.a present.a concessive.a
 concessive.a: past.a
 

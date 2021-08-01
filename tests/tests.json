@@ -1204,8 +1204,16 @@
         "analysis": "സമ്മാനിയ്ക്കുക<v><past>"
     },
     {
+        "word": "സമ്മാനിച്ചോ?",
+        "analysis": "സമ്മാനിയ്ക്കുക<v><past><qn>"
+    },
+    {
         "word": "അടിച്ചു്",
         "analysis": "അടിക്കുക<v><cvb-adv-part-past>"
+    },
+    {
+        "word": "അടിച്ചോ?",
+        "analysis": "അടിക്കുക<v><past><qn>"
     },
     {
         "word": "വന്ന്",
@@ -1256,6 +1264,10 @@
     {
         "word": "നടന്നിരുന്നു",
         "analysis": "നടക്കുക<v><simple-perfect-aspect>"
+    },
+    {
+        "word": "നടന്നിരുന്നോ?",
+        "analysis": "നടക്കുക<v><simple-perfect-aspect><qn>"
     },
     {
         "word": "വന്നിട്ട്",
@@ -1454,6 +1466,10 @@
         "analysis": "എഴുതുക<v><passive-voice><future>"
     },
     {
+        "word": "എഴുതപ്പെടുമോ?",
+        "analysis": "എഴുതുക<v><passive-voice><future><qn>"
+    },
+    {
         "word": "എഴുതപ്പെടട്ടെ",
         "analysis": "എഴുതുക<v><passive-voice><optative-mood>"
     },
@@ -1464,6 +1480,10 @@
     {
         "word": "ചിരിപ്പിക്കുക",
         "analysis": "ചിരിക്കുക<v><causative-voice>"
+    },
+    {
+        "word": "ചിരിപ്പിക്കുമോ?",
+        "analysis": "ചിരിക്കുക<v><causative-voice><qn>"
     },
     {
         "word": "ചിരിപ്പിച്ചു",
@@ -1598,6 +1618,10 @@
         "analysis": "വീട്<n><n-v-compound>കാണുക<v><past>"
     },
     {
+        "word": "വീടുകണ്ടോ?",
+        "analysis": "വീട്<n><n-v-compound>കാണുക<v><past><qn>"
+    },
+    {
         "word": "തെറിപറഞ്ഞു",
         "analysis": "തെറി<n><n-v-compound>പറയുക<v><past>"
     },
@@ -1730,8 +1754,16 @@
         "analysis": "ദയവ്<n><n-v-compound>ചെയ്യുക<v><cvb-adv-part-past>പോകുക<v>"
     },
     {
+        "word": "ദയവുചെയ്തുപോകുമോ?",
+        "analysis": "ദയവ്<n><n-v-compound>ചെയ്യുക<v><cvb-adv-part-past>പോകുക<v><qn>"
+    },
+    {
         "word": "തീർച്ചപ്പെടുത്തി",
         "analysis": "തീർച്ചപ്പെടുക<v><causative-voice><past>"
+    },
+    {
+        "word": "തീർച്ചപ്പെടുത്തിയോ?",
+        "analysis": "തീർച്ചപ്പെടുക<v><causative-voice><past><qn>"
     },
     {
         "word": "വരൂ",
