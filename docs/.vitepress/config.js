@@ -89,6 +89,7 @@ module.exports = {
               { text: "Mood", link: "/vinfl/mood" },
               { text: "Voice", link: "/vinfl/voice" },
               { text: "Clauses", link: "/vinfl/clauses" },
+              { text: "Questions", link: "/vinfl/questions" },
             ]
           },
           { text: "Cardinals", link: "/cardinals" },

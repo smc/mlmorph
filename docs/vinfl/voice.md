@@ -6,6 +6,8 @@
 
 POS tag: `<passive-voice>`
 
+Malayalam passive verbs are derived from the present tense root encliticized by the passive auxiliary പ്പെടുക.
+
 In Malayalam they are known as കർമ്മണിപ്രയോഗങ്ങൾ
 
 ::: rule
@@ -30,8 +32,6 @@ POS tag: `<causative-voice>`
 Malayalam verbs can be divided into Intransitive(അകർമ്മകം), and transitive(സകർമ്മകം) with their degree of valency often depending on syntactic/semantic context.
 
 Morphophonemic alterations in the stem mark increased degrees of valency; if the verb is intransitive, it becomes transitive. If it is transitive to begin with, it becomes causative verb(പ്രയോജക ക്രിയ)
-
-
 
 ::: rule
 
