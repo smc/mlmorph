@@ -102,6 +102,9 @@ module.exports = {
       {
         text: "Derivational morphology",
         link: "/deriv/",
+        children: [
+          { text: "Verbal nouns", link: "/deriv/noun-from-verb" }
+        ]
       },
       {
         text: "Using mlmorph",
