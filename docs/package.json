@@ -24,6 +24,6 @@
   "devDependencies": {
     "@tinymce/tinymce-vue": "^4.0.4",
     "axios": "0.21.1",
-    "vitepress": "^0.15.6"
+    "vitepress": "^0.17.3"
   }
 }
