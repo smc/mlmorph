@@ -23,7 +23,8 @@
   "homepage": "https://gitlab.com/smc/mlmorph#readme",
   "devDependencies": {
     "@tinymce/tinymce-vue": "^4.0.4",
-    "axios": "0.21.1",
-    "vitepress": "^0.17.3"
+    "axios": "0.23.0",
+    "markdown-it-container": "^3.0.0",
+    "vitepress": "^0.20.0"
   }
 }
