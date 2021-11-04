@@ -34,10 +34,20 @@ $noun-forms$ = {രുക}: {രൽ} |\
 	{തുക} : {ത്ത്} | {തുക} : {ത്തു്} |\
 	{ഴുക} : {ഴ്ച}
 
-$nouns$ = ( [#Letters##POS##BM##Numbers##TMP##vinfl#]+ $noun-forms$ [#POS##BM##TMP##infl#]+ <n> <deriv> )
+
+$noun-forms-vi$ = {പിറക്കുക}: {പിറവി} | {മറക്കുക}: {മറവി} | {തോൽക്കുക}: {തോൽവി}
+$noun-forms-tu$ = {ചുമക്കുക}: {ചുമട്}
+
+$nouns-suffixes$ = ( [#Letters##POS##BM##Numbers##TMP##vinfl#]+ $noun-forms$ [#POS##BM##TMP##infl#]+ <n> <deriv> )
+$nouns-special$ = [#POS##BM##Numbers##TMP##vinfl#]? ($noun-forms-vi$ | $noun-forms-tu$) [#POS##BM##TMP##infl#]+ <n> <deriv>
 
 % Incomplete.
 % Refer: കേരളപാണിനീയം - കൃതികൃത്തുക്കൾ. 20 പ്രത്യയങ്ങൾ
 % May be we need tagging for verbs as കേവലക്രിയ, പ്രയോജകക്രിയ to aid this processing of 20 different forms.
+
+$nouns$ = $nouns-special$ | $nouns-suffixes$
+
+% $tests$ = പിറക്കുക<v><n><deriv>
+% ($tests$ || $nouns$ ) >> "v-n-deriv.a"
 
 $nouns$
