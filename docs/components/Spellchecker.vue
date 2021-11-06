@@ -1,9 +1,9 @@
 <template>
     <section>
       <editor
-        tinymce-script-src="/assets/js/tinymce/tinymce.min.js"
         :initial-value="input"
         :init="editorConfig"
+        apiKey="tzetc8ho0zjyrn2dtibac3ebs3wknjwnihhw9idoqww33bvm"
       ></editor>
     </section>
 </template>
@@ -71,6 +71,7 @@ export default {
         success();
       }
     }
+
     return {
         editorConfig,
         input,
