@@ -1,3 +1,5 @@
+from mlmorph import Generator
+
 onesStr = [
   "പൂജ്യം",
   "ഒന്ന്",
@@ -15,8 +17,8 @@ onesStr = [
 def clean(result) : 
       result = result.replace("<ones><hundreds>", "<hundreds>")
       result = result.replace("<ones><tens>", "<tens>")
-      result = result.replace("ഒന്ന്<ones><hundreds>", "<hundreds>")
-      result = result.replace("ഒന്ന്<ones><thousands>", "<thousands>")
+      #result = result.replace("ഒന്ന്<ones><hundreds>", "<hundreds>") # is it needed?
+      result = result.replace("ഒന്ന്<ones><thousands>", "<thousands>") if result.startswith("ഒന്ന്<ones><thousands>") else result #to handle 11000
       return result
 
 def positionValues(value) :
@@ -39,14 +41,29 @@ def positionValues(value) :
 def spellOut(value) : 
     return positionValues(value) + "<cardinal>" 
 
+def expand_numbers(value) :
+   numtext = spellOut(value)
+   generator = Generator()
+   out  = generator.generate(numtext)
+   return out[-1][0]
+
+
+
+        
+
+
+
+
+    
 
 
 
 if __name__ == '__main__' :
-    from mlmorph import Generator
+    value = 110
+    out = spellOut(value)
     generator = Generator()
-    num = spellOut(100)
-    print(generator.generate(num))
+    text  = generator.generate(out)
+    #out = expand_numbers_ml(value)
 
 
 
