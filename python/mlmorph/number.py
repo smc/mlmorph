@@ -41,11 +41,11 @@ def positionValues(value) :
 def spellOut(value) : 
     return positionValues(value) + "<cardinal>" 
 
-def expand_numbers(value) :
+def expand_numbers(value,weight=False) :
    numtext = spellOut(value)
    generator = Generator()
-   out  = generator.generate(numtext)
-   return out[-1][0]
+   out  = generator.generate(numtext,weighted=weight)
+   return out
 
 
 
