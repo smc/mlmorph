@@ -33,8 +33,8 @@ const onesStr = [
  const clean = (result) => {
       result = result.replace("<ones><hundreds>", "<hundreds>");
       result = result.replace("<ones><tens>", "<tens>");
-      result = result.replace("ഒന്ന്<ones><hundredsa>", "<hundreds>");
-      result = result.replace("ഒന്ന്<ones><thousands>", "<thousands>");
+      result = result.replace(/^ഒന്ന്<ones><hundreds>/, "<hundreds>");
+      result = result.replace(/^ഒന്ന്<ones><thousands>/, "<thousands>");
       return result;
 };
 
