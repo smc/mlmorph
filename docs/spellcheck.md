@@ -10,4 +10,4 @@ import Spellchecker from './components/Spellchecker.vue'
 
 ## How to use
 
-Add any Malayalam content to the above editor and press the spellcheck icon in the toolbar
+Add any Malayalam content to the above editor. On content changes, spelling check will happen.
