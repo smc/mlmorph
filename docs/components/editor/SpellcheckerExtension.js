@@ -171,6 +171,9 @@ export const Spellchecker = Extension.create({
           decorations(state) {
             return this.getState(state);
           },
+          attributes:{
+            spellcheck: false
+          },
           handleClick(view, _, event) {
             if (/spellingmistake/.test(event.target.className)) {
               return;
