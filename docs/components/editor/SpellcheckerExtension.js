@@ -4,7 +4,7 @@ import { Decoration, DecorationSet } from "prosemirror-view";
 import { TextSelection } from "prosemirror-state";
 import axios from "axios";
 
-const wordsRegex = /[a-zA-Z\u0D00-\u0D7F]+/gi;
+const wordsRegex = /[a-zA-Z\u0D00-\u0D7F\.\?\!]+/gi;
 
 function debounce(func, timeout = 100) {
   let timer;
