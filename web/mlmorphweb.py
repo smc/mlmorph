@@ -1,7 +1,7 @@
 import regex
 from flask import Flask, jsonify, request, send_from_directory
 
-from mlmorph import Generator, Analyser, tokenize
+from mlmorph import Generator, Analyser
 from mlmorph_spellchecker import SpellChecker
 
 app = Flask(__name__,
@@ -27,7 +27,8 @@ def do_analyse():
         text = request.json.get('text')
     else:
         text = request.args.get('text')
-    words = tokenize(text)
+    text = text.strip()
+    words = regex.split(r'(\s+)', text)
     # real analysis
     for windex in range(len(words)):
         word = words[windex]
@@ -71,7 +72,8 @@ def do_spellcheck():
         text = request.json.get('text')
     else:
         text = request.args.get('text')
-    words = tokenize(text)
+    text = text.strip()
+    words = regex.split(r'(\s+)', text)
     result = {}
     # real analysis
     for windex in range(len(words)):
