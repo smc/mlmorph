@@ -3,11 +3,11 @@ import os
 import unittest
 import glob
 from time import perf_counter as clock
-from mlmorph import Analyser
+from mlmorph import Analyser, tokenize
 
 
 CURR_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
-MIN_COVERAGE = 56.92
+MIN_COVERAGE = 57.10
 
 
 def is_valid_malayalam_word(word):
@@ -33,7 +33,7 @@ class CoverageTests(unittest.TestCase):
                 tokens_count = 0
                 analysed_tokens_count = 0
                 for line in file:
-                    for word in regex.split(r'([\.\s]+)', line):
+                    for word in tokenize(line):
                         if not is_valid_malayalam_word(word):
                             continue
                         tokens_count += 1
