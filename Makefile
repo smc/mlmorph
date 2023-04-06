@@ -20,3 +20,6 @@ test: malayalam.a python
 coverage-analysis: malayalam.a python
 	@python tests/coverage-test.py
 
+dataset:
+	pip install tqdm
+	python scripts/create-dataset.py

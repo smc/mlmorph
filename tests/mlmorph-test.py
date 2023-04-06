@@ -1,12 +1,11 @@
 import json
 import unittest
-import sys
 import os
-import re
 
 from mlmorph import Generator, Analyser
 
 CURR_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
+
 
 class Struct:
     def __init__(self, entries):
@@ -67,6 +66,7 @@ class AnalyserGeneratorTests(unittest.TestCase):
                 if not (hasattr(test, 'skip') and test.skip):
                     self.assertEqual(
                         match, True, 'Generate for ' + test.analysis)
+
 
 if __name__ == '__main__':
     unittest.main()

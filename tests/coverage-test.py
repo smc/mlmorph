@@ -12,7 +12,7 @@ MIN_COVERAGE = 57.10
 
 def is_valid_malayalam_word(word):
     word = word.strip()
-    if(len(word) <= 1):
+    if (len(word) <= 1):
         return False
     # Ignore all non-Malayalam words
     if regex.search(r"[\u0D00-\u0D7F\u200C-\u200D]+", word) is None:
@@ -27,7 +27,8 @@ class CoverageTests(unittest.TestCase):
         total_tokens_count = 0
         total_analysed_tokens_count = 0
         start = clock()
-        print("%40s\t%8s\t%8s\t%s" % ('File name', 'Words', 'Analysed', 'Percentage'))
+        print("%40s\t%8s\t%8s\t%s" %
+              ('File name', 'Words', 'Analysed', 'Percentage'))
         for filename in glob.glob(os.path.join(CURR_DIR, "coverage", "*.txt")):
             with open(filename, 'r') as file:
                 tokens_count = 0
@@ -43,7 +44,8 @@ class CoverageTests(unittest.TestCase):
                 percentage = (analysed_tokens_count/tokens_count)*100
                 total_tokens_count += tokens_count
                 total_analysed_tokens_count += analysed_tokens_count
-                print("%40s\t%8d\t%8d\t%3.2f%%" % (os.path.basename(filename), tokens_count, analysed_tokens_count, percentage))
+                print("%40s\t%8d\t%8d\t%3.2f%%" % (os.path.basename(
+                    filename), tokens_count, analysed_tokens_count, percentage))
                 file.close()
         percentage = (total_analysed_tokens_count/total_tokens_count)*100
         time_taken = clock() - start
