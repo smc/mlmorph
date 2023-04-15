@@ -20,7 +20,7 @@ test: malayalam.a python
 coverage-analysis: malayalam.a python
 	@python tests/coverage-test.py
 	sort -u tests/unanalyzed.lex --output=tests/unanalyzed.lex
-        wc tests/unanalyzed.lex
+	wc tests/unanalyzed.lex
 
 dataset:
 	pip install tqdm
