@@ -49,7 +49,7 @@ class CoverageTests(unittest.TestCase):
                 total_analysed_tokens_count += analysed_tokens_count
                 print("%40s\t%8d\t%8d\t%3.2f%%" % (os.path.basename(
                     filename), tokens_count, analysed_tokens_count, percentage))
-                file.close;
+                file.close();
         percentage = (total_analysed_tokens_count/total_tokens_count)*100
         time_taken = clock() - start
         print('%40s\t%8d\t%8d\t%3.2f%%' %
