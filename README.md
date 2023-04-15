@@ -129,7 +129,7 @@ $ make test
 ```bash
 $ make coverage-test
 ```
-runs a coverage-tests and creates unanalyzed.lex file with unanalyzed words.
+runs a coverage-tests and creates unanalyzed.lex file in tests with unanalyzed words.
 ## Dataset
 ```bash
 $ make dataset 
