@@ -126,6 +126,16 @@ The analyser is being developed with lot of tests. To run tests :
 $ make test
 ```
 
+```bash
+$ make coverage-test
+```
+runs a coverage-tests and creates unanalyzed.lex file with unanalyzed words.
+## Dataset
+```bash
+$ make dataset 
+```
+creates a .csv file with words from tests/coverage/*.txt files. 
+
 ## Citation
 
 Please cite the following publication in order to refer to the mlmorph:
