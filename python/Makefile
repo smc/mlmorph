@@ -1,7 +1,7 @@
 all:
 	@mkdir -p mlmorph/data
 	cp ../malayalam.a  mlmorph/data/malayalam.a
-	python setup.py sdist
+	python -m build --sdist
 	pip3 install -e .
 
 clean:
@@ -9,5 +9,5 @@ clean:
 
 upload:
 	rm -rf dist
-	python setup.py sdist
+	python -m build --sdist
 	python -m twine upload dist/*
