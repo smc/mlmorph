@@ -4,7 +4,7 @@ build:
   stage: build
   before_script:
     - apt-get update -y
-    - apt-get install -y make sfst python3 python-is-python3 python3-pip python3-build
+    - apt-get install -y make sfst python3 python-is-python3 python3-pip python3-venv python3-build
   script:
     - make
   artifacts:
@@ -16,7 +16,7 @@ test:
   stage: test
   before_script:
     - apt-get update -y
-    - apt-get install -y make sfst python3 python-is-python3 python3-pip python3-build locales
+    - apt-get install -y make sfst python3 python-is-python3 python3-pip python3-venv python3-build locales
     - locale-gen ml_IN.UTF-8
   script:
     - LC_ALL=ml_IN.UTF-8 make test
