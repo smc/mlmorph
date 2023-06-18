@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlmorph"
+authors = [
+    {name = "Santhosh Thottingal", email = "santhosh.thottingal@gmail.com"},
+]
+description = "Malayalam morphology analyser"
+readme = "README.rst"
+requires-python = ">=3.8"
+keywords = ["Malayalam", "morphology", "FST", "analyser", "generator"]
+license = {text = "MIT", files = ["LICENSE.txt"]}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+    "regex",
+    'sfst>=1.5.7',
+]
+dynamic = ["version"]
+
+[project.scripts]
+mlmorph = "mlmorph.__main__:main"
+
+[tool.setuptools.package-data]
+mlmorph = ["data/malayalam.a"]
+
+[tool.setuptools_scm]
+search_parent_directories = "true"
+git_describe_command="git describe --tags --abbrev=0"
