@@ -1,7 +1,6 @@
 all:
 	@mkdir -p mlmorph/data
 	cp ../malayalam.a  mlmorph/data/malayalam.a
-	python -m build --sdist
 	pip install -e .
 
 clean:
