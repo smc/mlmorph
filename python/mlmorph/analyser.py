@@ -4,12 +4,16 @@
 Simple python interface for mlmorph using sfst
 """
 
+from importlib import resources
+from typing import List, Tuple
+
 import regex
 import sfst
-from typing import List, Tuple
-from pkg_resources import resource_filename, resource_exists
-from .normalizer import normalize
+
 from .foreign_word_detector import check_foreign_word
+from .normalizer import normalize
+
+
 class Analyser:
 
     ANALYSER_REGEX = regex.compile(r"((?P<root>([^<])+)(?P<tags>(<[^>]+>)+))+")
@@ -19,8 +23,8 @@ class Analyser:
     def __init__(self):
         """Construct Mlmorph Analyser"""
         self.fsa: str = None
-        if resource_exists(__name__, Analyser.RESOURCE_PATH):
-            self.fsa: str = resource_filename(__name__, Analyser.RESOURCE_PATH)
+        if resources.files('mlmorph').joinpath(Analyser.RESOURCE_PATH).is_file():
+            self.fsa: str = str(resources.files('mlmorph').joinpath(Analyser.RESOURCE_PATH))
         if not self.fsa:
             raise ValueError("Could not read the fsa.")
         sfst.init(self.fsa)

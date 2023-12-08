@@ -11,7 +11,6 @@ description = "Malayalam morphology analyser"
 readme = "README.rst"
 requires-python = ">=3.8"
 keywords = ["Malayalam", "morphology", "FST", "analyser", "generator"]
-license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
@@ -37,3 +36,27 @@ mlmorph = ["data/malayalam.a"]
 [tool.setuptools_scm]
 search_parent_directories = "true"
 git_describe_command="git describe --tags --abbrev=0"
+
+[project.optional-dependencies]
+tests = [
+    "pytest"
+]
+dev = [
+    "ruff",
+    "tox",
+]
+
+[tool.ruff]
+line-length = 100
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
+ignore = [
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+]

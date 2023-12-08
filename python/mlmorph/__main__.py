@@ -1,6 +1,7 @@
 from argparse import ArgumentParser
 from sys import stdin
-from mlmorph import Generator, Analyser, check_foreign_word
+
+from mlmorph import Analyser, Generator, check_foreign_word
 
 
 def main():

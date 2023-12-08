@@ -4,11 +4,13 @@
 Simple python interface for mlmorph using sfst
 """
 
-import sfst
-from pkg_resources import resource_filename, resource_exists
+from importlib import resources
 from typing import Tuple
-from .normalizer import normalize
+
+import sfst
+
 from .analyser import Analyser
+from .normalizer import normalize
 
 
 class Generator:
@@ -17,8 +19,8 @@ class Generator:
     def __init__(self):
         """Construct Mlmorph Generator"""
         self.fsa: str = None
-        if resource_exists(__name__, Generator.RESOURCE_PATH):
-            self.fsa = resource_filename(__name__, Generator.RESOURCE_PATH)
+        if resources.files('mlmorph').joinpath(Generator.RESOURCE_PATH).is_file():
+            self.fsa: str = str(resources.files('mlmorph').joinpath(Analyser.RESOURCE_PATH))
         if not self.fsa:
             raise ValueError('Could not read the fsa.')
         sfst.init(self.fsa)
