@@ -11,7 +11,7 @@ description = "Malayalam morphology analyser"
 readme = "README.rst"
 requires-python = ">=3.8"
 keywords = ["Malayalam", "morphology", "FST", "analyser", "generator"]
-license = {text = "MIT", files = ["LICENSE.txt"]}
+license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
