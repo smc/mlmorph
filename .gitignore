@@ -9,3 +9,9 @@ ENV_DIR
 **/node_modules/
 .venv
 .vscode
+.tox
+python/build
+python/dist
+.ruff_cache
+.pytest_cache
+.tmp

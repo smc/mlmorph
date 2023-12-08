@@ -28,11 +28,30 @@ test:
   dependencies:
     - build
 
+test:python:
+  stage: test
+  image: docker.io/python:$PYTHON_VERSIONS
+  before_script:
+    - echo "Pass. Just overriding"
+  parallel:
+    matrix:
+      - PYTHON_VERSIONS: [ "3.8", "3.9", "3.10", "3.11", "3.12" ]
+  script:
+    - pip install tox
+    - tox -e py -c python/tox.ini
+  dependencies:
+    - build
+
+
 publish:
   stage: publish
+  before_script:
+    - echo "Pass. Just overriding"
   script:
     - pip install twine
     - twine upload dist/* --username __token__ --password $PYPI_API_KEY
+  dependencies:
+    - build
   only:
     - tags
 
