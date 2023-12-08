@@ -7,6 +7,11 @@ before_script:
   - source .venv/bin/activate
   - locale-gen ml_IN.UTF-8
 
+stages:
+  - build
+  - test
+  - publish
+
 build:
   stage: build
   script:
@@ -22,3 +27,12 @@ test:
     - LC_ALL=ml_IN.UTF-8 make test
   dependencies:
     - build
+
+publish:
+  stage: publish
+  script:
+    - pip install twine
+    - twine upload dist/* --username __token__ --password $PYPI_API_KEY
+  only:
+    - tags
+
