@@ -98,49 +98,49 @@ export default {
 .morpheme {
     margin: 1rem 0.5rem;
     padding: 0;
-    border: 1px solid var(--c-brand);
-     border-radius: 2px;
 }
 
 .pos-tags {
-    padding: 0;
+    padding: 0 !important;
+    display: inline;
 }
 
 .pos-tag {
-    border: 1px solid var(--c-brand);
-    border-left: 1px solid var(--c-brand);
-    background-color: #f0f8ff;
     display: inline;
     padding: 0.25rem;
     margin: 0 4px;
     font-size: 0.8rem;
     font-family: monospace;
     border-radius: 4px;
+    border-color: var(--vp-badge-tip-border);
+    color: var(--vp-badge-tip-text);
+    background-color: var(--vp-badge-tip-bg);
 }
 
 .root {
-    background-color:var(--c-brand-light);;
+    background-color:var(--vp-c-brand-light);
     padding: 0 0.5rem;
     font-weight: bold;
+    display: inline;
 }
 
 input.analyser-input {
     padding: 0.5rem;
     font-size: 1rem;
     width: 100%;
-    border: 1px solid var(--c-brand);
+    border: 1px solid var(--vp-c-brand);
 }
 
 button.analyser-analyse-button {
     padding: 0.5rem;
     margin: 0.5rem 0;
-    background-color: var(--c-brand);
+    background-color: var(--vp-c-brand);
     color: #fff;
     border: none;
 }
 
 .analysis h4 {
-     color: var(--c-brand);
+     color: var(--vp-c-brand);
 }
 
 form {

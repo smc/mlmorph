@@ -120,13 +120,13 @@ export default {
   width: 100%;
   height: 24ch;
   overflow: auto;
-  border: 1px solid var(--c-brand);
+  border: 1px solid var(--vp-c-brand);
 }
 
 button.ner-button {
   padding: 0.5rem;
   margin: 0.5rem 0;
-  background-color: var(--c-brand);
+  background-color: var(--vp-c--c-brand);
   color: #fff;
   border: none;
 }

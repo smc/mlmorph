@@ -107,7 +107,7 @@ export default {
   line-height: 1.4;
   width: 100%;
   overflow: auto;
-  border: 1px solid var(--c-brand);
+  border: 1px solid var(--vp-c-brand);
 }
 
 progress {
@@ -115,11 +115,11 @@ progress {
 }
 
 .number-result .primary{
- color: var(--c-brand);
+ color: var(--vp-c-brand);
 }
 
 .number-result .alternate {
-  color: var(--c-text-light-2);
+  color: var(--vp-c-text-light-2);
 }
 
 </style>
