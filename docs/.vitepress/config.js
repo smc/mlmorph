@@ -53,7 +53,7 @@ module.exports = {
     sidebar: [
       {
         text: "Getting Started",
-        children: [
+        items: [
           { text: "Malayalam morphology analyser", link: "/" },
           { text: "Part of speech tags", link: "/pos" },
           { text: "Finite State Transducer", link: "/fst" },
@@ -64,7 +64,7 @@ module.exports = {
       },
       {
         text: "Lexicon",
-        children: [
+        items: [
           { text: "Introduction", link: "/lexicon/" },
           { text: "Nouns", link: "/lexicon/nouns" },
           { text: "Verbs", link: "/lexicon/verbs" },
@@ -72,18 +72,18 @@ module.exports = {
       },
       {
         text: "Morphology",
-        children: [
+        items: [
           {
             text: "Nominal inflections",
             link: "/ninfl/",
-            children: [
+            items: [
               { text: "Cases", link: "/ninfl/cases" },
               { text: "Number", link: "/ninfl/number" }
             ]
           },
           {
             text: "Verbal inflections", link: "/vinfl/",
-            children: [
+            items: [
               { text: "Tense", link: "/vinfl/tense" },
               { text: "Aspect", link: "/vinfl/aspect" },
               { text: "Mood", link: "/vinfl/mood" },
@@ -102,13 +102,13 @@ module.exports = {
       {
         text: "Derivational morphology",
         link: "/deriv/",
-        children: [
+        items: [
           { text: "Verbal nouns", link: "/deriv/noun-from-verb" }
         ]
       },
       {
         text: "Using mlmorph",
-        children: [
+        items: [
           {
             text: "Python API",
             link: "/dev/python",
@@ -118,7 +118,7 @@ module.exports = {
       },
       {
         text: "Applications",
-        children: [
+        items: [
           {
             text: "Morphology analyser",
             link: "/analyser",
@@ -141,7 +141,7 @@ module.exports = {
           },
         ],
       },
-    ],
+    ]
   },
   markdown: {
     // options for markdown-it-anchor
@@ -154,5 +154,6 @@ module.exports = {
       md.use(...createContainer('rule'))
       md.use(...createContainer('example', 'Examples'))
     }
-  }
+  },
+
 };

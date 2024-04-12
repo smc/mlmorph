@@ -1,7 +1,7 @@
 @import url("https://smc.org.in/fonts/manjari.css");
 
 :root {
-    --c-brand: #00A7D0;
+    --c-brand: #3451b2;
     --c-brand-light: #f0f8ff;
     --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Manjari, sans-serif;
     --font-family-mono: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', Manjari, monospace;
@@ -9,7 +9,7 @@
 
 .custom-block.example {
     background-color: var(--c-white);
-    border-color: var(--c-brand);
+    border-color: #3451b2;
     overflow-x: auto;
 }
 
@@ -21,13 +21,13 @@
 .custom-block.rule {
     margin-top: 2rem;
     border-top: 1px solid var(--c-brand);
-    background-color: #f0f8ff;
+    background-color: #646cff24;
+    color: #3451b2;
 }
 
 .custom-block.rule::before {
     content: "🖝";
     position: absolute;
     left: -1.5em;
-    color: var(--c-brand);
     font-size: 2em;
 }
