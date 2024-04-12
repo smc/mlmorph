@@ -7,7 +7,7 @@ from mlmorph import Analyser, tokenize
 
 
 CURR_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
-MIN_COVERAGE = 57.10
+MIN_COVERAGE = 57.25
 
 
 def is_valid_malayalam_word(word):
@@ -33,7 +33,8 @@ class CoverageTests(unittest.TestCase):
             with open(filename, 'r') as file:
                 tokens_count = 0
                 analysed_tokens_count = 0
-                for line in file:
+                lines = file.readlines()
+                for line in lines:
                     for word in tokenize(line):
                         if not is_valid_malayalam_word(word):
                             continue
