@@ -18,7 +18,7 @@ For a detailed introduction and explanation of approach, please refer the blog p
 
 ## Status
 
-Currently the analyser can parse(or recognize) 80%+ of words in our test corpora of 50000 Malayalam words. The lexicon prepared is being updated and expanded to include more commonly used words. Morpho-Phonological rules are still being added, even though the common constructs are already added.
+Currently the analyser can parse(or recognize) 80%+ of words in our [test corpora](https://gitlab.com/smc/mlmorph/-/blob/master/tests/coverage) of 50000 Malayalam words. The lexicon prepared is being updated and expanded to include more commonly used words. Morpho-Phonological rules are still being added, even though the common constructs are already added.
 
 * A web interface is available at https://morph.smc.org.in to quickly try out the analyser and generator.
 * A spellchecker based on this analyser is being developed. See https://gitlab.com/smc/mlmorph-spellchecker
