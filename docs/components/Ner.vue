@@ -7,13 +7,8 @@
     <progress v-if="loading" />
     <section v-else class="ner-result">
       <div class="entity" :key="entity.title" v-for="entity in entities">
-        <h3>
-          <a :href="entity.content_urls && entity.content_urls.desktop.page">{{
-            entity.title
-          }}</a>
-        </h3>
-        <p class="subtitle">{{ entity.description }}</p>
-        <img :src="entity.thumbnail && entity.thumbnail.source" :title=entity.extract />
+        <wiki-article language="ml" :article="entity.title">
+        </wiki-article>
       </div>
     </section>
   </section>
@@ -21,7 +16,8 @@
 
 <script>
 import axios from "axios";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+
 
 export default {
   name: "Ner",
@@ -102,6 +98,12 @@ export default {
         });
     };
 
+    onMounted(() => {
+      import('https://santhoshtr.github.io/wiki-elements/src/wiki-article.js').then((module) => {
+        // use code
+      })
+    })
+
     return {
       loading,
       input,
@@ -146,28 +148,7 @@ progress {
 }
 
 .entity {
-  display: flex;
-  flex-direction: column;
-  min-width: 300px;
-  max-width: 300px;
   margin: 1rem;
 }
 
-.entity img {
-  width: 250px;
-  height: 150px;
-  object-fit: cover;
-}
-
-.entity .subtitle {
-  padding: 0;
-  margin: 0;
-  max-height: 2rem;
-  overflow: hidden;
-}
-
-.entity .extract {
-  max-height: 200px;
-  overflow: hidden;
-}
 </style>

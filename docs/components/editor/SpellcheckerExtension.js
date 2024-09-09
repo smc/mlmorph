@@ -1,7 +1,6 @@
 import { Extension } from '@tiptap/core'
 import { Plugin } from 'prosemirror-state'
 import { Decoration, DecorationSet } from "prosemirror-view";
-import { TextSelection } from "prosemirror-state";
 import axios from "axios";
 
 const wordsRegex = /[a-zA-Z\u0D00-\u0D7F\.\?\!]+/gi;
@@ -25,7 +24,7 @@ function fixSpelling(replacement) {
 
 const spellcheck = (text) => {
   const misspellings = {};
-  const api = `https://morph.smc.org.in/api/spellcheck`;
+  const api = `/api/spellcheck`;
   return axios
     .post(api, { text: text })
     .then((response) => {
@@ -51,8 +50,6 @@ function checkNodes(node, pos) {
     // Scan text nodes for suspicious patterns
     let m;
 
-    let words = node.text.split(" ");
-    let misspellings = {};
     return spellcheck(node.text).then((misspellings) => {
       while ((m = wordsRegex.exec(node.text))) {
         let word = m[0];
@@ -91,52 +88,6 @@ function spellcheckDeco(view) {
   });
 }
 
-function showSuggestions(view, event){
-  let pos = view.posAtCoords({ left: event.clientX, top: event.clientY });
-  if (!pos) {
-    return;
-  }
-  pos = pos.pos;
-  const decos = this.getState(view.state);
-  const deco = decos.find(pos, pos)[0];
-  if (!deco) {
-    return false;
-  }
-  const contextMenu = document.getElementById("spellcheck-suggestions");
-  const { clientX: mouseX, clientY: mouseY } = event;
-  contextMenu.style.top = `${mouseY}px`;
-  contextMenu.style.left = `${mouseX}px`;
-  contextMenu.classList.add("show");
-  const suggestions = deco.type.attrs.suggestions;
-
-  while (contextMenu.firstChild) {
-    contextMenu.removeChild(contextMenu.firstChild);
-  }
-
-  for (let i = 0; i < suggestions.length; i++) {
-    const suggestionEl = document.createElement("li");
-    suggestionEl.innerText = suggestions[i];
-    suggestionEl.classList.add("suggestion");
-    suggestionEl.addEventListener("click", () => {
-      view.dispatch(view.state.tr.replaceWith(deco.from, deco.to,
-        view.state.schema.text(suggestions[i])))
-      contextMenu.classList.remove("show");
-    });
-
-    contextMenu.append(suggestionEl);
-  }
-
-  if (!suggestions || !suggestions.length) {
-    const suggestionEl = document.createElement("li");
-    suggestionEl.innerText = "No suggestions";
-    contextMenu.append(suggestionEl);
-  }
-  contextMenu.addEventListener("blur", () => {
-    contextMenu.classList.remove("show");
-  })
-  event.preventDefault();
-  return true;
-}
 
 export const Spellchecker = Extension.create({
   name: 'spellchecker',
