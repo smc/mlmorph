@@ -10,7 +10,7 @@ authors = [
 description = "Malayalam morphology analyser"
 readme = "README.rst"
 requires-python = ">=3.8"
-keywords = ["Malayalam", "morphology", "FST", "analyser", "generator"]
+keywords = ["Malayalam", "morphology", "FST", "analyser", "generator", "spellchecker"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
@@ -23,15 +23,19 @@ classifiers = [
 ]
 dependencies = [
     "regex",
-    'sfst>=1.5.7',
+    'sfst>=1.6.0',
 ]
 dynamic = ["version"]
 
 [project.scripts]
 mlmorph = "mlmorph.__main__:main"
+spellchecker = "mlmorph.spellchecker.__main__:main"
 
 [tool.setuptools.package-data]
-mlmorph = ["data/malayalam.a"]
+mlmorph = [
+    "data/malayalam.a",
+    "spellchecker/resources/common_mistakes.csv"
+]
 
 [tool.setuptools_scm]
 search_parent_directories = "true"
@@ -42,13 +46,13 @@ tests = [
     "pytest"
 ]
 dev = [
-    "ruff",
+    "ruff>=0.6.4",
     "tox",
 ]
 
 [tool.ruff]
 line-length = 100
-select = [
+lint.select = [
     "E",  # pycodestyle errors
     "W",  # pycodestyle warnings
     "F",  # pyflakes
@@ -56,7 +60,7 @@ select = [
     "C",  # flake8-comprehensions
     "B",  # flake8-bugbear
 ]
-ignore = [
+lint.ignore = [
     "B008",  # do not perform function calls in argument defaults
     "C901",  # too complex
 ]
