@@ -48,6 +48,8 @@ tests = [
 dev = [
     "ruff>=0.6.4",
     "tox",
+    "build",
+    "twine"
 ]
 
 [tool.ruff]
