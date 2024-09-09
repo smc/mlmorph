@@ -1,37 +1,32 @@
 import regex
-from flask import Flask, jsonify, request, send_from_directory
-
+from fastapi import FastAPI, Request
+from fastapi.responses import FileResponse, JSONResponse
 from mlmorph import Generator, Analyser
-from mlmorph_spellchecker import SpellChecker
+from mlmorph.spellchecker import SpellChecker
+from fastapi.staticfiles import StaticFiles
+import uvicorn
 
-app = Flask(__name__,
-            static_folder="./public/",
-            static_url_path='',
-            template_folder="./public")
+app = FastAPI()
+
 
 generator = Generator()
 analyser = Analyser()
 spellchecker = SpellChecker()
 
 
-@app.route("/<path:path>", defaults={'path': 'index.html'})
-def index(path):
-    return send_from_directory('./public', path)
+@app.get("/api/analyse")
+@app.post("/api/analyse")
+async def do_analyse(request: Request):
+    text = (
+        (await request.json()).get("text")
+        if request.method == "POST"
+        else request.query_params.get("text", "")
+    )
 
-
-@app.route("/api/analyse", methods=['POST', 'GET'])
-def do_analyse():
-    text = None
-    analyse_results = {}
-    if request.method == 'POST':
-        text = request.json.get('text')
-    else:
-        text = request.args.get('text')
     text = text.strip()
     words = regex.split(r'(\s+)', text)
-    # real analysis
-    for windex in range(len(words)):
-        word = words[windex]
+    analyse_results = {}
+    for word in words:
         anals = analyser.analyse(word, False)
         anals_results = []
         if len(anals) == 0:
@@ -43,18 +38,15 @@ def do_analyse():
         anals_results.sort(key=lambda analysis: analysis['weight'])
         analyse_results[word] = anals_results
 
-    return jsonify(result=analyse_results)
+    return JSONResponse(content={"result": analyse_results})
 
 
-@app.route("/api/generate", methods=['GET'])
-def do_generate():
+@app.get("/api/generate")
+async def do_generate(word: str, wordtype: str = "", infl: str = ""):
     generate_results = []
-    word = request.args.get('word')
-    wordtype = request.args.get('type')
     genInput = word
     if wordtype:
-        genInput += '<' + wordtype + '>'
-    infl = request.args.get('infl')
+        genInput += "<" + wordtype + ">"
     if infl:
         genInput += '<' + infl + '>'
     gens = generator.generate(genInput)
@@ -62,29 +54,38 @@ def do_generate():
         generate_results.append(genInput)
     for gindex in range(len(gens)):
         generate_results.append(gens[gindex][0])
-    return jsonify(word=word, type=wordtype, infl=infl, result=generate_results)
+    return JSONResponse(
+        content={
+            "word": word,
+            "type": wordtype,
+            "infl": infl,
+            "result": generate_results,
+        }
+    )
 
 
-@app.route("/api/spellcheck", methods=['POST', 'GET'])
-def do_spellcheck():
-    result = {}
-    if request.method == 'POST':
-        text = request.json.get('text')
-    else:
-        text = request.args.get('text')
+@app.get("/api/spellcheck")
+@app.post("/api/spellcheck")
+async def do_spellcheck(request: Request):
+    text = (
+        (await request.json()).get("text")
+        if request.method == "POST"
+        else request.query_params.get("text", "")
+    )
     text = text.strip()
     words = regex.split(r'(\s+)', text)
     result = {}
-    # real analysis
-    for windex in range(len(words)):
-        word = words[windex]
+    for word in words:
         isCorrect = spellchecker.spellcheck(word)
         suggestions = []
         if not isCorrect:
             suggestions = spellchecker.candidates(word)
         result[word] = {'correct': isCorrect, 'suggestions': suggestions}
-    return jsonify(result)
+    return JSONResponse(content=result)
+
+
+app.mount("/", StaticFiles(directory="public", html=True), name="static")
 
 
 if __name__ == "__main__":
-    app.run()
+    uvicorn.run(app, host="0.0.0.0", port=8000)
