@@ -109,6 +109,7 @@ export const Spellchecker = Extension.create({
           },
         },
         view: (view) => {
+          spellcheckDeco(view);
           return {
             update: debounce((view, lastState) => {
               let state = view.state;
