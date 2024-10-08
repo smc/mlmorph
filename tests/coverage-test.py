@@ -29,8 +29,9 @@ class CoverageTests(unittest.TestCase):
         start = clock()
         print("%40s\t%8s\t%8s\t%s" %
               ('File name', 'Words', 'Analysed', 'Percentage'))
-        for filename in glob.glob(os.path.join(CURR_DIR, "coverage", "*.txt")):
-            with open(filename, 'r') as file:
+        with open("./tests/unanalyzed.lex", "w+") as unanFile:
+            for filename in glob.glob(os.path.join(CURR_DIR, "coverage", "*.txt")):
+              with open(filename, 'r') as file:
                 tokens_count = 0
                 analysed_tokens_count = 0
                 lines = file.readlines()
@@ -42,12 +43,14 @@ class CoverageTests(unittest.TestCase):
                         analysis = self.analyser.analyse(word, False)
                         if len(analysis) > 0:
                             analysed_tokens_count += 1
+                        else:
+                            unanFile.write(word+"\n")
                 percentage = (analysed_tokens_count/tokens_count)*100
                 total_tokens_count += tokens_count
                 total_analysed_tokens_count += analysed_tokens_count
                 print("%40s\t%8d\t%8d\t%3.2f%%" % (os.path.basename(
                     filename), tokens_count, analysed_tokens_count, percentage))
-                file.close()
+                file.close();
         percentage = (total_analysed_tokens_count/total_tokens_count)*100
         time_taken = clock() - start
         print('%40s\t%8d\t%8d\t%3.2f%%' %
