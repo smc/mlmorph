@@ -595,32 +595,32 @@ POS tag: `<ablative>`
 
 ::: example
 
-* `തറ<n><ablative>` ⇒ തറയിലൂടെ, തറയിൽനിന്നു
+* `തറ<n><ablative>` ⇒ തറയിൽനിന്നു
 * `ഇല<n><ablative>` ⇒ ഇലയിൽനിന്ന്
 * `വഴി<n><ablative>` ⇒ വഴിയിൽനിന്ന്
 * `വരി<n><ablative>` ⇒ വരിയിൽനിന്ന്
-* `ഇന്ത്യ<n><ablative>` ⇒ ഇന്ത്യയിൽനിന്ന്
+* `ഇന്ത്യ<np><ablative>` ⇒ ഇന്ത്യയിൽനിന്ന്
 
 :::
 
 ::: rule
-**Words ending with Chandrakkala or Chillus** Append ഇലൂടെ, ഇൽക്കൂടെ
+**Words ending with Chandrakkala or Chillus** Append ഇൽനിന്ന്, ഇൽനിന്നു
 :::
 
 ::: example
 
-* `കാറ്റ്<n><ablative>` ⇒ കാറ്റിൽനിന്ന്
+* `കാറ്റ്<n><ablative>` ⇒ കാറ്റിൽനിന്ന്, കാറ്റിൽനിന്നു
 
 :::
 
 ::: rule
-**Words ending with ട്** Geminate ട(ട്ട) Append ഇലൂടെ, ഇൽക്കൂടെ
+**Words ending with ട്** Geminate ട(ട്ട) Append ഇൽനിന്ന്, ഇൽനിന്നു
 :::
 
 ::: example
 
 
-* `വീട്<n><ablative>` ⇒ വീട്ടിൽനിന്ന്
-* `കാട്<n><ablative>` ⇒ കാട്ടിൽനിന്ന്
+* `വീട്<n><ablative>` ⇒ വീട്ടിൽനിന്ന്, വീട്ടിൽനിന്നു
+* `കാട്<n><ablative>` ⇒ കാട്ടിൽനിന്ന്, കാട്ടിൽനിന്നു
 
 :::
