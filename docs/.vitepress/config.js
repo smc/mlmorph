@@ -24,31 +24,39 @@ module.exports = {
   title: "Malayalam morphology analyser",
   description: pkg.description,
   head: [["meta", { property: "og:description", content: pkg.description }]],
+  vue: {
+    template: {
+      compilerOptions: {
+        // Vue compiler options here
+        isCustomElement: (tag) => tag.startsWith("wiki-"),
+      },
+    },
+  },
   themeConfig: {
     repo: "smc/mlmorph",
     docsDir: "docs",
     editLinks: true,
     nav: [
       {
-        text: 'Documentation',
-        link: '/'
+        text: "Documentation",
+        link: "/",
       },
       {
-        text: 'Analyser',
-        link: '/analyser'
+        text: "Analyser",
+        link: "/analyser",
       },
       {
-        text: 'Generator',
-        link: '/generator'
+        text: "Generator",
+        link: "/generator",
       },
       {
-        text: 'Spellchecker',
-        link: '/spellcheck'
+        text: "Spellchecker",
+        link: "/spellcheck",
       },
       {
-        text: 'SMC',
-        link: 'https://smc.org.in'
-      }
+        text: "SMC",
+        link: "https://smc.org.in",
+      },
     ],
     sidebar: [
       {
@@ -78,11 +86,12 @@ module.exports = {
             link: "/ninfl/",
             items: [
               { text: "Cases", link: "/ninfl/cases" },
-              { text: "Number", link: "/ninfl/number" }
-            ]
+              { text: "Number", link: "/ninfl/number" },
+            ],
           },
           {
-            text: "Verbal inflections", link: "/vinfl/",
+            text: "Verbal inflections",
+            link: "/vinfl/",
             items: [
               { text: "Tense", link: "/vinfl/tense" },
               { text: "Aspect", link: "/vinfl/aspect" },
@@ -90,7 +99,7 @@ module.exports = {
               { text: "Voice", link: "/vinfl/voice" },
               { text: "Clauses", link: "/vinfl/clauses" },
               { text: "Questions", link: "/vinfl/questions" },
-            ]
+            ],
           },
           { text: "Cardinals", link: "/cardinals" },
         ],
@@ -102,9 +111,7 @@ module.exports = {
       {
         text: "Derivational morphology",
         link: "/deriv/",
-        items: [
-          { text: "Verbal nouns", link: "/deriv/noun-from-verb" }
-        ]
+        items: [{ text: "Verbal nouns", link: "/deriv/noun-from-verb" }],
       },
       {
         text: "Using mlmorph",
@@ -141,7 +148,7 @@ module.exports = {
           },
         ],
       },
-    ]
+    ],
   },
   markdown: {
     // options for markdown-it-anchor
@@ -151,9 +158,8 @@ module.exports = {
     toc: { includeLevel: [1, 2] },
 
     config: (md) => {
-      md.use(...createContainer('rule'))
-      md.use(...createContainer('example', 'Examples'))
-    }
+      md.use(...createContainer("rule"));
+      md.use(...createContainer("example", "Examples"));
+    },
   },
-
 };
