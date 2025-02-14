@@ -149,6 +149,7 @@ progress {
 
 .entity {
   margin: 1rem;
+  width: 100%;
 }
 
 </style>
