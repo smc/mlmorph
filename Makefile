@@ -1,4 +1,4 @@
-SUBDIRS = lexicon phon ninfl vinfl deriv python
+SUBDIRS = lexicon phon ninfl vinfl deriv python rust
 
 include Makefile.inc
 
