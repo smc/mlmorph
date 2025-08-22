@@ -13,7 +13,8 @@ clean:
 	@rm -f data/*.a
 
 publish: test
-	cargo publish
+	# --allow-dirty is required because we are not publishing that to git
+	cargo publish --allow-dirty
 
 # Add a version-check target to verify sync
 version-check:

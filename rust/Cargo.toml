@@ -2,6 +2,9 @@
 name = "mlmorph"
 version = "1.4.0"
 edition = "2024"
+description = "Malayalam morphological analyzer"
+license = "MIT"
+authors = ["Santhosh Thottingal <santhosh.thottingal@gmail.com>"]
 include = [
   "src/**/*",
   "data/malayalam.a",
