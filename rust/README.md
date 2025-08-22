@@ -1,4 +1,4 @@
-# mlmorph-rs
+# mlmorph
 
 A Rust implementation of the Malayalam Morphological Analyzer using Finite State Transducer technology.
 
