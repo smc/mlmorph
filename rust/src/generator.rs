@@ -1,52 +1,14 @@
 use crate::{GenerationResult, analyser::Analyser, normalizer::normalize};
 use sfst::Sfst;
-use std::path::PathBuf;
 
 pub struct Generator {
     sfst: Sfst,
 }
 
 impl Generator {
-    const RESOURCE_PATH: &'static str = "data/malayalam.a";
-
     pub fn new() -> Result<Self, Box<dyn std::error::Error>> {
-        let fsa_path = Self::get_fsa_path()?;
-        let sfst = Sfst::new(&fsa_path)?;
+        let sfst = crate::create_sfst()?;
         Ok(Generator { sfst })
-    }
-
-    fn get_fsa_path() -> Result<String, Box<dyn std::error::Error>> {
-        // First try to find the file in the current directory structure
-        let current_dir_path = PathBuf::from(Self::RESOURCE_PATH);
-        if current_dir_path.exists() {
-            return Ok(current_dir_path.to_string_lossy().to_string());
-        }
-
-        // Try relative to the executable
-        if let Ok(exe_path) = std::env::current_exe() {
-            if let Some(exe_dir) = exe_path.parent() {
-                let relative_path = exe_dir.join(Self::RESOURCE_PATH);
-                if relative_path.exists() {
-                    return Ok(relative_path.to_string_lossy().to_string());
-                }
-            }
-        }
-
-        // For development and testing, try some common locations
-        let fallback_paths = [
-            "malayalam.a",
-            "../data/malayalam.a",
-            "../../data/malayalam.a",
-        ];
-
-        for path in &fallback_paths {
-            let path_buf = PathBuf::from(path);
-            if path_buf.exists() {
-                return Ok(path.to_string());
-            }
-        }
-
-        Err("Could not find malayalam.a FSA file. Please ensure it's available in the data/ directory.".into())
     }
 
     pub fn generate(

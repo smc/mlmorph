@@ -111,6 +111,28 @@ pub use foreign_word_detector::check_foreign_word;
 pub use generator::Generator;
 pub use normalizer::normalize;
 
+use include_dir::{Dir, include_dir};
+use sfst::Sfst;
+use std::fs;
+use tempfile::TempDir;
+
+pub fn create_sfst() -> Result<Sfst, Box<dyn std::error::Error>> {
+    const DATA_DIR: Dir<'_> = include_dir!("$CARGO_MANIFEST_DIR/data");
+    let tmp_dir = TempDir::new()?;
+    let file_path = tmp_dir.path().join("malayalam.a");
+    let fsa_path = DATA_DIR
+        .get_file("malayalam.a")
+        .ok_or("Could not find malayalam.a")?;
+    let body = fsa_path.contents();
+    fs::write(&file_path, body)?;
+    let sfst = Sfst::new(file_path.as_path().to_str().ok_or("Invalid file path")?)?;
+
+    // Keep the temp dir alive by leaking it (since SFST needs the file to persist)
+    std::mem::forget(tmp_dir);
+
+    Ok(sfst)
+}
+
 /// Represents a single morpheme in the morphological analysis.
 ///
 /// A morpheme is the smallest grammatical unit in a language. Each morpheme
