@@ -213,7 +213,7 @@ checksum = "32a282da65faaf38286cf3be983213fcf1d2e2a58700e808f83f4ea9a4804bc0"
 
 [[package]]
 name = "mlmorph"
-version = "1.4.1"
+version = "1.4.2"
 dependencies = [
  "clap",
  "include_dir",
@@ -303,9 +303,9 @@ dependencies = [
 
 [[package]]
 name = "sfst"
-version = "0.1.0"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0832f694a2713ccbc6d419de1ff63c09002d3dea919bd77ad3c9c5ef00530198"
+checksum = "69a92dd1e9f1fa2a6a71c3f530e9286087863f09197e525468c64075f236deff"
 dependencies = [
  "cc",
  "clap",
