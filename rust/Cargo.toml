@@ -1,6 +1,6 @@
 [package]
 name = "mlmorph"
-version = "1.4.2"
+version = "1.4.3"
 edition = "2024"
 description = "Malayalam morphological analyzer"
 license = "MIT"
