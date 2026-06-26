@@ -7,12 +7,17 @@ use sfst::Sfst;
 use std::collections::HashMap;
 
 lazy_static::lazy_static! {
-    static ref ANALYSER_REGEX: Regex = {
-        Regex::new(r"((?P<root>([^<])+)(?P<tags>(<[^>]+>)+))+").unwrap()
+    // One morpheme: a root (non-tag chars) followed by one or more tags.
+    // Unlike Python's `regex` module, the Rust `regex` crate cannot return every
+    // repetition of a capture group, so we match each morpheme separately with
+    // `captures_iter` instead of relying on an outer `+`.
+    static ref MORPHEME_REGEX: Regex = {
+        Regex::new(r"(?P<root>[^<]+)(?P<tags>(?:<[^>]+>)+)").unwrap()
     };
 
+    // A single tag. `captures_iter` yields one capture per tag.
     static ref POS_REGEX: Regex = {
-        Regex::new(r"(<(?P<tag>([^>]+))>)+").unwrap()
+        Regex::new(r"<(?P<tag>[^>]+)>").unwrap()
     };
 }
 
@@ -73,36 +78,21 @@ impl Analyser {
             analysis.to_string()
         };
 
-        let _caps = ANALYSER_REGEX
-            .captures(&analysis)
-            .ok_or("Could not parse the analysis")?;
-
         let mut morphemes = Vec::new();
-        let roots: Vec<&str> = ANALYSER_REGEX
-            .captures_iter(&analysis)
-            .filter_map(|cap| cap.name("root"))
-            .map(|m| m.as_str())
-            .collect();
+        for cap in MORPHEME_REGEX.captures_iter(&analysis) {
+            let root = cap.name("root").unwrap().as_str().to_string();
+            let tags = cap.name("tags").unwrap().as_str();
+            let pos: Vec<String> = POS_REGEX
+                .captures_iter(tags)
+                .filter_map(|cap| cap.name("tag"))
+                .map(|m| m.as_str().to_string())
+                .collect();
 
-        let tags_list: Vec<&str> = ANALYSER_REGEX
-            .captures_iter(&analysis)
-            .filter_map(|cap| cap.name("tags"))
-            .map(|m| m.as_str())
-            .collect();
+            morphemes.push(Morpheme { root, pos });
+        }
 
-        for (i, root) in roots.iter().enumerate() {
-            if let Some(tags) = tags_list.get(i) {
-                let pos: Vec<String> = POS_REGEX
-                    .captures_iter(tags)
-                    .filter_map(|cap| cap.name("tag"))
-                    .map(|m| m.as_str().to_string())
-                    .collect();
-
-                morphemes.push(Morpheme {
-                    root: root.to_string(),
-                    pos,
-                });
-            }
+        if morphemes.is_empty() {
+            return Err("Could not parse the analysis".into());
         }
 
         let weight = Self::get_weight(&morphemes);
@@ -116,7 +106,7 @@ impl Analyser {
         for morpheme in morphemes {
             for pos in &morpheme.pos {
                 weight += morpheme.pos.len() as i32 * 5
-                    + morpheme.root.len() as i32 * 2
+                    + morpheme.root.chars().count() as i32 * 2
                     + Self::get_pos_weight(pos) * 3;
             }
         }
@@ -143,5 +133,26 @@ impl Analyser {
         .collect();
 
         weights.get(pos).copied().unwrap_or(pos.len() as i32)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_parse_analysis_multi_morpheme() {
+        let parsed = Analyser::parse_analysis("കരുത്ത്<n><sociative>എ<indeclinable>").unwrap();
+
+        assert_eq!(parsed.morphemes.len(), 2);
+
+        assert_eq!(parsed.morphemes[0].root, "കരുത്ത്");
+        assert_eq!(parsed.morphemes[0].pos, vec!["n", "sociative"]);
+
+        assert_eq!(parsed.morphemes[1].root, "എ");
+        assert_eq!(parsed.morphemes[1].pos, vec!["indeclinable"]);
+
+        // Weight matches the Python reference implementation.
+        assert_eq!(parsed.weight, 324);
     }
 }
