@@ -24,7 +24,7 @@ docs:
 	cd docs && npm ci && npm run docs:build
 	cp -r docs/.vitepress/dist web/public
 
-webserver: docs
+webserver: all docs
 	cd web && uv sync --frozen && uv run uvicorn mlmorphweb:app --host 0.0.0.0 --port 8000
 
 dataset:
