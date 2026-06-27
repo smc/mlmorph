@@ -47,4 +47,5 @@ RUN git clone --depth 1 https://github.com/santhoshtr/sfst.git /tmp/sfst \
 WORKDIR /app
 COPY . /app
 
+EXPOSE 8000
 CMD ["make", "webserver"]
