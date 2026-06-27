@@ -4,7 +4,7 @@ include Makefile.inc
 
 .PHONY: all subdirs $(SUBDIRS)
 
-all: malayalam.a python
+all: malayalam.a python rust
 
 malayalam.a: morph.a afilter.a
 noun.a: ninfl lexicon deriv phon num.a verb.a

@@ -1,0 +1,35 @@
+{
+  "name": "mlmorph",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12"
+    },
+    "ghcr.io/devcontainers/features/rust:1": {
+      "version": "latest"
+    },
+    "ghcr.io/va-h/devcontainers-features/uv:1": {}
+  },
+  // Tests assert Malayalam output and read LC_ALL=ml_IN.UTF-8.
+  "containerEnv": {
+    "LANG": "ml_IN.UTF-8",
+    "LC_ALL": "ml_IN.UTF-8"
+  },
+  // Build the automata, then install the python package editable with dev deps.
+  // setuptools-scm derives the version from git tags, so fetch them.
+  "postCreateCommand": "make all",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "rust-lang.rust-analyzer"
+      ],
+      "settings": {
+        "python.testing.pytestEnabled": true
+      }
+    }
+  }
+}
