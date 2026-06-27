@@ -2,7 +2,7 @@ SUBDIRS = lexicon phon ninfl vinfl deriv python rust
 
 include Makefile.inc
 
-.PHONY: all subdirs $(SUBDIRS)
+.PHONY: all subdirs $(SUBDIRS) docs webserver
 
 all: malayalam.a python rust
 
@@ -19,6 +19,13 @@ test: malayalam.a python
 
 coverage-analysis: malayalam.a python
 	@python tests/coverage-test.py
+
+docs:
+	cd docs && npm ci && npm run docs:build
+	cp -r docs/.vitepress/dist web/public
+
+webserver: docs
+	cd web && uv sync --frozen && uv run uvicorn mlmorphweb:app --host 0.0.0.0 --port 8000
 
 dataset:
 	pip install tqdm

@@ -1,6 +1,0 @@
-pydantic>=2.6.4
-fastapi>=0.110.1
-uvicorn>=0.29.0
-regex
-gunicorn
-mlmorph
