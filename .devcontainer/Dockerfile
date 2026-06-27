@@ -6,6 +6,7 @@ FROM alpine:3.21
 #   git          -> setuptools-scm derives the package version from git tags
 #   python3, py3-pip, python3-dev -> python package + sfst musllinux wheel
 #   uv           -> project dependency tooling (uv.lock)
+#   nodejs, npm  -> build web frontend (docs:build via make docs)
 #   rustup       -> Rust toolchain; Cargo.toml needs edition 2024 (Rust >= 1.85),
 #                   newer than Alpine's packaged rust
 RUN apk add --no-cache \
@@ -20,6 +21,8 @@ RUN apk add --no-cache \
         py3-pip \
         python3-dev \
         uv \
+        nodejs \
+        npm \
         rustup
 
 # Alpine's system Python is PEP 668 "externally managed", but the project
