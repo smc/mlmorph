@@ -1,7 +1,8 @@
 {
   "name": "mlmorph",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "../Dockerfile",
+    "context": ".."
   },
   // Build the automata, then install the python package editable with dev deps.
   // setuptools-scm derives the version from git tags (present in the mount).
