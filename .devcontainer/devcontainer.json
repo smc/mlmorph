@@ -5,6 +5,7 @@
   },
   // Build the automata, then install the python package editable with dev deps.
   // setuptools-scm derives the version from git tags (present in the mount).
+  "forwardPorts": [8000],
   "postCreateCommand": "make all",
   "customizations": {
     "vscode": {
