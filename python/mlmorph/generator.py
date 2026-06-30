@@ -14,15 +14,15 @@ from .normalizer import normalize
 
 
 class Generator:
-    RESOURCE_PATH = 'data/malayalam.a'
+    RESOURCE_PATH = "data/malayalam.a"
 
     def __init__(self):
         """Construct Mlmorph Generator"""
-        self.fsa: str = None
-        if resources.files('mlmorph').joinpath(Generator.RESOURCE_PATH).is_file():
-            self.fsa: str = str(resources.files('mlmorph').joinpath(Analyser.RESOURCE_PATH))
+        self.fsa: str | None = None
+        if resources.files("mlmorph").joinpath(Generator.RESOURCE_PATH).is_file():
+            self.fsa: str = str(resources.files("mlmorph").joinpath(Generator.RESOURCE_PATH))
         if not self.fsa:
-            raise ValueError('Could not read the fsa.')
+            raise ValueError("Could not read the fsa.")
         sfst.init(self.fsa)
 
     @staticmethod
@@ -34,14 +34,14 @@ class Generator:
         Give priority for smaller words, collation order.
         """
 
-        suffixes = ['ിൽ', 'ിലും', 'ന്റെ', 'ന്', 'നെ']
-        token_weight = Analyser.parse_analysis(token)['weight']
+        suffixes = ["ിൽ", "ിലും", "ന്റെ", "ന്", "നെ"]
+        token_weight = Analyser.parse_analysis(token)["weight"]
         length = len(suffixes)
         weight = token_weight
         for i in range(length):
             if generated_word.endswith(suffixes[i]):
-                return weight+i
-        return weight+len(generated_word)
+                return weight + i
+        return weight + len(generated_word)
 
     def generate(self, token: str, weighted: bool = True) -> Tuple:
         """Perform a simple morphological generator lookup."""
@@ -52,9 +52,6 @@ class Generator:
 
         processed_result = []
         for gindex in range(len(generated_results)):
-            generated_result_weight = Generator.get_weight(
-                generated_results[gindex], token)
-            processed_result.append(
-                (generated_results[gindex], generated_result_weight))
+            generated_result_weight = Generator.get_weight(generated_results[gindex], token)
+            processed_result.append((generated_results[gindex], generated_result_weight))
         return sorted(processed_result, key=lambda tup: tup[1])
-
