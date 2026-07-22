@@ -28,7 +28,7 @@
     "vitepress": "^1.6.3"
   },
   "dependencies": {
-    "axios": "1.7.7",
+    "axios": "1.18.1",
     "@tiptap/extension-character-count": "2.11.5",
     "@tiptap/extension-highlight": "^2.11.5",
     "@tiptap/extension-task-item": "^2.11.5",
