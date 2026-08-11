@@ -23,7 +23,7 @@
   "homepage": "https://gitlab.com/smc/mlmorph#readme",
   "devDependencies": {
     "markdown-it-container": "^4.0.0",
-    "postcss": "^8.5.2",
+    "postcss": "^8.5.26",
     "sass": "^1.85.0",
     "vitepress": "^1.6.3"
   },
