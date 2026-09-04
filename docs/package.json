@@ -29,12 +29,12 @@
   },
   "dependencies": {
     "axios": "1.7.7",
-    "@tiptap/extension-character-count": "2.11.5",
-    "@tiptap/extension-highlight": "^2.11.5",
-    "@tiptap/extension-task-item": "^2.11.5",
-    "@tiptap/extension-task-list": "^2.11.5",
-    "@tiptap/starter-kit": "^2.11.5",
-    "@tiptap/vue-3": "^2.11.5",
+    "@tiptap/extension-character-count": "3.31.0",
+    "@tiptap/extension-highlight": "^3.31.0",
+    "@tiptap/extension-task-item": "^3.31.0",
+    "@tiptap/extension-task-list": "^3.31.0",
+    "@tiptap/starter-kit": "^3.31.0",
+    "@tiptap/vue-3": "^3.31.0",
     "remixicon": "^4.6.0"
   }
 }
